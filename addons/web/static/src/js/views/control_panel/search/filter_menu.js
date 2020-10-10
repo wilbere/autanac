@@ -1,4 +1,4 @@
-odoo.define('web.FilterMenu', function (require) {
+autanac.define('web.FilterMenu', function (require) {
 "use strict";
 
 var config = require('web.config');
@@ -161,7 +161,7 @@ var FilterMenu = DropdownMenu.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onConfirmProposition: function (ev) {
         ev.stopPropagation();
@@ -169,7 +169,7 @@ var FilterMenu = DropdownMenu.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onRemoveProposition: function (ev) {
         ev.stopPropagation();

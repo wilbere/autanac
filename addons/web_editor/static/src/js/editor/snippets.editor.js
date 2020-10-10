@@ -1,4 +1,4 @@
-odoo.define('web_editor.snippet.editor', function (require) {
+autanac.define('web_editor.snippet.editor', function (require) {
 'use strict';
 
 var concurrency = require('web.concurrency');
@@ -609,7 +609,7 @@ var SnippetEditor = Widget.extend({
      * specific action/react to a specific event.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onOptionUpdate: function (ev) {
         var self = this;
@@ -1616,7 +1616,7 @@ var SnippetsMenu = Widget.extend({
      * Called when a child editor asks for insertion zones to be enabled.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onActivateInsertionZones: function (ev) {
         this._activateInsertionZones(ev.data.$selectorSiblings, ev.data.$selectorChildren);
@@ -1635,7 +1635,7 @@ var SnippetsMenu = Widget.extend({
      * snippet of a DOM element.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onCallForEachChildSnippet: function (ev) {
         this._callForEachChildSnippet(ev.data.$snippet, ev.data.callback);
@@ -1674,7 +1674,7 @@ var SnippetsMenu = Widget.extend({
      * call the _onClone methods if the element's editor has one.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onCloneSnippet: function (ev) {
         ev.stopPropagation();
@@ -1695,7 +1695,7 @@ var SnippetsMenu = Widget.extend({
      * Called when a snippet has moved in the page.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onDragAndDropStop: function (ev) {
         this._destroyEditors();
@@ -1706,7 +1706,7 @@ var SnippetsMenu = Widget.extend({
      * parent instead.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onGoToParent: function (ev) {
         ev.stopPropagation();
@@ -1714,7 +1714,7 @@ var SnippetsMenu = Widget.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onRemoveSnippet: function (ev) {
         ev.stopPropagation();
@@ -1733,7 +1733,7 @@ var SnippetsMenu = Widget.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onUpdateCustomizeElements: function (ev) {
         while (this.customizePanel.firstChild) {

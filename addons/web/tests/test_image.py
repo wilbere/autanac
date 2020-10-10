@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import io
 import base64
 
 from PIL import Image
 
-from odoo.tests.common import HttpCase
+from autanac.tests.common import HttpCase
 
 
 class TestImage(HttpCase):

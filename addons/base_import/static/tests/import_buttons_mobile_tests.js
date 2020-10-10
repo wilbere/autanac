@@ -1,4 +1,4 @@
-odoo.define('web.base_import_mobile_tests', function (require) {
+autanac.define('web.base_import_mobile_tests', function (require) {
 "use strict";
 
 var KanbanView = require('web.KanbanView');

@@ -1,4 +1,4 @@
-odoo.define('web.qweb_tests', function (require) {
+autanac.define('web.qweb_tests', function (require) {
 "use strict";
 
 var qwebPath = '/web/static/lib/qweb/';

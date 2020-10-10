@@ -1,4 +1,4 @@
-odoo.define('web.kanban_record_quick_create', function (require) {
+autanac.define('web.kanban_record_quick_create', function (require) {
 "use strict";
 
 /**
@@ -14,15 +14,15 @@ var Widget = require('web.Widget');
 var qweb = core.qweb;
 
 var RecordQuickCreate = Widget.extend({
-    className: 'o_kanban_quick_create',
+    className: 'a_kanban_quick_create',
     custom_events: {
         add: '_onAdd',
         cancel: '_onCancel',
     },
     events: {
-        'click .o_kanban_add': '_onAddClicked',
-        'click .o_kanban_edit': '_onEditClicked',
-        'click .o_kanban_cancel': '_onCancelClicked',
+        'click .a_kanban_add': '_onAddClicked',
+        'click .a_kanban_edit': '_onEditClicked',
+        'click .a_kanban_cancel': '_onCancelClicked',
     },
 
     /**
@@ -205,7 +205,7 @@ var RecordQuickCreate = Widget.extend({
 
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onAdd: function (ev) {
         ev.stopPropagation();
@@ -221,7 +221,7 @@ var RecordQuickCreate = Widget.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onCancel: function (ev) {
         ev.stopPropagation();
@@ -264,7 +264,7 @@ var RecordQuickCreate = Widget.extend({
 
         // ignore clicks on elements that open the quick create widget, to
         // prevent from closing quick create widget that has just been opened
-        if ($(ev.target).closest('.o-kanban-button-new, .o_kanban_quick_add').length) {
+        if ($(ev.target).closest('.o-kanban-button-new, .a_kanban_quick_add').length) {
             return;
         }
 

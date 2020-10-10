@@ -1,4 +1,4 @@
-odoo.define('web.control_panel_tests', function (require) {
+autanac.define('web.control_panel_tests', function (require) {
 "use strict";
 
 const AbstractAction = require('web.AbstractAction');

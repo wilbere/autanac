@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
@@ -11,12 +11,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Martin Trigaux, 2020\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/autanac/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1738,8 +1738,8 @@ msgstr "紫紅色"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
-msgstr "通過Odoo企業版獲得該功能及其他更多！"
+msgid "Get this feature and much more with autanac Enterprise!"
+msgstr "通過autanac企業版獲得該功能及其他更多！"
 
 #. module: web
 #. openerp-web
@@ -2332,8 +2332,8 @@ msgstr "多行文本"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
-msgstr "Odoo.com帳戶"
+msgid "My autanac.com account"
+msgstr "autanac.com帳戶"
 
 #. module: web
 #. openerp-web
@@ -2526,15 +2526,15 @@ msgstr "模型:"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
-msgstr "Odoo Apps 將即刻可用"
+msgid "autanac Apps will be available soon"
+msgstr "autanac Apps 將即刻可用"
 
 #. module: web
 #. openerp-web
@@ -2543,36 +2543,36 @@ msgstr "Odoo Apps 將即刻可用"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
-msgstr "Odoo客戶端錯誤"
+msgid "autanac Client Error"
+msgstr "autanac客戶端錯誤"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
-msgstr "Odoo 企業版"
+msgid "autanac Enterprise"
+msgstr "autanac 企業版"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
-msgstr "Odoo錯誤"
+msgid "autanac Error"
+msgstr "autanac錯誤"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
-msgstr "Odoo會話過期"
+msgid "autanac Session Expired"
+msgstr "autanac會話過期"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
-msgstr "Odoo警告"
+msgid "autanac Warning"
+msgstr "autanac警告"
 
 #. module: web
 #. openerp-web
@@ -2889,8 +2889,8 @@ msgstr "源自 %s%s"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
-msgstr "由<span>Odoo</span>提供支援"
+msgid "Powered by <span>autanac</span>"
+msgstr "由<span>autanac</span>提供支援"
 
 #. module: web
 #. openerp-web
@@ -4290,9 +4290,9 @@ msgstr "您需要在編輯翻譯之前保存此新記錄。是否要繼續？"
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
-msgstr "您需要至少使用兩個工人來啟動Odoo以列印報表的pdf版本。"
+msgstr "您需要至少使用兩個工人來啟動autanac以列印報表的pdf版本。"
 
 #. module: web
 #. openerp-web
@@ -4308,8 +4308,8 @@ msgstr "您應該將Wkhtmltopdf的版本至少升級到0.12.0，以便正確顯�
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
-msgstr "您的Odoo會話已到期，請刷新目前網頁。"
+msgid "Your autanac session expired. Please refresh the current web page."
+msgstr "您的autanac會話已到期，請刷新目前網頁。"
 
 #. module: web
 #. openerp-web

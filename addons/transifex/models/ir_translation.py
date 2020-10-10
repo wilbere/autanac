@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 try:
     from configparser import ConfigParser
@@ -10,8 +10,8 @@ from os.path import join as opj
 import os
 import werkzeug
 
-import odoo
-from odoo import models, fields
+import autanac
+from autanac import models, fields
 
 
 class IrTranslation(models.Model):
@@ -22,19 +22,19 @@ class IrTranslation(models.Model):
 
     def _get_transifex_url(self):
         """ Construct transifex URL based on the module on configuration """
-        # e.g. 'https://www.transifex.com/odoo/'
+        # e.g. 'https://www.transifex.com/autanac/'
         base_url = self.env['ir.config_parameter'].sudo().get_param('transifex.project_url')
 
         tx_config_file = ConfigParser()
         tx_sections = []
-        for addon_path in odoo.addons.__path__:
+        for addon_path in autanac.addons.__path__:
             tx_path = opj(addon_path, '.tx', 'config')
             if os.path.isfile(tx_path):
                 tx_config_file.read(tx_path)
-                # first section is [main], after [odoo-11.sale]
+                # first section is [main], after [autanac-11.sale]
                 tx_sections.extend(tx_config_file.sections()[1:])
 
-            # parent directory ad .tx/config is root directory in odoo/odoo
+            # parent directory ad .tx/config is root directory in autanac/autanac
             tx_path = opj(addon_path, os.pardir, '.tx', 'config')
             if os.path.isfile(tx_path):
                 tx_config_file.read(tx_path)
@@ -53,7 +53,7 @@ class IrTranslation(models.Model):
             language_codes = dict((l.code, l.iso_code) for l in languages)
 
             # .tx/config files contains the project reference
-            # using ini files like '[odoo-master.website_sale]'
+            # using ini files like '[autanac-master.website_sale]'
             translation_modules = set(self.mapped('module'))
             project_modules = {}
             for module in translation_modules:
@@ -78,7 +78,7 @@ class IrTranslation(models.Model):
                     translation.transifex_url = False
                     continue
 
-                # e.g. https://www.transifex.com/odoo/odoo-10/translate/#fr/sale/42?q=text'Sale+Order'
+                # e.g. https://www.transifex.com/autanac/autanac-10/translate/#fr/sale/42?q=text'Sale+Order'
                 translation.transifex_url = "%(url)s/%(project)s/translate/#%(lang)s/%(module)s/42?q=%(src)s" % {
                     'url': base_url,
                     'project': project,

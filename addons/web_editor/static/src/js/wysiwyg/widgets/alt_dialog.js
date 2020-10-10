@@ -1,4 +1,4 @@
-odoo.define('wysiwyg.widgets.AltDialog', function (require) {
+autanac.define('wysiwyg.widgets.AltDialog', function (require) {
 'use strict';
 
 var core = require('web.core');

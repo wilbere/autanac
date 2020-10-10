@@ -1,4 +1,4 @@
-odoo.define('web.ChangePassword', function (require) {
+autanac.define('web.ChangePassword', function (require) {
 "use strict";
 
 /**

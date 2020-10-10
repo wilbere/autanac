@@ -1,4 +1,4 @@
-odoo.define('web.ControlPanelController', function (require) {
+autanac.define('web.ControlPanelController', function (require) {
 "use strict";
 
 var mvc = require('web.mvc');
@@ -150,7 +150,7 @@ var ControlPanelController = mvc.Controller.extend({
 
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onActivateTimeRange: function (ev) {
         ev.stopPropagation();
@@ -163,7 +163,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onAutoCompletionFilter: function (ev) {
         ev.stopPropagation();
@@ -172,7 +172,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onFacetRemoved: function (ev) {
         ev.stopPropagation();
@@ -184,7 +184,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onGetSearchQuery: function (ev) {
         ev.stopPropagation();
@@ -193,7 +193,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onItemOptionClicked: function (ev) {
         ev.stopPropagation();
@@ -202,7 +202,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onItemTrashed: function (ev) {
         ev.stopPropagation();
@@ -211,7 +211,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onMenuItemClicked: function (ev) {
         ev.stopPropagation();
@@ -220,7 +220,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNewFavorite: function (ev) {
         ev.stopPropagation();
@@ -229,7 +229,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNewFilters: function (ev) {
         ev.stopPropagation();
@@ -238,7 +238,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNewGroupBy: function (ev) {
         ev.stopPropagation();
@@ -247,7 +247,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onReload: function (ev) {
         ev.stopPropagation();
@@ -255,7 +255,7 @@ var ControlPanelController = mvc.Controller.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onReset: function (ev) {
         ev.stopPropagation();

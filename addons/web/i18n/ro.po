@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
@@ -12,12 +12,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Hongu Cosmin <cosmin513@gmail.com>, 2020\n"
-"Language-Team: Romanian (https://www.transifex.com/odoo/teams/41243/ro/)\n"
+"Language-Team: Romanian (https://www.transifex.com/autanac/teams/41243/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1760,7 +1760,7 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
+msgid "Get this feature and much more with autanac Enterprise!"
 msgstr "Această opțiune este disponibilă în varianta Enterprise!"
 
 #. module: web
@@ -2358,8 +2358,8 @@ msgstr "Text multilin"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
-msgstr "Contul meu Odoo.com"
+msgid "My autanac.com account"
+msgstr "Contul meu autanac.com"
 
 #. module: web
 #. openerp-web
@@ -2554,15 +2554,15 @@ msgstr "Obiect:"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
-msgstr "Aplicațiile Odoo vor fi disponibile în curând"
+msgid "autanac Apps will be available soon"
+msgstr "Aplicațiile autanac vor fi disponibile în curând"
 
 #. module: web
 #. openerp-web
@@ -2571,36 +2571,36 @@ msgstr "Aplicațiile Odoo vor fi disponibile în curând"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
-msgstr "Eroare client Odoo"
+msgid "autanac Client Error"
+msgstr "Eroare client autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
-msgstr "Odoo Enterprise"
+msgid "autanac Enterprise"
+msgstr "autanac Enterprise"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
-msgstr "Eroare Odoo"
+msgid "autanac Error"
+msgstr "Eroare autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
-msgstr "Sesiune Odoo Expirată"
+msgid "autanac Session Expired"
+msgstr "Sesiune autanac Expirată"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
-msgstr "Avertisment Odoo"
+msgid "autanac Warning"
+msgstr "Avertisment autanac"
 
 #. module: web
 #. openerp-web
@@ -2927,8 +2927,8 @@ msgstr "Powered by %s%s"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
-msgstr "Oferit de <span>Odoo</span>"
+msgid "Powered by <span>autanac</span>"
+msgstr "Oferit de <span>autanac</span>"
 
 #. module: web
 #. openerp-web
@@ -4350,10 +4350,10 @@ msgstr ""
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
 msgstr ""
-"Trebuie să începeți Odoo cu cel puțin doi lucrători pentru a imprima o "
+"Trebuie să începeți autanac cu cel puțin doi lucrători pentru a imprima o "
 "versiune pdf a rapoartelor."
 
 #. module: web
@@ -4373,8 +4373,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
-msgstr "Sesiunea de Odoo a expirat. Vă rog să dați refresh la pagina curentă."
+msgid "Your autanac session expired. Please refresh the current web page."
+msgstr "Sesiunea de autanac a expirat. Vă rog să dați refresh la pagina curentă."
 
 #. module: web
 #. openerp-web

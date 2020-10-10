@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import json
 from werkzeug.utils import redirect
 
-from odoo import http, registry
-from odoo.http import request
+from autanac import http, registry
+from autanac.http import request
 
 
 class GoogleAuth(http.Controller):

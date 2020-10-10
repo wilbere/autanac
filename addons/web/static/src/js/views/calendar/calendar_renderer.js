@@ -1,4 +1,4 @@
-odoo.define('web.CalendarRenderer', function (require) {
+autanac.define('web.CalendarRenderer', function (require) {
 "use strict";
 
 var AbstractRenderer = require('web.AbstractRenderer');
@@ -107,7 +107,7 @@ var SidebarFilter = Widget.extend(FieldManagerMixin, {
 
     /**
      * @private
-     * @param {OdooEvent} event
+     * @param {autanacEvent} event
      */
     _onFieldChanged: function (event) {
         var self = this;
@@ -779,7 +779,7 @@ return AbstractRenderer.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} event
+     * @param {autanacEvent} event
      */
     _onEditEvent: function (event) {
         this._unselectEvent();
@@ -790,7 +790,7 @@ return AbstractRenderer.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} event
+     * @param {autanacEvent} event
      */
     _onDeleteEvent: function (event) {
         this._unselectEvent();

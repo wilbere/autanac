@@ -9,12 +9,12 @@ import threading
 import time
 import urllib3
 
-from odoo import http
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.controllers.driver import Driver, event_manager, iot_devices
+from autanac import http
+from autanac.addons.hw_drivers.tools import helpers
+from autanac.addons.hw_drivers.controllers.driver import Driver, event_manager, iot_devices
 
 try:
-    from odoo.addons.hw_drivers.controllers.driver import cm
+    from autanac.addons.hw_drivers.controllers.driver import cm
 except:
     cm = None
 
@@ -93,12 +93,12 @@ class DisplayDriver(Driver):
 
     def load_url(self):
         url = None
-        if helpers.get_odoo_server_url():
+        if helpers.get_autanac_server_url():
             # disable certifiacte verification
             urllib3.disable_warnings()
             http = urllib3.PoolManager(cert_reqs='CERT_NONE')
             try:
-                response = http.request('GET', "%s/iot/box/%s/screen_url" % (helpers.get_odoo_server_url(), helpers.get_mac_address()))
+                response = http.request('GET', "%s/iot/box/%s/screen_url" % (helpers.get_autanac_server_url(), helpers.get_mac_address()))
                 if response.status == 200:
                     data = json.loads(response.data.decode('utf8'))
                     url = data[self.device_identifier]
@@ -215,7 +215,7 @@ class DisplayController(http.Controller):
             display_identifier = DisplayDriver.get_default_display().device_identifier
 
         return pos_display_template.render({
-            'title': "Odoo -- Point of Sale",
+            'title': "autanac -- Point of Sale",
             'breadcrumb': 'POS Client display',
             'cust_js': cust_js,
             'display_ifaces': display_ifaces,

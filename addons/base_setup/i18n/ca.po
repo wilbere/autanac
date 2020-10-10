@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -6,7 +6,7 @@
 # Martin Trigaux, 2020
 # Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2020
 # Carles Antoli <carlesantoli@hotmail.com>, 2020
-# RGB Consulting <odoo@rgbconsulting.com>, 2020
+# RGB Consulting <autanac@rgbconsulting.com>, 2020
 # Quim - eccit <quim@eccit.com>, 2020
 # Manel Fernandez Ramirez <manelfera@outlook.com>, 2020
 # M Palau <mpalau@tda.ad>, 2020
@@ -14,12 +14,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~12.5\n"
+"Project-Id-Version: autanac Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: Arnau Ros, 2020\n"
-"Language-Team: Catalan (https://www.transifex.com/odoo/teams/41243/ca/)\n"
+"Language-Team: Catalan (https://www.transifex.com/autanac/teams/41243/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -308,8 +308,8 @@ msgstr "Servidors de correu electrònic extern"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze Odoo data from Google Spreadsheet"
-msgstr "Extreu i analitza dades d'Odoo des dels fulls de càlcul de Google"
+msgid "Extract and analyze autanac data from Google Spreadsheet"
+msgstr "Extreu i analitza dades d'autanac des dels fulls de càlcul de Google"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -485,15 +485,15 @@ msgstr "Autenticació OAuth"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: base_setup
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo S.A."
-msgstr "Odoo S.A."
+msgid "Distribuidor Autana Cars c.a"
+msgstr "Distribuidor Autana Cars c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -618,8 +618,8 @@ msgstr "Ús de proveïdors d'autenticació externs (OAuth)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in Odoo Notes"
-msgstr "Utilitza coixinets externs a Odoo Notes"
+msgid "Use external pads in autanac Notes"
+msgstr "Utilitza coixinets externs a autanac Notes"
 
 #. module: base_setup
 #. openerp-web
@@ -633,11 +633,11 @@ msgstr "Usuaris"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, Odoo provides a list of matching "
+"When populating your address book, autanac provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""
-"A la vostra llibreta d’adreces, Odoo proporciona una llista d’empreses "
+"A la vostra llibreta d’adreces, autanac proporciona una llista d’empreses "
 "coincidents. Quan seleccioneu un element, les dades de l'empresa i el "
 "logotip s'omplen automàticament."
 

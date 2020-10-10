@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import ctypes
 import evdev
@@ -18,10 +18,10 @@ try:
 except ImportError:
     from Queue import Queue, Empty  # pylint: disable=deprecated-module
 
-from odoo import http, _
-from odoo.addons.hw_proxy.controllers.main import drivers as old_drivers
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.controllers.driver import event_manager, Driver, iot_devices
+from autanac import http, _
+from autanac.addons.hw_proxy.controllers.main import drivers as old_drivers
+from autanac.addons.hw_drivers.tools import helpers
+from autanac.addons.hw_drivers.controllers.driver import event_manager, Driver, iot_devices
 
 _logger = logging.getLogger(__name__)
 xlib = ctypes.cdll.LoadLibrary('libX11.so.6')
@@ -87,7 +87,7 @@ class KeyboardUSBDriver(Driver):
 
     @classmethod
     def send_layouts_list(cls):
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_autanac_server_url()
         if server:
             urllib3.disable_warnings()
             pm = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -201,19 +201,19 @@ class KeyboardUSBDriver(Driver):
                 - variant (str): An optional key to represent the variant of the
                                  selected layout
         """
-        file_path = Path.home() / 'odoo-keyboard-layouts.conf'
+        file_path = Path.home() / 'autanac-keyboard-layouts.conf'
         if file_path.exists():
             data = json.loads(file_path.read_text())
         else:
             data = {}
         data[self.device_identifier] = layout
-        helpers.write_file('odoo-keyboard-layouts.conf', json.dumps(data))
+        helpers.write_file('autanac-keyboard-layouts.conf', json.dumps(data))
 
     def load_layout(self):
         """Read the layout from the saved filed and set it as current layout.
         If no file or no layout is found we use 'us' by default.
         """
-        file_path = Path.home() / 'odoo-keyboard-layouts.conf'
+        file_path = Path.home() / 'autanac-keyboard-layouts.conf'
         if file_path.exists():
             data = json.loads(file_path.read_text())
             layout = data.get(self.device_identifier, {'layout': 'us'})
@@ -223,7 +223,7 @@ class KeyboardUSBDriver(Driver):
 
     def _keyboard_input(self, scancode):
         """Deal with a keyboard input. Send the character corresponding to the
-        pressed key represented by its scancode to the connected Odoo instance.
+        pressed key represented by its scancode to the connected autanac instance.
 
         Args:
             scancode (int): The scancode of the pressed key.

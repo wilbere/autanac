@@ -1,4 +1,4 @@
-odoo.define('web.RamStorage', function (require) {
+autanac.define('web.RamStorage', function (require) {
 'use strict';
 
 /**

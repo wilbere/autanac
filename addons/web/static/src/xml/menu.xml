@@ -96,9 +96,9 @@
 </t>
 
 <t t-extend="UserMenu.Actions">
-    <t t-jquery=".dropdown-divider" t-operation="before">
+    <!-- <t t-jquery=".dropdown-divider" t-operation="before">
         <a role="menuitem" href="#" data-menu="shortcuts" class="dropdown-item d-none d-md-inline-block">Shortcuts</a>
-    </t>
+    </t> -->
 </t>
 
 <div t-name="UserMenu.shortcuts">

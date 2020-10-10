@@ -1,13 +1,13 @@
-odoo.define('web.concurrency', function (require) {
+autanac.define('web.concurrency', function (require) {
 "use strict";
 
 /**
  * Concurrency Utils
  *
  * This file contains a short collection of useful helpers designed to help with
- * everything concurrency related in Odoo.
+ * everything concurrency related in autanac.
  *
- * The basic concurrency primitives in Odoo JS are the callback, and the
+ * The basic concurrency primitives in autanac JS are the callback, and the
  * promises.  Promises (promise) are more composable, so we usually use them
  * whenever possible.  We use the jQuery implementation.
  *
@@ -136,7 +136,7 @@ return {
         }
     }),
     /**
-     * A (Odoo) mutex is a primitive for serializing computations.  This is
+     * A (autanac) mutex is a primitive for serializing computations.  This is
      * useful to avoid a situation where two computations modify some shared
      * state and cause some corrupted state.
      *

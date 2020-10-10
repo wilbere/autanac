@@ -1,4 +1,4 @@
-odoo.define('web.daterangepicker.extensions', function () {
+autanac.define('web.daterangepicker.extensions', function () {
 'use strict';
 
 /**

@@ -19,8 +19,8 @@
                     }
                 }
                 tr:last-child {
-                    color: $o-datepicker-week-color;
-                    background-color: $o-datepicker-week-bg-color;
+                    color: $a-datepicker-week-color;
+                    background-color: $a-datepicker-week-bg-color;
                 }
                 th {
                     border-radius: 0;
@@ -28,7 +28,7 @@
             }
             tbody {
                 tr {
-                    border-bottom: 1px solid $o-datepicker-week-bg-color;
+                    border-bottom: 1px solid $a-datepicker-week-bg-color;
                     td {
                         border-width: 0px;
                         &:not(.off) {

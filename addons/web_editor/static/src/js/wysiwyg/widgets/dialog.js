@@ -1,4 +1,4 @@
-odoo.define('wysiwyg.widgets.Dialog', function (require) {
+autanac.define('wysiwyg.widgets.Dialog', function (require) {
 'use strict';
 
 var config = require('web.config');
@@ -71,7 +71,7 @@ var SummernoteDialog = Dialog.extend({
      * @returns {*}
      */
     open: function() {
-        this.hasFullScreen = $(window.top.document.body).hasClass('o_field_widgetTextHtml_fullscreen');
+        this.hasFullScreen = $(window.top.document.body).hasClass('a_field_widgetTextHtml_fullscreen');
         this._toggleFullScreen();
         return this._super.apply(this, arguments);
     },

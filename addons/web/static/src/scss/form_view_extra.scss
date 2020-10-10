@@ -1,4 +1,4 @@
-.o_form_view {
+.a_form_view {
     $sheet-max-width: 1140px;
     $sheet-min-width: 650px;
     $sheet-padding: 16px;
@@ -18,12 +18,13 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             background: white;
             overflow: hidden;
+            border-radius: 10px;
 
-            margin: $o-sheet-vpadding*0.2 auto;
+            margin: $a-sheet-vpadding*0.2 auto;
             @include media-breakpoint-up(md) {
-                margin: $o-sheet-vpadding*0.5 auto;
+                margin: $a-sheet-vpadding*0.5 auto;
             }
-            padding: $o-sheet-vpadding;
+            padding: $a-sheet-vpadding;
             @include o-form-sheet-inner-right-padding;
             @include o-form-sheet-inner-left-padding;
 
@@ -68,7 +69,7 @@
         .o_td_label + td {
             padding: 0px 36px 0px 8px;
         }
-        .o_field_widget.o_text_overflow {
+        .a_field_widget.o_text_overflow {
             width: 1px!important; // hack to make the table layout believe it is a small element (so that the table does not grow too much) ...
             min-width: 100%;      // ... but in fact it takes the whole table space
         }
@@ -102,7 +103,7 @@
 
 // Overridden style when form view in modal
 .modal .modal-dialog {
-    .o_form_view {
+    .a_form_view {
         .o_form_sheet_bg, .o_form_sheet {
             border: none;
         }
@@ -113,7 +114,7 @@
 }
 
 // XXS form view specific rules
-.o_form_view.o_xxs_form_view {
+.a_form_view.o_xxs_form_view {
     .o_group .o_td_label {
         border: none;
     }

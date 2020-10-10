@@ -4,7 +4,7 @@ Tests for various autodetection magics for CSV imports
 """
 import codecs
 
-from odoo.tests import common
+from autanac.tests import common
 
 class ImportCase(common.TransactionCase):
     def _make_import(self, contents):

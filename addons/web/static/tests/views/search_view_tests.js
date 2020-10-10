@@ -1,4 +1,4 @@
-odoo.define('web.search_view_tests', function (require) {
+autanac.define('web.search_view_tests', function (require) {
 "use strict";
 
 var FormView = require('web.FormView');
@@ -1172,7 +1172,7 @@ QUnit.module('Search View', {
         await testUtils.fields.many2one.clickOpenDropdown('bar');
         await testUtils.fields.many2one.clickItem('bar','Search');
 
-        assert.strictEqual($('tr.o_data_row').length, 9, "should display 9 records");
+        assert.strictEqual($('tr.a_data_row').length, 9, "should display 9 records");
 
         await testUtils.dom.click($('button:contains(Filters)'));
         await testUtils.dom.click($('.o_add_custom_filter:visible'));
@@ -1180,7 +1180,7 @@ QUnit.module('Search View', {
             "date field should be selected");
         await testUtils.dom.click($('.o_apply_filter'));
 
-        assert.strictEqual($('tr.o_data_row').length, 0, "should display 0 records");
+        assert.strictEqual($('tr.a_data_row').length, 0, "should display 0 records");
 
         // Save this search
         await testUtils.mock.intercept(form, 'create_filter', function (event) {

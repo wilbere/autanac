@@ -1,4 +1,4 @@
-odoo.define('web.ServiceProviderMixin', function (require) {
+autanac.define('web.ServiceProviderMixin', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -77,7 +77,7 @@ var ServiceProviderMixin = {
      * the target so that it can call back the caller.
      *
      * @private
-     * @param  {OdooEvent} event
+     * @param  {autanacEvent} event
      */
     _call_service: function (event) {
         var args = event.data.args || [];
@@ -95,7 +95,7 @@ return ServiceProviderMixin;
 
 });
 
-odoo.define('web.ServicesMixin', function (require) {
+autanac.define('web.ServicesMixin', function (require) {
 "use strict";
 
 var rpc = require('web.rpc');

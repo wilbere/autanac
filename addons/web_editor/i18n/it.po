@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web_editor
 # 
@@ -12,18 +12,18 @@
 # Luigi Di Naro <gigidn@gmail.com>, 2019
 # Paolo Valier, 2019
 # Niccolò Lubello <nlubello@gmail.com>, 2019
-# Léonie Bouchat <lbo@odoo.com>, 2019
+# Léonie Bouchat <lbo@autanac.com>, 2019
 # Manuela Feliciani <mfeliciani@alice.it>, 2019
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Sergio Zanchetta <primes2h@gmail.com>, 2020\n"
-"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"Language-Team: Italian (https://www.transifex.com/autanac/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -798,7 +798,7 @@ msgstr ""
 #: code:addons/web_editor/static/src/xml/ace.xml:0
 #, python-format
 msgid ""
-"If you edit and save this file, you will never receive updates from Odoo "
+"If you edit and save this file, you will never receive updates from autanac "
 "anymore unless you reset your customizations."
 msgstr ""
 
@@ -819,7 +819,7 @@ msgstr ""
 #, python-format
 msgid ""
 "If you want to crop it, please first download it from the original source "
-"and upload it in Odoo."
+"and upload it in autanac."
 msgstr ""
 
 #. module: web_editor
@@ -2028,14 +2028,14 @@ msgstr "automatica"
 #. openerp-web
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
-msgid "https://www.odoo.com/logo.png"
-msgstr "https://www.odoo.com/logo.png"
+msgid "https://www.autanac.com/logo.png"
+msgstr "https://www.autanac.com/logo.png"
 
 #. module: web_editor
 #. openerp-web
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
-msgid "https://www.odoo.com/mydocument"
+msgid "https://www.autanac.com/mydocument"
 msgstr ""
 
 #. module: web_editor

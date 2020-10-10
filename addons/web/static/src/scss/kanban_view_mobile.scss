@@ -1,5 +1,5 @@
 @include media-breakpoint-down(sm) {
-    .o_kanban_view.o_kanban_grouped {
+    .a_kanban_view.a_kanban_grouped {
         display: block;
         position: relative;
         overflow-x: hidden;
@@ -7,7 +7,7 @@
             width: 100%;
         }
 
-        .o_kanban_mobile_tabs_container {
+        .a_kanban_mobile_tabs_container {
             position: sticky;
             display: flex;
             justify-content: space-between;
@@ -16,23 +16,23 @@
             z-index: 1;
             background-color: #5E5E5E;
 
-            .o_kanban_mobile_add_column {
-                height: $o-kanban-mobile-tabs-height;
+            .a_kanban_mobile_add_column {
+                height: $a-kanban-mobile-tabs-height;
                 padding: 10px;
                 border-left: grey 1px solid;
                 color: white;
                 font-size: 14px;
             }
 
-            .o_kanban_mobile_tabs {
+            .a_kanban_mobile_tabs {
                 position: relative;
                 display: flex;
                 width: 100%;
-                height: $o-kanban-mobile-tabs-height;
+                height: $a-kanban-mobile-tabs-height;
                 overflow-x: auto;
 
-                .o_kanban_mobile_tab {
-                    height: $o-kanban-mobile-tabs-height;
+                .a_kanban_mobile_tab {
+                    height: $a-kanban-mobile-tabs-height;
                     padding: 10px 20px;
                     font-size: 14px;
                     color: white;
@@ -49,12 +49,12 @@
                 }
             }
         }
-        .o_kanban_columns_content {
+        .a_kanban_columns_content {
             position: relative;
         }
         // [class] to get same specificity as elsewhere (kanban_view.less)
-        &[class] .o_kanban_group:not(.o_column_folded) {
-            @include o-position-absolute($top: $o-kanban-mobile-tabs-height, $left: 0, $bottom: 0);
+        &[class] .a_kanban_group:not(.o_column_folded) {
+            @include o-position-absolute($top: $a-kanban-mobile-tabs-height, $left: 0, $bottom: 0);
             width: 100%;
             padding: 0;
             margin-left: 0; // override the margin-left: -1px of the desktop mode
@@ -64,16 +64,16 @@
                 position: inherit;
                 top: 0;
 
-                &.o_kanban_no_records {
+                &.a_kanban_no_records {
                     // set a default height for clarity when embedded in another view
-                    min-height: $o-kanban-mobile-empty-height;
+                    min-height: $a-kanban-mobile-empty-height;
                 }
             }
 
-            .o_kanban_header {
+            .a_kanban_header {
                 display: none;
             }
-            .o_kanban_record, .o_kanban_quick_create {
+            .a_kanban_record, .a_kanban_quick_create {
                 border: none;
                 border-bottom: 1px solid lightgray;
                 padding: 10px 16px;
@@ -81,7 +81,7 @@
             }
         }
     }
-    .o_kanban_view .o_column_quick_create {
+    .a_kanban_view .o_column_quick_create {
         .o_quick_create_folded {
             display: none !important;
         }

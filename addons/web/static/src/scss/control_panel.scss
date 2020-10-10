@@ -1,8 +1,8 @@
 
 .o_control_panel {
-    border-bottom: 1px solid darken($o-control-panel-background-color, 20%);
+    border-bottom: 1px solid darken($a-control-panel-background-color, 20%);
     @include o-webclient-padding($top: 10px, $bottom: 10px);
-    background-color: $o-control-panel-background-color;
+    background-color: $a-control-panel-background-color;
 
     > div {
         display: flex;
@@ -24,7 +24,7 @@
     }
 
     .o_cp_searchview {
-        min-height: $o-cp-breadcrumb-height;
+        min-height: $a-cp-breadcrumb-height;
     }
 
     .btn.o_enable_searchview{
@@ -85,12 +85,12 @@
 
             .o_pager_counter {
                 margin-right: 5px;
-                min-width: $o-statbutton-height;
+                min-width: $a-statbutton-height;
             }
         }
 
         > .o_cp_switch_buttons > .btn:first-child {
-            margin-left: $o-horizontal-padding;
+            margin-left: $a-horizontal-padding;
             @include media-breakpoint-down(sm) {
                 margin-left: 0;
             }
@@ -109,7 +109,7 @@
             margin-top: 5px;
         }
         .o-kanban-button-new {
-            margin-left: $o-kanban-record-margin;
+            margin-left: $a-kanban-record-margin;
         }
     }
     .o_cp_pager {

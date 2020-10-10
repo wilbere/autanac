@@ -1,4 +1,4 @@
-odoo.define("web.relational_fields_mobile_tests", function (require) {
+autanac.define("web.relational_fields_mobile_tests", function (require) {
 "use strict";
 
 const FormView = require("web.FormView");
@@ -56,7 +56,7 @@ QUnit.module("fields", {}, function () {
             await testUtils.form.clickEdit(form);
             assert.containsOnce(form, ".o_field_x2many_list",
                 "should display one2many's list");
-            assert.containsN(form, ".o_field_x2many_list .o_data_row", 2,
+            assert.containsN(form, ".o_field_x2many_list .a_data_row", 2,
                 "should display 2 records in one2many's list");
 
             form.destroy();

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import base64
 import os
@@ -8,8 +8,8 @@ import uuid
 
 from lxml import etree
 
-from odoo import models
-from odoo.modules.module import get_resource_path, get_module_path
+from autanac import models
+from autanac.modules.module import get_resource_path, get_module_path
 
 _match_asset_file_url_regex = re.compile("^/(\w+)/(.+?)(\.custom\.(.+))?\.(\w+)$")
 

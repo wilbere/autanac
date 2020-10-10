@@ -1,4 +1,4 @@
-odoo.define('web.data_export_tests', function (require) {
+autanac.define('web.data_export_tests', function (require) {
 "use strict";
 
 var framework = require('web.framework');
@@ -319,7 +319,7 @@ QUnit.module('widgets', {
         });
 
         // select a record => should not be taken into account
-        await testUtils.dom.click(list.$('.o_data_row .o_list_record_selector input')[0]);
+        await testUtils.dom.click(list.$('.a_data_row .o_list_record_selector input')[0]);
         // Download
         await testUtils.dom.click(list.$buttons.find('.o_list_export_xlsx'));
 

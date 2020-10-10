@@ -1,4 +1,4 @@
-odoo.define("web.ModelFieldSelector", function (require) {
+autanac.define("web.ModelFieldSelector", function (require) {
 "use strict";
 
 var core = require("web.core");

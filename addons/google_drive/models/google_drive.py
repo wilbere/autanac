@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 import logging
 import json
 import re
@@ -7,12 +7,12 @@ import re
 import requests
 import werkzeug.urls
 
-from odoo import api, fields, models
-from odoo.exceptions import RedirectWarning, UserError
-from odoo.tools.safe_eval import safe_eval
-from odoo.tools.translate import _
+from autanac import api, fields, models
+from autanac.exceptions import RedirectWarning, UserError
+from autanac.tools.safe_eval import safe_eval
+from autanac.tools.translate import _
 
-from odoo.addons.google_account.models.google_service import GOOGLE_TOKEN_ENDPOINT, TIMEOUT
+from autanac.addons.google_account.models.google_service import GOOGLE_TOKEN_ENDPOINT, TIMEOUT
 
 _logger = logging.getLogger(__name__)
 
@@ -96,7 +96,7 @@ class GoogleDrive(models.Model):
         except requests.HTTPError:
             raise UserError(_("The Google Template cannot be found. Maybe it has been deleted."))
 
-        record_url = "Click on link to open Record in Odoo\n %s/?db=%s#id=%s&model=%s" % (google_web_base_url, self._cr.dbname, res_id, res_model)
+        record_url = "Click on link to open Record in autanac\n %s/?db=%s#id=%s&model=%s" % (google_web_base_url, self._cr.dbname, res_id, res_model)
         data = {
             "title": name_gdocs,
             "description": record_url,
@@ -124,7 +124,7 @@ class GoogleDrive(models.Model):
             self._cr.commit()
             res['url'] = content['alternateLink']
             key = self._get_key_from_url(res['url'])
-            request_url = "https://www.googleapis.com/drive/v2/files/%s/permissions?emailMessage=This+is+a+drive+file+created+by+Odoo&sendNotificationEmails=false&access_token=%s" % (key, access_token)
+            request_url = "https://www.googleapis.com/drive/v2/files/%s/permissions?emailMessage=This+is+a+drive+file+created+by+autanac&sendNotificationEmails=false&access_token=%s" % (key, access_token)
             data = {'role': 'writer', 'type': 'anyone', 'value': '', 'withLink': True}
             try:
                 req = requests.post(request_url, data=json.dumps(data), headers=headers, timeout=TIMEOUT)

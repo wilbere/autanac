@@ -1,4 +1,4 @@
-odoo.define('web_editor.base', function (require) {
+autanac.define('web_editor.base', function (require) {
 'use strict';
 
 // TODO this should be re-removed as soon as possible.
@@ -125,7 +125,7 @@ return {
 
 //==============================================================================
 
-odoo.define('web_editor.context', function (require) {
+autanac.define('web_editor.context', function (require) {
 'use strict';
 
 // TODO this should be re-removed as soon as possible.
@@ -162,7 +162,7 @@ return {
 
 //==============================================================================
 
-odoo.define('web_editor.ready', function (require) {
+autanac.define('web_editor.ready', function (require) {
 'use strict';
 
 // TODO this should be re-removed as soon as possible.

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import logging
 import time
@@ -10,8 +10,8 @@ from contextlib import contextmanager
 
 import serial
 
-from odoo.tools.translate import _
-from odoo.addons.hw_drivers.controllers.driver import Driver, event_manager
+from autanac.tools.translate import _
+from autanac.addons.hw_drivers.controllers.driver import Driver, event_manager
 
 _logger = logging.getLogger(__name__)
 

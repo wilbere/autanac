@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 from base64 import b64decode
 from cups import IPPError, IPP_PRINTER_IDLE, IPP_PRINTER_PROCESSING, IPP_PRINTER_STOPPED
@@ -14,13 +14,13 @@ import subprocess
 import tempfile
 from PIL import Image, ImageOps
 
-from odoo import http, _
-from odoo.addons.hw_drivers.controllers.driver import event_manager, Driver, PPDs, conn, printers, cups_lock, iot_devices
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_proxy.controllers.main import drivers as old_drivers
+from autanac import http, _
+from autanac.addons.hw_drivers.controllers.driver import event_manager, Driver, PPDs, conn, printers, cups_lock, iot_devices
+from autanac.addons.hw_drivers.tools import helpers
+from autanac.addons.hw_proxy.controllers.main import drivers as old_drivers
 
 try:
-    from odoo.addons.hw_drivers.controllers.driver import cm
+    from autanac.addons.hw_drivers.controllers.driver import cm
 except:
     cm = None
 
@@ -43,7 +43,7 @@ def print_star_error(deviceId):
         "configure your printer, please refer to:\n\n"
         "\x1B\x1D\x61\x01"                                      # Centering start
         "\x1B\x2D\x01"                                          # Underline start
-        "http://www.odoo.com"  # TODO: Replace URL
+        "http://www.autanac.com"  # TODO: Replace URL
         "\x0A\x0A"
         "\x1B\x2D\x00"                                          # Underline stop
         "\x1B\x1D\x61\x00"                                      # Centering stop
@@ -175,7 +175,7 @@ class PrinterDriver(Driver):
             self.send_status()
 
     def send_status(self):
-        """ Sends the current status of the printer to the connected Odoo instance.
+        """ Sends the current status of the printer to the connected autanac instance.
         """
         self.data = {
             'value': '',

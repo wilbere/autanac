@@ -1,11 +1,11 @@
-odoo.define('web.ActionManager', function (require) {
+autanac.define('web.ActionManager', function (require) {
 "use strict";
 
 /**
  * ActionManager
  *
  * The ActionManager is one of the centrepieces in the WebClient architecture.
- * Its role is to makes sure that Odoo actions are properly started and
+ * Its role is to makes sure that autanac actions are properly started and
  * coordinated.
  */
 
@@ -102,7 +102,7 @@ var ActionManager = Widget.extend({
         return Promise.resolve();
     },
     /**
-     * This is the entry point to execute Odoo actions, given as an ID in
+     * This is the entry point to execute autanac actions, given as an ID in
      * database, an xml ID, a client action tag or an action descriptor.
      *
      * @param {number|string|Object} action the action to execute
@@ -875,8 +875,8 @@ var ActionManager = Widget.extend({
 
     /**
      * @private
-     * @param {OdooEvent} ev
-     * @param {OdooEvent} ev.data.controllerID
+     * @param {autanacEvent} ev
+     * @param {autanacEvent} ev.data.controllerID
      */
     _onBreadcrumbClicked: function (ev) {
         ev.stopPropagation();
@@ -904,7 +904,7 @@ var ActionManager = Widget.extend({
      * information about the given controller.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {string} ev.controllerID
      * @param {Object} [ev.state={}]
      */
@@ -918,7 +918,7 @@ var ActionManager = Widget.extend({
      * Intercepts and triggers a redirection on a link.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {integer} ev.data.res_id
      * @param {string} ev.data.res_model
      */

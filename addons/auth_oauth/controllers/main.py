@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import functools
 import logging
@@ -10,13 +10,13 @@ import werkzeug.urls
 import werkzeug.utils
 from werkzeug.exceptions import BadRequest
 
-from odoo import api, http, SUPERUSER_ID, _
-from odoo.exceptions import AccessDenied
-from odoo.http import request
-from odoo import registry as registry_get
+from autanac import api, http, SUPERUSER_ID, _
+from autanac.exceptions import AccessDenied
+from autanac.http import request
+from autanac import registry as registry_get
 
-from odoo.addons.auth_signup.controllers.main import AuthSignupHome as Home
-from odoo.addons.web.controllers.main import db_monodb, ensure_db, set_cookie_and_redirect, login_and_redirect
+from autanac.addons.auth_signup.controllers.main import AuthSignupHome as Home
+from autanac.addons.web.controllers.main import db_monodb, ensure_db, set_cookie_and_redirect, login_and_redirect
 
 
 _logger = logging.getLogger(__name__)
@@ -167,7 +167,7 @@ class OAuthController(http.Controller):
 
     @http.route('/auth_oauth/oea', type='http', auth='none')
     def oea(self, **kw):
-        """login user via Odoo Account provider"""
+        """login user via autanac Account provider"""
         dbname = kw.pop('db', None)
         if not dbname:
             dbname = db_monodb()

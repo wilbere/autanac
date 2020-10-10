@@ -1,4 +1,4 @@
-odoo.define('web_tour.Tip', function(require) {
+autanac.define('web_tour.Tip', function(require) {
 "use strict";
 
 var config = require('web.config');

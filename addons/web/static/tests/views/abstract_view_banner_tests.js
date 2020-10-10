@@ -1,4 +1,4 @@
-odoo.define('web.abstract_view_banner_tests', function (require) {
+autanac.define('web.abstract_view_banner_tests', function (require) {
 "use strict";
 
 var AbstractRenderer = require('web.AbstractRenderer');
@@ -47,7 +47,7 @@ QUnit.module('Views', {
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-footer">
-                                <a type="action" class="btn btn-primary" data-dismiss="modal"
+                                <a type="action" class="btn rounded-pill btn-primary" data-dismiss="modal"
                                 data-toggle="collapse" href=".o_onboarding_container">
                                     Remove
                                 </a>

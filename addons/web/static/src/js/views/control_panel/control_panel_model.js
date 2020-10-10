@@ -1,4 +1,4 @@
-odoo.define('web.ControlPanelModel', function (require) {
+autanac.define('web.ControlPanelModel', function (require) {
 "use strict";
 
 var controlPanelViewParameters = require('web.controlPanelViewParameters');
@@ -776,7 +776,7 @@ var ControlPanelModel = mvc.Model.extend({
             });
         }
         // the following code aims to restore this:
-        // https://github.com/odoo/odoo/blob/12.0/addons/web/static/src/js/views/search/search_inputs.js#L498
+        // https://github.com/autanac/autanac/blob/12.0/addons/web/static/src/js/views/search/search_inputs.js#L498
         // this is required for the helpdesk tour to pass
         // this seems weird to only do that for m2o fields, but a test fails if
         // we do it for other fields (my guess being that the test should simply
@@ -785,7 +785,7 @@ var ControlPanelModel = mvc.Model.extend({
             if (this.fields[filter.attrs.name].type === 'many2one') {
                 var value = filter.defaultValue;
                 // the following if required to make the main_flow_tour pass (see
-                // https://github.com/odoo/odoo/blob/12.0/addons/web/static/src/js/views/search/search_inputs.js#L461)
+                // https://github.com/autanac/autanac/blob/12.0/addons/web/static/src/js/views/search/search_inputs.js#L461)
                 if (_.isArray(filter.defaultValue)) {
                     value = filter.defaultValue[0];
                 }

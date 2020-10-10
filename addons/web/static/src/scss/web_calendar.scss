@@ -1,5 +1,5 @@
 // Variables
-$o-cw-color-today: nth($o-colors, 3);
+$o-cw-color-today: nth($a-colors, 3);
 $o-cw-color-today-accent: #FC3D39;
 $o-cw-popup-avatar-size: 16px;
 $o-cw-filter-avatar-size: 20px;
@@ -105,7 +105,7 @@ $o-cw-filter-avatar-size: 20px;
         // ====== Both Day and Week agenda
         .fc-agendaDay-view, .fc-agendaWeek-view {
             .fc-axis {
-                padding-left: $o-horizontal-padding;
+                padding-left: $a-horizontal-padding;
             }
 
             // Hide unnecessary borders
@@ -206,7 +206,7 @@ $o-cw-filter-avatar-size: 20px;
         // ====== Week only
         .fc-agendaWeek-view {
             .fc-now-indicator {
-                left: $o-horizontal-padding;
+                left: $a-horizontal-padding;
             }
 
             // Expand tiny events on hover/select
@@ -220,7 +220,7 @@ $o-cw-filter-avatar-size: 20px;
 
         // ====== Month only
         .fc-month-view {
-            padding-left: $o-horizontal-padding;
+            padding-left: $a-horizontal-padding;
 
             .fc-widget-header {
                 padding: 3px 0;
@@ -350,9 +350,9 @@ $o-cw-filter-avatar-size: 20px;
 .o_calendar_sidebar_container {
     flex: 0 0 auto;
     position: relative;
-    @include o-webclient-padding($top: $o-horizontal-padding/2);
+    @include o-webclient-padding($top: $a-horizontal-padding/2);
     background-color: $a-view-background-color;
-    border-left: 1px solid darken($o-control-panel-background-color, 20%);
+    border-left: 1px solid darken($a-control-panel-background-color, 20%);
     overflow-y:auto;
 
     .o_calendar_sidebar {
@@ -586,8 +586,8 @@ $o-cw-filter-avatar-size: 20px;
 }
 
 // ===============  Generate color classes ===============
-@for $i from 1 through length($o-colors-complete) {
-    $color: nth($o-colors-complete, $i);
+@for $i from 1 through length($a-colors-complete) {
+    $color: nth($a-colors-complete, $i);
 
     .o_calendar_view .fc-view {
         .fc-event.o_calendar_color_#{$i} {

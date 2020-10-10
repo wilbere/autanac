@@ -1,4 +1,4 @@
-odoo.define('base_import.import_buttons', function (require) {
+autanac.define('base_import.import_buttons', function (require) {
 "use strict";
 
 var config = require('web.config');

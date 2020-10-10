@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<autanac>
 
     <record id="res_config_settings_view_form" model="ir.ui.view">
         <field name="name">res.config.settings.view.form.inherit.google.drive</field>
@@ -23,13 +23,13 @@
                         </div>
                         <div class="col-sm text-center"
                              attrs="{'invisible': [('is_google_drive_token_generated', '=', True)]}">
-                            <button class="btn btn-link"
+                            <button class="btn rounded-pill btn-link"
                                     name="action_setup_token"
                                     type="object"><i class="fa fa-arrow-right"></i> Set up token</button>
                         </div>
                         <div class="col-sm text-center"
                              attrs="{'invisible': [('is_google_drive_token_generated', '=', False)]}">
-                            <button class="btn btn-link"
+                            <button class="btn rounded-pill btn-link"
                                     name="action_setup_token"
                                     type="object"><i class="fa fa-arrow-right"></i> Reset token</button>
                         </div>
@@ -66,7 +66,7 @@
                 </group>
                 <footer>
                     <button string="Confirm"
-                            class="btn btn-primary"
+                            class="btn rounded-pill btn-primary"
                             name="confirm_setup_token"
                             type="object"/>
                     <button special="cancel" string="Cancel" />
@@ -74,4 +74,4 @@
             </form>
         </field>
     </record>
-</odoo>
+</autanac>

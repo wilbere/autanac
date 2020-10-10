@@ -1,4 +1,4 @@
-odoo.define('web.IFrameWidget', function (require) {
+autanac.define('web.IFrameWidget', function (require) {
 "use strict";
 
 var Widget = require('web.Widget');

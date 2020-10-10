@@ -1,4 +1,4 @@
-odoo.define('web.debugManagerTests', function (require) {
+autanac.define('web.debugManagerTests', function (require) {
 "use strict";
 
 var testUtils = require('web.test_utils');

@@ -1,4 +1,4 @@
-odoo.define('web.SessionStorageService', function (require) {
+autanac.define('web.SessionStorageService', function (require) {
 'use strict';
 
 /**

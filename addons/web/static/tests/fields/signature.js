@@ -1,4 +1,4 @@
-odoo.define('web.signature_field_tests', function (require) {
+autanac.define('web.signature_field_tests', function (require) {
 "use strict";
 
 var ajax = require('web.ajax');

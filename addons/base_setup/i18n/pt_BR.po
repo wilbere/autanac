@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -20,12 +20,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~12.5\n"
+"Project-Id-Version: autanac Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: PopSolutions Cooperativa Digital <popsolutions.co@gmail.com>, 2020\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/odoo/teams/41243/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/autanac/teams/41243/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -314,8 +314,8 @@ msgstr "Servidores de e-mail externos"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze Odoo data from Google Spreadsheet"
-msgstr "Extrair e analisar dados do Odoo do Google Planilha"
+msgid "Extract and analyze autanac data from Google Spreadsheet"
+msgstr "Extrair e analisar dados do autanac do Google Planilha"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -491,15 +491,15 @@ msgstr "Autenticação OAuth"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: base_setup
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo S.A."
-msgstr "Odoo S.A."
+msgid "Distribuidor Autana Cars c.a"
+msgstr "Distribuidor Autana Cars c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -624,8 +624,8 @@ msgstr "Usar provedores de autenticação externos (OAuth)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in Odoo Notes"
-msgstr "Use almofadas externas em Notas Odoo"
+msgid "Use external pads in autanac Notes"
+msgstr "Use almofadas externas em Notas autanac"
 
 #. module: base_setup
 #. openerp-web
@@ -639,11 +639,11 @@ msgstr "Usuários"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, Odoo provides a list of matching "
+"When populating your address book, autanac provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""
-"Ao preencher seu catálogo de endereços, o Odoo fornece uma lista de empresas"
+"Ao preencher seu catálogo de endereços, o autanac fornece uma lista de empresas"
 " correspondentes. Ao selecionar um item, os dados e o logotipo da empresa "
 "são preenchidos automaticamente."
 

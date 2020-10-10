@@ -1,4 +1,4 @@
-odoo.define('web.mathUtils', function () {
+autanac.define('web.mathUtils', function () {
 "use strict";
 
 /**

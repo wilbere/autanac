@@ -24,11 +24,11 @@
                 </t>
             </t>
             <script type="text/javascript">
-                odoo.define('web.session', function () {
-                    return window.top.odoo.__DEBUG__.services['web.session'];
+                autanac.define('web.session', function () {
+                    return window.top.autanac.__DEBUG__.services['web.session'];
                 });
 
-                odoo.define('root.widget', function (require) {
+                autanac.define('root.widget', function (require) {
                     'use strict';
                     var Widget = require('web.Widget');
                     var widget = new Widget();
@@ -36,9 +36,9 @@
                     return widget;
                 });
 
-                odoo.define('web.core.top', function (require) {
+                autanac.define('web.core.top', function (require) {
                     var core = require('web.core');
-                    core.qweb.templates = window.top.odoo.__DEBUG__.services['web.core'].qweb.templates;
+                    core.qweb.templates = window.top.autanac.__DEBUG__.services['web.core'].qweb.templates;
                 });
             </script>
         </head>
@@ -50,7 +50,7 @@
                 </main>
             </div>
             <script type="text/javascript">
-                odoo.define('web_editor.wysiwyg.iniframe', function (require) {
+                autanac.define('web_editor.wysiwyg.iniframe', function (require) {
                     'use strict';
                     var editor = require('web_editor.editor');
 
@@ -126,7 +126,7 @@
             <div class="form-text o_we_error_text"/>
             <div class="o_we_existing_attachments"/>
             <div class="mt-4 text-center mx-auto">
-                <button class="btn btn-primary o_load_more d-none" type="button">Load more...</button>
+                <button class="btn rounded-pill btn-primary o_load_more d-none" type="button">Load more...</button>
                 <div class="mt-4 o_load_done_msg d-none">
                     <span><i>All images have been loaded</i></span>
                 </div>
@@ -139,7 +139,7 @@
             <input type="file" class="d-none o_file_input" name="upload" t-att-accept="widget.options.accept" t-att-multiple="widget.options.multiImages &amp;&amp; 'multiple'"/>
 
             <div class="btn-group">
-                <button type="button" class="btn btn-primary o_upload_media_button">
+                <button type="button" class="btn rounded-pill btn-primary o_upload_media_button">
                     <t t-esc="uploadText"/>
                 </button>
                 <t t-raw="alternateUpload"/>
@@ -148,7 +148,7 @@
             <div class="input-group align-items-center ml-2">
                 <input type="text" class="form-control o_we_url_input" name="url" t-att-placeholder="urlPlaceholder"/>
                 <div class="input-group-append align-items-center">
-                    <button type="button" class="btn btn-secondary o_upload_media_url_button" disabled="disabled">
+                    <button type="button" class="btn rounded-pill btn-secondary o_upload_media_url_button" disabled="disabled">
                         <t t-esc="addText"/>
                     </button>
                     <div class="ml-2">
@@ -166,12 +166,12 @@
     <t t-name="wysiwyg.widgets.image">
         <t t-call="wysiwyg.widgets.file">
             <t t-set="uploadText">Upload an image</t>
-            <t t-set="urlPlaceholder">https://www.odoo.com/logo.png</t>
+            <t t-set="urlPlaceholder">https://www.autanac.com/logo.png</t>
             <t t-set="addText">Add image</t>
             <t t-set="searchPlaceholder">Search an image</t>
             <t t-set="urlWarningTitle">The URL does not contain any image. The file will be added in the document section.</t>
             <t t-if="widget.options.showQuickUpload" t-set="alternateUpload">
-                <button class="btn btn-primary o_we_quick_upload" type="button" title="Quick Upload">
+                <button class="btn rounded-pill btn-primary o_we_quick_upload" type="button" title="Quick Upload">
                     <i class="fa fa-fast-forward"/>
                     <span class="sr-only">Quick Upload</span>
                 </button>
@@ -182,7 +182,7 @@
     <t t-name="wysiwyg.widgets.document">
         <t t-call="wysiwyg.widgets.file">
             <t t-set="uploadText">Upload a document</t>
-            <t t-set="urlPlaceholder">https://www.odoo.com/mydocument</t>
+            <t t-set="urlPlaceholder">https://www.autanac.com/mydocument</t>
             <t t-set="addText">Add document</t>
             <t t-set="searchPlaceholder">Search a document</t>
             <t t-set="urlWarningTitle">The URL contains an image. The file will be added in the image section.</t>
@@ -518,7 +518,7 @@
             <h4>This image is an external image</h4>
             <p>
                 This type of image is not supported for cropping.<br/>
-                If you want to crop it, please first download it from the original source and upload it in Odoo.
+                If you want to crop it, please first download it from the original source and upload it in autanac.
             </p>
         </div>
         <t t-else="">
@@ -529,25 +529,25 @@
                <div class="btn-group btn-group-toggle" title="Aspect Ratio" data-toggle="buttons">
                    <t t-foreach="widget.aspectRatioList" t-as="ratio">
                        <t t-set="is_active" t-value="ratio[1] === widget.imageData.aspectRatio"/>
-                       <label t-attf-class="btn btn-secondary#{is_active and ' active' or ''}" data-event="ratio" t-att-data-label="ratio[1]" t-att-data-value="ratio[2]">
+                       <label t-attf-class="btn rounded-pill btn-secondary#{is_active and ' active' or ''}" data-event="ratio" t-att-data-label="ratio[1]" t-att-data-value="ratio[2]">
                            <input type="radio" /><t t-esc="ratio[0]"/>
                        </label>
                    </t>
                </div>
                <div class="btn-group" role="group">
-                   <button type="button" class="btn btn-secondary" title="Zoom In" data-event="zoom" data-value="0.1"><i class="fa fa-search-plus"/></button>
-                   <button type="button" class="btn btn-secondary" title="Zoom Out" data-event="zoom" data-value="-0.1"><i class="fa fa-search-minus"/></button>
+                   <button type="button" class="btn rounded-pill btn-secondary" title="Zoom In" data-event="zoom" data-value="0.1"><i class="fa fa-search-plus"/></button>
+                   <button type="button" class="btn rounded-pill btn-secondary" title="Zoom Out" data-event="zoom" data-value="-0.1"><i class="fa fa-search-minus"/></button>
                </div>
                <div class="btn-group" role="group">
-                   <button type="button" class="btn btn-secondary" title="Rotate Left" data-event="rotate" data-value="-45"><i class="fa fa-rotate-left"/></button>
-                   <button type="button" class="btn btn-secondary" title="Rotate Right" data-event="rotate" data-value="45"><i class="fa fa-rotate-right"/></button>
+                   <button type="button" class="btn rounded-pill btn-secondary" title="Rotate Left" data-event="rotate" data-value="-45"><i class="fa fa-rotate-left"/></button>
+                   <button type="button" class="btn rounded-pill btn-secondary" title="Rotate Right" data-event="rotate" data-value="45"><i class="fa fa-rotate-right"/></button>
                </div>
                <div class="btn-group" role="group">
-                   <button type="button" class="btn btn-secondary" title="Flip Horizontal" data-event="flip" data-value="horizontal" data-x="1"><i class="fa fa-arrows-h"/></button>
-                   <button type="button" class="btn btn-secondary" title="Flip Vertical" data-event="flip" data-value="vertical" data-y="1"><i class="fa fa-arrows-v"/></button>
+                   <button type="button" class="btn rounded-pill btn-secondary" title="Flip Horizontal" data-event="flip" data-value="horizontal" data-x="1"><i class="fa fa-arrows-h"/></button>
+                   <button type="button" class="btn rounded-pill btn-secondary" title="Flip Vertical" data-event="flip" data-value="vertical" data-y="1"><i class="fa fa-arrows-v"/></button>
                </div>
                <div class="btn-group" role="group">
-                   <button type="button" class="btn btn-secondary" title="Reset Image" data-event="reset"><i class="fa fa-refresh"/> Reset Image</button>
+                   <button type="button" class="btn rounded-pill btn-secondary" title="Reset Image" data-event="reset"><i class="fa fa-refresh"/> Reset Image</button>
                </div>
            </div>
        </t>

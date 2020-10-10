@@ -1,4 +1,4 @@
-odoo.define('web_editor.rte.summernote', function (require) {
+autanac.define('web_editor.rte.summernote', function (require) {
 'use strict';
 
 var ajax = require('web.ajax');
@@ -233,7 +233,7 @@ renderer.tplPopovers = function (lang, options) {
 
     var $alt = $('<div class="btn-group"/>');
     $alt.appendTo($imagePopover.find('.popover-body'));
-    $alt.append('<button class="btn btn-secondary" data-event="alt"><strong>' + _t('Description') + ': </strong><span class="o_image_alt"/></button>');
+    $alt.append('<button class="btn rounded-pill btn-secondary" data-event="alt"><strong>' + _t('Description') + ': </strong><span class="o_image_alt"/></button>');
 
     //////////////// link popover
 
@@ -1033,8 +1033,8 @@ eventHandler.detach = function (oLayoutInfo, options) {
     $(document).off("keyup", reRangeSelectKey);
 };
 
-// Translation for odoo
-$.summernote.lang.odoo = {
+// Translation for autanac
+$.summernote.lang.autanac = {
     font: {
       bold: _t('Bold'),
       italic: _t('Italic'),

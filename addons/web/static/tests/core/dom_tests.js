@@ -1,4 +1,4 @@
-odoo.define('web.dom_tests', function (require) {
+autanac.define('web.dom_tests', function (require) {
 "use strict";
 
 var dom = require('web.dom');

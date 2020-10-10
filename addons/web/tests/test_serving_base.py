@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import random
 import re
@@ -9,9 +9,9 @@ from datetime import datetime, timedelta
 from lxml import etree
 import logging
 
-from odoo.tests.common import BaseCase, tagged
-from odoo.tools import topological_sort
-from odoo.addons.web.controllers.main import HomeStaticTemplateHelpers
+from autanac.tests.common import BaseCase, tagged
+from autanac.tools import topological_sort
+from autanac.addons.web.controllers.main import HomeStaticTemplateHelpers
 
 _logger = logging.getLogger(__name__)
 

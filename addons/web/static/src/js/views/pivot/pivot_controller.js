@@ -1,7 +1,7 @@
-odoo.define('web.PivotController', function (require) {
+autanac.define('web.PivotController', function (require) {
 "use strict";
 /**
- * Odoo Pivot Table Controller
+ * autanac Pivot Table Controller
  *
  * This class is the Controller for the pivot table view.  It has to coordinate
  * the actions coming from the search view (through the update method), from
@@ -250,7 +250,7 @@ var PivotController = AbstractController.extend({
     /**
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onCloseGroup: function (ev) {
         this.model.closeGroup(ev.data.groupId, ev.data.type);
@@ -325,7 +325,7 @@ var PivotController = AbstractController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onOpenView: function (ev) {
         ev.stopPropagation();
@@ -346,7 +346,7 @@ var PivotController = AbstractController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onSortRows: function (ev) {
         this.model.sortRows(ev.data.sortedColumn);

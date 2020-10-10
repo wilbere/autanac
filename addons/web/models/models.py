@@ -3,11 +3,11 @@ import babel.dates
 import pytz
 import base64
 
-from odoo import _, api, fields, models
-from odoo.osv.expression import AND
-from odoo.tools import lazy
-from odoo.tools.misc import get_lang
-from odoo.exceptions import UserError
+from autanac import _, api, fields, models
+from autanac.osv.expression import AND
+from autanac.tools import lazy
+from autanac.tools.misc import get_lang
+from autanac.exceptions import UserError
 
 SEARCH_PANEL_LIMIT = 200
 

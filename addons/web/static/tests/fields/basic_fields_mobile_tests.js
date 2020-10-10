@@ -1,4 +1,4 @@
-odoo.define('web.basic_fields_mobile_tests', function (require) {
+autanac.define('web.basic_fields_mobile_tests', function (require) {
 "use strict";
 
 var FormView = require('web.FormView');
@@ -70,7 +70,7 @@ QUnit.module('basic_fields', {
             res_id: 1,
         });
 
-        var $phoneLink = form.$('a.o_form_uri.o_field_widget');
+        var $phoneLink = form.$('a.o_form_uri.a_field_widget');
         assert.strictEqual($phoneLink.length, 1,
             "should have a anchor with correct classes");
         assert.strictEqual($phoneLink.text(), 'yop',
@@ -80,17 +80,17 @@ QUnit.module('basic_fields', {
 
         // switch to edit mode and check the result
         await testUtils.form.clickEdit(form);
-        assert.containsOnce(form, 'input[type="text"].o_field_widget',
+        assert.containsOnce(form, 'input[type="text"].a_field_widget',
             "should have an int for the phone field");
-        assert.strictEqual(form.$('input[type="text"].o_field_widget').val(), 'yop',
+        assert.strictEqual(form.$('input[type="text"].a_field_widget').val(), 'yop',
             "input should contain field value in edit mode");
 
         // change value in edit mode
-        await testUtils.fields.editInput(form.$('input[type="text"].o_field_widget'), 'new');
+        await testUtils.fields.editInput(form.$('input[type="text"].a_field_widget'), 'new');
 
         // save
         await testUtils.form.clickSave(form);
-        $phoneLink = form.$('a.o_form_uri.o_field_widget');
+        $phoneLink = form.$('a.o_form_uri.a_field_widget');
         assert.strictEqual($phoneLink.text(), 'new',
             "new value should be displayed properly");
         assert.hasAttrValue($phoneLink, 'href', 'tel:new',
@@ -109,12 +109,12 @@ QUnit.module('basic_fields', {
             arch: '<tree editable="bottom"><field name="foo" widget="phone"/></tree>',
         });
 
-        assert.containsN(list, '.o_data_row', 3,
+        assert.containsN(list, '.a_data_row', 3,
             "should have 3 record");
         assert.strictEqual(list.$('tbody td:not(.o_list_record_selector)').first().text(), 'yop',
             "value should be displayed properly");
 
-        var $phoneLink = list.$('a.o_form_uri.o_field_widget');
+        var $phoneLink = list.$('a.o_form_uri.a_field_widget');
         assert.strictEqual($phoneLink.length, 3,
             "should have anchors with correct classes");
         assert.hasAttrValue($phoneLink.first(), 'href', 'tel:yop',
@@ -123,7 +123,7 @@ QUnit.module('basic_fields', {
         // Edit a line and check the result
         var $cell = list.$('tbody td:not(.o_list_record_selector)').first();
         await testUtils.dom.click($cell);
-        assert.hasClass($cell.parent(),'o_selected_row', 'should be set as edit mode');
+        assert.hasClass($cell.parent(),'a_selected_row', 'should be set as edit mode');
         assert.strictEqual($cell.find('input').val(), 'yop',
             'should have the corect value in internal input');
         await testUtils.fields.editInput($cell.find('input'), 'new');
@@ -131,10 +131,10 @@ QUnit.module('basic_fields', {
         // save
         await testUtils.dom.click(list.$buttons.find('.o_list_button_save'));
         $cell = list.$('tbody td:not(.o_list_record_selector)').first();
-        assert.doesNotHaveClass($cell.parent(), 'o_selected_row', 'should not be in edit mode anymore');
+        assert.doesNotHaveClass($cell.parent(), 'a_selected_row', 'should not be in edit mode anymore');
         assert.strictEqual(list.$('tbody td:not(.o_list_record_selector)').first().text(), 'new',
             "value should be properly updated");
-        $phoneLink = list.$('a.o_form_uri.o_field_widget');
+        $phoneLink = list.$('a.o_form_uri.a_field_widget');
         assert.strictEqual($phoneLink.length, 3,
             "should still have anchors with correct classes");
         assert.hasAttrValue($phoneLink.first(), 'href', 'tel:new',
@@ -164,11 +164,11 @@ QUnit.module('basic_fields', {
         });
 
         var val = '<script>throw Error();</script><script>throw Error();</script>';
-        await testUtils.fields.editInput(form.$('input.o_field_widget[name="foo"]'), val);
+        await testUtils.fields.editInput(form.$('input.a_field_widget[name="foo"]'), val);
 
         // save
         await testUtils.form.clickSave(form);
-        assert.strictEqual(form.$('.o_field_widget').text(), val,
+        assert.strictEqual(form.$('.a_field_widget').text(), val,
             "value should have been correctly escaped");
 
         form.destroy();

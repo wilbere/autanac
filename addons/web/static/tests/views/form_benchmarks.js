@@ -1,4 +1,4 @@
-odoo.define('web.form_benchmarks', function (require) {
+autanac.define('web.form_benchmarks', function (require) {
 "use strict";
 
 var FormView = require('web.FormView');
@@ -85,7 +85,7 @@ QUnit.module('Form View', {
                 '</form>';
         this.run(assert, done, function (form) {
             testUtils.form.clickEdit(form);
-            form.$('.o_data_cell:first').click();
+            form.$('.a_data_cell:first').click();
             form.$('input:first').val("tralala").trigger('input');
         });
     });

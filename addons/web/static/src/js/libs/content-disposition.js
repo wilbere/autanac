@@ -26,7 +26,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /**
  * Stripped down to only parsing/decoding.
  */
-odoo.define('web.contentdisposition', function () {
+autanac.define('web.contentdisposition', function () {
 'use strict';
 
 /**

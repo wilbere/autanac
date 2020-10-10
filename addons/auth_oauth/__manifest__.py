@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'OAuth2 Authentication',
     'category': 'Tools',
     'description': """
-Allow users to login through OAuth2 Provider.
-=============================================
+Permitir a las usuarios iniciar sesión a través del Proveedor OAuth2.
 """,
-    'maintainer': 'Odoo S.A.',
     'depends': ['base', 'web', 'base_setup', 'auth_signup'],
     'data': [
         'data/auth_oauth_data.xml',

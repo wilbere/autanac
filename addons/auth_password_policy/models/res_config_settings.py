@@ -1,4 +1,4 @@
-from odoo import api, fields, models, _
+from autanac import api, fields, models, _
 
 
 class ResConfigSettings(models.TransientModel):

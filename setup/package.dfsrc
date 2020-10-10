@@ -1,7 +1,7 @@
 # Please note that this Dockerfile is used for testing nightly builds and should
-# not be used to deploy Odoo
+# not be used to deploy autanac
 FROM debian:buster
-MAINTAINER Odoo S.A. <info@odoo.com>
+MAINTAINER autanac S.A. <info@autanac.com>
 
 RUN apt-get update && \
 	apt-get install -y locales && \

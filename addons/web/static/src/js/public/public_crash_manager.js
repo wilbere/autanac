@@ -1,4 +1,4 @@
-odoo.define('web.PublicCrashManager', function (require) {
+autanac.define('web.PublicCrashManager', function (require) {
 "use strict";
 
 const core = require('web.core');

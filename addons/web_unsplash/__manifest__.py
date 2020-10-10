@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 {
     'name': 'Unsplash Image Library',
     'category': 'Hidden',
     'summary': 'Find free high-resolution images from Unsplash',
     'version': '1.1',
-    'description': """Explore the free high-resolution image library of Unsplash.com and find images to use in Odoo. An Unsplash search bar is added to the image library modal.""",
+    'description': """Explore la biblioteca de imágenes de alta resolución gratuita de Unsplash.com y busque imágenes para usar en Autana. Se agrega una barra de búsqueda Unsplash al modal de la biblioteca de imágenes.""",
     'depends': ['base_setup', 'web_editor'],
     'data': [
         'views/res_config_settings_view.xml',

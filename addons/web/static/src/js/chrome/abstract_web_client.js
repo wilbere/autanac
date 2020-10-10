@@ -1,4 +1,4 @@
-odoo.define('web.AbstractWebClient', function (require) {
+autanac.define('web.AbstractWebClient', function (require) {
 "use strict";
 
 /**
@@ -91,8 +91,8 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
         set_title_part: '_onSetTitlePart',
     },
     init: function (parent) {
-        // a flag to determine that odoo is fully loaded
-        odoo.isReady = false;
+        // a flag to determine that autanac is fully loaded
+        autanac.isReady = false;
         this.client_options = {};
         this._super(parent);
         ServiceProviderMixin.init.call(this);
@@ -101,7 +101,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
         this._current_state = null;
         this.menu_dp = new concurrency.DropPrevious();
         this.action_mutex = new concurrency.Mutex();
-        this.set('title_part', {"zopenerp": "Odoo"});
+        this.set('title_part', {"zopenerp": "AutanaShops"});
     },
     start: function () {
         var self = this;
@@ -154,7 +154,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
                 // Listen to 'scroll' event and propagate it on main bus
                 self.action_manager.$el.on('scroll', core.bus.trigger.bind(core.bus, 'scroll'));
                 core.bus.trigger('web_client_ready');
-                odoo.isReady = true;
+                autanac.isReady = true;
                 if (session.uid === 1) {
                     self.$el.addClass('o_is_superuser');
                 }
@@ -374,7 +374,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
     },
     /**
      * @private
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      * @param {Object} e.data.filter the filter description
      * @param {function} e.data.on_success called when the RPC succeeds with its
      *   returned value as argument
@@ -386,7 +386,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
     },
     /**
      * @private
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      * @param {Object} e.data.filter the filter description
      * @param {function} e.data.on_success called when the RPC succeeds with its
      *   returned value as argument
@@ -400,7 +400,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
      * Displays a warning in a dialog or with the notification service
      *
      * @private
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      * @param {string} e.data.message the warning's message
      * @param {string} e.data.title the warning's title
      * @param {string} [e.data.type] 'dialog' to display in a dialog
@@ -423,7 +423,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
      * main scrolling area of the webclient.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {function} ev.data.callback
      */
     _onGetScrollPosition: function (ev) {
@@ -433,7 +433,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
      * Loads an action from the database given its ID.
      *
      * @private
-     * @param {OdooEvent} event
+     * @param {autanacEvent} event
      * @param {integer} event.data.actionID
      * @param {Object} event.data.context
      * @param {function} event.data.on_success
@@ -445,7 +445,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
     },
     /**
      * @private
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      */
     _onPushState: function (e) {
         this.do_push_state(_.extend(e.data.state, {'cids': $.bbq.getState().cids}));
@@ -455,7 +455,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
      * It must be called with: trigger_up('scrollTo', options).
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {integer} [ev.data.top] the number of pixels to scroll from top
      * @param {integer} [ev.data.left] the number of pixels to scroll from left
      * @param {string} [ev.data.selector] the selector of the target element to
@@ -478,7 +478,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {string} ev.data.part
      * @param {string} [ev.data.title]
      */
@@ -491,7 +491,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
      * Displays a visual effect (for example, a rainbowman0
      *
      * @private
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      * @param {Object} [e.data] - key-value options to decide rainbowman
      *   behavior / appearance
      */

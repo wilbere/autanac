@@ -1,2 +1,2 @@
-debian/odoo.conf /etc/odoo
-README.md /usr/share/doc/odoo
+debian/autanac.conf /etc/autanac
+README.md /usr/share/doc/autanac

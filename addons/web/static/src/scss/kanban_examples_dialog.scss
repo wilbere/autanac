@@ -1,11 +1,11 @@
 // container ghost card in modal
-.o_kanban_examples_dialog {
+.a_kanban_examples_dialog {
     display: flex;
     padding: 0px;
     background: theme-color('light');
 
     // sidebar
-    .o_kanban_examples_dialog_nav {
+    .a_kanban_examples_dialog_nav {
         flex: 0 0 auto;
         border-right: 1px solid gray('300');
         background: white;
@@ -31,10 +31,10 @@
     }
 
     // content
-    .o_kanban_examples_dialog_content {
+    .a_kanban_examples_dialog_content {
         flex: 1 1 100%;
 
-        .o_kanban_examples_description {
+        .a_kanban_examples_description {
             padding: 16px 16px 0;
             text-align: justify;
         }
@@ -42,18 +42,18 @@
 }
 
 // container ghost card in background
-.o_kanban_example_background_container {
+.a_kanban_example_background_container {
     display: flex;
     padding: 0px;
     opacity: 0.4;
 
     // content
-    .o_kanban_example_background {
+    .a_kanban_example_background {
         flex: 1 1 100%;
 
-        .o_kanban_examples {
-            .o_kanban_examples_group {
-                .o_kanban_examples_ghost {
+        .a_kanban_examples {
+            .a_kanban_examples_group {
+                .a_kanban_examples_ghost {
                     width: 224px;
                     margin-bottom: 10px;
                 }
@@ -64,15 +64,15 @@
 
 
 // kanban ghost card
-.o_kanban_examples {
+.a_kanban_examples {
     display: flex;
     padding: 0 6px;
 
-    .o_kanban_examples_group {
+    .a_kanban_examples_group {
         flex: 1 1 100%;
         margin: 10px;
 
-        .o_kanban_examples_ghost {
+        .a_kanban_examples_ghost {
             padding: 5px;
             margin-top: -1px;
             border: thin solid gray('300');

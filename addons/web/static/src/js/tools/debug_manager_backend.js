@@ -1,4 +1,4 @@
-odoo.define('web.DebugManager.Backend', function (require) {
+autanac.define('web.DebugManager.Backend', function (require) {
 "use strict";
 
 var ActionManager = require('web.ActionManager');

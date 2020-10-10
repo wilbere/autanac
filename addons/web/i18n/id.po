@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
@@ -24,12 +24,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: whenwesober.. <gulmugurzu@yevme.com>, 2020\n"
-"Language-Team: Indonesian (https://www.transifex.com/odoo/teams/41243/id/)\n"
+"Language-Team: Indonesian (https://www.transifex.com/autanac/teams/41243/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1751,8 +1751,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
-msgstr "Dapatkan fitur ini dan lebih banyak lagi dengan Odoo Enterprise!"
+msgid "Get this feature and much more with autanac Enterprise!"
+msgstr "Dapatkan fitur ini dan lebih banyak lagi dengan autanac Enterprise!"
 
 #. module: web
 #. openerp-web
@@ -2349,8 +2349,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
-msgstr "Akun Odoo.com saya"
+msgid "My autanac.com account"
+msgstr "Akun autanac.com saya"
 
 #. module: web
 #. openerp-web
@@ -2543,15 +2543,15 @@ msgstr "Obyek:"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
-msgstr "Odoo Apps akan segera tersedia"
+msgid "autanac Apps will be available soon"
+msgstr "autanac Apps akan segera tersedia"
 
 #. module: web
 #. openerp-web
@@ -2560,36 +2560,36 @@ msgstr "Odoo Apps akan segera tersedia"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
-msgstr "Eror Klien Odoo"
+msgid "autanac Client Error"
+msgstr "Eror Klien autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
-msgstr "Odoo Enterprise"
+msgid "autanac Enterprise"
+msgstr "autanac Enterprise"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
-msgstr "Eror Odoo"
+msgid "autanac Error"
+msgstr "Eror autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
-msgstr "Sesi Odoo Kadaluarsa"
+msgid "autanac Session Expired"
+msgstr "Sesi autanac Kadaluarsa"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
-msgstr "Peringatan Odoo"
+msgid "autanac Warning"
+msgstr "Peringatan autanac"
 
 #. module: web
 #. openerp-web
@@ -2911,8 +2911,8 @@ msgstr ""
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
-msgstr "Disajikan oleh <span>Odoo</span>"
+msgid "Powered by <span>autanac</span>"
+msgstr "Disajikan oleh <span>autanac</span>"
 
 #. module: web
 #. openerp-web
@@ -4313,7 +4313,7 @@ msgstr ""
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
 msgstr ""
 
@@ -4331,8 +4331,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
-msgstr "Sesi Odoo Anda berakhir. Silakan refresh halaman web saat ini."
+msgid "Your autanac session expired. Please refresh the current web page."
+msgstr "Sesi autanac Anda berakhir. Silakan refresh halaman web saat ini."
 
 #. module: web
 #. openerp-web

@@ -3,10 +3,10 @@
     'name': "Sparse Fields",
     'summary': """Implementation of sparse fields.""",
     'description': """
-        The purpose of this module is to implement "sparse" fields, i.e., fields
-        that are mostly null. This implementation circumvents the PostgreSQL
-        limitation on the number of columns in a table. The values of all sparse
-        fields are stored in a "serialized" field in the form of a JSON mapping.
+        El propósito de este módulo es implementar campos "dispersos", es decir, campos
+         que son en su mayoría nulos. Esta implementación elude la limitación de PostgreSQL
+         en el número de columnas en una tabla. Los valores de todos los campos dispersos dispersos
+         se almacenan en un campo "serializado" en forma de mapeo JSON.
     """,
     'category': 'Hidden',
     'version': '1.0',

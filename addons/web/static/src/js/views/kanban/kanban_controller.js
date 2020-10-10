@@ -1,4 +1,4 @@
-odoo.define('web.KanbanController', function (require) {
+autanac.define('web.KanbanController', function (require) {
 "use strict";
 
 /**
@@ -225,7 +225,7 @@ var KanbanController = BasicController.extend({
      * a group and to update the renderer
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onAddColumn: function (ev) {
         var self = this;
@@ -245,7 +245,7 @@ var KanbanController = BasicController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onAddRecordToColumn: function (ev) {
         var self = this;
@@ -264,7 +264,7 @@ var KanbanController = BasicController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onButtonClicked: function (ev) {
         var self = this;
@@ -338,7 +338,7 @@ var KanbanController = BasicController.extend({
     _onButtonsKeyDown: function (ev) {
         switch(ev.keyCode) {
             case $.ui.keyCode.DOWN:
-                this.$('.o_kanban_record:first').focus();
+                this.$('.a_kanban_record:first').focus();
         }
     },
     /**
@@ -350,24 +350,24 @@ var KanbanController = BasicController.extend({
     _onClick: function (ev) {
         var state = this.model.get(this.handle, {raw: true});
         if (!state.count && this.buttons) {
-            var classesList = ['o_kanban_view', 'o_kanban_group', 'o_column_quick_create', 'o_view_nocontent_smiling_face'];
+            var classesList = ['a_kanban_view', 'a_kanban_group', 'o_column_quick_create', 'o_view_nocontent_smiling_face'];
             var $target = $(ev.target);
             var hasClassList = _.map(classesList, function(klass){ return $target.hasClass(klass) });
             if (_.some(hasClassList)) {
-                this.$buttons.find('.o-kanban-button-new').odooBounce();
+                this.$buttons.find('.o-kanban-button-new').autanacBounce();
             }
         }
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onColumnResequence: function (ev) {
         this._resequenceRecords(ev.target.db_id, ev.data.ids);
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onDeleteColumn: function (ev) {
         var self = this;
@@ -385,7 +385,7 @@ var KanbanController = BasicController.extend({
      * lazy loaded)
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onLoadColumnRecords: function (ev) {
         var self = this;
@@ -401,7 +401,7 @@ var KanbanController = BasicController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onLoadMore: function (ev) {
         var self = this;
@@ -414,7 +414,7 @@ var KanbanController = BasicController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {KanbanColumn} ev.target the column in which the record should
      *   be added
      * @param {Object} ev.data.values the field values of the record to
@@ -468,14 +468,14 @@ var KanbanController = BasicController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onRecordDelete: function (ev) {
         this._deleteRecords([ev.data.id]);
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onResequenceColumn: function (ev) {
         var self = this;
@@ -485,7 +485,7 @@ var KanbanController = BasicController.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {boolean} [ev.data.openQuickCreate=false] if true, opens the
      *   QuickCreate in the toggled column (it assumes that we are opening it)
      */
@@ -505,7 +505,7 @@ var KanbanController = BasicController.extend({
      * @todo should simply use field_changed event...
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {function} [ev.data.onSuccess] callback to execute after applying
      *   changes
      */
@@ -520,7 +520,7 @@ var KanbanController = BasicController.extend({
      * Allow the user to archive/restore all the records of a column.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onToggleActiveRecords: function (ev) {
         var self = this;

@@ -1,4 +1,4 @@
-odoo.define('web.kanban_column_quick_create', function (require) {
+autanac.define('web.kanban_column_quick_create', function (require) {
 "use strict";
 
 /**
@@ -18,8 +18,8 @@ var ColumnQuickCreate = Widget.extend({
     template: 'KanbanView.ColumnQuickCreate',
     events: {
         'click .o_quick_create_folded': '_onUnfold',
-        'click .o_kanban_add': '_onAddClicked',
-        'click .o_kanban_examples': '_onShowExamples',
+        'click .a_kanban_add': '_onAddClicked',
+        'click .a_kanban_examples': '_onShowExamples',
         'keydown': '_onKeydown',
         'keypress input': '_onKeypress',
         'blur input': '_onInputBlur',

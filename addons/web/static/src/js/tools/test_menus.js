@@ -11,9 +11,9 @@
     var blackListedMenus = ['base.menu_theme_store', 'base.menu_third_party'];
 
     function createWebClientHooks() {
-        var AbstractController = odoo.__DEBUG__.services['web.AbstractController'];
-        var Discuss = odoo.__DEBUG__.services['mail.Discuss'];
-        var WebClient = odoo.__DEBUG__.services["web.WebClient"];
+        var AbstractController = autanac.__DEBUG__.services['web.AbstractController'];
+        var Discuss = autanac.__DEBUG__.services['mail.Discuss'];
+        var WebClient = autanac.__DEBUG__.services["web.WebClient"];
 
         WebClient.include({
             current_action_updated : function (action, controller) {
@@ -56,18 +56,18 @@
         createWebClientHooks();
         testedApps = [];
         testedMenus = [];
-        var isEnterprise = odoo.session_info.server_version_info[5] === 'e';
+        var isEnterprise = autanac.session_info.server_version_info[5] === 'e';
         // finding applications menus
         var $listOfAppMenuItems;
         if (isEnterprise) {
-            console.log("Odoo flavor: Enterprise");
+            console.log("autanac flavor: Enterprise");
             if (menu_id !== undefined) {
                 $listOfAppMenuItems = $('a.o_app.o_menuitem[data-menu=' + menu_id + ']');
             } else {
                 $listOfAppMenuItems = $('a.o_app.o_menuitem');
             }
         } else {
-            console.log("Odoo flavor: Community");
+            console.log("autanac flavor: Community");
             if (menu_id !== undefined) {
                 $listOfAppMenuItems = $('a.o_app[data-menu-id=' + menu_id + ']');
             } else {

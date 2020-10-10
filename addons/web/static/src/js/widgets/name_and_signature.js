@@ -1,4 +1,4 @@
-odoo.define('web.name_and_signature', function (require) {
+autanac.define('web.name_and_signature', function (require) {
 'use strict';
 
 var core = require('web.core');

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 from collections import deque
 import json
 
-from odoo import http
-from odoo.http import request
-from odoo.tools import ustr
-from odoo.tools.misc import xlwt
+from autanac import http
+from autanac.http import request
+from autanac.tools import ustr
+from autanac.tools.misc import xlwt
 
 
 class TableExporter(http.Controller):

@@ -4,12 +4,12 @@
 /**
  * QUnit Config
  *
- * The Odoo javascript test framework is based on QUnit (http://qunitjs.com/).
+ * The autanac javascript test framework is based on QUnit (http://qunitjs.com/).
  * This file is necessary to setup Qunit and to prepare its interactions with
- * Odoo.  It has to be loaded before any tests are defined.
+ * autanac.  It has to be loaded before any tests are defined.
  *
- * Note that it is not an Odoo module, because we want this code to be executed
- * as soon as possible, not whenever the Odoo module system feels like it.
+ * Note that it is not an autanac module, because we want this code to be executed
+ * as soon as possible, not whenever the autanac module system feels like it.
  */
 
 
@@ -23,7 +23,7 @@ QUnit.config.requireExpects = true;
 /**
  * not important in normal mode, but in debug=assets, the files are loaded
  * asynchroneously, which can lead to various issues with QUnit... Notice that
- * this is done outside of odoo modules, otherwise the setting would not take
+ * this is done outside of autanac modules, otherwise the setting would not take
  * effect on time.
  */
 QUnit.config.autostart = false;
@@ -63,9 +63,9 @@ async function checkModules() {
     $modulesAlert.appendTo('#qunit');
 
     // wait for the module system to end processing the JS modules
-    await odoo.__DEBUG__.didLogInfo;
+    await autanac.__DEBUG__.didLogInfo;
 
-    const info = odoo.__DEBUG__.jsModules;
+    const info = autanac.__DEBUG__.jsModules;
     if (info.missing.length || info.failed.length) {
         $('#qunit-banner').addClass('qunit-fail');
         $modulesAlert.toggleClass('alert-info alert-danger');
@@ -142,7 +142,7 @@ QUnit.moduleDone(function(result) {
  *
  * Note: this event is not QUnit standard, we added it for this specific use case.
  */
-QUnit.on('OdooAfterTestHook', function () {
+QUnit.on('autanacAfterTestHook', function () {
     // check for leftover elements in the body
     var $bodyChilds = $('body > *');
     var validElements = [

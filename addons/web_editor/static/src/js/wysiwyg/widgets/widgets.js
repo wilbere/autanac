@@ -1,4 +1,4 @@
-odoo.define('wysiwyg.widgets', function (require) {
+autanac.define('wysiwyg.widgets', function (require) {
 'use strict';
 
 var Dialog = require('wysiwyg.widgets.Dialog');

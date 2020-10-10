@@ -15,7 +15,7 @@ $-main-color: map-get($o-theme-color-palette, 'alpha');
 $-main-color-lightness: lightness($-main-color);
 $o-theme-color-palette: map-merge((
     // alpha and beta colors are used to override primary and secondary BS4
-    // colors by default, so that theme colors affect the default Odoo layouts
+    // colors by default, so that theme colors affect the default autanac layouts
     'primary': $-main-color,
     'secondary': map-get($o-theme-color-palette, 'beta'),
 

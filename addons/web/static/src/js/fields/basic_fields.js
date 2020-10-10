@@ -1,4 +1,4 @@
-odoo.define('web.basic_fields', function (require) {
+autanac.define('web.basic_fields', function (require) {
 "use strict";
 
 /**
@@ -24,7 +24,7 @@ var field_utils = require('web.field_utils');
 var time = require('web.time');
 var ColorpickerDialog = require('web.ColorpickerDialog');
 
-require("web.zoomodoo");
+require("web.zoomautanac");
 
 var qweb = core.qweb;
 var _t = core._t;
@@ -310,7 +310,7 @@ var InputField = DebouncedField.extend({
      * has been trigerred. This allows to detect that all changes have been
      * acknowledged by the environment.
      *
-     * @param {OdooEvent} event 'field_changed' event
+     * @param {autanacEvent} event 'field_changed' event
      */
     _onFieldChanged: function (event) {
         this.lastChangeEvent = event;
@@ -331,7 +331,7 @@ var InputField = DebouncedField.extend({
      * start/end of the input element.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNavigationMove: function (ev) {
         this._super.apply(this, arguments);
@@ -640,7 +640,7 @@ var FieldDateRange = InputField.extend({
         var changedEndDate = picker.endDate;
         if (this.isDateField) {
             // In date mode, the library will give moment object of start and end date having
-            // time at 00:00:00. So, Odoo will consider it as UTC. To fix this added browser
+            // time at 00:00:00. So, autanac will consider it as UTC. To fix this added browser
             // timezone offset in dates to get a correct selected date.
             changedStartDate = picker.startDate.add(session.getTZOffset(picker.startDate), 'minutes');
             changedEndDate = picker.endDate.startOf('day').add(session.getTZOffset(picker.endDate), 'minutes');
@@ -1316,7 +1316,7 @@ var FieldFloatToggle = AbstractField.extend({
      * the range will be displayed.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onClick: function(ev) {
         if (this.mode === 'edit') {
@@ -1387,7 +1387,7 @@ var FieldText = InputField.extend(TranslatableFieldMixin, {
      * Stops the enter navigation in a text area.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onKeydown: function (ev) {
         if (ev.which === $.ui.keyCode.ENTER) {
@@ -1885,7 +1885,7 @@ var FieldBinaryImage = AbstractFieldBinary.extend({
                 $img.attr('data-zoom', 1);
                 $img.attr('data-zoom-image', url);
 
-                $img.zoomOdoo({
+                $img.zoomautanac({
                     event: 'mouseenter',
                     timer: zoomDelay,
                     attach: '.o_content',
@@ -2486,7 +2486,7 @@ var LabelSelection = AbstractField.extend({
 
 var BooleanToggle = FieldBoolean.extend({
     description: _lt("Toggle"),
-    className: FieldBoolean.prototype.className + ' o_boolean_toggle',
+    className: FieldBoolean.prototype.className + ' a_boolean_toggle',
     events: {
         'click': '_onClick'
     },
@@ -2504,7 +2504,7 @@ var BooleanToggle = FieldBoolean.extend({
     _onClick: function (event) {
         event.stopPropagation();
         this._setValue(!this.value);
-        this.$el.closest(".o_data_row").toggleClass('text-muted', this.value);
+        this.$el.closest(".a_data_row").toggleClass('text-muted', this.value);
     },
 });
 
@@ -3210,7 +3210,7 @@ var FieldDomain = AbstractField.extend({
      * one which is in a dialog (@see _onDomainSelectorDialogValueChange))
      * -> Adapt the internal value state
      *
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      */
     _onDomainSelectorValueChange: function (e) {
         if (this.inDialog) return;
@@ -3220,7 +3220,7 @@ var FieldDomain = AbstractField.extend({
      * Called when the in-dialog domain selector value is confirmed
      * -> Adapt the internal value state
      *
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      */
     _onDomainSelectorDialogValueChange: function (e) {
         this._setValue(Domain.prototype.arrayToString(e.data.domain));
@@ -3229,7 +3229,7 @@ var FieldDomain = AbstractField.extend({
      * Stops the propagation of the 'open_record' event, as we don't want the
      * user to be able to open records from the list opened in a dialog.
      *
-     * @param {OdooEvent} event
+     * @param {autanacEvent} event
      */
     _onOpenRecord: function (event) {
         event.stopPropagation();
@@ -3416,7 +3416,7 @@ var FieldColor = AbstractField.extend({
 
     /**
     * @private
-    * @param {OdooEvent} ev
+    * @param {autanacEvent} ev
     */
     _onColorpickerSaved: function (ev) {
         this._setValue(ev.data.hex);

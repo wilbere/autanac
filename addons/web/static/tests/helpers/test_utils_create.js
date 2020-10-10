@@ -1,4 +1,4 @@
-odoo.define('web.test_utils_create', function (require) {
+autanac.define('web.test_utils_create', function (require) {
 "use strict";
 
 /**
@@ -58,7 +58,7 @@ var createActionManager = async function (params) {
     });
     testUtilsMock.addMockEnvironment(widget, _.defaults(params, { debounce: false }));
     await widget.prependTo($target);
-    widget.$el.addClass('o_web_client');
+    widget.$el.addClass('a_web_client');
     if (config.device.isMobile) {
         widget.$el.addClass('o_touch_device');
     }
@@ -95,7 +95,7 @@ var createActionManager = async function (params) {
  * @param {any[]} [params.domain] the initial domain for the view
  * @param {Object} [params.context] the initial context for the view
  * @param {Object} [params.debug=false] if true, the widget will be appended in
- *   the DOM. Also, RPCs and uncaught OdooEvent will be logged
+ *   the DOM. Also, RPCs and uncaught autanacEvent will be logged
  * @param {string[]} [params.groupBy] the initial groupBy for the view
  * @param {integer} [params.fieldDebounce=0] the debounce value to use for the
  *   duration of the test.
@@ -116,7 +116,7 @@ async function createView(params) {
         $target.addClass('debug');
     }
     // reproduce the DOM environment of views
-    var $webClient = $('<div>').addClass('o_web_client').prependTo($target);
+    var $webClient = $('<div>').addClass('a_web_client').prependTo($target);
     var $actionManager = $('<div>').addClass('o_action_manager').appendTo($webClient);
 
 
@@ -237,7 +237,7 @@ async function createCalendarView(params, options) {
  * @param {Object} [params.action={}]
  * @param {Object} [params.context={}]
  * @param {Object} [params.debug=false] if true, the widget will be appended in
- *   the DOM. Also, RPCs and uncaught OdooEvent will be logged
+ *   the DOM. Also, RPCs and uncaught autanacEvent will be logged
  * @param {string} [params.domain=[]]
  * @param {integer} [params.fieldDebounce=0] the debounce value to use for the
  *   duration of the test.
@@ -270,7 +270,7 @@ function createControlPanel(params) {
         $target.addClass('debug');
     }
     // reproduce the DOM environment of a view control panel
-    var $webClient = $('<div>').addClass('o_web_client').prependTo($target);
+    var $webClient = $('<div>').addClass('a_web_client').prependTo($target);
     var $actionManager = $('<div>').addClass('o_action_manager').appendTo($webClient);
     var $action = $('<div>').addClass('o_action').appendTo($actionManager);
 

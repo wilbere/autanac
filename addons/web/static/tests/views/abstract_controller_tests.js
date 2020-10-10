@@ -1,4 +1,4 @@
-odoo.define("base.abstract_controller_tests", function (require) {
+autanac.define("base.abstract_controller_tests", function (require) {
 "use strict";
 
 var testUtils = require("web.test_utils");

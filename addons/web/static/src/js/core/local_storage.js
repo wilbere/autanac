@@ -1,4 +1,4 @@
-odoo.define('web.local_storage', function (require) {
+autanac.define('web.local_storage', function (require) {
 'use strict';
 
 var RamStorage = require('web.RamStorage');

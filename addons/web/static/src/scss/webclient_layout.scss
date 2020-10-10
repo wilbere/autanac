@@ -4,7 +4,7 @@
 html {
     height: 100%;
 
-    .o_web_client {
+    .a_web_client {
         height: 100%;
         display: flex;
         flex-flow: column nowrap;
@@ -73,7 +73,7 @@ html {
 }
 
 @media print {
-    html .o_web_client {
+    html .a_web_client {
         .o_main_navbar {
             display: none;
         }

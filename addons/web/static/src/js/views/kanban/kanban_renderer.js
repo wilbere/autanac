@@ -1,4 +1,4 @@
-odoo.define('web.KanbanRenderer', function (require) {
+autanac.define('web.KanbanRenderer', function (require) {
 "use strict";
 
 var BasicRenderer = require('web.BasicRenderer');
@@ -83,7 +83,7 @@ function transformQwebTemplate(node, fields) {
 }
 
 var KanbanRenderer = BasicRenderer.extend({
-    className: 'o_kanban_view',
+    className: 'a_kanban_view',
     config: { // the KanbanRecord and KanbanColumn classes to use (may be overridden)
         KanbanColumn: KanbanColumn,
         KanbanRecord: KanbanRecord,
@@ -96,7 +96,7 @@ var KanbanRenderer = BasicRenderer.extend({
         quick_create_column_updated: '_onQuickCreateColumnUpdated',
     }),
     events:_.extend({}, BasicRenderer.prototype.events || {}, {
-        'keydown .o_kanban_record' : '_onRecordKeyDown'
+        'keydown .a_kanban_record' : '_onRecordKeyDown'
     }),
 
     /**
@@ -163,7 +163,7 @@ var KanbanRenderer = BasicRenderer.extend({
      * Focuses the first kanban record
      */
     giveFocus: function () {
-        this.$('.o_kanban_record:first').focus();
+        this.$('.a_kanban_record:first').focus();
     },
     /**
      * Toggle fold/unfold the Column quick create widget
@@ -270,7 +270,7 @@ var KanbanRenderer = BasicRenderer.extend({
      */
     _focusOnPreviousCard: function (currentCardElement) {
         var previousCard = currentCardElement.previousElementSibling;
-        if (previousCard && previousCard.classList.contains("o_kanban_record")) { //previous element might be column title
+        if (previousCard && previousCard.classList.contains("a_kanban_record")) { //previous element might be column title
             previousCard.focus();
             return true;
         }
@@ -311,7 +311,7 @@ var KanbanRenderer = BasicRenderer.extend({
     _renderGhostDivs: function (fragment, nbDivs, options) {
         var ghostDefs = [];
         for (var $ghost, i = 0; i < nbDivs; i++) {
-            $ghost = $('<div>').addClass('o_kanban_record o_kanban_ghost');
+            $ghost = $('<div>').addClass('a_kanban_record a_kanban_ghost');
             if (options && options.inlineStyle) {
                 $ghost.attr('style', options.inlineStyle);
             }
@@ -352,8 +352,8 @@ var KanbanRenderer = BasicRenderer.extend({
             // Enable column sorting
             this.$el.sortable({
                 axis: 'x',
-                items: '> .o_kanban_group',
-                handle: '.o_kanban_header_title',
+                items: '> .a_kanban_group',
+                handle: '.a_kanban_header_title',
                 cursor: 'move',
                 revert: 150,
                 delay: 100,
@@ -361,7 +361,7 @@ var KanbanRenderer = BasicRenderer.extend({
                 forcePlaceholderSize: true,
                 stop: function () {
                     var ids = [];
-                    self.$('.o_kanban_group').each(function (index, u) {
+                    self.$('.a_kanban_group').each(function (index, u) {
                         // Ignore 'Undefined' column
                         if (_.isNumber($(u).data('id'))) {
                             ids.push($(u).data('id'));
@@ -411,7 +411,7 @@ var KanbanRenderer = BasicRenderer.extend({
                         (orderedBy.length === 0 || orderedBy[0].name === this.handleField);
         if (hasHandle) {
             this.$el.sortable({
-                items: '.o_kanban_record:not(.o_kanban_ghost)',
+                items: '.a_kanban_record:not(.a_kanban_ghost)',
                 cursor: 'move',
                 revert: 0,
                 delay: 0,
@@ -455,8 +455,8 @@ var KanbanRenderer = BasicRenderer.extend({
         return this._super.apply(this, arguments).then(function () {
             return Promise.all(defs).then(function () {
                 self.$el.empty();
-                self.$el.toggleClass('o_kanban_grouped', isGrouped);
-                self.$el.toggleClass('o_kanban_ungrouped', !isGrouped);
+                self.$el.toggleClass('a_kanban_grouped', isGrouped);
+                self.$el.toggleClass('a_kanban_ungrouped', !isGrouped);
                 self.$el.append(fragment);
                 self._toggleNoContentHelper();
                 if (self._isInDom) {
@@ -563,7 +563,7 @@ var KanbanRenderer = BasicRenderer.extend({
             currentColumn = candidateColumn;
             if (candidateColumn) {
                 var allCardsOfCandidateColumn =
-                    candidateColumn.getElementsByClassName('o_kanban_record');
+                    candidateColumn.getElementsByClassName('a_kanban_record');
                 if (allCardsOfCandidateColumn.length) {
                     allCardsOfCandidateColumn[0].focus();
                     hasSelectedACard = true;
@@ -602,7 +602,7 @@ var KanbanRenderer = BasicRenderer.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onQuickCreateColumnUpdated: function (ev) {
         ev.stopPropagation();
@@ -645,7 +645,7 @@ var KanbanRenderer = BasicRenderer.extend({
      * received data.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onSetProgressBarState: function (ev) {
         if (!this.columnOptions.progressBarStates[ev.data.columnID]) {
@@ -669,7 +669,7 @@ var KanbanRenderer = BasicRenderer.extend({
      * @private
      **/
     _updateExampleBackground: function () {
-        var $elem = this.$('.o_kanban_example_background_container');
+        var $elem = this.$('.a_kanban_example_background_container');
         if (!this.state.data.length && !$elem.length) {
             this._renderExampleBackground(this.$el);
         } else {

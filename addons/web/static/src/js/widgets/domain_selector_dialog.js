@@ -1,4 +1,4 @@
-odoo.define("web.DomainSelectorDialog", function (require) {
+autanac.define("web.DomainSelectorDialog", function (require) {
 "use strict";
 
 var core = require("web.core");

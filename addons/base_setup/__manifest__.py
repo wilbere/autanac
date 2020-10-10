@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Initial Setup Tools',
     'version': '1.0',
     'category': 'Hidden',
     'description': """
-This module helps to configure the system at the installation of a new database.
+Este módulo ayuda a configurar el sistema en la instalación de una nueva base de datos.
 ================================================================================
 
-Shows you a list of applications features to install from.
 
     """,
     'depends': ['base', 'web'],

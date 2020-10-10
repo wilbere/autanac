@@ -1,4 +1,4 @@
-odoo.define('web.AbstractStorageService', function (require) {
+autanac.define('web.AbstractStorageService', function (require) {
 'use strict';
 
 /**

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 import io
 import logging
 import re
@@ -8,9 +8,9 @@ import werkzeug.wrappers
 from PIL import Image, ImageFont, ImageDraw
 from lxml import etree
 
-from odoo.http import request
-from odoo import http, tools, _
-from odoo.exceptions import UserError
+from autanac.http import request
+from autanac import http, tools, _
+from autanac.exceptions import UserError
 
 logger = logging.getLogger(__name__)
 

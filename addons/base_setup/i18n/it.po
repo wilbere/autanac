@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -7,17 +7,17 @@
 # Simone Bernini <simone@aperturelabs.it>, 2019
 # Paolo Valier, 2019
 # Pietro Della Notte <pdellanotte@gmail.com>, 2019
-# Léonie Bouchat <lbo@odoo.com>, 2019
+# Léonie Bouchat <lbo@autanac.com>, 2019
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~12.5\n"
+"Project-Id-Version: autanac Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: Sergio Zanchetta <primes2h@gmail.com>, 2020\n"
-"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"Language-Team: Italian (https://www.transifex.com/autanac/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -324,8 +324,8 @@ msgstr "Server di posta esterni"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze Odoo data from Google Spreadsheet"
-msgstr "Estrazione e analisi di dati Odoo da Fogli Google"
+msgid "Extract and analyze autanac data from Google Spreadsheet"
+msgstr "Estrazione e analisi di dati autanac da Fogli Google"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -501,15 +501,15 @@ msgstr "Autenticazione OAuth"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: base_setup
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo S.A."
-msgstr "Odoo S.A."
+msgid "Distribuidor Autana Cars c.a"
+msgstr "Distribuidor Autana Cars c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -634,8 +634,8 @@ msgstr "Uso di sistemi di autenticazione esterni (OAuth)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in Odoo Notes"
-msgstr "Uso di pad esterni nelle note Odoo"
+msgid "Use external pads in autanac Notes"
+msgstr "Uso di pad esterni nelle note autanac"
 
 #. module: base_setup
 #. openerp-web
@@ -649,11 +649,11 @@ msgstr "Utenti"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, Odoo provides a list of matching "
+"When populating your address book, autanac provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""
-"Quando compili la tua rubrica di indirizzi, Odoo fornisce un elenco di "
+"Quando compili la tua rubrica di indirizzi, autanac fornisce un elenco di "
 "aziende corrispondenti. Quando selezioni uno elemento, i dati e il logo "
 "dell'azienda vengono compilati automaticamente."
 

@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
@@ -10,12 +10,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Martin Trigaux, 2020\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/odoo/teams/41243/nb/)\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/autanac/teams/41243/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1748,8 +1748,8 @@ msgstr "Fushia"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
-msgstr "Få denne funksjonaliteten og mye mer med Odoo Enterprise!"
+msgid "Get this feature and much more with autanac Enterprise!"
+msgstr "Få denne funksjonaliteten og mye mer med autanac Enterprise!"
 
 #. module: web
 #. openerp-web
@@ -2344,8 +2344,8 @@ msgstr "Flere linjer med tekst"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
-msgstr "Min konto på odoo.com"
+msgid "My autanac.com account"
+msgstr "Min konto på autanac.com"
 
 #. module: web
 #. openerp-web
@@ -2538,15 +2538,15 @@ msgstr "Objekt:"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
-msgstr "Apper fra Odoo vil snart være tilgjengelige"
+msgid "autanac Apps will be available soon"
+msgstr "Apper fra autanac vil snart være tilgjengelige"
 
 #. module: web
 #. openerp-web
@@ -2555,36 +2555,36 @@ msgstr "Apper fra Odoo vil snart være tilgjengelige"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
-msgstr "Odoo-klientfeil"
+msgid "autanac Client Error"
+msgstr "autanac-klientfeil"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
-msgstr "Odoo Enterprise"
+msgid "autanac Enterprise"
+msgstr "autanac Enterprise"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
-msgstr "Odoo-feil"
+msgid "autanac Error"
+msgstr "autanac-feil"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
-msgstr "Odoo-økt har utløpt"
+msgid "autanac Session Expired"
+msgstr "autanac-økt har utløpt"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
-msgstr "Odoo-advarsel"
+msgid "autanac Warning"
+msgstr "autanac-advarsel"
 
 #. module: web
 #. openerp-web
@@ -2905,8 +2905,8 @@ msgstr ""
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
-msgstr "Drevet av <span>Odoo</span>"
+msgid "Powered by <span>autanac</span>"
+msgstr "Drevet av <span>autanac</span>"
 
 #. module: web
 #. openerp-web
@@ -4313,9 +4313,9 @@ msgstr ""
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
-msgstr "Du må starte Odoo med minst to workers for å printe pdf-rapporter."
+msgstr "Du må starte autanac med minst to workers for å printe pdf-rapporter."
 
 #. module: web
 #. openerp-web
@@ -4334,8 +4334,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
-msgstr "Odoo-økten din har utløpt. Last inn nettsiden på nytt."
+msgid "Your autanac session expired. Please refresh the current web page."
+msgstr "autanac-økten din har utløpt. Last inn nettsiden på nytt."
 
 #. module: web
 #. openerp-web

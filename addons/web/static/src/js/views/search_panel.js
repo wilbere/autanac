@@ -1,4 +1,4 @@
-odoo.define('web.SearchPanel', function (require) {
+autanac.define('web.SearchPanel', function (require) {
 "use strict";
 
 /**

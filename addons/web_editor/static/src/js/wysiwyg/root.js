@@ -1,4 +1,4 @@
-odoo.define('web_editor.wysiwyg.root', function (require) {
+autanac.define('web_editor.wysiwyg.root', function (require) {
 'use strict';
 
 var Widget = require('web.Widget');
@@ -35,7 +35,7 @@ var WysiwygRoot = Widget.extend({
             // JS module was requiring a delayed module, using it here right
             // away would lead to a crash.
             if (!assetsLoaded) {
-                var Wysiwyg = odoo.__DEBUG__.services['web_editor.wysiwyg'];
+                var Wysiwyg = autanac.__DEBUG__.services['web_editor.wysiwyg'];
                 _.each(['getRange', 'setRange', 'setRangeFromNode'], function (methodName) {
                     WysiwygRoot[methodName] = Wysiwyg[methodName].bind(Wysiwyg);
                 });
@@ -57,7 +57,7 @@ var WysiwygRoot = Widget.extend({
     },
 
     _getWysiwygContructor: function () {
-        return odoo.__DEBUG__.services['web_editor.wysiwyg'];
+        return autanac.__DEBUG__.services['web_editor.wysiwyg'];
     }
 });
 
@@ -65,7 +65,7 @@ return WysiwygRoot;
 
 });
 
-odoo.define('web_editor.wysiwyg.default_options', function (require) {
+autanac.define('web_editor.wysiwyg.default_options', function (require) {
 'use strict';
 
 /**

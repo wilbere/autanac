@@ -36,7 +36,7 @@ define([
       return (dropdown ? '<div class="btn-group' +
                (className ? ' ' + className : '') + '">' : '') +
                '<button type="button"' +
-                 ' class="btn btn-secondary btn-sm' +
+                 ' class="btn rounded-pill btn-secondary btn-sm' +
                    ((!dropdown && className) ? ' ' + className : '') +
                    (dropdown ? ' dropdown-toggle' : '') +
                  '"' +
@@ -512,8 +512,8 @@ define([
       return $notePopover;
     };
 
-    this.tplButtonInfo = tplButtonInfo; // ODOO: allow access for override
-    this.tplPopovers = tplPopovers; // ODOO: allow access for override
+    this.tplButtonInfo = tplButtonInfo; // autanac: allow access for override
+    this.tplPopovers = tplPopovers; // autanac: allow access for override
 
     var tplHandles = function (options) {
       return '<div class="note-handle">' +
@@ -656,7 +656,7 @@ define([
                      '<label>' + lang.image.url + '</label>' +
                      '<input class="note-image-url form-control col-md-12" type="text" />' +
                    '</div>';
-        var footer = '<button href="#" class="btn btn-primary note-image-btn disabled" disabled>' + lang.image.insert + '</button>';
+        var footer = '<button href="#" class="btn rounded-pill btn-primary note-image-btn disabled" disabled>' + lang.image.insert + '</button>';
         return tplDialog('note-image-dialog', lang.image.insert, body, footer);
       },
 
@@ -676,7 +676,7 @@ define([
                        '</label>' +
                      '</div>' : ''
                    );
-        var footer = '<button href="#" class="btn btn-primary note-link-btn disabled" disabled>' + lang.link.insert + '</button>';
+        var footer = '<button href="#" class="btn rounded-pill btn-primary note-link-btn disabled" disabled>' + lang.link.insert + '</button>';
         return tplDialog('note-link-dialog', lang.link.insert, body, footer);
       },
 
@@ -775,7 +775,7 @@ define([
       });
     };
 
-    this.createPalette = createPalette; // ODOO: allow access for override
+    this.createPalette = createPalette; // autanac: allow access for override
 
     /**
      * create summernote layout (air mode)
@@ -788,9 +788,9 @@ define([
       var keyMap = options.keyMap[agent.isMac ? 'mac' : 'pc'];
       var id = func.uniqueId();
 
-      $holder.addClass('note-air-editor note-editable'); // ODOO: removing panel-body class to remove unwanted style
+      $holder.addClass('note-air-editor note-editable'); // autanac: removing panel-body class to remove unwanted style
       $holder.attr({
-        'data-note-id': id, // ODOO: we use [data-note-id="{id}"] instead of [id="{id}"]
+        'data-note-id': id, // autanac: we use [data-note-id="{id}"] instead of [id="{id}"]
         // 'id': 'note-editor-' + id,
         'contentEditable': true
       });
@@ -799,12 +799,12 @@ define([
       var $container = $('#web_editor-toolbars')
 
       // create Popover
-      var $popover = $(this.tplPopovers(langInfo, options)); // ODOO: user (maybe) overrided method
+      var $popover = $(this.tplPopovers(langInfo, options)); // autanac: user (maybe) overrided method
       $popover.addClass('note-air-layout');
       $popover.attr('id', 'note-popover-' + id);
       $popover.appendTo($container);
       createTooltip($popover, keyMap);
-      this.createPalette($popover, options); // ODOO: use (maybe) overrided method
+      this.createPalette($popover, options); // autanac: use (maybe) overrided method
 
       // create Handle
       var $handle = $(tplHandles(options));
@@ -865,8 +865,8 @@ define([
       $('<textarea class="note-codable"></textarea>').prependTo($editingArea);
 
       //04. create Popover
-      var $popover = $(this.tplPopovers(langInfo, options)).prependTo($editingArea); // ODOO: use (maybe) overrided method
-      this.createPalette($popover, options); // ODOO: use (maybe) overrided method
+      var $popover = $(this.tplPopovers(langInfo, options)).prependTo($editingArea); // autanac: use (maybe) overrided method
+      this.createPalette($popover, options); // autanac: use (maybe) overrided method
       createTooltip($popover, keyMap);
 
       //05. handle(control selection, ...)
@@ -894,7 +894,7 @@ define([
       }
 
       var keyMap = options.keyMap[agent.isMac ? 'mac' : 'pc'];
-      this.createPalette($toolbar, options); // ODOO: use (maybe) overrided method
+      this.createPalette($toolbar, options); // autanac: use (maybe) overrided method
       createTooltip($toolbar, keyMap, 'bottom');
       $toolbar.prependTo($editor);
 
@@ -970,7 +970,7 @@ define([
     this.removeLayout = function ($holder, layoutInfo, options) {
       if (options.airMode) {
         $holder.removeClass('note-air-editor note-editable')
-               .removeAttr('contentEditable'); // ODOO: removed id 'id contentEditable'
+               .removeAttr('contentEditable'); // autanac: removed id 'id contentEditable'
 
         layoutInfo.popover().remove();
         layoutInfo.handle().remove();
@@ -998,7 +998,7 @@ define([
         button: tplButton,
         iconButton: tplIconButton,
         dialog: tplDialog,
-        dropdown: tplDropdown // ODOO: suggest upstream
+        dropdown: tplDropdown // autanac: suggest upstream
       };
     };
 

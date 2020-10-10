@@ -1,4 +1,4 @@
-odoo.define('web.pager_tests', function (require) {
+autanac.define('web.pager_tests', function (require) {
 "use strict";
 
 var Pager = require('web.Pager');

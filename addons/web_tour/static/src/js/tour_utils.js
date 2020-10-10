@@ -1,4 +1,4 @@
-odoo.define('web_tour.utils', function(require) {
+autanac.define('web_tour.utils', function(require) {
 "use strict";
 
 function get_step_key(name) {

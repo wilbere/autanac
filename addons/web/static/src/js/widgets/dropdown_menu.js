@@ -1,4 +1,4 @@
-odoo.define('web.DropdownMenu', function (require) {
+autanac.define('web.DropdownMenu', function (require) {
 "use strict";
 
 var core = require('web.core');

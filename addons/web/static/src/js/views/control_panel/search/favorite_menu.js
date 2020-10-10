@@ -1,4 +1,4 @@
-odoo.define('web.FavoriteMenu', function (require) {
+autanac.define('web.FavoriteMenu', function (require) {
 "use strict";
 
 var config = require('web.config');
@@ -95,7 +95,7 @@ var FavoriteMenu = DropdownMenu.extend({
      * repositions the current dropdown
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      *
      */
     _onSubMenuToggled: function (ev) {

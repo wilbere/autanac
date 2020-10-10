@@ -1,4 +1,4 @@
-odoo.define('web.KanbanColumnProgressBar', function (require) {
+autanac.define('web.KanbanColumnProgressBar', function (require) {
 'use strict';
 
 const core = require('web.core');
@@ -11,7 +11,7 @@ const _t = core._t;
 var KanbanColumnProgressBar = Widget.extend({
     template: 'KanbanView.ColumnProgressBar',
     events: {
-        'click .o_kanban_counter_progress': '_onProgressBarParentClick',
+        'click .a_kanban_counter_progress': '_onProgressBarParentClick',
         'click .progress-bar': '_onProgressBarClick',
     },
     /**
@@ -62,7 +62,7 @@ var KanbanColumnProgressBar = Widget.extend({
         _.each(this.colors, function (val, key) {
             self.$bars[key] = self.$(`.progress-bar[data-filter=${key}]`);
         });
-        this.$counter = this.$('.o_kanban_counter_side');
+        this.$counter = this.$('.a_kanban_counter_side');
         this.$number = this.$counter.find('b');
 
         if (this.currency) {
@@ -119,12 +119,12 @@ var KanbanColumnProgressBar = Widget.extend({
         // Update column display according to active filter
         this.trigger_up('tweak_column', {
             callback: function ($el) {
-                $el.removeClass('o_kanban_group_show');
+                $el.removeClass('a_kanban_group_show');
                 _.each(self.colors, function (val, key) {
-                    $el.removeClass('o_kanban_group_show_' + val);
+                    $el.removeClass('a_kanban_group_show_' + val);
                 });
                 if (self.activeFilter) {
-                    $el.addClass('o_kanban_group_show o_kanban_group_show_' + self.colors[self.activeFilter]);
+                    $el.addClass('a_kanban_group_show a_kanban_group_show_' + self.colors[self.activeFilter]);
                 }
             },
         });
@@ -208,7 +208,7 @@ var KanbanColumnProgressBar = Widget.extend({
             }
         }
         this.prevTotalCounterValue = end;
-        var animationClass = start > 999 ? 'o_kanban_grow' : 'o_kanban_grow_huge';
+        var animationClass = start > 999 ? 'a_kanban_grow' : 'a_kanban_grow_huge';
 
         if (start !== undefined && (end > start || this.activeFilter) && this.ANIMATE) {
             $({currentValue: start}).animate({currentValue: end}, {

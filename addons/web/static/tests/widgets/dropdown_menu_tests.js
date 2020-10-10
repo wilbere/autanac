@@ -1,4 +1,4 @@
-odoo.define('web.dropdown_menu_tests', function (require) {
+autanac.define('web.dropdown_menu_tests', function (require) {
 "use strict";
 
 var DropdownMenu = require('web.DropdownMenu');

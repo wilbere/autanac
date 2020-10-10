@@ -1,11 +1,11 @@
-odoo.define('web.select_create_controllers_registry', function (require) {
+autanac.define('web.select_create_controllers_registry', function (require) {
 "use strict";
 
 return {};
 
 });
 
-odoo.define('web._select_create_controllers_registry', function (require) {
+autanac.define('web._select_create_controllers_registry', function (require) {
 "use strict";
 
 var KanbanController = require('web.KanbanController');

@@ -1,4 +1,4 @@
-odoo.define('root.widget', function (require) {
+autanac.define('root.widget', function (require) {
 'use strict';
 
 var lazyloader = require('web.public.lazyloader');

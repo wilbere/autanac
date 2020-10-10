@@ -1,23 +1,23 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* http_routing
 # 
 # Translators:
 # Marco Tarsia <marco.y.tarsia@gmail.com>, 2019
-# Leon Grill <leg@odoo.com>, 2019
+# Leon Grill <leg@autanac.com>, 2019
 # e2f <projects@e2f.com>, 2019
 # Martin Trigaux, 2019
 # Wolfgang Taferner, 2019
-# Kevin Harrings <kha@odoo.com>, 2020
+# Kevin Harrings <kha@autanac.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-07 07:14+0000\n"
 "PO-Revision-Date: 2019-08-26 09:11+0000\n"
-"Last-Translator: Kevin Harrings <kha@odoo.com>, 2020\n"
-"Language-Team: German (https://www.transifex.com/odoo/teams/41243/de/)\n"
+"Last-Translator: Kevin Harrings <kha@autanac.com>, 2020\n"
+"Language-Team: German (https://www.transifex.com/autanac/teams/41243/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"

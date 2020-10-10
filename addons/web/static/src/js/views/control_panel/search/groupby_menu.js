@@ -1,4 +1,4 @@
-odoo.define('web.GroupByMenu', function (require) {
+autanac.define('web.GroupByMenu', function (require) {
 "use strict";
 
 var config = require('web.config');

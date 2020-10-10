@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 import logging
 import werkzeug
 
-from odoo import http, _
-from odoo.addons.auth_signup.models.res_users import SignupError
-from odoo.addons.web.controllers.main import ensure_db, Home
-from odoo.addons.base_setup.controllers.main import BaseSetup
-from odoo.exceptions import UserError
-from odoo.http import request
+from autanac import http, _
+from autanac.addons.auth_signup.models.res_users import SignupError
+from autanac.addons.web.controllers.main import ensure_db, Home
+from autanac.addons.base_setup.controllers.main import BaseSetup
+from autanac.exceptions import UserError
+from autanac.http import request
 
 _logger = logging.getLogger(__name__)
 

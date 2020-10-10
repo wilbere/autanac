@@ -8,7 +8,7 @@
     <!-- Buttons of the Control Panel -->
     <t t-name="report.client_action.ControlButtons">
         <div class="o_report_buttons">
-            <button type="button" class="btn btn-primary o_report_print" title="Print">Print</button>
+            <button type="button" class="btn rounded-pill btn-primary o_report_print" title="Print">Print</button>
         </div>
     </t>
 </template>

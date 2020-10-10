@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
     <div t-name='res_config_dev_tool'>
-        <div id="developer_tool">
+        <!-- <div id="developer_tool">
             <h2>Developer Tools</h2>
             <div class="row mt16 o_settings_container">
                 <div class="col-12 col-lg-6 o_setting_box" id="devel_tool">
@@ -14,6 +14,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>

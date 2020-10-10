@@ -1,4 +1,4 @@
-odoo.define('web.PieChart', function (require) {
+autanac.define('web.PieChart', function (require) {
 "use strict";
 
 /**

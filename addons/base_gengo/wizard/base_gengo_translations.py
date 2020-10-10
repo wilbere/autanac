@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import logging
 import re
 import time
 import uuid
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import get_lang
+from autanac import api, fields, models, tools, _
+from autanac.exceptions import UserError, ValidationError
+from autanac.tools.misc import get_lang
 
 _logger = logging.getLogger(__name__)
 
@@ -121,7 +121,7 @@ class BaseGengoTranslations(models.TransientModel):
         """
         This method will be called by cron services to get translations from
         Gengo. It will read translated terms and comments from Gengo and will
-        update respective ir.translation in Odoo.
+        update respective ir.translation in autanac.
         """
         IrTranslation = self.env['ir.translation']
         flag, gengo = self.gengo_authentication()
@@ -253,7 +253,7 @@ class BaseGengoTranslations(models.TransientModel):
 
         A special key 'gengo_language' can be passed in the context in order to
         request only translations of that language only. Its value is the language
-        ID in Odoo.
+        ID in autanac.
         """
         domain = [
             ('state', '=', 'to_translate'),

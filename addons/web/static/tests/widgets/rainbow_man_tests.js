@@ -1,4 +1,4 @@
-odoo.define('web.RainbowMan_tests', function (require) {
+autanac.define('web.RainbowMan_tests', function (require) {
 "use strict";
 
 var RainbowMan = require('web.RainbowMan');

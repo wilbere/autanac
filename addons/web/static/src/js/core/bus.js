@@ -1,4 +1,4 @@
-odoo.define('web.Bus', function (require) {
+autanac.define('web.Bus', function (require) {
 "use strict";
 
 var Class = require('web.Class');

@@ -1,4 +1,4 @@
-odoo.define('web.graph_view_tests', function (require) {
+autanac.define('web.graph_view_tests', function (require) {
 "use strict";
 
 var concurrency = require('web.concurrency');

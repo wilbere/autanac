@@ -1,4 +1,4 @@
-odoo.define('web.public.root', function (require) {
+autanac.define('web.public.root', function (require) {
 'use strict';
 
 var ajax = require('web.ajax');
@@ -251,7 +251,7 @@ var PublicRoot = publicWidget.RootWidget.extend(ServiceProviderMixin, {
      * Called when someone asked for the global public context.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onContextGet: function (ev) {
         if (ev.data.extra) {
@@ -264,7 +264,7 @@ var PublicRoot = publicWidget.RootWidget.extend(ServiceProviderMixin, {
      * Checks information about the page main object.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onMainObjectRequest: function (ev) {
         var repr = $('html').data('main-object');
@@ -279,7 +279,7 @@ var PublicRoot = publicWidget.RootWidget.extend(ServiceProviderMixin, {
      * (re)started.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onWidgetsStartRequest: function (ev) {
         this._startWidgets(ev.data.$target, ev.data.options)
@@ -291,7 +291,7 @@ var PublicRoot = publicWidget.RootWidget.extend(ServiceProviderMixin, {
      * stopped.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onWidgetsStopRequest: function (ev) {
         this._stopWidgets(ev.data.$target);

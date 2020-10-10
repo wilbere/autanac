@@ -1,4 +1,4 @@
-odoo.define('web.Dialog', function (require) {
+autanac.define('web.Dialog', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -29,7 +29,7 @@ var Dialog = Widget.extend({
     /**
      * @param {Widget} parent
      * @param {Object} [options]
-     * @param {string} [options.title=Odoo]
+     * @param {string} [options.title=autanac]
      * @param {string} [options.subtitle]
      * @param {string} [options.size=large] - 'extra-large', 'large', 'medium'
      *        or 'small'
@@ -72,7 +72,7 @@ var Dialog = Widget.extend({
             self._openedResolver = resolve;
         });
         options = _.defaults(options || {}, {
-            title: _t('Odoo'), subtitle: '',
+            title: _t('autanac'), subtitle: '',
             size: 'large',
             fullscreen: false,
             dialogClass: '',
@@ -328,7 +328,7 @@ var Dialog = Widget.extend({
      * Moves the focus to the first button primary in the footer of the dialog
      *
      * @private
-     * @param {odooEvent} e
+     * @param {autanacEvent} e
      */
     _onFocusControlButton: function (e) {
         if (this.$footer) {

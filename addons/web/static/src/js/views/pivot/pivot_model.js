@@ -1,4 +1,4 @@
-odoo.define('web.PivotModel', function (require) {
+autanac.define('web.PivotModel', function (require) {
 "use strict";
 
 /**

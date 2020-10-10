@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 import base64
 import logging
 import mimetypes
 import requests
 import werkzeug.utils
 
-from odoo import http, tools, _
-from odoo.http import request
-from odoo.tools.mimetypes import guess_mimetype
+from autanac import http, tools, _
+from autanac.http import request
+from autanac.tools.mimetypes import guess_mimetype
 from werkzeug.urls import url_encode
 
 logger = logging.getLogger(__name__)

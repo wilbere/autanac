@@ -1,4 +1,4 @@
-odoo.define('auth_password_policy_signup.policy', function (require) {
+autanac.define('auth_password_policy_signup.policy', function (require) {
 "use strict";
 
 require('web.dom_ready');

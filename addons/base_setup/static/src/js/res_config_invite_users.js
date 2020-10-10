@@ -1,4 +1,4 @@
-odoo.define('base_setup.ResConfigInviteUsers', function (require) {
+autanac.define('base_setup.ResConfigInviteUsers', function (require) {
     "use strict";
 
     var Widget = require('web.Widget');

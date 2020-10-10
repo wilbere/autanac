@@ -1,4 +1,4 @@
-odoo.define('web.TranslationDialog', function (require) {
+autanac.define('web.TranslationDialog', function (require) {
     'use strict';
 
     var core = require('web.core');

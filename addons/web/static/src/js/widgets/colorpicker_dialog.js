@@ -1,4 +1,4 @@
-odoo.define('web.ColorpickerDialog', function (require) {
+autanac.define('web.ColorpickerDialog', function (require) {
 'use strict';
 
 var core = require('web.core');

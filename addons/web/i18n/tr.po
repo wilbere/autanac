@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
@@ -27,12 +27,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Murat Kaplan <muratk@projetgrup.com>, 2020\n"
-"Language-Team: Turkish (https://www.transifex.com/odoo/teams/41243/tr/)\n"
+"Language-Team: Turkish (https://www.transifex.com/autanac/teams/41243/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1770,9 +1770,9 @@ msgstr "Fuşya"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
+msgid "Get this feature and much more with autanac Enterprise!"
 msgstr ""
-"Odoo Enterprise ile bu özellik ve hatta daha fazlasına sahip olabilirsiniz!"
+"autanac Enterprise ile bu özellik ve hatta daha fazlasına sahip olabilirsiniz!"
 
 #. module: web
 #. openerp-web
@@ -2369,8 +2369,8 @@ msgstr "Çok Satırlı Metin"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
-msgstr "Odoo.com hesabım"
+msgid "My autanac.com account"
+msgstr "autanac.com hesabım"
 
 #. module: web
 #. openerp-web
@@ -2563,15 +2563,15 @@ msgstr "Nesne:"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
-msgstr "Odoo Apps yakında hazır olacak"
+msgid "autanac Apps will be available soon"
+msgstr "autanac Apps yakında hazır olacak"
 
 #. module: web
 #. openerp-web
@@ -2580,36 +2580,36 @@ msgstr "Odoo Apps yakında hazır olacak"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
-msgstr "Odoo Müşteri Hatası"
+msgid "autanac Client Error"
+msgstr "autanac Müşteri Hatası"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
-msgstr "Odoo Enterprise"
+msgid "autanac Enterprise"
+msgstr "autanac Enterprise"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
-msgstr "Odoo Hatası"
+msgid "autanac Error"
+msgstr "autanac Hatası"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
-msgstr "Odoo Oturumu Sonlandı"
+msgid "autanac Session Expired"
+msgstr "autanac Oturumu Sonlandı"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
-msgstr "Odoo Uyarısı"
+msgid "autanac Warning"
+msgstr "autanac Uyarısı"
 
 #. module: web
 #. openerp-web
@@ -2937,8 +2937,8 @@ msgstr "Tarafından desteklenmektedir %s%s"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
-msgstr "Hazırlayan <span>Odoo</span>"
+msgid "Powered by <span>autanac</span>"
+msgstr "Hazırlayan <span>autanac</span>"
 
 #. module: web
 #. openerp-web
@@ -4352,10 +4352,10 @@ msgstr ""
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
 msgstr ""
-"Raporların pdf sürümünü yazdırmak için Odoo'yu en az iki worker ile "
+"Raporların pdf sürümünü yazdırmak için autanac'yu en az iki worker ile "
 "başlatmanız gerekir."
 
 #. module: web
@@ -4375,8 +4375,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
-msgstr "Odoo oturumunuz sona erdi. Geçerli web sayfasını yenileyin."
+msgid "Your autanac session expired. Please refresh the current web page."
+msgstr "autanac oturumunuz sona erdi. Geçerli web sayfasını yenileyin."
 
 #. module: web
 #. openerp-web

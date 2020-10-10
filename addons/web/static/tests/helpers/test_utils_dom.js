@@ -1,4 +1,4 @@
-odoo.define('web.test_utils_dom', function (require) {
+autanac.define('web.test_utils_dom', function (require) {
 "use strict";
 
 var concurrency = require('web.concurrency');

@@ -1,7 +1,7 @@
-odoo.define('web.GraphController', function (require) {
+autanac.define('web.GraphController', function (require) {
 "use strict";
 /*---------------------------------------------------------
- * Odoo Graph view
+ * autanac Graph view
  *---------------------------------------------------------*/
 
 var core = require('web.core');

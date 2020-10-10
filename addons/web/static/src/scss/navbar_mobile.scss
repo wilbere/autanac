@@ -4,7 +4,7 @@
         @include media-breakpoint-down(sm) {
             float: none;
             margin: 0;
-            border-bottom: 1px solid $o-navbar-inverse-link-hover-bg;
+            border-bottom: 1px solid $a-navbar-inverse-link-hover-bg;
             color: transparent !important;
         }
     }
@@ -13,7 +13,7 @@
         @include media-breakpoint-down(sm) {
             float: none;
             margin: 0;
-            border-bottom: 1px solid $o-navbar-inverse-link-hover-bg;
+            border-bottom: 1px solid $a-navbar-inverse-link-hover-bg;
             color: transparent !important;
         }
     }
@@ -22,7 +22,7 @@
         transition: height 200ms linear 0s;
 
         position: relative;
-        height: $o-navbar-height;
+        height: $a-navbar-height;
 
         > ul {
             > li {
@@ -56,15 +56,15 @@
             }
 
             &.o_menu_systray {
-                @include o-position-absolute(0px, $o-navbar-height, auto, $o-navbar-height);
-                height: $o-navbar-height;
+                @include o-position-absolute(0px, $a-navbar-height, auto, $a-navbar-height);
+                height: $a-navbar-height;
                 text-align: right;
 
                 > li {
                     display: inline-block;
 
                     .dropdown-menu.show {
-                        @include o-position-absolute($o-navbar-height, 0, 0, 0);
+                        @include o-position-absolute($a-navbar-height, 0, 0, 0);
                         position: fixed;
                         width: auto;
                     }

@@ -1,4 +1,4 @@
-/var/log/odoo/*.log {
+/var/log/autanac/*.log {
     copytruncate
     missingok
     notifempty

@@ -1,4 +1,4 @@
-odoo.define('web.EditableListRenderer', function (require) {
+autanac.define('web.EditableListRenderer', function (require) {
 "use strict";
 
 /**
@@ -8,7 +8,7 @@ odoo.define('web.EditableListRenderer', function (require) {
  * file simply 'includes' the basic ListRenderer to add all the necessary
  * behaviors to enable editing records.
  *
- * Unlike Odoo v10 and before, this list renderer is independant from the form
+ * Unlike autanac v10 and before, this list renderer is independant from the form
  * view. It uses the same widgets, but the code is totally stand alone.
  */
 var core = require('web.core');
@@ -27,8 +27,8 @@ ListRenderer.include({
         'click .o_field_x2many_list_row_add a': '_onAddRecord',
         'click .o_group_field_row_add a': '_onAddRecordToGroup',
         'keydown .o_field_x2many_list_row_add a': '_onKeyDownAddRecord',
-        'click tbody td.o_data_cell': '_onCellClick',
-        'click tbody tr:not(.o_data_row)': '_onEmptyRowClick',
+        'click tbody td.a_data_cell': '_onCellClick',
+        'click tbody tr:not(.a_data_row)': '_onEmptyRowClick',
         'click tfoot': '_onFooterClick',
         'click tr .o_list_record_remove': '_onRemoveIconClick',
     }),
@@ -175,8 +175,8 @@ ListRenderer.include({
             }
         }
         var fieldNames = this._super(recordID);
-        this.$('.o_selected_row .o_data_cell').removeClass('o_invalid_cell');
-        this.$('.o_selected_row .o_data_cell:has(> .o_field_invalid)').addClass('o_invalid_cell');
+        this.$('.a_selected_row .a_data_cell').removeClass('o_invalid_cell');
+        this.$('.a_selected_row .a_data_cell:has(> .o_field_invalid)').addClass('o_invalid_cell');
         return fieldNames;
     },
     /**
@@ -218,7 +218,7 @@ ListRenderer.include({
      * @param {Object} state
      * @param {string} id
      * @param {string[]} fields
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @returns {Promise<AbstractField[]>} resolved with the list of widgets
      *                                      that have been reset
      */
@@ -275,13 +275,13 @@ ListRenderer.include({
                 // remove all data rows except the one being edited, and insert
                 // data rows of the re-rendered body before and after it
                 var $editedRow = self._getRow(id);
-                $editedRow.nextAll('.o_data_row').remove();
-                $editedRow.prevAll('.o_data_row').remove();
-                var $newRow = $newBody.find('.o_data_row[data-id="' + id + '"]');
-                $newRow.prevAll('.o_data_row').get().reverse().forEach(function (row) {
+                $editedRow.nextAll('.a_data_row').remove();
+                $editedRow.prevAll('.a_data_row').remove();
+                var $newRow = $newBody.find('.a_data_row[data-id="' + id + '"]');
+                $newRow.prevAll('.a_data_row').get().reverse().forEach(function (row) {
                     $(row).insertBefore($editedRow);
                 });
-                $newRow.nextAll('.o_data_row').get().reverse().forEach(function (row) {
+                $newRow.nextAll('.a_data_row').get().reverse().forEach(function (row) {
                     $(row).insertAfter($editedRow);
                 });
 
@@ -329,7 +329,7 @@ ListRenderer.include({
     focusCell: function (recordId, column) {
         var $row = this._getRow(recordId);
         var cellIndex = this.columns.indexOf(column);
-        $row.find('.o_data_cell')[cellIndex].focus();
+        $row.find('.a_data_cell')[cellIndex].focus();
     },
     /**
      * Returns the recordID associated to the line which is currently in edition
@@ -392,7 +392,7 @@ ListRenderer.include({
             var $emptyRow = this._renderEmptyRow();
             $row.replaceWith($emptyRow);
             // move the empty row we just inserted after last data row
-            const $lastDataRow = this.$('.o_data_row:last');
+            const $lastDataRow = this.$('.a_data_row:last');
             if ($lastDataRow.length) {
                 $emptyRow.insertAfter($lastDataRow);
             }
@@ -416,7 +416,7 @@ ListRenderer.include({
         var editMode = (mode === 'edit');
         var $row = this._getRow(recordID);
         this.currentRow = editMode ? $row.prop('rowIndex') - 1 : null;
-        var $tds = $row.children('.o_data_cell');
+        var $tds = $row.children('.a_data_cell');
         var oldWidgets = _.clone(this.allFieldWidgets[record.id]);
 
         // Prepare options for cell rendering (this depends on the mode)
@@ -459,7 +459,7 @@ ListRenderer.include({
         _.each(oldWidgets, this._destroyFieldWidget.bind(this, recordID));
 
         // Toggle selected class here so that style is applied at the end
-        $row.toggleClass('o_selected_row', editMode);
+        $row.toggleClass('a_selected_row', editMode);
         if (editMode) {
             this._disableRecordSelectors();
         } else {
@@ -692,7 +692,7 @@ ListRenderer.include({
      * @returns {integer}
      */
     _getBorderRow: function (side) {
-        let $borderDataRow = this.$(`.o_data_row:${side}`);
+        let $borderDataRow = this.$(`.a_data_row:${side}`);
         if (!this._isRecordEditable($borderDataRow.data('id'))) {
             $borderDataRow = this._getNearestEditableRow($borderDataRow, side === 'first');
         }
@@ -791,12 +791,12 @@ ListRenderer.include({
         let $nearestRow;
         if (this.editable) {
             $nearestRow = $row[direction]();
-            if (!$nearestRow.hasClass('o_data_row')) {
+            if (!$nearestRow.hasClass('a_data_row')) {
                 var $nextBody = $row.closest('tbody')[direction]();
-                while ($nextBody.length && !$nextBody.find('.o_data_row').length) {
+                while ($nextBody.length && !$nextBody.find('.a_data_row').length) {
                     $nextBody = $nextBody[direction]();
                 }
-                $nearestRow = $nextBody.find(`.o_data_row:${next ? 'first' : 'last'}`);
+                $nearestRow = $nextBody.find(`.a_data_row:${next ? 'first' : 'last'}`);
             }
         } else {
             // In readonly lists, look directly into selected records
@@ -864,7 +864,7 @@ ListRenderer.include({
      * @returns {jQueryElement}
      */
     _getRow: function (recordId) {
-        return this.$('.o_data_row[data-id="' + recordId + '"]');
+        return this.$('.a_data_row[data-id="' + recordId + '"]');
     },
     /**
      * This function returns true iff records are visible in the list, i.e.
@@ -1091,7 +1091,7 @@ ListRenderer.include({
         if (this.hasHandle) {
             $body.sortable({
                 axis: 'y',
-                items: '> tr.o_data_row',
+                items: '> tr.a_data_row',
                 helper: 'clone',
                 handle: '.o_row_handle',
                 stop: function (event, ui) {
@@ -1503,13 +1503,13 @@ ListRenderer.include({
         const $tr = $target.closest('tr');
         const recordEditable = this._isRecordEditable($tr.data('id'));
 
-        if (recordEditable && ev.keyCode === $.ui.keyCode.ENTER && $tr.hasClass('o_selected_row')) {
+        if (recordEditable && ev.keyCode === $.ui.keyCode.ENTER && $tr.hasClass('a_selected_row')) {
             // enter on a textarea for example, let it bubble
             return;
         }
 
         if (recordEditable && ev.keyCode === $.ui.keyCode.ENTER &&
-            !$tr.hasClass('o_selected_row') && !$tr.hasClass('o_group_header')) {
+            !$tr.hasClass('a_selected_row') && !$tr.hasClass('o_group_header')) {
             ev.stopPropagation();
             ev.preventDefault();
             if ($target.closest('td').hasClass('o_group_field_row_add')) {
@@ -1547,7 +1547,7 @@ ListRenderer.include({
      * above if on the first line automatically creates a new line.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNavigationMove: function (ev) {
         var self = this;
@@ -1617,7 +1617,7 @@ ListRenderer.include({
         event.stopPropagation();
         var $row = $(event.target).closest('tr');
         var id = $row.data('id');
-        if ($row.hasClass('o_selected_row')) {
+        if ($row.hasClass('a_selected_row')) {
             this.trigger_up('list_record_remove', {id: id});
         } else {
             var self = this;

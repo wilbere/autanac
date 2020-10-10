@@ -1,4 +1,4 @@
-odoo.define('web.user_menu_tests', function (require) {
+autanac.define('web.user_menu_tests', function (require) {
 "use strict";
 
 var testUtils = require('web.test_utils');

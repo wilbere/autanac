@@ -1,4 +1,4 @@
-odoo.define('wysiwyg.widgets.CropImageDialog', function (require) {
+autanac.define('wysiwyg.widgets.CropImageDialog', function (require) {
 'use strict';
 
 var core = require('web.core');

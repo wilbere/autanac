@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models
+from autanac import fields, models
 
 
 def model(suffix_name):

@@ -1,4 +1,4 @@
-odoo.define('web.domain_tests', function (require) {
+autanac.define('web.domain_tests', function (require) {
 "use strict";
 
 var Domain = require('web.Domain');

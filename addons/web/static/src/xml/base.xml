@@ -137,8 +137,8 @@
             </tr>
         </table>
     </div>
-    <button type="button" class="btn btn-primary rounded-pill oe_form_button">Change Password</button>
-    <button type="button" class="btn btn-secondary rounded-pill oe_form_button oe_form_button_cancel" href="javascript:void(0)">Cancel</button>
+    <button type="button" class="btn rounded-pill btn-primary rounded-pill oe_form_button">Change Password</button>
+    <button type="button" class="btn rounded-pill btn-secondary rounded-pill oe_form_button oe_form_button_cancel" href="javascript:void(0)">Cancel</button>
 </form>
 
 <div t-name="Action" class="o_action">
@@ -147,9 +147,10 @@
 </div>
 
 <t t-name="ControlPanel">
-    <div class="o_control_panel">
+   <div class="o_control_panel">
         <div>
             <ol class="breadcrumb" role="navigation"/>
+            
         </div>
         <div>
             <div class="o_cp_left">
@@ -157,10 +158,12 @@
                 <aside class="o_cp_sidebar"/>
             </div>
             <div class="o_cp_right">
-                <div class="o_cp_searchview position-static" role="search">
+                <div class="o_cp_searchview" role="search">
                     <t t-if="widget.withSearchBar" t-call="SearchView"/>
                 </div>
+
                 <nav class="o_cp_pager" role="search" aria-label="Pager"/>
+                
             </div>
         </div>
     </div>
@@ -174,13 +177,13 @@
 
 <t t-name="ControlPanel.SwitchButton">
     <button type="button" t-att-accesskey="view.accessKey"
-        t-attf-class="btn btn-secondary fa fa-lg #{view.icon} o_cp_switch_#{view.type} #{viewType === view.type ? ' active' : ''}"
+        t-attf-class="btn rounded-pill btn-secondary fa fa-lg #{view.icon} o_cp_switch_#{view.type} #{viewType === view.type ? ' active' : ''}"
         t-attf-aria-label="View #{view.type}"
         t-att-data-view-type="view.type" t-attf-title="View #{view.type}" tabindex="-1"/>
 </t>
 
 <t t-name="ControlPanel.SwitchButtons.Mobile">
-    <button class="btn btn-link btn-sm" data-toggle="dropdown" aria-expanded="false">
+    <button class="btn rounded-pill btn-link btn-sm" data-toggle="dropdown" aria-expanded="false">
         <span class="o_switch_view_button_icon"/>
     </button>
     <ul class="dropdown-menu dropdown-menu-right list-inline">
@@ -262,19 +265,19 @@
 
 <t t-name="ListView.buttons">
     <div class="o_list_buttons" role="toolbar" aria-label="Main actions">
-        <button type="button" class="btn btn-primary rounded-pill o_list_button_save" accesskey="s">
+        <button type="button" class="btn rounded-pill btn-primary rounded-pill o_list_button_save" accesskey="s">
             Save
         </button>
-        <button type="button" class="btn btn-secondary rounded-pill o_list_button_discard" accesskey="j">
+        <button type="button" class="btn rounded-pill btn-secondary rounded-pill o_list_button_discard" accesskey="j">
             Discard
         </button>
         <t t-if="widget.is_action_enabled('create')">
-            <button type="button" class="btn btn-primary rounded-pill o_list_button_add" accesskey="c">
+            <button type="button" class="btn rounded-pill btn-primary rounded-pill o_list_button_add" accesskey="c">
                 Create
             </button>
         </t>
         <t t-if="widget.is_action_enabled('export_xlsx')">
-            <button type="button" class="btn rounded-circle btn-secondary fa fa-download o_list_export_xlsx" title="Export All"/>
+            <button type="button" class="btn rounded-pill rounded-circle btn-secondary fa fa-download o_list_export_xlsx" title="Export All"/>
         </t>
     </div>
 </t>
@@ -310,21 +313,21 @@
 <t t-name="FormView.buttons">
     <div class="o_form_buttons_view" role="toolbar" aria-label="Main actions">
         <button t-if="widget.is_action_enabled('edit')" type="button"
-                class="btn btn-primary rounded-pill o_form_button_edit" accesskey="a">
+                class="btn rounded-pill btn-primary rounded-pill o_form_button_edit" accesskey="a">
             Edit
         </button>
         <button t-if="widget.is_action_enabled('create')" type="button"
-                class="btn btn-secondary rounded-pill o_form_button_create" accesskey="c">
+                class="btn rounded-pill btn-secondary rounded-pill o_form_button_create" accesskey="c">
             Create
         </button>
     </div>
     <div class="o_form_buttons_edit" role="toolbar" aria-label="Main actions">
         <button type="button"
-                class="btn btn-primary rounded-pill o_form_button_save" accesskey="s">
+                class="btn rounded-pill btn-primary rounded-pill o_form_button_save" accesskey="s">
             Save
         </button>
         <button type="button"
-                class="btn btn-secondary rounded-pill o_form_button_cancel" accesskey="j">
+                class="btn rounded-pill btn-secondary rounded-pill o_form_button_cancel" accesskey="j">
             Discard
         </button>
     </div>
@@ -411,7 +414,7 @@
 </form>
 <t t-name="GraphView.buttons">
     <div class="btn-group" role="toolbar" aria-label="Main actions">
-        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <button class="btn rounded-pill btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Measures
         </button>
         <div class="dropdown-menu o_graph_measures_list" role="menu">
@@ -423,12 +426,12 @@
         </div>
     </div>
     <div class="btn-group" role="toolbar" aria-label="Change graph">
-        <button class="btn btn-secondary fa fa-bar-chart-o o_graph_button" title="Bar Chart" aria-label="Bar Chart" data-mode="bar"/>
-        <button class="btn btn-secondary fa fa-area-chart o_graph_button" title="Line Chart" aria-label="Line Chart" data-mode="line"/>
-        <button class="btn btn-secondary fa fa-pie-chart o_graph_button" title="Pie Chart" aria-label="Pie Chart" data-mode="pie"/>
+        <button class="btn rounded-pill btn-secondary fa fa-bar-chart-o o_graph_button" title="Bar Chart" aria-label="Bar Chart" data-mode="bar"/>
+        <button class="btn rounded-pill btn-secondary fa fa-area-chart o_graph_button" title="Line Chart" aria-label="Line Chart" data-mode="line"/>
+        <button class="btn rounded-pill btn-secondary fa fa-pie-chart o_graph_button" title="Pie Chart" aria-label="Pie Chart" data-mode="pie"/>
     </div>
     <div class="btn-group" role="toolbar" aria-label="Change graph">
-        <button class="btn btn-secondary fa fa-database o_graph_button" title="Stacked" aria-label="Stacked" data-mode="stack"/>
+        <button class="btn rounded-pill btn-secondary fa fa-database o_graph_button" title="Stacked" aria-label="Stacked" data-mode="stack"/>
     </div>
 </t>
 
@@ -458,7 +461,7 @@
 </div>
 <t t-name="PivotView.buttons">
     <div class="btn-group" role="toolbar" aria-label="Main actions">
-        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <button class="btn rounded-pill btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
             Measures
         </button>
         <div class="dropdown-menu o_pivot_measures_list" role="menu">
@@ -470,9 +473,9 @@
         </div>
     </div>
     <div class="btn-group" role="toolbar" aria-label="Pivot settings">
-        <button class="btn btn-secondary fa fa-exchange o_pivot_flip_button" title="Flip axis" aria-label="Flip axis"/>
-        <button class="btn btn-secondary fa fa-arrows o_pivot_expand_button" title="Expand all" aria-label="Expand all"/>
-        <button class="btn btn-secondary fa fa-download o_pivot_download" title="Download xls" aria-label="Download xls"/>
+        <button class="btn rounded-pill btn-secondary fa fa-exchange o_pivot_flip_button" title="Flip axis" aria-label="Flip axis"/>
+        <button class="btn rounded-pill btn-secondary fa fa-arrows o_pivot_expand_button" title="Expand all" aria-label="Expand all"/>
+        <button class="btn rounded-pill btn-secondary fa fa-download o_pivot_download" title="Download xls" aria-label="Download xls"/>
     </div>
 </t>
 <t t-name="PivotView.GroupBySelection">
@@ -517,25 +520,25 @@
     <div t-if="hasModel" class="o_field_domain_panel">
         <i class="fa fa-arrow-right" role="img" aria-label="Domain" title="Domain"/>
 
-        <button t-if="isValid" class="btn btn-sm btn-secondary o_domain_show_selection_button" type="button">
+        <button t-if="isValid" class="btn rounded-pill btn-sm btn-secondary o_domain_show_selection_button" type="button">
             <t t-esc="nbRecords"/> record(s)
         </button>
         <span t-else="" class="text-warning" role="alert"><i class="fa fa-exclamation-triangle" role="img" aria-label="Warning" title="Warning"/> Invalid domain</span>
 
-        <button t-if="inDialogEdit" class="btn btn-sm btn-primary o_field_domain_dialog_button">Edit Domain</button>
+        <button t-if="inDialogEdit" class="btn rounded-pill btn-sm btn-primary o_field_domain_dialog_button">Edit Domain</button>
     </div>
     <div t-else="">Select a model to add a filter.</div>
 </t>
 <t t-name="DomainNode.ControlPanel">
     <div t-if="!widget.readonly &amp;&amp; !widget.noControlPanel" class="o_domain_node_control_panel" role="toolbar" aria-label="Domain node">
-        <button class="btn o_domain_delete_node_button" title="Delete node" aria-label="Delete node"><i class="fa fa-times"/></button>
-        <button class="btn o_domain_add_node_button" title="Add node" aria-label="Add node"><i class="fa fa-plus-circle"/></button>
-        <button class="btn o_domain_add_node_button" title="Add branch" aria-label="Add branch" data-branch="1"><i class="fa fa-ellipsis-h"/></button>
+        <button class="btn rounded-pill o_domain_delete_node_button" title="Delete node" aria-label="Delete node"><i class="fa fa-times"/></button>
+        <button class="btn rounded-pill o_domain_add_node_button" title="Add node" aria-label="Add node"><i class="fa fa-plus-circle"/></button>
+        <button class="btn rounded-pill o_domain_add_node_button" title="Add branch" aria-label="Add branch" data-branch="1"><i class="fa fa-ellipsis-h"/></button>
     </div>
 </t>
 <t t-name="DomainTree.OperatorSelector">
     <div t-if="!widget.readonly" class="btn-group o_domain_tree_operator_selector" aria-atomic="true">
-        <button class="btn btn-sm btn-primary o_domain_tree_operator_caret" data-toggle="dropdown">
+        <button class="btn rounded-pill btn-sm btn-primary o_domain_tree_operator_caret" data-toggle="dropdown">
             <t t-if="widget.operator === '&amp;'">All</t>
             <t t-if="widget.operator === '|'">Any</t>
             <t t-if="widget.operator === '!'">None</t>
@@ -554,7 +557,7 @@
 <div aria-atomic="true" t-name="DomainSelector" t-attf-class="o_domain_node o_domain_tree o_domain_selector #{widget.readonly ? 'o_read_mode' : 'o_edit_mode'}">
     <t t-if="widget.children.length === 0">
         <span>Match <strong>all records</strong></span>
-        <button t-if="!widget.readonly" class="btn btn-sm btn-primary o_domain_add_first_node_button"><i class="fa fa-plus"/> Add filter</button>
+        <button t-if="!widget.readonly" class="btn rounded-pill btn-sm btn-primary o_domain_add_first_node_button"><i class="fa fa-plus"/> Add filter</button>
     </t>
     <t t-else="">
         <div class="o_domain_tree_header">
@@ -615,7 +618,7 @@
                     </div>
                     <div class="o_domain_leaf_value_tags">
                         <input placeholder="Add new value" type="text" class="o_input"/>
-                        <button class="btn btn-sm btn-primary fa fa-plus o_domain_leaf_value_add_tag_button" aria-label="Add tag" title="Add tag"/>
+                        <button class="btn rounded-pill btn-sm btn-primary fa fa-plus o_domain_leaf_value_add_tag_button" aria-label="Add tag" title="Add tag"/>
                     </div>
                 </t>
                 <t t-else="">
@@ -834,7 +837,7 @@
 </t>
 <t t-name="FieldStatus.content">
     <t t-if="selection_folded.length">
-        <button type="button" class="btn o_arrow_button btn-secondary dropdown-toggle rounded-pill" data-toggle="dropdown" aria-expanded="false">More</button>
+        <button type="button" class="btn rounded-pill o_arrow_button btn-secondary dropdown-toggle rounded-pill" data-toggle="dropdown" aria-expanded="false">More</button>
         <div class="dropdown-menu" role="menu">
             <t t-foreach="selection_folded" t-as="i">
                 <t t-call="FieldStatus.content.button">
@@ -851,17 +854,17 @@
     <t t-set="disabled" t-value="!clickable"/>
     <button type="button" t-att-data-value="i.id" disabled="disabled" title="Current state" aria-checked="true"
         t-att-role="is_dropdown ? 'menuitemradio': 'radio'"
-        t-attf-class="btn o_arrow_button btn-primary disabled #{is_dropdown ? 'dropdown-item bg-primary text-white': ''}" t-if="i.selected" aria-current="step">
+        t-attf-class="btn rounded-pill o_arrow_button btn-primary disabled #{is_dropdown ? 'dropdown-item bg-primary text-white': ''}" t-if="i.selected" aria-current="step">
         <t t-esc="i.display_name" role="img" t-attf-aria-label="#{i.display_name} is current state"/>
     </button>
     <button type="button" t-att-data-value="i.id" disabled="disabled" title="Not active state" aria-checked="false"
         t-att-role="is_dropdown ? 'menuitemradio': 'radio'"
-        t-attf-class="btn o_arrow_button btn-secondary disabled #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and disabled">
+        t-attf-class="btn rounded-pill o_arrow_button btn-secondary disabled #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and disabled">
         <t t-esc="i.display_name" role="img" t-attf-aria-label="#{i.display_name} is not current state"/>
     </button>
     <button type="button" t-att-data-value="i.id" title="Not active state, click to change it" aria-checked="false"
         t-att-role="is_dropdown ? 'menuitemradio': 'radio'"
-        t-attf-class="btn o_arrow_button btn-secondary #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and !disabled">
+        t-attf-class="btn rounded-pill o_arrow_button btn-secondary #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and !disabled">
         <t t-esc="i.display_name" role="img" t-attf-aria-label="Click to change current state to #{i.display_name}"/>
     </button>
 </t>
@@ -889,12 +892,12 @@
         t-att-name="widget.name"/>
 </t>
 <t t-name="CopyClipboardText">
-    <button class="btn btn-sm btn-primary o_clipboard_button o_btn_text_copy">
+    <button class="btn rounded-pill btn-sm btn-primary o_clipboard_button o_btn_text_copy">
         <span class="fa fa-clipboard"></span><span> Copy Text</span>
     </button>
 </t>
 <t t-name="CopyClipboardChar">
-    <button class="btn btn-sm btn-primary o_clipboard_button o_btn_char_copy">
+    <button class="btn rounded-pill btn-sm btn-primary o_clipboard_button o_btn_char_copy">
         <span class="fa fa-clipboard"></span><span> Copy Text</span>
     </button>
 </t>
@@ -908,9 +911,9 @@
             t-att-tabindex="widget.attrs.tabindex"
             t-att-autofocus="widget.attrs.autofocus"/>
 
-        <button type="button" class="btn btn-primary o_select_file_button" title="Select">Upload your file</button>
-        <button type="button" class="btn btn-secondary fa fa-pencil o_select_file_button" title="Select" aria-label="Select"/>
-        <button type="button" class="btn btn-secondary fa fa-trash-o o_clear_file_button" title="Clear" aria-label="Clear"/>
+        <button type="button" class="btn rounded-pill btn-primary o_select_file_button" title="Select">Upload your file</button>
+        <button type="button" class="btn rounded-pill btn-secondary fa fa-pencil o_select_file_button" title="Select" aria-label="Select"/>
+        <button type="button" class="btn rounded-pill btn-secondary fa fa-trash-o o_clear_file_button" title="Clear" aria-label="Clear"/>
 
         <span class="o_form_binary_progress">Uploading...</span>
         <t t-call="HiddenInputFile">
@@ -982,9 +985,9 @@
     <div class="o_field_pdfviewer" aria-atomic="true">
         <div t-if="widget.mode !== 'readonly'" class="o_form_pdf_controls mt8" role="toolbar" aria-label="PDF controls">
             <span class="o_form_binary_progress">Uploading...</span>
-            <button type="button" class="btn btn-primary o_select_file_button" title="Select">Upload your file</button>
-            <button class="btn btn-secondary fa fa-pencil o_select_file_button" title="Select" aria-label="Select" type="button"></button>
-            <button class="btn btn-secondary fa fa-trash-o o_clear_file_button" title="Clear" aria-label="Clear" type="button"></button>
+            <button type="button" class="btn rounded-pill btn-primary o_select_file_button" title="Select">Upload your file</button>
+            <button class="btn rounded-pill btn-secondary fa fa-pencil o_select_file_button" title="Select" aria-label="Select" type="button"></button>
+            <button class="btn rounded-pill btn-secondary fa fa-trash-o o_clear_file_button" title="Clear" aria-label="Clear" type="button"></button>
         </div>
         <iframe class="o_pdfview_iframe o_field_pdfviewer"/>
         <t t-call="HiddenInputPDFFile">
@@ -1005,7 +1008,7 @@
 <div t-name="FieldBinaryFileUploader" t-attf-class="oe_fileupload #{widget.attrs.class ? widget.attrs.class :''}" aria-atomic="true">
     <div class="oe_placeholder_files"/>
     <div t-if="widget.mode !== 'readonly'" class="oe_add">
-        <button class="btn btn-secondary o_attach" title="Attach"><span class="fa fa-paperclip" aria-label="Attach"/> <t t-esc="widget.string"/></button>
+        <button class="btn rounded-pill btn-secondary o_attach" title="Attach"><span class="fa fa-paperclip" aria-label="Attach"/> <t t-esc="widget.string"/></button>
         <t t-call="HiddenInputFile">
             <t t-set="fileupload_id" t-value="widget.fileupload_id"/>
             <t t-set="fileupload_action" t-translation="off">/web/binary/upload_attachment</t>
@@ -1109,7 +1112,7 @@
         </select>
     </div>
     <div t-if="widget.generatorMenuIsOpen" class="dropdown-item-text o_generator_menu">
-        <button type="button" class="btn btn-primary o_apply_group o_add_group">Apply</button>
+        <button type="button" class="btn rounded-pill btn-primary o_apply_group o_add_group">Apply</button>
     </div>
 </t>
 
@@ -1117,8 +1120,8 @@
     <div t-if="Object.keys(widget.fields).length !== 0 &amp;&amp; widget.items.length !== 0" role="separator" class="dropdown-divider o_generator_menu"/>
     <button t-if="Object.keys(widget.fields).length !== 0" type="button" class="dropdown-item o_generator_menu o_add_custom_filter" aria-expanded="false">Add Custom Filter</button>
     <div t-if="widget.generatorMenuIsOpen" class="dropdown-item-text o_generator_menu o_add_filter_menu">
-        <button class="btn btn-primary o_apply_filter" type="button">Apply</button>
-        <button class="btn btn-secondary o_add_condition" type="button">
+        <button class="btn rounded-pill btn-primary o_apply_filter" type="button">Apply</button>
+        <button class="btn rounded-pill btn-secondary o_add_condition" type="button">
             <span class="fa fa-plus-circle"/>
             Add a condition
         </button>
@@ -1192,7 +1195,7 @@
             </select>
         </div>
         <div class="dropdown-item-text">
-            <button class="btn btn-primary o_apply_range" type="button">Apply</button>
+            <button class="btn rounded-pill btn-primary o_apply_range" type="button">Apply</button>
         </div>
     </div>
 </div>
@@ -1283,7 +1286,7 @@
         <span class="float-right o_mobile_search_clear_facets mt16 mr16">CLEAR</span>
     </div>
     <div class="o_mobile_search_filter o_search_options mb8 mt8 ml16 mr16"/>
-    <div class="btn btn-primary o_mobile_search_show_result fixed-bottom">SEE RESULT</div>
+    <div class="btn rounded-pill btn-primary o_mobile_search_show_result fixed-bottom">SEE RESULT</div>
 </div>
 
 <div t-name="AddNewFavoriteMenu">
@@ -1302,7 +1305,7 @@
             <label t-attf-for="o_favorite_share_all_users#{favId}" class="custom-control-label">Share with all users <span class="fa fa-users" role="img" aria-label="Users" title="Users"/></label>
         </div>
         <div class="dropdown-item-text o_save_favorite">
-            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn rounded-pill btn-primary">Save</button>
         </div>
     </div>
 </div>
@@ -1358,8 +1361,8 @@
         <label class="pt-2 font-weight-bold">Save as : </label>
         <input class="form-control ml-4 o_save_list_name"
                placeholder="New template"/>
-        <button type="button" class="btn btn-secondary ml-1 o_save_list_btn"><i class="fa fa-floppy-o"/></button>
-        <button type="button" class="btn btn-secondary ml-1 o_cancel_list_btn"><i class="fa fa-times"/></button>
+        <button type="button" class="btn rounded-pill btn-secondary ml-1 o_save_list_btn"><i class="fa fa-floppy-o"/></button>
+        <button type="button" class="btn rounded-pill btn-secondary ml-1 o_cancel_list_btn"><i class="fa fa-times"/></button>
     </div>
 </t>
 <t t-name="Export.SavedList">
@@ -1374,7 +1377,7 @@
                 </option>
             </t>
         </select>
-        <button type="button" class="btn btn-secondary d-none ml-1 o_delete_exported_list">
+        <button type="button" class="btn rounded-pill btn-secondary d-none ml-1 o_delete_exported_list">
             <i class="fa fa-trash"/>
         </button>
     </div>
@@ -1420,9 +1423,7 @@
 </t>
 
 <div t-name="Pager" class="o_pager">
-    <span class="o_pager_counter">
-        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
-    </span>
+    
     <span class="btn-group" aria-atomic="true">
         <!-- accesskeys not wanted in X2Many widgets -->
         <t t-if="widget.options.withAccessKey">
@@ -1531,7 +1532,7 @@
 </t>
 
 <t t-name="AttachDocument">
-    <button t-attf-class="btn o_attachment_button #{widget.node.attrs.highlight?'btn-primary':'btn-secondary'}">
+    <button t-attf-class="btn rounded-pill o_attachment_button #{widget.node.attrs.highlight?'btn-primary':'btn-secondary'}">
         <span class="o_attach_document"><t t-esc="widget.node.attrs.string"/></span>
         <span class="d-none">
             <t t-call="HiddenInputFile">

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 from __future__ import print_function
 import logging
@@ -29,8 +29,8 @@ try:
 except ImportError:
     usb = None
 
-from odoo import http, _
-from odoo.addons.hw_proxy.controllers import main as hw_proxy
+from autanac import http, _
+from autanac.addons.hw_proxy.controllers import main as hw_proxy
 
 _logger = logging.getLogger(__name__)
 
@@ -111,7 +111,7 @@ class EscposDriver(Thread):
             except HandleDeviceError:
                 # Escpos printers are now integrated to PrinterDriver, if the IoTBox is printing
                 # through Cups at the same time, we get an USBError(16, 'Resource busy'). This means
-                # that the Odoo instance connected to this IoTBox is up to date and no longer uses
+                # that the autanac instance connected to this IoTBox is up to date and no longer uses
                 # this escpos library.
                 return None
             self.set_status(

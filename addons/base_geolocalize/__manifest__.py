@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Partners Geolocation',
     'version': '2.1',
     'category': 'Tools',
     'description': """
-Partners Geolocation
+Geolocalización
 ========================
     """,
     'depends': ['base_setup'],

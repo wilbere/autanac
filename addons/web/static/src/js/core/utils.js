@@ -1,4 +1,4 @@
-odoo.define('web.utils', function (require) {
+autanac.define('web.utils', function (require) {
 "use strict";
 
 /**

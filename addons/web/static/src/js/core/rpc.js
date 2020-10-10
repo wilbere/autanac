@@ -1,4 +1,4 @@
-odoo.define('web.rpc', function (require) {
+autanac.define('web.rpc', function (require) {
 "use strict";
 
 var ajax = require('web.ajax');

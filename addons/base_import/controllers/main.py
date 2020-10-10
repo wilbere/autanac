@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import json
 
-from odoo import http
-from odoo.http import request
-from odoo.tools import misc
+from autanac import http
+from autanac.http import request
+from autanac.tools import misc
 
 
 class ImportController(http.Controller):

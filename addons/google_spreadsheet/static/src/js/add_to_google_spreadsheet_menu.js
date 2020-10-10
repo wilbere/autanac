@@ -1,4 +1,4 @@
-odoo.define('board.AddToGoogleSpreadsheetMenu', function (require) {
+autanac.define('board.AddToGoogleSpreadsheetMenu', function (require) {
 "use strict";
 
 var ActionManager = require('web.ActionManager');

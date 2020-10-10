@@ -1,4 +1,4 @@
-odoo.define("web.DomainSelector", function (require) {
+autanac.define("web.DomainSelector", function (require) {
 "use strict";
 
 var core = require("web.core");
@@ -422,7 +422,7 @@ var DomainTree = DomainNode.extend({
      * Called when a node addition was asked -> add the new domain part if on
      * the right node or let the propagation continue.
      *
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      */
     _onNodeAdditionAsk: function (e) {
         var domain = this.options.default || [["id", "=", 1]];
@@ -437,7 +437,7 @@ var DomainTree = DomainNode.extend({
      * Called when a node deletion was asked -> remove the domain part if on
      * the right node or let the propagation continue.
      *
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      */
     _onNodeDeletionAsk: function (e) {
         if (this._removeChild(e.data.child)) {
@@ -594,7 +594,7 @@ var DomainSelector = DomainTree.extend({
      * Called when a (child's) domain has changed -> redraw the entire tree
      * representation if necessary
      *
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      */
     _onDomainChange: function (e) {
         // If a subdomain notifies that it underwent some modifications, the
@@ -934,7 +934,7 @@ var DomainLeaf = DomainNode.extend({
      * Called when the field selector value is changed -> change the internal
      * chain state and adapt
      *
-     * @param {OdooEvent} e
+     * @param {autanacEvent} e
      */
     _onFieldChainChange: function (e) {
         this._changeFieldChain(e.data.chain);

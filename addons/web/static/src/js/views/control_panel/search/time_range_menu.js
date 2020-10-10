@@ -1,4 +1,4 @@
-odoo.define('web.TimeRangeMenu', function (require) {
+autanac.define('web.TimeRangeMenu', function (require) {
 "use strict";
 
 var config = require('web.config');

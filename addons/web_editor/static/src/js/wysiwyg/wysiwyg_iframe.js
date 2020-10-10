@@ -1,4 +1,4 @@
-odoo.define('web_editor.wysiwyg.iframe', function (require) {
+autanac.define('web_editor.wysiwyg.iframe', function (require) {
 'use strict';
 
 var Wysiwyg = require('web_editor.wysiwyg');
@@ -90,8 +90,8 @@ Wysiwyg.include({
                 $(qweb.render('web_editor.FieldTextHtml.fullscreen'))
                     .appendTo(self.options.toolbarHandler)
                     .on('click', '.o_fullscreen', function () {
-                        $("body").toggleClass("o_field_widgetTextHtml_fullscreen");
-                        var full = $("body").hasClass("o_field_widgetTextHtml_fullscreen");
+                        $("body").toggleClass("a_field_widgetTextHtml_fullscreen");
+                        var full = $("body").hasClass("a_field_widgetTextHtml_fullscreen");
                         self.$iframe.parents().toggleClass('o_form_fullscreen_ancestor', full);
                         $(window).trigger("resize"); // induce a resize() call and let other backend elements know (the navbar extra items management relies on this)
                     });

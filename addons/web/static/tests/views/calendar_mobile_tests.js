@@ -1,4 +1,4 @@
-odoo.define('web.calendar_mobile_tests', function (require) {
+autanac.define('web.calendar_mobile_tests', function (require) {
 "use strict";
 
 var CalendarView = require('web.CalendarView');

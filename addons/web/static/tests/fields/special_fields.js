@@ -1,4 +1,4 @@
-odoo.define('web.special_fields_tests', function (require) {
+autanac.define('web.special_fields_tests', function (require) {
 "use strict";
 
 var FormView = require('web.FormView');
@@ -172,7 +172,7 @@ QUnit.module('special_fields', {
             "should have 3 rows with correct value");
         await testUtils.dom.click(list.$('td:contains(Red):first'));
 
-        var $td = list.$('tbody tr.o_selected_row td:not(.o_list_record_selector)');
+        var $td = list.$('tbody tr.a_selected_row td:not(.o_list_record_selector)');
 
         assert.strictEqual($td.find('select').length, 1, "td should have a child 'select'");
         assert.strictEqual($td.contents().length, 1, "select tag should be only child of td");

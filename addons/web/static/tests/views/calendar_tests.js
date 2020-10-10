@@ -1,4 +1,4 @@
-odoo.define('web.calendar_tests', function (require) {
+autanac.define('web.calendar_tests', function (require) {
 "use strict";
 
 var AbstractStorageService = require('web.AbstractStorageService');
@@ -370,10 +370,10 @@ QUnit.module('Views', {
         testUtils.fields.editInput($('.modal-body input:first'), 'coucou');
         await testUtils.dom.click($('.modal-footer button.btn:contains(Edit)'));
 
-        assert.strictEqual($('.modal-lg .o_form_view').length, 1, "should open the slow create dialog");
+        assert.strictEqual($('.modal-lg .a_form_view').length, 1, "should open the slow create dialog");
         assert.strictEqual($('.modal-lg .modal-title').text(), "Create: Events",
             "should use the string attribute as modal title");
-        assert.strictEqual($('.modal-lg .o_form_view input[name="name"]').val(), "coucou",
+        assert.strictEqual($('.modal-lg .a_form_view input[name="name"]').val(), "coucou",
             "should have set the name from the quick create dialog");
 
         await testUtils.dom.click($('.modal-lg button.btn:contains(Save)'));
@@ -447,7 +447,7 @@ QUnit.module('Views', {
                         message: {
                             code: 200,
                             data: {},
-                            message: "Odoo server error",
+                            message: "autanac server error",
                         },
                         event: event
                     });
@@ -474,7 +474,7 @@ QUnit.module('Views', {
 
         assert.strictEqual($('.modal-lg .modal-title').text(), 'Create: Events',
             "should have switched to a bigger modal for an actual create rather than quickcreate");
-        assert.strictEqual($('.modal-lg main .o_form_view.o_form_editable').length, 1,
+        assert.strictEqual($('.modal-lg main .a_form_view.o_form_editable').length, 1,
             "should open the full event form view in a dialog");
 
         calendar.destroy();
@@ -713,7 +713,7 @@ QUnit.module('Views', {
 
     QUnit.test('week numbering', function (assert) {
         // week number depends on the week start, which depends on the locale
-        // the calendar library uses numbers [0 .. 6], while Odoo uses [1 .. 7]
+        // the calendar library uses numbers [0 .. 6], while autanac uses [1 .. 7]
         // so if the modulo is not done, the week number is incorrect
         assert.expect(1);
         var done = assert.async();
@@ -892,7 +892,7 @@ QUnit.module('Views', {
         await testUtils.fields.editInput($('.modal input:first'), 'new event');
         await testUtils.dom.click($('.modal button.btn:contains(Edit)'));
 
-        assert.strictEqual($('.o_field_widget[name="start"] input').val(),
+        assert.strictEqual($('.a_field_widget[name="start"] input').val(),
             "12/13/2016 08:00:00", "should display the datetime");
 
         await testUtils.dom.click($('.modal-lg .o_field_boolean[name="allday"] input'));
@@ -902,18 +902,18 @@ QUnit.module('Views', {
 
         await testUtils.dom.click($('.modal-lg .o_field_boolean[name="allday"] input'));
 
-        assert.strictEqual($('.o_field_widget[name="start"] input').val(),
+        assert.strictEqual($('.a_field_widget[name="start"] input').val(),
             "12/13/2016 02:00:00", "should display the datetime from the date with the timezone");
 
         // use datepicker to enter a date: 12/13/2016 08:00:00
-        testUtils.dom.openDatepicker($('.o_field_widget[name="start"].o_datepicker'));
+        testUtils.dom.openDatepicker($('.a_field_widget[name="start"].o_datepicker'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .picker-switch a[data-action="togglePicker"]'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker .timepicker-hour'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker-hours td.hour:contains(08)'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .picker-switch a[data-action="close"]'));
 
         // use datepicker to enter a date: 12/13/2016 10:00:00
-        testUtils.dom.openDatepicker($('.o_field_widget[name="stop"].o_datepicker'));
+        testUtils.dom.openDatepicker($('.a_field_widget[name="stop"].o_datepicker'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .picker-switch a[data-action="togglePicker"]'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker .timepicker-hour'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker-hours td.hour:contains(10)'));
@@ -1177,28 +1177,28 @@ QUnit.module('Views', {
         testUtils.fields.editInput($('.modal input:first'), 'new event');
         await testUtils.dom.click($('.modal button.btn:contains(Edit)'));
 
-        assert.strictEqual($('.o_field_widget[name="start"] input').val(), "12/13/2016 08:00:00",
+        assert.strictEqual($('.a_field_widget[name="start"] input').val(), "12/13/2016 08:00:00",
             "should display the datetime");
 
         await testUtils.dom.click($('.modal-lg .o_field_boolean[name="allday"] input'));
 
-        assert.strictEqual($('.o_field_widget[name="start_date"] input').val(), "12/13/2016",
+        assert.strictEqual($('.a_field_widget[name="start_date"] input').val(), "12/13/2016",
             "should display the date");
 
         await testUtils.dom.click($('.modal-lg .o_field_boolean[name="allday"] input'));
 
-        assert.strictEqual($('.o_field_widget[name="start"] input').val(), "12/13/2016 02:00:00",
+        assert.strictEqual($('.a_field_widget[name="start"] input').val(), "12/13/2016 02:00:00",
             "should display the datetime from the date with the timezone");
 
         // use datepicker to enter a date: 12/13/2016 08:00:00
-        testUtils.dom.openDatepicker($('.o_field_widget[name="start"].o_datepicker'));
+        testUtils.dom.openDatepicker($('.a_field_widget[name="start"].o_datepicker'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .picker-switch a[data-action="togglePicker"]'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker .timepicker-hour'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker-hours td.hour:contains(08)'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .picker-switch a[data-action="close"]'));
 
         // use datepicker to enter a date: 12/13/2016 10:00:00
-        testUtils.dom.openDatepicker($('.o_field_widget[name="stop"].o_datepicker'));
+        testUtils.dom.openDatepicker($('.a_field_widget[name="stop"].o_datepicker'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .picker-switch a[data-action="togglePicker"]'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker .timepicker-hour'));
         await testUtils.dom.click($('.bootstrap-datetimepicker-widget .timepicker-hours td.hour:contains(10)'));
@@ -2029,7 +2029,7 @@ QUnit.module('Views', {
         assert.ok(calendar.$('.o_cw_popover').length, "should open a popover clicking on event");
         await testUtils.dom.click(calendar.$('.o_cw_popover .o_cw_popover_edit'));
         assert.strictEqual($('.modal .modal-title').text(), 'Open: event 2', "dialog should have a valid title");
-        await testUtils.dom.click($('.modal .o_field_widget[name="user_id"] input'));
+        await testUtils.dom.click($('.modal .a_field_widget[name="user_id"] input'));
         await testUtils.dom.click($('.ui-menu-item a:contains(user 5)').trigger('mouseenter'));
         await testUtils.dom.click($('.modal button.btn:contains(Save)'));
 
@@ -2473,11 +2473,11 @@ QUnit.module('Views', {
 
         assert.strictEqual(calendar.$('.fc-event:eq(0)').text().trim(), "event 1");
         await testUtils.dom.click(calendar.$('.fc-event:eq(0)'));
-        assert.strictEqual(calendar.$('.o_field_widget[name="start"]').text(), "12/09/2016 08:00:00");
+        assert.strictEqual(calendar.$('.a_field_widget[name="start"]').text(), "12/09/2016 08:00:00");
 
         assert.strictEqual(calendar.$('.fc-event:eq(5)').text().trim(), "event 6");
         await testUtils.dom.click(calendar.$('.fc-event:eq(5)'));
-        assert.strictEqual(calendar.$('.o_field_widget[name="start"]').text(), "12/16/2016 16:00:00");
+        assert.strictEqual(calendar.$('.a_field_widget[name="start"]').text(), "12/16/2016 16:00:00");
 
         // Move event 6 as on first day of month view (27th november 2016)
         await testUtils.dragAndDrop(
@@ -2488,11 +2488,11 @@ QUnit.module('Views', {
 
         assert.strictEqual(calendar.$('.fc-event:eq(0)').text().trim(), "event 6");
         await testUtils.dom.click(calendar.$('.fc-event:eq(0)'));
-        assert.strictEqual(calendar.$('.o_field_widget[name="start"]').text(), "11/27/2016 16:00:00");
+        assert.strictEqual(calendar.$('.a_field_widget[name="start"]').text(), "11/27/2016 16:00:00");
 
         assert.strictEqual(calendar.$('.fc-event:eq(1)').text().trim(), "event 1");
         await testUtils.dom.click(calendar.$('.fc-event:eq(1)'));
-        assert.strictEqual(calendar.$('.o_field_widget[name="start"]').text(), "12/09/2016 08:00:00");
+        assert.strictEqual(calendar.$('.a_field_widget[name="start"]').text(), "12/09/2016 08:00:00");
 
         calendar.destroy();
     });

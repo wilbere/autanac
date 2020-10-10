@@ -29,7 +29,7 @@ SOFTWARE.
  * @param {String} [filename]
  * @param {String} [mimetype]
  */
-odoo.define('web.download', function () {
+autanac.define('web.download', function () {
 return function download(data, filename, mimetype) {
     var self = window, // this script is only for browsers anyway...
             defaultMime = "application/octet-stream", // this default mime also triggers iframe downloads
