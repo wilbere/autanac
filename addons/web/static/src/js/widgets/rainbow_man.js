@@ -1,4 +1,4 @@
-odoo.define('web.RainbowMan', function (require) {
+autanac.define('web.RainbowMan', function (require) {
 "use strict";
 
 /**

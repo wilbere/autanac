@@ -1,4 +1,4 @@
-odoo.define('web.ListRenderer', function (require) {
+autanac.define('web.ListRenderer', function (require) {
 "use strict";
 
 var BasicRenderer = require('web.BasicRenderer');
@@ -397,7 +397,7 @@ var ListRenderer = BasicRenderer.extend({
      * @returns {jQueryElement} a <td> element
      */
     _renderBodyCell: function (record, node, colIndex, options) {
-        var tdClassName = 'o_data_cell';
+        var tdClassName = 'a_data_cell';
         if (node.tag === 'button') {
             tdClassName += ' o_list_button';
         } else if (node.tag === 'field') {
@@ -468,7 +468,7 @@ var ListRenderer = BasicRenderer.extend({
         var nodeWithoutWidth = Object.assign({}, node);
         delete nodeWithoutWidth.attrs.width;
         var $button = viewUtils.renderButtonFromNode(nodeWithoutWidth, {
-            extraClass: node.attrs.icon ? 'o_icon_button' : undefined,
+            extraClass: node.attrs.icon ? 'a_icon_button' : undefined,
             textAsTitle: !!node.attrs.icon,
         });
         this._handleAttributes($button, node);
@@ -537,7 +537,7 @@ var ListRenderer = BasicRenderer.extend({
      */
     _renderGroupButton: function (list, node) {
         var $button = viewUtils.renderButtonFromNode(node, {
-            extraClass: node.attrs.icon ? 'o_icon_button' : undefined,
+            extraClass: node.attrs.icon ? 'a_icon_button' : undefined,
             textAsTitle: !!node.attrs.icon,
         });
         this._handleAttributes($button, node);
@@ -838,7 +838,7 @@ var ListRenderer = BasicRenderer.extend({
             return self._renderBodyCell(record, node, index, { mode: 'readonly' });
         });
 
-        var $tr = $('<tr/>', { class: 'o_data_row' })
+        var $tr = $('<tr/>', { class: 'a_data_row' })
             .attr('data-id', record.id)
             .append($cells);
         if (this.hasSelectors) {
@@ -943,7 +943,7 @@ var ListRenderer = BasicRenderer.extend({
 
         // display the no content helper if there is no data to display
         var displayNoContentHelper = !this._hasContent() && !!this.noContentHelp;
-        this.$el.toggleClass('o_list_view', !displayNoContentHelper);
+        this.$el.toggleClass('a_list_view', !displayNoContentHelper);
         if (displayNoContentHelper) {
             // destroy the previously instantiated pagers, if any
             _.invoke(oldPagers, 'destroy');

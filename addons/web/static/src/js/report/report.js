@@ -1,4 +1,4 @@
-odoo.define('report', function (require) {
+autanac.define('report', function (require) {
 'use strict';
 
 require('web.dom_ready');

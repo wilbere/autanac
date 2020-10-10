@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<autanac>
         <template id="auth_signup.login" inherit_id="web.login" name="Sign up - Reset Password">
             <xpath expr="//button[@type='submit']" position="after">
                 <div class="justify-content-between mt-2 d-flex small">
@@ -51,8 +51,8 @@
                     <input type="hidden" name="redirect" t-att-value="redirect"/>
                     <input type="hidden" name="token" t-att-value="token"/>
                     <div class="text-center oe_login_buttons pt-3">
-                        <button type="submit" class="btn btn-primary btn-block"> Sign up</button>
-                        <a t-attf-href="/web/login?{{ keep_query() }}" class="btn btn-link btn-sm" role="button">Already have an account?</a>
+                        <button type="submit" class="btn rounded-pill btn-primary btn-block"> Sign up</button>
+                        <a t-attf-href="/web/login?{{ keep_query() }}" class="btn rounded-pill btn-link btn-sm" role="button">Already have an account?</a>
                         <div class="o_login_auth"/>
                     </div>
                 </form>
@@ -65,7 +65,7 @@
                     <p class="alert alert-success" t-if="message" role="status">
                         <t t-esc="message"/>
                     </p>
-                    <a href="/web/login" class="btn btn-link float-right" role="button">Back to Login</a>
+                    <a href="/web/login" class="btn rounded-pill btn-link float-right" role="button">Back to Login</a>
                 </div>
 
                 <form class="oe_reset_password_form" role="form" method="post" t-if="not message">
@@ -91,7 +91,7 @@
                     <input type="hidden" name="redirect" t-att-value="redirect"/>
                     <input type="hidden" name="token" t-att-value="token"/>
                     <div class="clearfix oe_login_buttons">
-                        <button type="submit" class="btn btn-primary btn-block">Confirm</button>
+                        <button type="submit" class="btn rounded-pill btn-primary btn-block">Confirm</button>
                         <div class="d-flex justify-content-between align-items-center small mt-2">
                             <a t-if="not token" t-attf-href="/web/login?{{ keep_query() }}">Back to Login</a>
                             <a t-if="invalid_token" href="/web/login">Back to Login</a>
@@ -103,4 +103,4 @@
 
             </t>
         </template>
-</odoo>
+</autanac>

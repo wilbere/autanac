@@ -1,4 +1,4 @@
-odoo.define('web.test_utils_modal', function (require) {
+autanac.define('web.test_utils_modal', function (require) {
 "use strict";
 
 /**

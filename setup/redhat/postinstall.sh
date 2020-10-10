@@ -2,58 +2,58 @@
 
 set -e
 
-ODOO_CONFIGURATION_DIR=/etc/odoo
-ODOO_CONFIGURATION_FILE=$ODOO_CONFIGURATION_DIR/odoo.conf
-ODOO_DATA_DIR=/var/lib/odoo
-ODOO_GROUP="odoo"
-ODOO_LOG_DIR=/var/log/odoo
-ODOO_LOG_FILE=$ODOO_LOG_DIR/odoo-server.log
-ODOO_USER="odoo"
+autanac_CONFIGURATION_DIR=/etc/autanac
+autanac_CONFIGURATION_FILE=$autanac_CONFIGURATION_DIR/autanac.conf
+autanac_DATA_DIR=/var/lib/autanac
+autanac_GROUP="autanac"
+autanac_LOG_DIR=/var/log/autanac
+autanac_LOG_FILE=$autanac_LOG_DIR/autanac-server.log
+autanac_USER="autanac"
 
-if ! getent passwd | grep -q "^odoo:"; then
-    groupadd $ODOO_GROUP
-    adduser --system --no-create-home $ODOO_USER -g $ODOO_GROUP
+if ! getent passwd | grep -q "^autanac:"; then
+    groupadd $autanac_GROUP
+    adduser --system --no-create-home $autanac_USER -g $autanac_GROUP
 fi
-# Register "$ODOO_USER" as a postgres user with "Create DB" role attribute
-su - postgres -c "createuser -d -R -S $ODOO_USER" 2> /dev/null || true
+# Register "$autanac_USER" as a postgres user with "Create DB" role attribute
+su - postgres -c "createuser -d -R -S $autanac_USER" 2> /dev/null || true
 # Configuration file
-mkdir -p $ODOO_CONFIGURATION_DIR
+mkdir -p $autanac_CONFIGURATION_DIR
 # can't copy debian config-file as addons_path is not the same
-if [ ! -f $ODOO_CONFIGURATION_FILE ]
+if [ ! -f $autanac_CONFIGURATION_FILE ]
 then
     echo "[options]
 ; This is the password that allows database operations:
 ; admin_passwd = admin
 db_host = False
 db_port = False
-db_user = $ODOO_USER
+db_user = $autanac_USER
 db_password = False
-addons_path = /usr/lib/python3.7/site-packages/odoo/addons
-" > $ODOO_CONFIGURATION_FILE
-    chown $ODOO_USER:$ODOO_GROUP $ODOO_CONFIGURATION_FILE
-    chmod 0640 $ODOO_CONFIGURATION_FILE
+addons_path = /usr/lib/python3.7/site-packages/autanac/addons
+" > $autanac_CONFIGURATION_FILE
+    chown $autanac_USER:$autanac_GROUP $autanac_CONFIGURATION_FILE
+    chmod 0640 $autanac_CONFIGURATION_FILE
 fi
 # Log
-mkdir -p $ODOO_LOG_DIR
-chown $ODOO_USER:$ODOO_GROUP $ODOO_LOG_DIR
-chmod 0750 $ODOO_LOG_DIR
+mkdir -p $autanac_LOG_DIR
+chown $autanac_USER:$autanac_GROUP $autanac_LOG_DIR
+chmod 0750 $autanac_LOG_DIR
 # Data dir
-mkdir -p $ODOO_DATA_DIR
-chown $ODOO_USER:$ODOO_GROUP $ODOO_DATA_DIR
+mkdir -p $autanac_DATA_DIR
+chown $autanac_USER:$autanac_GROUP $autanac_DATA_DIR
 
-INIT_FILE=/lib/systemd/system/odoo.service
+INIT_FILE=/lib/systemd/system/autanac.service
 touch $INIT_FILE
 chmod 0700 $INIT_FILE
 cat << EOF > $INIT_FILE
 [Unit]
-Description=Odoo Open Source ERP and CRM
+Description=autanac Open Source ERP and CRM
 After=network.target
 
 [Service]
 Type=simple
-User=odoo
-Group=odoo
-ExecStart=/usr/bin/odoo --config $ODOO_CONFIGURATION_FILE --logfile $ODOO_LOG_FILE
+User=autanac
+Group=autanac
+ExecStart=/usr/bin/autanac --config $autanac_CONFIGURATION_FILE --logfile $autanac_LOG_FILE
 KillMode=mixed
 
 [Install]

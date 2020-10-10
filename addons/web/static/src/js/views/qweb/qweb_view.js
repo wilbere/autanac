@@ -1,7 +1,7 @@
 /**
  * Client-side implementation of a qweb view.
  */
-odoo.define('web.qweb', function (require) {
+autanac.define('web.qweb', function (require) {
 "use strict";
 
 var core = require('web.core');

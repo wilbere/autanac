@@ -1,4 +1,4 @@
-odoo.define('web.action_manager_mobile_tests', function (require) {
+autanac.define('web.action_manager_mobile_tests', function (require) {
 "use strict";
 
 var ActionManager = require('web.ActionManager');
@@ -66,14 +66,14 @@ QUnit.module('ActionManager', {
         // should default on a mobile-friendly view (kanban) for action 1
         await actionManager.doAction(1);
 
-        assert.containsNone(actionManager, '.o_list_view');
-        assert.containsOnce(actionManager, '.o_kanban_view');
+        assert.containsNone(actionManager, '.a_list_view');
+        assert.containsOnce(actionManager, '.a_kanban_view');
 
         // there is no mobile-friendly view for action 2, should use the first one (list)
         await actionManager.doAction(2);
 
-        assert.containsOnce(actionManager, '.o_list_view');
-        assert.containsNone(actionManager, '.o_kanban_view');
+        assert.containsOnce(actionManager, '.a_list_view');
+        assert.containsNone(actionManager, '.a_kanban_view');
 
         actionManager.destroy();
     });
@@ -95,15 +95,15 @@ QUnit.module('ActionManager', {
             view_type: 'form',
         });
 
-        assert.containsNone(actionManager, '.o_list_view');
-        assert.containsNone(actionManager, '.o_kanban_view');
-        assert.containsOnce(actionManager, '.o_form_view');
+        assert.containsNone(actionManager, '.a_list_view');
+        assert.containsNone(actionManager, '.a_kanban_view');
+        assert.containsOnce(actionManager, '.a_form_view');
 
         // go back to lazy loaded view
         await testUtils.dom.click(actionManager.$('.o_control_panel .breadcrumb .breadcrumb-item:first'));
-        assert.containsNone(actionManager, '.o_form_view');
-        assert.containsNone(actionManager, '.o_list_view');
-        assert.containsOnce(actionManager, '.o_kanban_view');
+        assert.containsNone(actionManager, '.a_form_view');
+        assert.containsNone(actionManager, '.a_list_view');
+        assert.containsOnce(actionManager, '.a_kanban_view');
 
         assert.verifySteps([
             '/web/action/load',

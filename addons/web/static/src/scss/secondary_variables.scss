@@ -1,43 +1,43 @@
-$o-webclient-background-color: desaturate($a-gray-100, 100%) !default;
-$o-control-panel-background-color: $a-view-background-color !default;
+$a-webclient-background-color: desaturate($a-gray-100, 100%) !default;
+$a-control-panel-background-color: $a-view-background-color !default;
 
-$o-list-footer-color: $a-main-text-color !default;
-$o-list-group-header-color: lighten($a-brand-lightsecondary, 10%) !default;
+$a-list-footer-color: $a-main-text-color !default;
+$a-list-group-header-color: lighten($a-brand-lightsecondary, 10%) !default;
 
 
-$o-colors: lighten(#000, 46.7%), #F06050, #F4A460, #F7CD1F, #6CC1ED, #814968,
+$a-colors: lighten(#000, 46.7%), #F06050, #F4A460, #F7CD1F, #6CC1ED, #814968,
               #EB7E7F, #2C8397, #475577, #D6145F, #30C381, #9365B8 !default;
 
-$o-colors-secondary: #aa4b6b, #30C381, #97743a, #F7CD1F, #4285F4, #8E24AA,
+$a-colors-secondary: #aa4b6b, #30C381, #97743a, #F7CD1F, #4285F4, #8E24AA,
                      #D6145F, #173e43, #348F50, #AA3A38, #795548, #5e0231,
                      #6be585, #999966, #e9d362, #b56969, #bdc3c7, #649173 !default;
 
 // UI custom colors, complete list
-$o-colors-complete: join(
-    set-nth(set-nth($o-colors, 1, #134E5E), 6, #3daec3),
-    $o-colors-secondary
+$a-colors-complete: join(
+    set-nth(set-nth($a-colors, 1, #134E5E), 6, #3daec3),
+    $a-colors-secondary
 )!default;
 
-$o-sheet-cancel-hpadding: $o-horizontal-padding !default;
-$o-sheet-cancel-bpadding: $o-horizontal-padding !default;
+$a-sheet-cancel-hpadding: $a-horizontal-padding !default;
+$a-sheet-cancel-bpadding: $a-horizontal-padding !default;
 
-$o-statusbar-arrow-width: $o-statusbar-height / 3 !default;
-$o-statusbar-disabled-bg: lighten($a-brand-lightsecondary, 7%) !default;
+$a-statusbar-arrow-width: $a-statusbar-height / 3 !default;
+$a-statusbar-arrow-width: lighten($a-brand-lightsecondary, 7%) !default;
 
-$o-navbar-inverse-link-hover-bg: darken($a-brand-autanac, 10%) !default;
+$a-navbar-inverse-link-hover-bg: darken($a-brand-autanac, 10%) !default;
 
-$o-datepicker-week-bg-color: lighten($o-datepicker-week-color, 30%) !default;
+$a-datepicker-week-bg-color: lighten($a-datepicker-week-color, 30%) !default;
 
 // Kanban
 
-$o-kanban-record-margin: $o-horizontal-padding / 2 !default;
-$o-kanban-group-padding: $o-horizontal-padding !default; // Cannot be higher than this
+$a-kanban-record-margin: $a-horizontal-padding / 2 !default;
+$a-kanban-group-padding: $a-horizontal-padding !default; // Cannot be higher than this
 
-$o-kanban-inside-hgutter-mobile: $o-horizontal-padding !default;
+$a-kanban-inside-hgutter-mobile: $a-horizontal-padding !default;
 
 // ------- Kanban dashboard variables -------
 
 // Since rows and containers are used inside cards, we're
 // forced to set the padding relative to the grid system.
-$o-kanban-dashboard-hpadding: $o-horizontal-padding !default;
-$o-kanban-dashboard-vpadding: $o-horizontal-padding / 2 !default;
+$a-kanban-dashboard-hpadding: $a-horizontal-padding !default;
+$a-kanban-dashboard-vpadding: $a-horizontal-padding / 2 !default;

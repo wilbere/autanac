@@ -1,4 +1,4 @@
-odoo.define('unsplash.api', function (require) {
+autanac.define('unsplash.api', function (require) {
 'use strict';
 
 var Class = require('web.Class');

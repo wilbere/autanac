@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -13,12 +13,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~12.5\n"
+"Project-Id-Version: autanac Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: Yoshi Tashiro <tashiro@roomsfor.hk>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/odoo/teams/41243/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/autanac/teams/41243/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -119,7 +119,7 @@ msgstr "機能を設定するには、一度このページを<strong>保存</st
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "About"
-msgstr "Odooについて"
+msgstr "autanacについて"
 
 #. module: base_setup
 #: code:addons/base_setup/controllers/main.py:0
@@ -315,8 +315,8 @@ msgstr "外部Eメールサーバ"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze Odoo data from Google Spreadsheet"
-msgstr "GoogleスプレッドシートにOdooデータを抽出、分析する"
+msgid "Extract and analyze autanac data from Google Spreadsheet"
+msgstr "Googleスプレッドシートにautanacデータを抽出、分析する"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -492,15 +492,15 @@ msgstr "OAuth認証"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: base_setup
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo S.A."
-msgstr "Odoo S.A."
+msgid "Distribuidor Autana Cars c.a"
+msgstr "Distribuidor Autana Cars c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -572,7 +572,7 @@ msgstr "統計"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Synchronize your calendar with Google Calendar"
-msgstr "OdooカレンダをGoogleカレンダーと同期"
+msgstr "autanacカレンダをGoogleカレンダーと同期"
 
 #. module: base_setup
 #. openerp-web
@@ -625,8 +625,8 @@ msgstr "外部認証プロバイダを使用する (OAuth)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in Odoo Notes"
-msgstr "Odooノートで外部のパッドを使用"
+msgid "Use external pads in autanac Notes"
+msgstr "autanacノートで外部のパッドを使用"
 
 #. module: base_setup
 #. openerp-web
@@ -640,7 +640,7 @@ msgstr "ユーザ"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, Odoo provides a list of matching "
+"When populating your address book, autanac provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""

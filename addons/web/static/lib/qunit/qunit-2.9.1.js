@@ -1247,7 +1247,7 @@
 
   var LISTENERS = Object.create(null);
   var SUPPORTED_EVENTS = ["runStart", "suiteStart", "testStart", "assertion", "testEnd", "suiteEnd", "runEnd"];
-  SUPPORTED_EVENTS.push("OdooAfterTestHook"); // Odoo customization
+  SUPPORTED_EVENTS.push("autanacAfterTestHook"); // autanac customization
 
   /**
    * Emits an event with the specified data to all currently registered listeners.
@@ -3141,7 +3141,7 @@
   			this.pushFailure("Expected at least one assertion, but none were run - call " + "expect(0) to accept zero assertions.", this.stack);
   		}
 
-        emit("OdooAfterTestHook"); // Odoo customization
+        emit("autanacAfterTestHook"); // autanac customization
 
   		var i,
   		    module = this.module,

@@ -1,6 +1,6 @@
 ///
 /// This file regroups the CSS rules made to fix/extend bootstrap in all places
-/// where it is used in Odoo (backend / frontend / reports / ...)
+/// where it is used in autanac (backend / frontend / reports / ...)
 ///
 
 .alert {
@@ -22,7 +22,7 @@
     // to a BS3-like one: only the header and footer are colored and the body
     // will use the color of a default card background with a light opacity.
     // Limitation: bg-* utilities cannot be used on card-body elements anymore.
-    @include o-bg-color(rgba($card-bg, $o-card-body-bg-opacity));
+    @include o-bg-color(rgba($card-bg, $a-card-body-bg-opacity));
 
     &:first-child {
         @include border-top-radius($card-inner-border-radius);

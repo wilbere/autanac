@@ -25,7 +25,7 @@
 // Fields
 //------------------------------------------------------------------------------
 
-.o_field_widget {
+.a_field_widget {
     // Default display and alignment of widget and internal <input/>
     &, input.o_input {
         display: inline-block;
@@ -93,7 +93,7 @@
         align-items: baseline;
         max-width: 100%;
 
-        > .o_field_widget {
+        > .a_field_widget {
             flex: 1 0 100px;
             position: initial;
             max-width: 100%;
@@ -128,14 +128,14 @@
         // o-kanban-colorpicker without customizing
         // '&:first-child > a::before' (transparent red-crossed colorpick)
         @mixin o-tag-colorpicker {
-            $o-tag-colorpicker-padding-right: $o-dropdown-hpadding - 2 * 5px; // FIXME was $o-kanban-inner-hmargin before scss convertion
+            $o-tag-colorpicker-padding-right: $a-dropdown-hpadding - 2 * 5px; // FIXME was $a-kanban-inner-hmargin before scss convertion
 
             max-width: 100%;
-            padding: 3px $o-tag-colorpicker-padding-right 3px $o-dropdown-hpadding;
+            padding: 3px $o-tag-colorpicker-padding-right 3px $a-dropdown-hpadding;
 
             > li {
                 display: inline-block;
-                margin: 5px 5px 0 0; // FIXME was $o-kanban-inner-hmargin before scss convertion
+                margin: 5px 5px 0 0; // FIXME was $a-kanban-inner-hmargin before scss convertion
                 border: 1px solid white;
                 box-shadow: 0 0 0 1px gray('300');
 
@@ -170,20 +170,20 @@
             }
         }
 
-        @for $size from 1 through length($o-colors) {
+        @for $size from 1 through length($a-colors) {
             .o_tag_color_#{$size - 1} {
                 @if $size == 1 {
                     & {
                         background-color: white;
-                        color: nth($o-colors, $size);
-                        box-shadow: inset 0 0 0 2px nth($o-colors, $size);
+                        color: nth($a-colors, $size);
+                        box-shadow: inset 0 0 0 2px nth($a-colors, $size);
                     }
                     &::after {
-                        background-color: nth($o-colors, $size);
+                        background-color: nth($a-colors, $size);
                     }
                 } @else {
                     &, &::after {
-                        background-color: nth($o-colors, $size);
+                        background-color: nth($a-colors, $size);
                         color: $white;
                     }
                 }
@@ -303,14 +303,14 @@
 
         &.o_horizontal {
             .o_radio_item {
-                margin-right: $o-form-spacing-unit * 2;
+                margin-right: $a-form-spacing-unit * 2;
             }
         }
 
         &.o_vertical {
             flex-flow: column nowrap;
             .o_radio_item {
-                margin-bottom: $o-form-spacing-unit;
+                margin-bottom: $a-form-spacing-unit;
             }
         }
     }
@@ -393,7 +393,7 @@
                 cursor: pointer;
             }
         }
-        @include media-breakpoint-down(xs, $o-extra-grid-breakpoints) {
+        @include media-breakpoint-down(xs, $a-extra-grid-breakpoints) {
             .o_form_image_controls{
                 position: initial;
                 opacity: 1;
@@ -495,6 +495,6 @@ button.o_field_float_toggle {
 }
 
 // Selection fields
-select.o_field_widget.o_input {
+select.a_field_widget.o_input {
     padding: 1px;  // Other inputs get a 1px padding automatically added by the browsers but selects do not
 }

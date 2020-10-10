@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import re
-import odoo.tests
+import autanac.tests
 
 RE_ONLY = re.compile('QUnit\.only\(')
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class WebSuite(odoo.tests.HttpCase):
+@autanac.tests.tagged('post_install', '-at_install')
+class WebSuite(autanac.tests.HttpCase):
 
     def test_js(self):
         # webclient desktop test suite
@@ -33,8 +33,8 @@ class WebSuite(odoo.tests.HttpCase):
                     self.fail("`QUnit.only()` used in file %r" % asset['url'])
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class MobileWebSuite(odoo.tests.HttpCase):
+@autanac.tests.tagged('post_install', '-at_install')
+class MobileWebSuite(autanac.tests.HttpCase):
     browser_size = '375x667'
 
     def test_mobile_js(self):

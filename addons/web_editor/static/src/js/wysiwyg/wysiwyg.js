@@ -1,4 +1,4 @@
-odoo.define('web_editor.wysiwyg', function (require) {
+autanac.define('web_editor.wysiwyg', function (require) {
 'use strict';
 var Widget = require('web.Widget');
 var SummernoteManager = require('web_editor.rte.summernote');
@@ -24,7 +24,7 @@ var Wysiwyg = Widget.extend({
         ],
         'styleWithSpan': false,
         'inlinemedia': ['p'],
-        'lang': 'odoo',
+        'lang': 'autanac',
         'colors': summernoteCustomColors,
         recordInfo: {
             context: {},
@@ -68,7 +68,7 @@ var Wysiwyg = Widget.extend({
      * @override
      */
     start: function () {
-        this.$target.wrap('<odoo-wysiwyg-container>');
+        this.$target.wrap('<autanac-wysiwyg-container>');
         this.$el = this.$target.parent();
         var options = this._editorOptions();
         this.$target.summernote(options);
@@ -262,7 +262,7 @@ Wysiwyg.setRangeFromNode = function (node, options) {
 };
 return Wysiwyg;
 });
-odoo.define('web_editor.widget', function (require) {
+autanac.define('web_editor.widget', function (require) {
 'use strict';
     return {
         Dialog: require('wysiwyg.widgets.Dialog'),

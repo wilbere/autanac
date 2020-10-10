@@ -1,4 +1,4 @@
-odoo.define('web.qweb_view_tests', function (require) {
+autanac.define('web.qweb_view_tests', function (require) {
 "use strict";
 
 var qweb = require('web.qweb');

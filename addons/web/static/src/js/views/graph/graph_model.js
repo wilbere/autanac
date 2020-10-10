@@ -1,4 +1,4 @@
-odoo.define('web.GraphModel', function (require) {
+autanac.define('web.GraphModel', function (require) {
 "use strict";
 
 var core = require('web.core');

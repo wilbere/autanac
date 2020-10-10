@@ -1,4 +1,4 @@
-odoo.define('web.CalendarPopover', function (require) {
+autanac.define('web.CalendarPopover', function (require) {
 "use strict";
 
 var fieldRegistry = require('web.field_registry');

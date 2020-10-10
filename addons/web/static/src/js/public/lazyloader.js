@@ -1,4 +1,4 @@
-odoo.define('web.public.lazyloader', function (require) {
+autanac.define('web.public.lazyloader', function (require) {
 'use strict';
 
 var blockEvents = ['submit', 'click'];

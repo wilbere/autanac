@@ -1,4 +1,4 @@
-odoo.define('web_editor.summernote', function (require) {
+autanac.define('web_editor.summernote', function (require) {
 'use strict';
 
 var core = require('web.core');
@@ -1017,7 +1017,7 @@ renderer.tplButtonInfo.color = function (lang, options) {
 renderer.tplButtonInfo.checklist = function (lang, options) {
     return '<button ' +
             'type="button" ' +
-            'class="btn btn-secondary btn-sm" ' +
+            'class="btn rounded-pill btn-secondary btn-sm" ' +
             'title="' + _t('Checklist') + '" ' +
             'data-event="insertCheckList" ' +
             'tabindex="-1" ' +
@@ -2031,7 +2031,7 @@ $.summernote.pluginEvents.formatBlock = function (event, editor, layoutInfo, sTa
       return;
     }
 
-    // fix by odoo because if you select a style in a li with no p tag all the ul is wrapped by the style tag
+    // fix by autanac because if you select a style in a li with no p tag all the ul is wrapped by the style tag
     var nodes = dom.listBetween(r.sc, r.ec, r.so, r.eo);
     for (var i=0; i<nodes.length; i++) {
         if (dom.isBR(nodes[i]) || (dom.isText(nodes[i]) && dom.isVisibleText(nodes[i])) || dom.isB(nodes[i]) || dom.isU(nodes[i]) || dom.isS(nodes[i]) || dom.isI(nodes[i]) || dom.isFont(nodes[i])) {

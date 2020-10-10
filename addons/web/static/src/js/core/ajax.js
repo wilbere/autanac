@@ -1,4 +1,4 @@
-odoo.define('web.ajax', function (require) {
+autanac.define('web.ajax', function (require) {
 "use strict";
 
 var config = require('web.config');
@@ -290,7 +290,7 @@ function get_file(options) {
             var err;
             var doc = new DOMParser().parseFromString(contents, 'text/html');
             var nodes = doc.body.children.length === 0 ? doc.body.childNodes : doc.body.children;
-            try { // Case of a serialized Odoo Exception: It is Json Parsable
+            try { // Case of a serialized autanac Exception: It is Json Parsable
                 var node = nodes[1] || nodes[0];
                 err = JSON.parse(node.textContent);
             } catch (e) { // Arbitrary uncaught python side exception
@@ -444,7 +444,7 @@ var loadAsset = (function () {
         if (cache[xmlId]) {
             return cache[xmlId];
         }
-        context = _.extend({}, odoo.session_info.user_context, context);
+        context = _.extend({}, autanac.session_info.user_context, context);
         const params = {
             args: [xmlId, {
                 debug: config.isDebug()

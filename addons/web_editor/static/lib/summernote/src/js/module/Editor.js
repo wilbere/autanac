@@ -28,10 +28,10 @@ define([
     var typing = new Typing();
     var bullet = new Bullet();
 
-    this.style = style;   // ODOO: allow access for override
-    this.table = table;   // ODOO: allow access for override
-    this.typing = typing; // ODOO: allow access for override
-    this.bullet = bullet; // ODOO: allow access for override
+    this.style = style;   // autanac: allow access for override
+    this.table = table;   // autanac: allow access for override
+    this.typing = typing; // autanac: allow access for override
+    this.bullet = bullet; // autanac: allow access for override
 
     /**
      * @method createRange
@@ -55,13 +55,13 @@ define([
      * @param {Boolean} [thenCollapse=false]
      */
     this.saveRange = function ($editable, thenCollapse) {
-      // ODOO: scroll to top when click on input in editable m (start_modification
+      // autanac: scroll to top when click on input in editable m (start_modification
       // this.focus($editable);
       var r = range.create();
       if (!r || ($editable[0] !== r.sc && !$.contains($editable[0], r.sc))) {
         $editable.focus();
       }
-      // ODOO: end_modication)
+      // autanac: end_modication)
       $editable.data('range', range.create());
       if (thenCollapse) {
         range.create().collapse().select();
@@ -628,7 +628,7 @@ define([
       }
 
       var anchors = [];
-      // ODOO: adding this branch to modify existing anchor if it fully contains the range
+      // autanac: adding this branch to modify existing anchor if it fully contains the range
       var ancestor_anchor = dom.ancestor(rng.sc, dom.isAnchor);
       if(ancestor_anchor && ancestor_anchor === dom.ancestor(rng.ec, dom.isAnchor)) {
           anchors.push($(ancestor_anchor).html(linkText).get(0));
@@ -646,8 +646,8 @@ define([
 
       $.each(anchors, function (idx, anchor) {
         $(anchor).attr('href', linkUrl);
-        $(anchor).attr('class', linkInfo.className || null); // ODOO: addition
-        $(anchor).css(linkInfo.style || {}); // ODOO: addition
+        $(anchor).attr('class', linkInfo.className || null); // autanac: addition
+        $(anchor).css(linkInfo.style || {}); // autanac: addition
         if (isNewWindow) {
           $(anchor).attr('target', '_blank');
         } else {

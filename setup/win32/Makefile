@@ -8,7 +8,7 @@ FILES_DIRECTORY=release
 MAKENSIS_ARGUMENTS=/DVERSION=$(VERSION) /DSERVICENAME=${SERVICENAME} /DPYTHONVERSION=${PYTHON_VERSION}
 
 LAUNCH_MAKENSIS=/cygdrive/c/tools/cygwin/makensis $(MAKENSIS_ARGUMENTS) setup.nsi
-WINPY_DIR=/cygdrive/c/odoobuild/WinPython/python-${PYTHON_VERSION}
+WINPY_DIR=/cygdrive/c/autanacbuild/WinPython/python-${PYTHON_VERSION}
 
 default: allinone
 

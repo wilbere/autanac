@@ -1,4 +1,4 @@
-odoo.define('web.test_utils_kanban', function (require) {
+autanac.define('web.test_utils_kanban', function (require) {
 "use strict";
 
 /**
@@ -31,7 +31,7 @@ function clickCreate(kanban) {
  * @returns {Promise}
  */
 function toggleGroupSettings($column) {
-    var $dropdownToggler = $column.find('.o_kanban_config > a.dropdown-toggle');
+    var $dropdownToggler = $column.find('.a_kanban_config > a.dropdown-toggle');
     if (!$dropdownToggler.is(':visible')) {
         $dropdownToggler.css('display', 'block');
     }
@@ -57,7 +57,7 @@ function quickCreate(kanban, value, fieldName) {
         }
     );
     return testUtilsFields.editAndTrigger(
-        kanban.$('.o_kanban_quick_create input' + additionalSelector),
+        kanban.$('.a_kanban_quick_create input' + additionalSelector),
         value,
         ['input', enterEvent]
     );

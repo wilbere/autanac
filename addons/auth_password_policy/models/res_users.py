@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import api, models, _
-from odoo.exceptions import UserError
+from autanac import api, models, _
+from autanac.exceptions import UserError
 
 
 class ResUsers(models.Model):

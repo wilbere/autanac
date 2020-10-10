@@ -1,4 +1,4 @@
-odoo.define('web.DebugManager', function (require) {
+autanac.define('web.DebugManager', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -20,7 +20,7 @@ var DebugManager = Widget.extend({
     init: function () {
         this._super.apply(this, arguments);
         this._events = null;
-        var debug = odoo.debug;
+        var debug = autanac.debug;
         this.debug_mode = debug;
         this.debug_mode_help = debug && debug !== '1' ? ' (' + debug + ')' : '';
     },

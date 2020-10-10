@@ -1,4 +1,4 @@
-odoo.define('web.NotificationService', function (require) {
+autanac.define('web.NotificationService', function (require) {
 'use strict';
 
 var AbstractService = require('web.AbstractService');
@@ -92,7 +92,7 @@ var NotificationService = AbstractService.extend({
 
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onCloseNotification: function (ev) {
         ev.stopPropagation();

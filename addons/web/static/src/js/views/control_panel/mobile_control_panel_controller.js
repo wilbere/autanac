@@ -1,4 +1,4 @@
- odoo.define('web.MobileControlPanelController', function (require) {
+ autanac.define('web.MobileControlPanelController', function (require) {
 "use strict";
 
 var config = require('web.config');

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 import netifaces
 from pathlib import Path
@@ -15,8 +15,8 @@ import zipfile
 from threading import Thread
 import time
 
-from odoo import _
-from odoo.modules.module import get_resource_path
+from autanac import _
+from autanac.modules.module import get_resource_path
 
 _logger = logging.getLogger(__name__)
 
@@ -26,7 +26,7 @@ _logger = logging.getLogger(__name__)
 
 class IoTRestart(Thread):
     """
-    Thread to restart odoo server in IoT Box when we must return a answer before
+    Thread to restart autanac server in IoT Box when we must return a answer before
     """
     def __init__(self, delay):
         Thread.__init__(self)
@@ -34,20 +34,20 @@ class IoTRestart(Thread):
 
     def run(self):
         time.sleep(self.delay)
-        subprocess.check_call(["sudo", "service", "odoo", "restart"])
+        subprocess.check_call(["sudo", "service", "autanac", "restart"])
 
 def access_point():
     return get_ip() == '10.11.12.1'
 
 def add_credential(db_uuid, enterprise_code):
-    write_file('odoo-db-uuid.conf', db_uuid)
-    write_file('odoo-enterprise-code.conf', enterprise_code)
+    write_file('autanac-db-uuid.conf', db_uuid)
+    write_file('autanac-enterprise-code.conf', enterprise_code)
 
 def check_certificate():
     """
     Check if the current certificate is up to date or not authenticated
     """
-    server = get_odoo_server_url()
+    server = get_autanac_server_url()
     if server:
         path = Path('/etc/ssl/certs/nginx-cert.crt')
         if path.exists():
@@ -57,7 +57,7 @@ def check_certificate():
                 for key in cert.get_subject().get_components():
                     if key[0] == b'CN':
                         cn = key[1].decode('utf-8')
-                if cn == 'OdooTempIoTBoxCertificate' or datetime.datetime.now() > cert_end_date:
+                if cn == 'autanacTempIoTBoxCertificate' or datetime.datetime.now() > cert_end_date:
                     _logger.info(_('Your certificate %s must be updated') % (cn))
                     load_certificate()
                 else:
@@ -67,10 +67,10 @@ def check_certificate():
 
 def check_git_branch():
     """
-    Check if the local branch is the same than the connected Odoo DB and
+    Check if the local branch is the same than the connected autanac DB and
     checkout to match it if needed.
     """
-    server = get_odoo_server_url()
+    server = get_autanac_server_url()
     if server:
         urllib3.disable_warnings()
         http = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -83,7 +83,7 @@ def check_git_branch():
             )
 
             if response.status == 200:
-                git = ['git', '--work-tree=/home/pi/odoo/', '--git-dir=/home/pi/odoo/.git']
+                git = ['git', '--work-tree=/home/pi/autanac/', '--git-dir=/home/pi/autanac/.git']
 
                 db_branch = json.loads(response.data)['result']['server_serie'].replace('~', '-')
                 if not subprocess.check_output(git + ['ls-remote', 'origin', db_branch]):
@@ -93,10 +93,10 @@ def check_git_branch():
 
                 if db_branch != local_branch:
                     subprocess.check_call(["sudo", "mount", "-o", "remount,rw", "/"])
-                    subprocess.check_call(["rm", "-rf", "/home/pi/odoo/addons/hw_drivers/drivers/*"])
+                    subprocess.check_call(["rm", "-rf", "/home/pi/autanac/addons/hw_drivers/drivers/*"])
                     subprocess.check_call(git + ['branch', '-m', db_branch])
                     subprocess.check_call(git + ['remote', 'set-branches', 'origin', db_branch])
-                    os.system('/home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh')
+                    os.system('/home/pi/autanac/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh')
                     subprocess.check_call(["sudo", "mount", "-o", "remount,ro", "/"])
                     subprocess.check_call(["sudo", "mount", "-o", "remount,rw", "/root_bypass_ramdisks/etc/cups"])
 
@@ -108,7 +108,7 @@ def check_image():
     """
     Check if the current image of IoT Box is up to date
     """
-    url = 'http://nightly.odoo.com/master/posbox/iotbox/SHA1SUMS.txt'
+    url = 'http://nightly.autanac.com/master/posbox/iotbox/SHA1SUMS.txt'
     urllib3.disable_warnings()
     http = urllib3.PoolManager(cert_reqs='CERT_NONE')
     response = http.request('GET', url)
@@ -151,11 +151,11 @@ def get_ssid():
     process_grep = subprocess.Popen(['grep', 'ESSID:"'], stdin=process_iwconfig.stdout, stdout=subprocess.PIPE)
     return subprocess.check_output(['sed', 's/.*"\\(.*\\)"/\\1/'], stdin=process_grep.stdout).decode('utf-8').rstrip()
 
-def get_odoo_server_url():
+def get_autanac_server_url():
     ap = subprocess.call(['systemctl', 'is-active', 'hostapd']) # if service is active return 0 else inactive
     if not ap:
         return False
-    return read_file_first_line('odoo-remote-server.conf')
+    return read_file_first_line('autanac-remote-server.conf')
 
 def get_token():
     return read_file_first_line('token')
@@ -175,12 +175,12 @@ def get_wifi_essid():
 
 def load_certificate():
     """
-    Send a request to Odoo with customer db_uuid and enterprise_code to get a true certificate
+    Send a request to autanac with customer db_uuid and enterprise_code to get a true certificate
     """
-    db_uuid = read_file_first_line('odoo-db-uuid.conf')
-    enterprise_code = read_file_first_line('odoo-enterprise-code.conf')
+    db_uuid = read_file_first_line('autanac-db-uuid.conf')
+    enterprise_code = read_file_first_line('autanac-enterprise-code.conf')
     if db_uuid and enterprise_code:
-        url = 'https://www.odoo.com/odoo-enterprise/iot/x509'
+        url = 'https://www.autanac.com/autanac-enterprise/iot/x509'
         data = {
             'params': {
                 'db_uuid': db_uuid,
@@ -197,7 +197,7 @@ def load_certificate():
         )
         result = json.loads(response.data.decode('utf8'))['result']
         if result:
-            write_file('odoo-subject.conf', result['subject_cn'])
+            write_file('autanac-subject.conf', result['subject_cn'])
             subprocess.check_call(["sudo", "mount", "-o", "remount,rw", "/"])
             subprocess.check_call(["sudo", "mount", "-o", "remount,rw", "/root_bypass_ramdisks/"])
             Path('/etc/ssl/certs/nginx-cert.crt').write_text(result['x509_pem'])
@@ -211,9 +211,9 @@ def load_certificate():
 
 def download_drivers(auto=True):
     """
-    Get the drivers from the configured Odoo server
+    Get the drivers from the configured autanac server
     """
-    server = get_odoo_server_url()
+    server = get_autanac_server_url()
     if server:
         urllib3.disable_warnings()
         pm = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -222,7 +222,7 @@ def download_drivers(auto=True):
             resp = pm.request('POST', server, fields={'mac': get_mac_address(), 'auto': auto})
             if resp.data:
                 subprocess.check_call(["sudo", "mount", "-o", "remount,rw", "/"])
-                drivers_path = Path.home() / 'odoo/addons/hw_drivers/drivers'
+                drivers_path = Path.home() / 'autanac/addons/hw_drivers/drivers'
                 zip_file = zipfile.ZipFile(io.BytesIO(resp.data))
                 zip_file.extractall(drivers_path)
                 subprocess.check_call(["sudo", "mount", "-o", "remount,ro", "/"])
@@ -231,7 +231,7 @@ def download_drivers(auto=True):
             _logger.error('Could not reach configured server')
             _logger.error('A error encountered : %s ' % e)
 
-def odoo_restart(delay):
+def autanac_restart(delay):
     IR = IoTRestart(delay)
     IR.start()
 

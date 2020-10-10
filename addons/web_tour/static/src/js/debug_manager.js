@@ -1,4 +1,4 @@
-odoo.define('web_tour.DebugManager.Backend', function (require) {
+autanac.define('web_tour.DebugManager.Backend', function (require) {
 "use strict";
 
 var core = require("web.core");

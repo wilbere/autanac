@@ -1,4 +1,4 @@
-odoo.define('web.widget_tests', function (require) {
+autanac.define('web.widget_tests', function (require) {
 "use strict";
 
 var AjaxService = require('web.AjaxService');

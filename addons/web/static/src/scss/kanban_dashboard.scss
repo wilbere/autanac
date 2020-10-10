@@ -1,16 +1,16 @@
 
-.o_kanban_view.o_kanban_dashboard {
-    &:not(.o_kanban_grouped) {
+.a_kanban_view.a_kanban_dashboard {
+    &:not(.a_kanban_grouped) {
         // correctly display the no_content_helper in dashboards
         flex-flow: row wrap;
     }
 
-    .o_kanban_record {
+    .a_kanban_record {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
-        padding: $o-kanban-dashboard-vpadding $o-kanban-dashboard-hpadding;
+        padding: $a-kanban-dashboard-vpadding $a-kanban-dashboard-hpadding;
 
         @include media-breakpoint-down(sm) {
             margin-bottom: 10px;
@@ -24,12 +24,12 @@
         // ------- Dropdown toggle & menu -------
         $o-kanban-manage-toggle-height: 35px;
 
-        .o_kanban_manage_toggle_button {
-            @include o-kanban-dropdown($o-kanban-dashboard-hpadding);
+        .a_kanban_manage_toggle_button {
+            @include o-kanban-dropdown($a-kanban-dashboard-hpadding);
             height: $o-kanban-manage-toggle-height;
         }
 
-        .o_kanban_card_manage_pane {
+        .a_kanban_card_manage_pane {
             @include o-kanban-dropdown-menu;
 
             // Arbitrary value to place the dropdown-menu exactly below the
@@ -42,7 +42,7 @@
                 margin-bottom: 5px;
             }
 
-            > .o_kanban_card_manage_section {
+            > .a_kanban_card_manage_section {
                 border-bottom: 1px solid gray('300');
                 margin-bottom: 10px;
 
@@ -62,31 +62,31 @@
                     justify-content: space-between;
                     margin-left: 0;
                     margin-right: 0;
-                    padding-left: $o-kanban-dashboard-dropdown-complex-gap*2;
-                    padding-right: $o-kanban-dashboard-dropdown-complex-gap*2;
+                    padding-left: $a-kanban-dashboard-dropdown-complex-gap*2;
+                    padding-right: $a-kanban-dashboard-dropdown-complex-gap*2;
                 }
 
                 div[class*="col-"] {
                     flex: 1 1 percentage(1/3);
-                    padding-left: $o-kanban-dashboard-dropdown-complex-gap;
-                    padding-right: $o-kanban-dashboard-dropdown-complex-gap;
+                    padding-left: $a-kanban-dashboard-dropdown-complex-gap;
+                    padding-right: $a-kanban-dashboard-dropdown-complex-gap;
                     max-width: none;
 
-                    > .o_kanban_card_manage_title {
+                    > .a_kanban_card_manage_title {
                         margin: (($font-size-base * $line-height-base) / 2) 0;
                         color: $headings-color;
                         font-size: $h5-font-size;
                         font-weight: 500;
                         line-height: $headings-line-height;
                     }
-                    > div:not(.o_kanban_card_manage_title) {
-                        @include o-kanban-dashboard-dropdown-link($link-padding-gap: $o-kanban-dashboard-dropdown-complex-gap);
+                    > div:not(.a_kanban_card_manage_title) {
+                        @include o-kanban-dashboard-dropdown-link($link-padding-gap: $a-kanban-dashboard-dropdown-complex-gap);
                     }
                 }
 
-                .row.o_kanban_card_manage_settings {
+                .row.a_kanban_card_manage_settings {
                     border-top: 1px solid gray('300');
-                    padding-top: $o-kanban-dashboard-dropdown-complex-gap*3;
+                    padding-top: $a-kanban-dashboard-dropdown-complex-gap*3;
 
                     .oe_kanban_colorpicker {
                         max-width: none;
@@ -112,10 +112,10 @@
         }
 
         &.o_dropdown_open {
-            .o_kanban_card_manage_pane {
+            .a_kanban_card_manage_pane {
                 display: block;
             }
-            .o_kanban_manage_toggle_button {
+            .a_kanban_manage_toggle_button {
                 @include o-kanban-dropdown-open;
                 position: absolute;
             }
@@ -126,19 +126,19 @@
 
         // Provide enough room for the dropdown-toggle
         .o_primary {
-            padding-right: $o-kanban-dashboard-hpadding*2;
+            padding-right: $a-kanban-dashboard-hpadding*2;
         }
 
         // Uniform titles
-        .o_kanban_card_header_title .o_primary,
-        .o_kanban_primary_left .o_primary > span:first-child,
+        .a_kanban_card_header_title .o_primary,
+        .a_kanban_primary_left .o_primary > span:first-child,
         .oe_kanban_content > .o_title > h3 {
             @include o-kanban-record-title($font-size: 16px);
             display: block;
         }
 
         // Identify subtitles without classes
-        .o_kanban_primary_left .o_primary > span:nth-child(2) > strong {
+        .a_kanban_primary_left .o_primary > span:nth-child(2) > strong {
             font-weight: 500;
             font-size: $font-size-sm;
             color: $text-muted;
@@ -146,22 +146,22 @@
 
         // Provide enough room to add an icon before the title
         &.o_has_icon .o_primary {
-            padding-left: $o-kanban-record-margin*1.5;
+            padding-left: $a-kanban-record-margin*1.5;
         }
 
         // -------  Kanban Content -------
-        .o_kanban_card_content {
+        .a_kanban_card_content {
             display: inline-block;
             vertical-align: top;
             min-height: 80px;
         }
 
-        .o_kanban_card_header + .container.o_kanban_card_content {
+        .a_kanban_card_header + .container.a_kanban_card_content {
             flex: 1 0 auto;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-between;
-            margin-top: $o-kanban-dashboard-vpadding * 2;
+            margin-top: $a-kanban-dashboard-vpadding * 2;
             padding-right: 0;
             padding-left: 0;
 
@@ -174,15 +174,15 @@
                 @include o-text-overflow(inline-block);
             }
 
-            .o_kanban_primary_bottom {
-                margin-top: $o-kanban-dashboard-vpadding;
-                margin-bottom: -$o-kanban-dashboard-vpadding;
+            .a_kanban_primary_bottom {
+                margin-top: $a-kanban-dashboard-vpadding;
+                margin-bottom: -$a-kanban-dashboard-vpadding;
 
                 &.bottom_block {
                     border-top: 1px solid gray('300');
                     background-color: gray('200');
-                    padding-top: $o-kanban-dashboard-vpadding;
-                    padding-bottom: $o-kanban-dashboard-vpadding;
+                    padding-top: $a-kanban-dashboard-vpadding;
+                    padding-bottom: $a-kanban-dashboard-vpadding;
                 }
             }
         }
@@ -192,9 +192,9 @@
         }
     }
 
-    .o_favorite, .o_kanban_manage_toggle_button {
+    .o_favorite, .a_kanban_manage_toggle_button {
         @include o-position-absolute(0, 0);
-        padding: $o-kanban-record-margin;
+        padding: $a-kanban-record-margin;
     }
 
     .o_favorite {
@@ -204,7 +204,7 @@
     }
 
     // Emphasize records' colors when necessary
-    &.o_emphasize_colors .o_kanban_record::after {
-        width: $o-kanban-color-border-width * 2;
+    &.o_emphasize_colors .a_kanban_record::after {
+        width: $a-kanban-color-border-width * 2;
     }
 }

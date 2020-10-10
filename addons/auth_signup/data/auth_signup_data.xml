@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<autanac>
     <data noupdate="1">
         <!-- activate B2C portal by default -->
         <function model="ir.config_parameter" name="set_param" eval="('auth_signup.invitation_scope', 'b2c')"/>
@@ -41,7 +41,7 @@
                 <tr><td valign="top" style="font-size: 13px;">
                     <div>
                         Dear ${object.name},<br/><br/>
-                        A password reset was requested for the Odoo account linked to this email.
+                        A password reset was requested for the autanac account linked to this email.
                         You may change your password by following this link which will remain valid during 24 hours:<br/>
                         <div style="margin: 16px 0px 16px 0px;">
                             <a href="${object.signup_url}"
@@ -87,9 +87,7 @@
 <!-- POWERED BY -->
 <tr><td align="center" style="min-width: 590px;">
     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
-      <tr><td style="text-align: center; font-size: 13px;">
-        Powered by <a target="_blank" href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">Odoo</a>
-      </td></tr>
+      
     </table>
 </td></tr>
 </table>
@@ -101,9 +99,9 @@
 
         <!-- Email template for new users -->
         <record id="set_password_email" model="mail.template">
-            <field name="name">Auth Signup: Odoo Connection</field>
+            <field name="name">Auth Signup: autanac Connection</field>
             <field name="model_id" ref="base.model_res_users"/>
-            <field name="subject">${object.create_uid.name} from ${object.company_id.name} invites you to connect to Odoo</field>
+            <field name="subject">${object.create_uid.name} from ${object.company_id.name} invites you to connect to autanac</field>
             <field name="email_from">"${object.company_id.name | safe}" &lt;${(object.company_id.email or user.email) | safe}&gt;</field>
             <field name="email_to">${object.email_formatted | safe}</field>
             <field name="body_html" type="html">
@@ -115,7 +113,7 @@
         <td align="center" style="min-width: 590px;">
             <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
                 <tr><td valign="middle">
-                    <span style="font-size: 10px;">Welcome to Odoo</span><br/>
+                    <span style="font-size: 10px;">Welcome to autanac</span><br/>
                     <span style="font-size: 20px; font-weight: bold;">
                         ${object.name}
                     </span>
@@ -135,7 +133,7 @@
                 <tr><td valign="top" style="font-size: 13px;">
                     <div>
                         Dear ${object.name},<br /><br />
-                        You have been invited by ${object.create_uid.name} of ${object.company_id.name} to connect on Odoo.
+                        You have been invited by ${object.create_uid.name} of ${object.company_id.name} to connect on autanac.
                         <div style="margin: 16px 0px 16px 0px;">
                             <a href="${object.signup_url}"
                                 style="background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
@@ -143,13 +141,13 @@
                             </a>
                         </div>
                         % set website_url = object.env['ir.config_parameter'].sudo().get_param('web.base.url')
-                        Your Odoo domain is: <b><a href='${website_url}'>${website_url}</a></b><br />
+                        Your autanac domain is: <b><a href='${website_url}'>${website_url}</a></b><br />
                         Your sign in email is: <b><a href="/web/login?login=${object.email}" target="_blank">${object.email}</a></b><br /><br />
-                        Never heard of Odoo? It’s an all-in-one business software loved by 3+ million users. It will considerably improve your experience at work and increase your productivity.
+                        Never heard of autanac? It’s an all-in-one business software loved by 3+ million users. It will considerably improve your experience at work and increase your productivity.
                         <br /><br />
-                        Have a look at the <a href="https://www.odoo.com/page/tour?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">Odoo Tour</a> to discover the tool.
+                        Have a look at the <a href="https://www.autanac.com/page/tour?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">autanac Tour</a> to discover the tool.
                         <br /><br />
-                        Enjoy Odoo!<br />
+                        Enjoy autanac!<br />
                         --<br/>The ${object.company_id.name} Team
                     </div>
                 </td></tr>
@@ -187,7 +185,7 @@
 <tr><td align="center" style="min-width: 590px;">
     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
       <tr><td style="text-align: center; font-size: 13px;">
-        Powered by <a target="_blank" href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">Odoo</a>
+        Powered by <a target="_blank" href="https://www.autanac.com?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">autanac</a>
       </td></tr>
     </table>
 </td></tr>
@@ -251,7 +249,7 @@
 
         <!-- Email template for new users that used a signup token -->
         <record id="mail_template_user_signup_account_created" model="mail.template">
-            <field name="name">Auth Signup: Odoo Account Created</field>
+            <field name="name">Auth Signup: autanac Account Created</field>
             <field name="model_id" ref="base.model_res_users"/>
             <field name="subject">Welcome to ${object.company_id.name}!</field>
             <field name="email_from">"${object.company_id.name | safe}" &lt;${(object.company_id.email or user.email) | safe}&gt;</field>
@@ -332,7 +330,7 @@
 <tr><td align="center" style="min-width: 590px;">
     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
       <tr><td style="text-align: center; font-size: 13px;">
-        Powered by <a target="_blank" href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">Odoo</a>
+        Powered by <a target="_blank" href="https://www.autanac.com?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">autanac</a>
       </td></tr>
     </table>
 </td></tr>
@@ -343,4 +341,4 @@
         </record>
 
     </data>
-</odoo>
+</autanac>

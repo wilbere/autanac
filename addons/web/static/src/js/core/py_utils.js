@@ -1,4 +1,4 @@
-odoo.define('web.py_utils', function (require) {
+autanac.define('web.py_utils', function (require) {
 "use strict";
 
 var core = require('web.core');

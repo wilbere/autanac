@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 {
     'name': 'Web',
@@ -7,10 +7,10 @@
     'version': '1.0',
     'description':
         """
-Odoo Web core module.
+Mudulo CORE Web
 ========================
 
-This module provides the core of the Odoo Web Client.
+This module provides the core of the autanac Web Client.
         """,
     'depends': ['base'],
     'auto_install': True,

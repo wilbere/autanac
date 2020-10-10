@@ -1,4 +1,4 @@
-odoo.define('web.math_utils_tests', function(require) {
+autanac.define('web.math_utils_tests', function(require) {
 "use strict";
 
 var mathUtils = require('web.mathUtils');

@@ -46,7 +46,7 @@ $text-muted: $gray-500 !default;
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-gutter-width: $o-horizontal-padding * 2 !default;
+$grid-gutter-width: $a-horizontal-padding * 2 !default;
 
 // Components
 //
@@ -102,7 +102,7 @@ $dropdown-link-active-bg: $gray-300 !default;
 // Indeed, bootstrap forces them to a lower z-index as the modal-backdrop
 // element (unique in their supported cases) might be put after the modal
 // element (if the modal is already in the DOM, hidden, then opened). This
-// cannot happen in odoo though as modals are not hidden but removed from
+// cannot happen in autanac though as modals are not hidden but removed from
 // the DOM and are always put at the end of the body when opened.
 //
 // TODO the following code was disabled because it is saas-incompatible
@@ -133,10 +133,10 @@ $badge-font-weight: normal !default;
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding: $o-horizontal-padding !default;
+$modal-inner-padding: $a-horizontal-padding !default;
 
-$modal-lg: $o-modal-lg !default;
-$modal-md: $o-modal-md !default;
+$modal-lg: $a-modal-lg !default;
+$modal-md: $a-modal-md !default;
 
 // Breadcrumbs
 
@@ -144,5 +144,5 @@ $breadcrumb-padding-y: 0 !default;
 $breadcrumb-padding-x: 0 !default;
 $breadcrumb-margin-bottom: 0 !default;
 
-$breadcrumb-bg: $o-control-panel-background-color !default;
+$breadcrumb-bg: $a-control-panel-background-color !default;
 $breadcrumb-active-color: #b4b4b4 !default;

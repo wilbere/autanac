@@ -1,4 +1,4 @@
-odoo.define('web.test_utils_mock', function (require) {
+autanac.define('web.test_utils_mock', function (require) {
 "use strict";
 
 /**
@@ -95,8 +95,8 @@ function removeSrcAttribute(el, widget) {
  * @param {string} [params.currentDate] a string representation of the current
  *   date. It is given to the mock server.
  * @param {Object} params.data the data given to the created mock server. It is
- *   used to generate mock answers for every kind of routes supported by odoo
- * @param {number} [params.debug] if set to true, logs RPCs and uncaught Odoo
+ *   used to generate mock answers for every kind of routes supported by autanac
+ * @param {number} [params.debug] if set to true, logs RPCs and uncaught autanac
  *   events.
  * @param {function} [params.mockRPC] a function that will be used to override
  *   the _performRpc method from the mock server. It is really useful to add
@@ -173,7 +173,7 @@ function addMockEnvironment(widget, params) {
             _.extend(config.device, params.config.device);
         }
         if ('debug' in params.config) {
-            odoo.debug = params.config.debug;
+            autanac.debug = params.config.debug;
         }
     }
     if ('translateParameters' in params) {
@@ -300,7 +300,7 @@ function addMockEnvironment(widget, params) {
         event.data.on_success([]);
     });
 
-    // make sure all Odoo events bubbling up are intercepted
+    // make sure all autanac events bubbling up are intercepted
     if ('intercepts' in params) {
         _.each(params.intercepts, function (cb, name) {
             intercept(widget, name, cb);
@@ -366,7 +366,7 @@ function fieldsViewGet(server, params) {
  * It will not be propagated further, and even the handlers on the target will
  * not fire.
  *
- * @param {Widget} widget the target widget (any Odoo widget)
+ * @param {Widget} widget the target widget (any autanac widget)
  * @param {string} eventName description of the event
  * @param {function} fn callback executed when the even is intercepted
  * @param {boolean} [propagate=false]

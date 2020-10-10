@@ -1,4 +1,4 @@
-odoo.define('web.ControlPanelView', function (require) {
+autanac.define('web.ControlPanelView', function (require) {
 "use strict";
 
 var ControlPanelController = require('web.ControlPanelController');

@@ -9,28 +9,28 @@ body.o_is_superuser .o_menu_systray {
     > li {
         > a, > label {
             &:hover {
-                background-color: fade_out($o-navbar-inverse-link-hover-bg, 0.5);
+                background-color: fade_out($a-navbar-inverse-link-hover-bg, 0.5);
             }
         }
     }
 
     .show .dropdown-toggle {
-        background-color: fade_out($o-navbar-inverse-link-hover-bg, 0.5);
+        background-color: fade_out($a-navbar-inverse-link-hover-bg, 0.5);
     }
 }
 .o_main_navbar {
     position: relative;
-    height: $o-navbar-height;
-    border-bottom: 1px solid $o-navbar-inverse-link-hover-bg;
+    height: $a-navbar-height;
+    border-bottom: 1px solid $a-navbar-inverse-link-hover-bg;
     background-color: $a-brand-autanac;
     color: white;
 
     > a, > button {
         float: left;
-        height: $o-navbar-height;
+        height: $a-navbar-height;
         border: none;
-        padding: 0 $o-horizontal-padding - 4px 0 $o-horizontal-padding;
-        line-height: $o-navbar-height;
+        padding: 0 $a-horizontal-padding - 4px 0 $a-horizontal-padding;
+        line-height: $a-navbar-height;
         background-color: transparent;
         text-align: center;
         color: inherit;
@@ -39,7 +39,7 @@ body.o_is_superuser .o_menu_systray {
         user-select: none;
 
         &:hover, &:focus {
-            background-color: $o-navbar-inverse-link-hover-bg;
+            background-color: $a-navbar-inverse-link-hover-bg;
             color: inherit;
         }
         &:focus, &:active, &:focus:active {
@@ -59,7 +59,7 @@ body.o_is_superuser .o_menu_systray {
         color: white;
         font-size: 22px;
         font-weight: 500;
-        line-height: $o-navbar-height;
+        line-height: $a-navbar-height;
         cursor: pointer;
     }
 
@@ -88,19 +88,19 @@ body.o_is_superuser .o_menu_systray {
             }
 
             > a, > label {
-                height: $o-navbar-height;
+                height: $a-navbar-height;
                 padding: 0 10px;
                 color: white;
-                line-height: $o-navbar-height;
+                line-height: $a-navbar-height;
 
                 &:hover {
-                    background-color: $o-navbar-inverse-link-hover-bg;
+                    background-color: $a-navbar-inverse-link-hover-bg;
                 }
             }
 
             &.o_extra_menu_items {
                 > a {
-                    width: $o-navbar-height;
+                    width: $a-navbar-height;
                     text-align: center;
                 }
                 &.show > ul {
@@ -143,19 +143,19 @@ body.o_is_superuser .o_menu_systray {
 
         @for $index from 3 through 5 {
             .o_menu_header_lvl_#{$index}, .o_menu_entry_lvl_#{$index} {
-                padding-left: $o-dropdown-hpadding + ($index - 2)*12px;
+                padding-left: $a-dropdown-hpadding + ($index - 2)*12px;
             }
         }
     }
 
     .show .dropdown-toggle {
-        background-color: $o-navbar-inverse-link-hover-bg;
+        background-color: $a-navbar-inverse-link-hover-bg;
     }
     .o_user_menu {
         margin-left: 6px;
 
         > a {
-            padding-right: $o-horizontal-padding;
+            padding-right: $a-horizontal-padding;
         }
 
         .oe_topbar_avatar {

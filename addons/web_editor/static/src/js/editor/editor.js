@@ -1,4 +1,4 @@
-odoo.define('web_editor.editor', function (require) {
+autanac.define('web_editor.editor', function (require) {
 'use strict';
 
 var Dialog = require('web.Dialog');
@@ -203,7 +203,7 @@ var EditorMenuBar = Widget.extend({
             ],
             'styleWithSpan': false,
             'inlinemedia' : ['p'],
-            'lang': 'odoo',
+            'lang': 'autanac',
             'onChange': function (html, $editable) {
                 $editable.trigger('content_changed');
             },
@@ -248,7 +248,7 @@ var EditorMenuBar = Widget.extend({
      * Called when an element askes to record an history undo -> records it.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onHistoryUndoRecordRequest: function (ev) {
         this.rte.historyRecordUndo(ev.data.$target, ev.data.event);
@@ -266,7 +266,7 @@ var EditorMenuBar = Widget.extend({
      * changes.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onDiscardRequest: function (ev) {
         this.cancel(ev.data.reload).then(ev.data.onSuccess, ev.data.onFailure);
@@ -275,7 +275,7 @@ var EditorMenuBar = Widget.extend({
      * Called when a save request is received -> saves the page content.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onSaveRequest: function (ev) {
         ev.stopPropagation();

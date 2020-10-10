@@ -1,4 +1,4 @@
-odoo.define('web.pivot_tests', function (require) {
+autanac.define('web.pivot_tests', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -2383,7 +2383,7 @@ QUnit.module('Views', {
 
         await testUtilsDom.click(actionManager.$('.o_pivot_cell_value:nth(1)'))
 
-        assert.containsOnce(actionManager, '.o_list_view');
+        assert.containsOnce(actionManager, '.a_list_view');
 
         await testUtilsDom.click(actionManager.$('.o_control_panel .breadcrumb-item:first() a'));
 

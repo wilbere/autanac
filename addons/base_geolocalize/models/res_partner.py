@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from autanac import api, fields, models
 
 
 class ResPartner(models.Model):

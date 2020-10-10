@@ -2,19 +2,19 @@
 
 set -e
 
-ODOO_LIB_DIR=/var/lib/odoo
-ODOO_USER="odoo"
-ODOO_GROUP="odoo"
+autanac_LIB_DIR=/var/lib/autanac
+autanac_USER="autanac"
+autanac_GROUP="autanac"
 
 case "${1}" in
     remove)
-        deluser --quiet --system $ODOO_USER || true
-        delgroup --quiet --system --only-if-empty $ODOO_GROUP || true
+        deluser --quiet --system $autanac_USER || true
+        delgroup --quiet --system --only-if-empty $autanac_GROUP || true
         ;;
 
     purge)
-        if [ -d "$ODOO_LIB_DIR" ]; then
-            rm -rf $ODOO_LIB_DIR
+        if [ -d "$autanac_LIB_DIR" ]; then
+            rm -rf $autanac_LIB_DIR
         fi
         ;;
 

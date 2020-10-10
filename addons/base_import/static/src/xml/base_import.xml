@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <p class="oe_import_noheaders text-muted">If the file contains
-                the column names, Odoo can try auto-detecting the
+                the column names, autanac can try auto-detecting the
                 field corresponding to the column. This makes imports
                 simpler especially when the file has many columns.</p>
 
@@ -99,18 +99,18 @@
                             <i class="fa fa-download"/> <span><t t-esc="template.label"/></span>
                         </a>
                     </div>
-                    <a href="https://www.odoo.com/documentation/user/13.0/general/base_import/import_faq.html" target="new">Import FAQ</a>
+                    <a href="https://www.autanac.com/documentation/user/13.0/general/base_import/import_faq.html" target="new">Import FAQ</a>
                 </div>
             </div>
         </form>
     </t>
 
     <t t-name="ImportView.buttons">
-        <button type="button" class="btn btn-primary rounded-pill o_import_import o_import_import_full d-none">Import</button>
-        <button type="button" class="btn btn-primary rounded-pill o_import_import o_import_import_partial d-none">Resume</button>
-        <button type="button" class="btn btn-secondary rounded-pill o_import_validate d-none">Test</button>
-        <button type="button" class="btn btn-primary rounded-pill oe_import_file">Load File</button>
-        <button type="button" class="btn btn-secondary rounded-pill o_import_cancel">Cancel</button>
+        <button type="button" class="btn rounded-pill btn-primary o_import_import o_import_import_full d-none">Import</button>
+        <button type="button" class="btn rounded-pill btn-primary o_import_import o_import_import_partial d-none">Resume</button>
+        <button type="button" class="btn rounded-pill btn-secondary o_import_validate d-none">Test</button>
+        <button type="button" class="btn rounded-pill btn-primary oe_import_file">Load File</button>
+        <button type="button" class="btn rounded-pill btn-secondary o_import_cancel">Cancel</button>
     </t>
 
     <t t-name="ImportView.create_record_option">
@@ -202,7 +202,7 @@
         <t t-if="error.moreinfo" t-raw="info(error.moreinfo)"/>
     </t>
     <t t-name="ImportView.import_button">
-        <button t-if='widget and widget.importEnabled' type="button" class="btn btn-secondary o_button_import rounded-pill">
+        <button t-if='widget and widget.importEnabled' type="button" class="btn rounded-pill btn-secondary o_button_import">
             Import
         </button>
     </t>

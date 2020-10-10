@@ -8,7 +8,7 @@
 <div t-name="CrashManager.error" class="o_dialog_error">
     <div class="alert alert-warning clearfix" role="alert">
         <div class="float-right ml8 btn-group-vertical">
-            <button class="btn btn-primary o_clipboard_button">
+            <button class="btn rounded-pill btn-primary o_clipboard_button">
                 <i class="fa fa-clipboard mr8"/>Copy the full error to clipboard
             </button>
         </div>
@@ -17,7 +17,7 @@
     </div>
 
     <t t-set="errUID" t-value="_.uniqueId()"/>
-    <button class="btn btn-link" t-att-data-target="'#o_error_detail' + errUID" data-toggle="collapse">See details</button>
+    <button class="btn rounded-pill btn-link" t-att-data-target="'#o_error_detail' + errUID" data-toggle="collapse">See details</button>
     <div t-att-id="'o_error_detail' + errUID" class="collapse alert alert-danger o_error_detail" role="alert">
         <pre t-esc="widget.message"/>
         <pre t-esc="widget.traceback"/>

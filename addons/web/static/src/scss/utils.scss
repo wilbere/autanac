@@ -1,5 +1,5 @@
 ///
-/// This file regroups the odoo mixins. They are available in every asset bundle.
+/// This file regroups the autanac mixins. They are available in every asset bundle.
 ///
 
 // ------------------------------------------------------------------
@@ -101,7 +101,7 @@
 // ------------------------------------------------------------------
 // Padding
 // ------------------------------------------------------------------
-@mixin o-webclient-padding($top: 0px, $right: $o-horizontal-padding, $bottom: 0px, $left: $o-horizontal-padding) {
+@mixin o-webclient-padding($top: 0px, $right: $a-horizontal-padding, $bottom: 0px, $left: $a-horizontal-padding) {
     padding-top: $top;
     padding-right: $right;
     padding-bottom: $bottom;
@@ -173,7 +173,7 @@
     }
 }
 
-// Odoo defines a limited Noto font-family for a small variety of unicode
+// autanac defines a limited Noto font-family for a small variety of unicode
 // characters that are not necessary defined in the user system or even defined
 // but not properly readable. This function allows to add this font family in a
 // given font list.
@@ -189,7 +189,7 @@
     $-with-support-font: ();
     @for $i from 1 through length($font) {
         @if $i == $index {
-            $-with-support-font: append($-with-support-font, 'Odoo Unicode Support Noto', $separator: comma);
+            $-with-support-font: append($-with-support-font, 'autanac Unicode Support Noto', $separator: comma);
         }
         $-with-support-font: append($-with-support-font, nth($font, $i), $separator: comma);
     }
@@ -230,19 +230,19 @@
     @include o-hover-opacity($base-opacity);
 }
 @mixin o-kanban-tag-color {
-    @for $size from 1 through length($o-colors) {
+    @for $size from 1 through length($a-colors) {
         // Note: the first color is supposed to be invisible if there is a color
         // field but it is used as a default color when there is no color field
         &.o_tag_color_#{$size - 1} span {
-            background-color: nth($o-colors, $size);
+            background-color: nth($a-colors, $size);
         }
     }
 }
 @mixin o-kanban-record-color {
-    @for $size from 2 through length($o-colors) {
+    @for $size from 2 through length($a-colors) {
         // Note: the first color is not defined as it is the 'no color' for kanban
         .oe_kanban_color_#{$size - 1}::after {
-            background-color: nth($o-colors, $size);
+            background-color: nth($a-colors, $size);
         }
     }
 }
@@ -250,18 +250,18 @@
     position: relative;
     flex: 0 0 auto;
     margin: 0;
-    padding: 0 floor($o-kanban-group-padding * 0.7);
+    padding: 0 floor($a-kanban-group-padding * 0.7);
     cursor: pointer;
 }
 @mixin o-kanban-header-title {
     display: flex;
     align-items: center;
-    height: $o-kanban-header-title-height;
+    height: $a-kanban-header-title-height;
     line-height: 2.2;
     color: $headings-color;
 }
 @mixin o-kanban-v-title {
-    @include o-position-absolute($o-kanban-inside-vgutter * 2, $left: floor(-$o-kanban-inside-vgutter * 1.2));
+    @include o-position-absolute($a-kanban-inside-vgutter * 2, $left: floor(-$a-kanban-inside-vgutter * 1.2));
     transform-origin: left bottom 0;
     transform: rotate(90deg);
     overflow: visible;
@@ -277,7 +277,7 @@
     margin-bottom: 0;
     margin-top: 0;
 }
-@mixin o-kanban-dropdown($padding-base: $o-kanban-inside-vgutter) {
+@mixin o-kanban-dropdown($padding-base: $a-kanban-inside-vgutter) {
     padding: $padding-base/2 $padding-base;
     border: none;
     border-left: 1px solid transparent;
@@ -304,11 +304,11 @@
 }
 @mixin o-kanban-colorpicker {
     max-width: 150px;
-    padding: 3px ($o-dropdown-hpadding - $o-kanban-inner-hmargin) 3px $o-dropdown-hpadding;
+    padding: 3px ($a-dropdown-hpadding - $a-kanban-inner-hmargin) 3px $a-dropdown-hpadding;
 
     > li {
         display: inline-block;
-        margin: $o-kanban-inner-hmargin $o-kanban-inner-hmargin 0 0;
+        margin: $a-kanban-inner-hmargin $a-kanban-inner-hmargin 0 0;
         border: 1px solid white;
         box-shadow: 0 0 0 1px gray('300');
 
@@ -343,7 +343,7 @@
 }
 
 // Emulate dropdown links
-@mixin o-kanban-dashboard-dropdown-link($link-padding-gap: $o-dropdown-hpadding) {
+@mixin o-kanban-dashboard-dropdown-link($link-padding-gap: $a-dropdown-hpadding) {
     padding: 0;
 
     > a {
@@ -370,12 +370,12 @@
     padding: 15px;
     z-index: 1000;
     text-align: center;
-    color: $o-tooltip-text-color;
+    color: $a-tooltip-text-color;
     font-size: 115%;
 
     > p:first-of-type {
         margin-top: 0;
-        color: $o-tooltip-title-text-color;
+        color: $a-tooltip-title-text-color;
         font-weight: bold;
         font-size: 125%;
     }

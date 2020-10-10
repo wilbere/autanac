@@ -1,4 +1,4 @@
-odoo.define('web.notification_tests', function (require) {
+autanac.define('web.notification_tests', function (require) {
 "use strict";
 
 var AbstractView = require('web.AbstractView');

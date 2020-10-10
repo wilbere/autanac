@@ -43,8 +43,8 @@
             </ul>
             <ul class="list-group list-group-flush o_cw_popover_fields_secondary"/>
             <div class="card-footer border-top">
-                <a href="#" class="btn btn-primary o_cw_popover_edit">Edit</a>
-                <a href="#" class="btn btn-secondary o_cw_popover_delete ml-2">Delete</a>
+                <a href="#" class="btn rounded-pill btn-primary o_cw_popover_edit">Edit</a>
+                <a href="#" class="btn rounded-pill btn-secondary o_cw_popover_delete ml-2">Delete</a>
             </div>
         </div>
     </t>
@@ -104,7 +104,7 @@
     </t>
 
     <t t-name="CalendarView.TodayButtonMobile">
-        <button class="btn btn-sm btn-link">
+        <button class="btn rounded-pill btn-sm btn-link">
             <span class="fa-stack o_calendar_button_today">
                 <i class="fa fa-calendar-o fa-stack-2x" role="img" aria-label="Today" title="Today"/>
                 <strong class="o_calendar_text fa-stack-1x"><t t-esc="moment().date()"/></strong>

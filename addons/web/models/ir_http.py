@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 import hashlib
 import json
 
-from odoo import api, models
-from odoo.http import request
-from odoo.tools import ustr
+from autanac import api, models
+from autanac.http import request
+from autanac.tools import ustr
 
-from odoo.addons.web.controllers.main import module_boot, HomeStaticTemplateHelpers
+from autanac.addons.web.controllers.main import module_boot, HomeStaticTemplateHelpers
 
-import odoo
+import autanac
 
 
 class Http(models.AbstractModel):
@@ -23,7 +23,7 @@ class Http(models.AbstractModel):
 
     def session_info(self):
         user = request.env.user
-        version_info = odoo.service.common.exp_version()
+        version_info = autanac.service.common.exp_version()
 
         user_context = request.session.get_context() if request.session.uid else {}
 

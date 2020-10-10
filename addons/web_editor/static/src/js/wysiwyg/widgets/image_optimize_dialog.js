@@ -1,4 +1,4 @@
-odoo.define('wysiwyg.widgets.image_optimize_dialog', function (require) {
+autanac.define('wysiwyg.widgets.image_optimize_dialog', function (require) {
 'use strict';
 
 var core = require('web.core');

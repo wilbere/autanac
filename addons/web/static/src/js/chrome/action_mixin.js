@@ -1,4 +1,4 @@
-odoo.define('web.ActionMixin', function (require) {
+autanac.define('web.ActionMixin', function (require) {
 "use strict";
 
 /**
@@ -35,7 +35,7 @@ var ActionMixin = {
     contentTemplate: null,
 
     /**
-     * Events built by and managed by Odoo Framework
+     * Events built by and managed by autanac Framework
      *
      * It is expected that any Widget Class implementing this mixin
      * will also implement the ParentedMixin which actually manages those
@@ -194,7 +194,7 @@ var ActionMixin = {
      * current controller.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @param {function} ev.data.callback used to send the requested state
      */
     _onGetControllerQueryParams: function (ev) {

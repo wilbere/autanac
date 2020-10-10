@@ -23,9 +23,9 @@ import socket
 import ctypes
 from datetime import datetime, timedelta
 
-from odoo import http, _
-from odoo.modules.module import get_resource_path
-from odoo.addons.hw_drivers.tools import helpers
+from autanac import http, _
+from autanac.modules.module import get_resource_path
+from autanac.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 
@@ -72,12 +72,12 @@ class StatusController(http.Controller):
     @http.route('/hw_drivers/box/connect', type='http', auth='none', cors='*', csrf=False, save_session=False)
     def connect_box(self, token):
         """
-        This route is called when we want that a IoT Box will be connected to a Odoo DB
+        This route is called when we want that a IoT Box will be connected to a autanac DB
         token is a base 64 encoded string and have 2 argument separate by |
-        1 - url of odoo DB
-        2 - token. This token will be compared to the token of Odoo. He have 1 hour lifetime
+        1 - url of autanac DB
+        2 - token. This token will be compared to the token of autanac. He have 1 hour lifetime
         """
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_autanac_server_url()
         image = get_resource_path('hw_drivers', 'static/img', 'False.jpg')
         if not server:
             credential = b64decode(token).decode('utf-8').split('|')
@@ -92,7 +92,7 @@ class StatusController(http.Controller):
                 subprocess.check_call([get_resource_path('point_of_sale', 'tools/posbox/configuration/connect_to_server.sh'), url, '', token, 'noreboot'])
                 m.send_alldevices()
                 image = get_resource_path('hw_drivers', 'static/img', 'True.jpg')
-                helpers.odoo_restart(3)
+                helpers.autanac_restart(3)
             except subprocess.CalledProcessError as e:
                 _logger.error('A error encountered : %s ' % e.output)
         if os.path.isfile(image):
@@ -262,7 +262,7 @@ class ConnectionManager(Thread):
         self.pairing_uuid = False
 
     def run(self):
-        if not helpers.get_odoo_server_url():
+        if not helpers.get_autanac_server_url():
             end_time = datetime.now() + timedelta(minutes=5)
             while (datetime.now() < end_time):
                 self._connect_box()
@@ -281,7 +281,7 @@ class ConnectionManager(Thread):
         }
 
         urllib3.disable_warnings()
-        req = requests.post('https://iot-proxy.odoo.com/odoo-enterprise/iot/connect-box', json=data, verify=False)
+        req = requests.post('https://iot-proxy.autanac.com/autanac-enterprise/iot/connect-box', json=data, verify=False)
         result = req.json().get('result', {})
 
         if all(key in result for key in ['pairing_code', 'pairing_uuid']):
@@ -299,7 +299,7 @@ class ConnectionManager(Thread):
         # Notify the DB, so that the kanban view already shows the IoT Box
         m.send_alldevices()
         # Restart to checkout the git branch, get a certificate, load the IoT handlers...
-        subprocess.check_call(["sudo", "service", "odoo", "restart"])
+        subprocess.check_call(["sudo", "service", "autanac", "restart"])
 
     def _refresh_displays(self):
         """Refresh all displays to hide the pairing code"""
@@ -317,7 +317,7 @@ class Manager(Thread):
 
     def load_drivers(self):
         """
-        This method loads local files: 'odoo/addons/hw_drivers/drivers'
+        This method loads local files: 'autanac/addons/hw_drivers/drivers'
         And execute these python drivers
         """
         helpers.download_drivers()
@@ -335,11 +335,11 @@ class Manager(Thread):
 
     def send_alldevices(self):
         """
-        This method send IoT Box and devices informations to Odoo database
+        This method send IoT Box and devices informations to autanac database
         """
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_autanac_server_url()
         if server:
-            subject = helpers.read_file_first_line('odoo-subject.conf')
+            subject = helpers.read_file_first_line('autanac-subject.conf')
             if subject:
                 domain = helpers.get_ip().replace('.', '-') + subject.strip('*')
             else:
@@ -380,7 +380,7 @@ class Manager(Thread):
                 _logger.error('Could not reach configured server')
                 _logger.error('A error encountered : %s ' % e)
         else:
-            _logger.warning('Odoo server not set')
+            _logger.warning('autanac server not set')
 
     def get_connected_displays(self):
         display_devices = {}
@@ -474,7 +474,7 @@ class Manager(Thread):
 
     def run(self):
         """
-        Thread that will check connected/disconnected device, load drivers if needed and contact the odoo server with the updates
+        Thread that will check connected/disconnected device, load drivers if needed and contact the autanac server with the updates
         """
         helpers.check_git_branch()
         helpers.check_certificate()
@@ -584,7 +584,7 @@ printers = conn.getPrinters()
 cups_lock = Lock()  # We can only make one call to Cups at a time
 
 mpdm = MPDManager()
-terminal_id = helpers.read_file_first_line('odoo-six-payment-terminal.conf')
+terminal_id = helpers.read_file_first_line('autanac-six-payment-terminal.conf')
 if terminal_id:
     try:
         subprocess.check_output(["pidof", "eftdvs"])  # Check if MPD server is running

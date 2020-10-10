@@ -561,7 +561,7 @@ var DateTimePicker = function ($, moment) {
         };
 
         DateTimePicker.prototype._notifyEvent = function _notifyEvent(e) {
-            // /!\ ODOO FIX: these next conditions have been modified by odoo
+            // /!\ autanac FIX: these next conditions have been modified by autanac
             // FIXME should write a test about the tricky case this handles
             if (e.type === DateTimePicker.Event.CHANGE) {
                 if (!e.date && !e.oldDate) {
@@ -785,7 +785,7 @@ var DateTimePicker = function ($, moment) {
         };
 
         DateTimePicker.prototype._getLastPickedDate = function _getLastPickedDate() {
-            return this._dates[this._getLastPickedDateIndex()] || this.getMoment(); // FIXME changed by Odoo
+            return this._dates[this._getLastPickedDateIndex()] || this.getMoment(); // FIXME changed by autanac
         };
 
         DateTimePicker.prototype._getLastPickedDateIndex = function _getLastPickedDateIndex() {
@@ -1865,7 +1865,7 @@ var TempusDominusBootstrap4 = function ($) {
                 self._element.children().first().after(self.widget);
             }
 
-            // /!\ ODOO FIX: the 3 next lines have been *added* by odoo
+            // /!\ autanac FIX: the 3 next lines have been *added* by autanac
             var parentOffset = parent.offset();
             position.top = offset.top - parentOffset.top;
             position.left = offset.left - parentOffset.left;
@@ -2093,9 +2093,9 @@ var TempusDominusBootstrap4 = function ($) {
             }
 
             currentDate = this._viewDate.clone().startOf('M').startOf('w').startOf('d');
-            // !! ODOO FIX START !!
+            // !! autanac FIX START !!
             var now = this.getMoment();
-            // !! ODOO FIX END !!
+            // !! autanac FIX END !!
 
             for (i = 0; i < 42; i++) {
                 //always display 42 days (should show 6 weeks)
@@ -2128,9 +2128,9 @@ var TempusDominusBootstrap4 = function ($) {
                 if (!this._isValid(currentDate, 'd')) {
                     clsName += ' disabled';
                 }
-                // !! ODOO FIX START !!
+                // !! autanac FIX START !!
                 if (currentDate.date() === now.date() && currentDate.month() === now.month() && currentDate.year() === now.year()) {
-                // !! ODOO FIX END !!
+                // !! autanac FIX END !!
                     clsName += ' today';
                 }
                 if (currentDate.day() === 0 || currentDate.day() === 6) {
@@ -2754,7 +2754,7 @@ var TempusDominusBootstrap4 = function ($) {
         if ($target.length === 0) {
             return;
         }
-        // /!\ ODOO FIX: check on 'config' existence added by odoo
+        // /!\ autanac FIX: check on 'config' existence added by autanac
         if (config && config._options.debug || window.debug) {
             return;
         }
@@ -2777,7 +2777,7 @@ var TempusDominusBootstrap4 = function ($) {
         if ($target.length === 0) {
             return;
         }
-        // /!\ ODOO FIX: check on 'config' existence added by odoo
+        // /!\ autanac FIX: check on 'config' existence added by autanac
         if (!(config && config._options.allowInputToggle)) {
             return;
         }

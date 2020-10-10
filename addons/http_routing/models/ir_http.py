@@ -13,13 +13,13 @@ try:
 except ImportError:
     slugify_lib = None
 
-import odoo
-from odoo import api, models, registry, exceptions
-from odoo.addons.base.models.ir_http import RequestUID, ModelConverter
-from odoo.addons.base.models.qweb import QWebException
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import config, ustr, pycompat
+import autanac
+from autanac import api, models, registry, exceptions
+from autanac.addons.base.models.ir_http import RequestUID, ModelConverter
+from autanac.addons.base.models.qweb import QWebException
+from autanac.http import request
+from autanac.osv import expression
+from autanac.tools import config, ustr, pycompat
 
 from ..geoipresolver import GeoIPResolver
 
@@ -27,7 +27,7 @@ _logger = logging.getLogger(__name__)
 
 # global resolver (GeoIP API is thread-safe, for multithreaded workers)
 # This avoids blowing up open files limit
-odoo._geoip_resolver = None
+autanac._geoip_resolver = None
 
 
 # ------------------------------------------------------------
@@ -369,11 +369,11 @@ class IrHttp(models.AbstractModel):
     @classmethod
     def _geoip_setup_resolver(cls):
         # Lazy init of GeoIP resolver
-        if odoo._geoip_resolver is not None:
+        if autanac._geoip_resolver is not None:
             return
         geofile = config.get('geoip_database')
         try:
-            odoo._geoip_resolver = GeoIPResolver.open(geofile) or False
+            autanac._geoip_resolver = GeoIPResolver.open(geofile) or False
         except Exception as e:
             _logger.warning('Cannot load GeoIP: %s', ustr(e))
 
@@ -381,8 +381,8 @@ class IrHttp(models.AbstractModel):
     def _geoip_resolve(cls):
         if 'geoip' not in request.session:
             record = {}
-            if odoo._geoip_resolver and request.httprequest.remote_addr:
-                record = odoo._geoip_resolver.resolve(request.httprequest.remote_addr) or {}
+            if autanac._geoip_resolver and request.httprequest.remote_addr:
+                record = autanac._geoip_resolver.resolve(request.httprequest.remote_addr) or {}
             request.session['geoip'] = record
 
     @classmethod
@@ -547,7 +547,7 @@ class IrHttp(models.AbstractModel):
         try:
             _, path = rule.build(arguments)
             assert path is not None
-        except odoo.exceptions.MissingError:
+        except autanac.exceptions.MissingError:
             return cls._handle_exception(werkzeug.exceptions.NotFound())
         except Exception as e:
             return cls._handle_exception(e)

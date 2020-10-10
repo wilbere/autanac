@@ -1,4 +1,4 @@
-odoo.define('web.KanbanRendererMobile', function (require) {
+autanac.define('web.KanbanRendererMobile', function (require) {
 "use strict";
 
 /**
@@ -24,8 +24,8 @@ KanbanRenderer.include({
         quick_create_column_created: '_onColumnAdded',
     }),
     events: _.extend({}, KanbanRenderer.prototype.events, {
-        'click .o_kanban_mobile_tab': '_onMobileTabClicked',
-        'click .o_kanban_mobile_add_column': '_onMobileQuickCreateClicked',
+        'click .a_kanban_mobile_tab': '_onMobileTabClicked',
+        'click .a_kanban_mobile_add_column': '_onMobileQuickCreateClicked',
     }),
     ANIMATE: true, // allows to disable animations for the tests
     /**
@@ -131,8 +131,8 @@ KanbanRenderer.include({
             // check rtl to compute correct css value
             const rtl = _t.database.parameters.direction === 'rtl';
 
-            // display all o_kanban_group
-            this.$('.o_kanban_group').show();
+            // display all a_kanban_group
+            this.$('.a_kanban_group').show();
 
             const $columnAfter = this._toNode(this.widgets.filter((widget, index) => index > this.activeColumnIndex));
             const promiseAfter = this._updateColumnCss($columnAfter, rtl ? {right: '100%'} : {left: '100%'}, animate);
@@ -165,10 +165,10 @@ KanbanRenderer.include({
                 return;
             }
             var columnID = column.id || column.db_id;
-            this.$('.o_kanban_mobile_tab.o_current, .o_kanban_group.o_current')
+            this.$('.a_kanban_mobile_tab.o_current, .a_kanban_group.o_current')
                 .removeClass('o_current');
-            this.$('.o_kanban_group[data-id="' + columnID + '"], ' +
-                   '.o_kanban_mobile_tab[data-id="' + columnID + '"]')
+            this.$('.a_kanban_group[data-id="' + columnID + '"], ' +
+                   '.a_kanban_mobile_tab[data-id="' + columnID + '"]')
                 .addClass('o_current');
         }
     },
@@ -205,7 +205,7 @@ KanbanRenderer.include({
             }
             // Apply the scroll x on the tabs
             // XXX in case of RTL, should we use scrollRight?
-            this.$('.o_kanban_mobile_tabs').scrollLeft(scrollToLeft);
+            this.$('.a_kanban_mobile_tabs').scrollLeft(scrollToLeft);
         }
     },
 
@@ -222,7 +222,7 @@ KanbanRenderer.include({
                 return total + self._getTabWidth(column);
             }, 0);
             // Apply a space around between child if the parent length is higher then the sum of the child width
-            var $tabs = this.$('.o_kanban_mobile_tabs');
+            var $tabs = this.$('.a_kanban_mobile_tabs');
             $tabs.toggleClass('justify-content-between', $tabs.outerWidth() >= widthChilds);
         }
     },
@@ -236,7 +236,7 @@ KanbanRenderer.include({
         var self = this;
         var step = _t.database.parameters.direction === 'rtl' ? -1 : 1;
         this.$el.swipe({
-            excludedElements: ".o_kanban_mobile_tabs",
+            excludedElements: ".a_kanban_mobile_tabs",
             swipeLeft: function () {
                 var moveToIndex = self.activeColumnIndex + step;
                 if (moveToIndex < self.widgets.length) {
@@ -261,7 +261,7 @@ KanbanRenderer.include({
      */
     _getTabWidth : function (column) {
         var columnID = column.id || column.db_id;
-        return this.$('.o_kanban_mobile_tab[data-id="' + columnID + '"]').outerWidth();
+        return this.$('.a_kanban_mobile_tab[data-id="' + columnID + '"]').outerWidth();
     },
 
     /**
@@ -327,7 +327,7 @@ KanbanRenderer.include({
             });
 
             var kanbanColumnContainer = document.createElement('div');
-            kanbanColumnContainer.classList.add('o_kanban_columns_content');
+            kanbanColumnContainer.classList.add('a_kanban_columns_content');
             kanbanColumnContainer.appendChild(newFragment);
             fragment.appendChild(kanbanColumnContainer);
             $(qweb.render('KanbanView.MobileTabs', {
@@ -357,15 +357,15 @@ KanbanRenderer.include({
     },
 
     /**
-     * Retrieve the Jquery node (.o_kanban_group) for a list of a given widgets
+     * Retrieve the Jquery node (.a_kanban_group) for a list of a given widgets
      *
      * @private
      * @param widgets
-     * @returns {jQuery} the matching .o_kanban_group widgets
+     * @returns {jQuery} the matching .a_kanban_group widgets
      */
     _toNode: function (widgets) {
         const selectorCss = widgets
-            .map(widget => '.o_kanban_group[data-id="' + (widget.id || widget.db_id) + '"]')
+            .map(widget => '.a_kanban_group[data-id="' + (widget.id || widget.db_id) + '"]')
             .join(', ');
         return this.$(selectorCss);
     },
@@ -406,7 +406,7 @@ KanbanRenderer.include({
      * @private
      */
     _onMobileQuickCreateClicked: function() {
-        this.$('.o_kanban_group').toggle();
+        this.$('.a_kanban_group').toggle();
         this.quickCreate.toggleFold();
     },
     /**

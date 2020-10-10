@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
@@ -9,20 +9,20 @@
 # Volluta <volluta@tutanota.com>, 2019
 # Gunther Clauwaert <gclauwae@hotmail.com>, 2019
 # Cas Vissers <casvissers@brahoo.nl>, 2019
-# Cécile Collart <cco@odoo.com>, 2019
-# Erwin van der Ploeg <erwin@odooexperts.nl>, 2020
+# Cécile Collart <cco@autanac.com>, 2019
+# Erwin van der Ploeg <erwin@autanacexperts.nl>, 2020
 # Martin Trigaux, 2020
-# Antoine Gilard <ang@odoo.com>, 2020
+# Antoine Gilard <ang@autanac.com>, 2020
 # Yenthe Van Ginneken <yenthespam@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>, 2020\n"
-"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"Language-Team: Dutch (https://www.transifex.com/autanac/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1762,8 +1762,8 @@ msgstr "Fuchsia"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
-msgstr "Krijg deze optie en veel meer met Odoo Enterprise!"
+msgid "Get this feature and much more with autanac Enterprise!"
+msgstr "Krijg deze optie en veel meer met autanac Enterprise!"
 
 #. module: web
 #. openerp-web
@@ -2361,8 +2361,8 @@ msgstr "Meerdere regels tekst"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
-msgstr "Mijn Odoo.com account"
+msgid "My autanac.com account"
+msgstr "Mijn autanac.com account"
 
 #. module: web
 #. openerp-web
@@ -2556,15 +2556,15 @@ msgstr "Object:"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
-msgstr "Odoo apps zijn binnenkort beschikbaar"
+msgid "autanac Apps will be available soon"
+msgstr "autanac apps zijn binnenkort beschikbaar"
 
 #. module: web
 #. openerp-web
@@ -2573,36 +2573,36 @@ msgstr "Odoo apps zijn binnenkort beschikbaar"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
-msgstr "Odoo cliënt fout"
+msgid "autanac Client Error"
+msgstr "autanac cliënt fout"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
-msgstr "Odoo Enterprise"
+msgid "autanac Enterprise"
+msgstr "autanac Enterprise"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
-msgstr "Odoo fout"
+msgid "autanac Error"
+msgstr "autanac fout"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
-msgstr "Odoo sessie verlopen"
+msgid "autanac Session Expired"
+msgstr "autanac sessie verlopen"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
-msgstr "Odoo foutmelding"
+msgid "autanac Warning"
+msgstr "autanac foutmelding"
 
 #. module: web
 #. openerp-web
@@ -2930,8 +2930,8 @@ msgstr "Aangeboden door %s%s"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
-msgstr "Aangeboden door <span>Odoo</span>"
+msgid "Powered by <span>autanac</span>"
+msgstr "Aangeboden door <span>autanac</span>"
 
 #. module: web
 #. openerp-web
@@ -3594,7 +3594,7 @@ msgstr "Labels"
 #, python-format
 msgid "Take a minute to get a coffee,<br />because it's loading..."
 msgstr ""
-"Neem een minuutje om koffie te halen,<br />want Odoo is aan het laden..."
+"Neem een minuutje om koffie te halen,<br />want autanac is aan het laden..."
 
 #. module: web
 #. openerp-web
@@ -4336,7 +4336,7 @@ msgstr "Het is niet toegestaan om de wachtwoord velden leeg te laten."
 msgid ""
 "You may not believe it,<br />but the application is actually loading..."
 msgstr ""
-"Je zou het haast niet geloven,<br />maar Odoo is wel degelijk aan het "
+"Je zou het haast niet geloven,<br />maar autanac is wel degelijk aan het "
 "laden..."
 
 #. module: web
@@ -4355,10 +4355,10 @@ msgstr ""
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
 msgstr ""
-"U moet Odoo starten met minimaal twee werkers om een PDF versie van de "
+"U moet autanac starten met minimaal twee werkers om een PDF versie van de "
 "rapporten te kunnen afdrukken."
 
 #. module: web
@@ -4378,8 +4378,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
-msgstr "Uw Odoo sessie is verlopen. Ververs aub de huidige webpagina."
+msgid "Your autanac session expired. Please refresh the current web page."
+msgstr "Uw autanac sessie is verlopen. Ververs aub de huidige webpagina."
 
 #. module: web
 #. openerp-web

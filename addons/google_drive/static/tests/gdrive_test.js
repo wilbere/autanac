@@ -1,4 +1,4 @@
-odoo.define('google_drive.gdrive_integration', function (require) {
+autanac.define('google_drive.gdrive_integration', function (require) {
 "use strict";
 //rebuild
 var FormView = require('web.FormView');

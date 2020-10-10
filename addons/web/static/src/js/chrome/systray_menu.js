@@ -1,4 +1,4 @@
-odoo.define('web.SystrayMenu', function (require) {
+autanac.define('web.SystrayMenu', function (require) {
 "use strict";
 
 var dom = require('web.dom');

@@ -1,4 +1,4 @@
-odoo.define('web.jquery.extensions', function () {
+autanac.define('web.jquery.extensions', function () {
 'use strict';
 
 /**
@@ -88,9 +88,9 @@ $.fn.extend({
         return o;
     },
     /**
-     * Makes DOM elements bounce the way Odoo decided it.
+     * Makes DOM elements bounce the way autanac decided it.
      */
-    odooBounce: function () {
+    autanacBounce: function () {
         return this.each(function () {
             var $el = $(this);
             $el.addClass('o_catch_attention');

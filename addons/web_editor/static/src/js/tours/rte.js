@@ -1,4 +1,4 @@
-odoo.define('web_editor.tour', function (require) {
+autanac.define('web_editor.tour', function (require) {
 'use strict';
 
 var core = require('web.core');
@@ -37,7 +37,7 @@ tour.register('rte', {
             '<p>Harum trium sententiarum nulli prorsus assentior.</p>\n'+
             '        </div>\n'+
             '        <div class="col-lg-6 mt16">\n'+
-            '            <img class="img img-fluid shadow mb16" src="/web/static/src/img/logo.png" alt="Odoo text and image block">\n'+
+            '            <img class="img img-fluid shadow mb16" src="/web/static/src/img/logo.png" alt="autanac text and image block">\n'+
             '        </div>\n'+
             '    </div>\n'+
             '</section>\n';
@@ -176,7 +176,7 @@ tour.register('rte', {
 }, {
     content: "insert a link url",
     trigger: 'input[name="url"]',
-    run: "text http://www.odoo.com",
+    run: "text http://www.autanac.com",
 }, {
     content: "click on color style",
     trigger: '.o_link_dialog_color > .o_link_dialog_color_item.btn-success',
@@ -294,7 +294,7 @@ tour.register('rte_inline', {
             '          <img src="/logo.png" alt="Your Logo" class="rounded-circle img-thumbnail">\n'+
             '        </td>\n'+
             '        <td valign="center" width="270">\n'+
-            '          <a href="https://www.facebook.com/Odoo"><span class="fa fa-facebook-square fa-2x text-primary"></span></a>\n'+
+            '          <a href="https://www.facebook.com/autanac"><span class="fa fa-facebook-square fa-2x text-primary"></span></a>\n'+
             '          <span style="color: rgb(255, 0, 0);" class="fa fa-4x fa-google-plus-square float-right"></span>\n'+
             '        </td>\n'+
             '      </tr>\n'+

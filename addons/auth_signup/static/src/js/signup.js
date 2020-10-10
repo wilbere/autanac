@@ -1,4 +1,4 @@
-odoo.define('auth_signup.signup', function (require) {
+autanac.define('auth_signup.signup', function (require) {
 'use strict';
 
 var publicWidget = require('web.public.widget');

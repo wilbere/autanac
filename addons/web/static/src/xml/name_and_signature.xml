@@ -68,17 +68,17 @@
                             </a>
                         </div>
                         <div t-attf-class="o_web_sign_draw_clear col-auto ml-auto {{ widget.signMode !== 'draw' ? 'd-none' : '' }}">
-                            <a role="button" href="#" class="btn btn-link">
+                            <a role="button" href="#" class="btn rounded-pill btn-link">
                                 Clear
                             </a>
                         </div>
                         <div t-attf-class="o_web_sign_auto_select_style col-auto ml-auto {{ widget.signMode !== 'auto' ? 'd-none' : '' }}">
-                            <a role="button" href="#" class="btn btn-link">
+                            <a role="button" href="#" class="btn rounded-pill btn-link">
                                 Style
                             </a>
                         </div>
                         <div t-attf-class="o_web_sign_load_file col-auto {{ widget.signMode !== 'load' ? 'd-none' : '' }}">
-                            <input type="file" role="button" name="files[]" class="btn btn-link py-0"/>
+                            <input type="file" role="button" name="files[]" class="btn rounded-pill btn-link py-0"/>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-odoo.define('web.BasicRenderer', function (require) {
+autanac.define('web.BasicRenderer', function (require) {
 "use strict";
 
 /**
@@ -90,7 +90,7 @@ var BasicRenderer = AbstractRenderer.extend({
      * @param {Object} state
      * @param {string} id
      * @param {string[]} fields
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      * @returns {Promise<AbstractField[]>} resolved with the list of widgets
      *                                      that have been reset
      */
@@ -281,7 +281,7 @@ var BasicRenderer = AbstractRenderer.extend({
 
             // Toggle modifiers CSS classes if necessary
             element.$el.toggleClass("o_invisible_modifier", !!modifiers.invisible);
-            element.$el.toggleClass("o_readonly_modifier", !!modifiers.readonly);
+            element.$el.toggleClass("a_readonly_modifier", !!modifiers.readonly);
             element.$el.toggleClass("o_required_modifier", !!modifiers.required);
 
             if (element.widget && element.widget.updateModifiersValue) {
@@ -815,11 +815,11 @@ var BasicRenderer = AbstractRenderer.extend({
     /**
      * When someone presses the TAB/UP/DOWN/... key in a widget, it is nice to
      * be able to navigate in the view (default browser behaviors are disabled
-     * by Odoo).
+     * by autanac).
      *
      * @abstract
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNavigationMove: function (ev) {},
 });

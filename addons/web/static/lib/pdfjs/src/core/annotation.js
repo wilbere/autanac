@@ -388,7 +388,7 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
     isViewable: function WidgetAnnotation_isViewable() {
       if (this.data.fieldType === 'Sig') {
         warn('unimplemented annotation type: Widget signature');
-        // Odoo: display digital signature even if verification not implemented https://github.com/mozilla/pdf.js/issues/4743
+        // autanac: display digital signature even if verification not implemented https://github.com/mozilla/pdf.js/issues/4743
         // return false;
       }
 

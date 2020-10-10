@@ -1,11 +1,11 @@
-odoo.define('web_tour.DisableTour', function (require) {
+autanac.define('web_tour.DisableTour', function (require) {
 "use strict";
 
 var TourManager = require('web_tour.TourManager');
 
 TourManager.include({
     /**
-     * Disables tours if Odoo installed with demo data.
+     * Disables tours if autanac installed with demo data.
      *
      * @override
      */

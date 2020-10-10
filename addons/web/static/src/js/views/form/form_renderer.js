@@ -1,4 +1,4 @@
-odoo.define('web.FormRenderer', function (require) {
+autanac.define('web.FormRenderer', function (require) {
 "use strict";
 
 var BasicRenderer = require('web.BasicRenderer');
@@ -11,7 +11,7 @@ var _t = core._t;
 var qweb = core.qweb;
 
 var FormRenderer = BasicRenderer.extend({
-    className: "o_form_view",
+    className: "a_form_view",
     events: _.extend({}, BasicRenderer.prototype.events, {
         'click .o_notification_box .oe_field_translate': '_onTranslate',
         'click .o_notification_box .close': '_onTranslateNotificationClose',
@@ -502,7 +502,7 @@ var FormRenderer = BasicRenderer.extend({
     _renderHeaderButton: function (node) {
         var $button = viewUtils.renderButtonFromNode(node);
 
-        // Current API of odoo for rendering buttons is "if classes are given
+        // Current API of autanac for rendering buttons is "if classes are given
         // use those on top of the 'btn' and 'btn-{size}' classes, otherwise act
         // as if 'btn-secondary' class was given". The problem is that, for
         // header buttons only, we allowed users to only indicate their custom
@@ -1034,7 +1034,7 @@ var FormRenderer = BasicRenderer.extend({
             // displayed multiple times on the view, otherwise, for example the
             // enterprise label will be displayed as many times as the field
             // exists on settings.
-            var $widgets = self.$('.o_field_widget[name=' + widget.name + ']');
+            var $widgets = self.$('.a_field_widget[name=' + widget.name + ']');
             var $label = idForLabel ? self.$('.o_form_label[for=' + idForLabel + ']') : $();
             $label = $label.eq($widgets.index(widget.$el));
             if (config.isDebug() || widget.attrs.help || widget.field.help) {
@@ -1064,7 +1064,7 @@ var FormRenderer = BasicRenderer.extend({
 
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onActivateNextWidget: function (ev) {
         ev.stopPropagation();
@@ -1084,7 +1084,7 @@ var FormRenderer = BasicRenderer.extend({
     /**
      * @override
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNavigationMove: function (ev) {
         ev.stopPropagation();

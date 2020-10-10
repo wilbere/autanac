@@ -1,4 +1,4 @@
-odoo.define('web.BrowserDetection', function (require) {
+autanac.define('web.BrowserDetection', function (require) {
     "use strict";
     var Class = require('web.Class');
 

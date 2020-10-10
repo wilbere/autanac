@@ -1,4 +1,4 @@
-odoo.define('web.search_bar_autocomplete_sources_registry', function (require) {
+autanac.define('web.search_bar_autocomplete_sources_registry', function (require) {
 "use strict";
 
 var Registry = require('web.Registry');
@@ -7,7 +7,7 @@ return new Registry();
 
 });
 
-odoo.define('web._search_bar_autocomplete_sources_registry', function(require) {
+autanac.define('web._search_bar_autocomplete_sources_registry', function(require) {
 "use strict";
 
 var registry = require('web.search_bar_autocomplete_sources_registry');

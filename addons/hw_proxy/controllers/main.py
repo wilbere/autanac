@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 from __future__ import print_function
 import logging
@@ -9,8 +9,8 @@ import subprocess
 from threading import Lock
 
 
-from odoo import http
-from odoo.http import request
+from autanac import http
+from autanac.http import request
 
 _logger = logging.getLogger(__name__)
 
@@ -57,7 +57,7 @@ class Proxy(http.Controller):
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Odoo's IoTBox</title>
+        <title>autanac's IoTBox</title>
         <style>
         body {
             width: 480px;

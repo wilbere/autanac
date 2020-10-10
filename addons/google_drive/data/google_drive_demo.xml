@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<odoo>
+<autanac>
     <data noupdate="1">
 
         <!-- filter demo -->
@@ -19,4 +19,4 @@
         </record>
 
     </data>
-</odoo>
+</autanac>

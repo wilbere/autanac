@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* base_import
 # 
@@ -6,18 +6,18 @@
 # gabriumaa <gabriel.umana@delfixcr.com>, 2019
 # Miguel Orueta <mo@landoo.es>, 2019
 # Emilio Silva <efsilvay@gmail.com>, 2019
-# Jon Perez <jop@odoo.com>, 2019
+# Jon Perez <jop@autanac.com>, 2019
 # Martin Trigaux, 2019
 # Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~12.5\n"
+"Project-Id-Version: autanac Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-23 11:32+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
+"Language-Team: Spanish (https://www.transifex.com/autanac/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -437,11 +437,11 @@ msgstr "ID"
 #, python-format
 msgid ""
 "If the file contains\n"
-"                the column names, Odoo can try auto-detecting the\n"
+"                the column names, autanac can try auto-detecting the\n"
 "                field corresponding to the column. This makes imports\n"
 "                simpler especially when the file has many columns."
 msgstr ""
-"Si el archivo contiene los nombres de columna, Odoo puede intentar auto-"
+"Si el archivo contiene los nombres de columna, autanac puede intentar auto-"
 "detectar el campo correspondiente a la columna. Esto hace la importación más"
 " simple, especialmente cuando el archivo tiene muchas columnas."
 

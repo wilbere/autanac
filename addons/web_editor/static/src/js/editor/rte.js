@@ -1,4 +1,4 @@
-odoo.define('web_editor.rte', function (require) {
+autanac.define('web_editor.rte', function (require) {
 'use strict';
 
 var fonts = require('wysiwyg.fonts');
@@ -323,7 +323,7 @@ var RTEWidget = Widget.extend({
         .each(function () {
             var $node = $(this);
 
-            // fallback for firefox iframe display:none see https://github.com/odoo/odoo/pull/22610
+            // fallback for firefox iframe display:none see https://github.com/autanac/autanac/pull/22610
             var computedStyles = window.getComputedStyle(this) || window.parent.getComputedStyle(this);
             // add class to display inline-block for empty t-field
             if (computedStyles.display === 'inline' && $node.data('oe-type') !== 'image') {
@@ -578,7 +578,7 @@ var RTEWidget = Widget.extend({
             ],
             'styleWithSpan': false,
             'inlinemedia' : ['p'],
-            'lang': 'odoo',
+            'lang': 'autanac',
             'onChange': function (html, $editable) {
                 $editable.trigger('content_changed');
             },
@@ -779,7 +779,7 @@ return {
 };
 });
 
-odoo.define('web_editor.rte.summernote_custom_colors', function (require) {
+autanac.define('web_editor.rte.summernote_custom_colors', function (require) {
 'use strict';
 
 return [

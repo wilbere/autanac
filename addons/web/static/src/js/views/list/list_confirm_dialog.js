@@ -1,4 +1,4 @@
-odoo.define('web.ListConfirmDialog', function (require) {
+autanac.define('web.ListConfirmDialog', function (require) {
 "use strict";
 
 const core = require('web.core');

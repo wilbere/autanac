@@ -1,4 +1,4 @@
-odoo.define('web.SearchBarAutoCompleteSources', function (require) {
+autanac.define('web.SearchBarAutoCompleteSources', function (require) {
 "use strict";
 
 var Class = require('web.Class');

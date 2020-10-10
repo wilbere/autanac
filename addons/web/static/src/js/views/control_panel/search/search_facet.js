@@ -1,4 +1,4 @@
-odoo.define('web.SearchFacet', function (require) {
+autanac.define('web.SearchFacet', function (require) {
 "use strict";
 
 var core = require('web.core');

@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Signup',
     'description': """
-Allow users to sign up and reset their password
+Permite a las usuarios registrarse y restablecer su contraseña
 ===============================================
     """,
     'version': '1.0',

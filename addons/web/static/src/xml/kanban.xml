@@ -2,7 +2,7 @@
 
 <t t-name="KanbanView.buttons">
     <div>
-        <button type="button" t-attf-class="btn #{btnClass} o-kanban-button-new" accesskey="c">
+        <button type="button" t-attf-class="btn rounded-pill #{btnClass} o-kanban-button-new" accesskey="c">
             <t t-esc="create_text || _t('Create')"/>
         </button>
     </div>
@@ -53,12 +53,12 @@
                 <div class="input-group">
                     <input type="text" class="form-control o_input" placeholder="Column title"/>
                     <span class="input-group-append">
-                        <button class="btn btn-primary o_kanban_add" type="button">Add</button>
+                        <button class="btn rounded-pill btn-primary o_kanban_add" type="button">Add</button>
                     </span>
                 </div>
                 <span t-if="!widget.isMobile" class="o_discard_msg text-muted float-right">Esc to discard</span>
                 <t t-if="widget.examples &amp;&amp; !widget.isMobile">
-                    <button type="button" class="btn btn-link o_kanban_examples">See examples</button>
+                    <button type="button" class="btn rounded-pill btn-link o_kanban_examples">See examples</button>
                 </t>
             </div>
             <div class="o_kanban_muted_record"/>
@@ -70,9 +70,9 @@
 
 <t t-name="KanbanView.RecordQuickCreate.buttons">
     <div>
-        <button class="btn btn-primary o_kanban_add">Add</button>
-        <button class="btn btn-primary o_kanban_edit">Edit</button>
-        <button class="btn btn-secondary o_kanban_cancel ml8">Discard</button>
+        <button class="btn rounded-pill btn-primary o_kanban_add">Add</button>
+        <button class="btn rounded-pill btn-primary o_kanban_edit">Edit</button>
+        <button class="btn rounded-pill btn-secondary o_kanban_cancel ml8">Discard</button>
     </div>
 </t>
 

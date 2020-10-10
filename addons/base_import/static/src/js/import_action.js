@@ -1,4 +1,4 @@
-odoo.define('base_import.import', function (require) {
+autanac.define('base_import.import', function (require) {
 "use strict";
 
 var AbstractAction = require('web.AbstractAction');

@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web_editor
 # 
@@ -6,18 +6,18 @@
 # Martin Trigaux, 2019
 # Cas Vissers <casvissers@brahoo.nl>, 2019
 # Gunther Clauwaert <gclauwae@hotmail.com>, 2019
-# Cécile Collart <cco@odoo.com>, 2019
-# Erwin van der Ploeg <erwin@odooexperts.nl>, 2019
+# Cécile Collart <cco@autanac.com>, 2019
+# Erwin van der Ploeg <erwin@autanacexperts.nl>, 2019
 # Yenthe Van Ginneken <yenthespam@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>, 2020\n"
-"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"Language-Team: Dutch (https://www.transifex.com/autanac/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -797,11 +797,11 @@ msgstr ""
 #: code:addons/web_editor/static/src/xml/ace.xml:0
 #, python-format
 msgid ""
-"If you edit and save this file, you will never receive updates from Odoo "
+"If you edit and save this file, you will never receive updates from autanac "
 "anymore unless you reset your customizations."
 msgstr ""
 "Indien u dit bestand wijzigt en bewaard ontvangt u nooit meer updates van "
-"Odoo tenzij u de wijzigingen terug weghaalt."
+"autanac tenzij u de wijzigingen terug weghaalt."
 
 #. module: web_editor
 #. openerp-web
@@ -820,10 +820,10 @@ msgstr ""
 #, python-format
 msgid ""
 "If you want to crop it, please first download it from the original source "
-"and upload it in Odoo."
+"and upload it in autanac."
 msgstr ""
 "Als u wilt bijsnijden, download dan eerst het originele bronbestand en "
-"upload het in Odoo."
+"upload het in autanac."
 
 #. module: web_editor
 #. openerp-web
@@ -2035,15 +2035,15 @@ msgstr "auto"
 #. openerp-web
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
-msgid "https://www.odoo.com/logo.png"
-msgstr "https://www.odoo.com/logo.png"
+msgid "https://www.autanac.com/logo.png"
+msgstr "https://www.autanac.com/logo.png"
 
 #. module: web_editor
 #. openerp-web
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
-msgid "https://www.odoo.com/mydocument"
-msgstr "https://www.odoo.com/mijndocument"
+msgid "https://www.autanac.com/mydocument"
+msgstr "https://www.autanac.com/mijndocument"
 
 #. module: web_editor
 #. openerp-web

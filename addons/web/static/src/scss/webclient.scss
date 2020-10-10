@@ -5,10 +5,10 @@
 // ------------------------------------------------------------------
 //  General
 // ------------------------------------------------------------------
-.o_web_client {
+.a_web_client {
     direction: ltr;
     position: relative; // normally useless but required by bootstrap-datepicker
-    background-color: $o-webclient-background-color;
+    background-color: $a-webclient-background-color;
 }
 
 // ------------------------------------------------------------------
@@ -16,7 +16,7 @@
 // ------------------------------------------------------------------
 
 // Buttons
-.o_icon_button {
+.a_icon_button {
     background-color: transparent;
     border: 0;
     padding: 0;
@@ -24,7 +24,7 @@
 }
 
 // Boolean Toggle widget
-div.o_boolean_toggle.custom-control.custom-checkbox {
+div.a_boolean_toggle.custom-control.custom-checkbox {
     $line-height-computed: $line-height-base * $font-size-base;
     $slider-width: $line-height-computed * 1.5;
     $circle-width: $line-height-computed * 0.6;
@@ -82,7 +82,7 @@ div.o_boolean_toggle.custom-control.custom-checkbox {
     background-color: #dee2e6;
 }
 
-.o_web_accesskey_overlay {
+.a_web_accesskey_overlay {
     font-family: $font-family-sans-serif;
     position: absolute;
     width: 100%;

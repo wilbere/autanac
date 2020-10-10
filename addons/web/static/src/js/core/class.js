@@ -1,4 +1,4 @@
-odoo.define('web.Class', function () {
+autanac.define('web.Class', function () {
 "use strict";
 /**
  * Improved John Resig's inheritance, based on:
@@ -48,7 +48,7 @@ odoo.define('web.Class', function () {
  *
  * @class Class
  */
-function OdooClass(){}
+function autanacClass(){}
 
 var initializing = false;
 var fnTest = /xyz/.test(function(){xyz();}) ? /\b_super\b/ : /.*/;
@@ -58,7 +58,7 @@ var fnTest = /xyz/.test(function(){xyz();}) ? /\b_super\b/ : /.*/;
  *
  * @param {Object} prop class-level properties (class attributes and instance methods) to set on the new class
  */
-OdooClass.extend = function() {
+autanacClass.extend = function() {
     var _super = this.prototype;
     // Support mixins arguments
     var args = _.toArray(arguments);
@@ -98,7 +98,7 @@ OdooClass.extend = function() {
 
     // The dummy class constructor
     function Class() {
-        if(this.constructor !== OdooClass){
+        if(this.constructor !== autanacClass){
             throw new Error("You can only instanciate objects with the 'new' operator");
         }
         // All construction is actually done in the init method
@@ -151,5 +151,5 @@ OdooClass.extend = function() {
     return Class;
 };
 
-return OdooClass;
+return autanacClass;
 });

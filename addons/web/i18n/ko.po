@@ -1,10 +1,10 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
 # Translators:
 # heejun lee <tkm01b@gmail.com>, 2019
-# Mark Lee <odoos@soti.33mail.com>, 2019
+# Mark Lee <autanacs@soti.33mail.com>, 2019
 # 방상우 <mrroom@gmail.com>, 2019
 # Martin Trigaux, 2019
 # Seongseok Shin <shinss61@hotmail.com>, 2019
@@ -14,12 +14,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: JH CHOI <hwangtog@gmail.com>, 2020\n"
-"Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
+"Language-Team: Korean (https://www.transifex.com/autanac/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1745,8 +1745,8 @@ msgstr "후시아"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
-msgstr "Odoo 기업용에서 이 기능을 비롯한 다양한 기능을 활용하십시오!"
+msgid "Get this feature and much more with autanac Enterprise!"
+msgstr "autanac 기업용에서 이 기능을 비롯한 다양한 기능을 활용하십시오!"
 
 #. module: web
 #. openerp-web
@@ -2339,8 +2339,8 @@ msgstr "여러 줄 문자"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
-msgstr "내 Odoo.com 계정"
+msgid "My autanac.com account"
+msgstr "내 autanac.com 계정"
 
 #. module: web
 #. openerp-web
@@ -2535,15 +2535,15 @@ msgstr "객체 :"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
-msgstr "Odoo 앱이 곧 사용가능해 질 것입니다"
+msgid "autanac Apps will be available soon"
+msgstr "autanac 앱이 곧 사용가능해 질 것입니다"
 
 #. module: web
 #. openerp-web
@@ -2552,36 +2552,36 @@ msgstr "Odoo 앱이 곧 사용가능해 질 것입니다"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
-msgstr "Odoo 클라이언트 오류"
+msgid "autanac Client Error"
+msgstr "autanac 클라이언트 오류"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
-msgstr "Odoo 기업용"
+msgid "autanac Enterprise"
+msgstr "autanac 기업용"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
-msgstr "Odoo 오류"
+msgid "autanac Error"
+msgstr "autanac 오류"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
-msgstr "Odoo 세션 만료"
+msgid "autanac Session Expired"
+msgstr "autanac 세션 만료"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
-msgstr "Odoo 경고"
+msgid "autanac Warning"
+msgstr "autanac 경고"
 
 #. module: web
 #. openerp-web
@@ -2898,8 +2898,8 @@ msgstr "제공자 %s%s"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
-msgstr "제공자 <span>Odoo</span>"
+msgid "Powered by <span>autanac</span>"
+msgstr "제공자 <span>autanac</span>"
 
 #. module: web
 #. openerp-web
@@ -4299,9 +4299,9 @@ msgstr "번역을 편집하기 전에 이 새 레코드를 저장해야 합니�
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
-msgstr "pdf 버전의 보고서를 인쇄하려면 두 명 이상의 직원으로 Odoo를 시작해야 합니다."
+msgstr "pdf 버전의 보고서를 인쇄하려면 두 명 이상의 직원으로 autanac를 시작해야 합니다."
 
 #. module: web
 #. openerp-web
@@ -4319,8 +4319,8 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
-msgstr "사용자의 Odoo 세션이 만료되었습니다. 현재 웹 페이지를 새로 고침하십시오."
+msgid "Your autanac session expired. Please refresh the current web page."
+msgstr "사용자의 autanac 세션이 만료되었습니다. 현재 웹 페이지를 새로 고침하십시오."
 
 #. module: web
 #. openerp-web

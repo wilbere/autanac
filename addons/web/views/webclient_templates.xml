@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<autanac>
     <template id="_assets_utils">
         <link rel="stylesheet" type="text/scss" href="/web/static/lib/bootstrap/scss/_functions.scss"/>
         <link rel="stylesheet" type="text/scss" href="/web/static/lib/bootstrap/scss/_mixins.scss"/>
@@ -77,7 +77,7 @@
         <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/translation_dialog.scss"/>
         <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/keyboard.scss"/>
         <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/name_and_signature.scss"/>
-        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/web.zoomodoo.scss"/>
+        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/web.zoomautanac.scss"/>
 
         <link rel="stylesheet" type="text/less" href="/web/static/src/scss/fontawesome_overridden.scss"/>
 
@@ -164,7 +164,7 @@
         <script type="text/javascript" src="/web/static/src/js/widgets/rainbow_man.js"></script>
         <script type="text/javascript" src="/web/static/src/js/widgets/colorpicker_dialog.js"></script>
         <script type="text/javascript" src="/web/static/src/js/widgets/translation_dialog.js"></script>
-        <script type="text/javascript" src="/web/static/src/js/libs/zoomodoo.js"></script>
+        <script type="text/javascript" src="/web/static/src/js/libs/zoomautanac.js"></script>
     </template>
 
     <template id="assets_common_lazy" inherit_id="web.assets_common" primary="True">
@@ -227,7 +227,7 @@
         <script type="text/javascript" src="/web/static/lib/fuzzy-master/fuzzy.js"></script>
 
         <script type="text/javascript" charset="utf-8">
-            odoo._modules = <t t-raw="get_modules_order()"/>;
+            autanac._modules = <t t-raw="get_modules_order()"/>;
         </script>
 
         <script type="text/javascript" src="/web/static/lib/py.js/lib/py.js"></script>
@@ -418,11 +418,11 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
-                <title t-esc="title or 'Odoo'"/>
+                <title t-esc="'Distribuidora Autana Cars'"/>
                 <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or '/web/static/src/img/favicon.ico'"/>
 
                 <script type="text/javascript">
-                    var odoo = {
+                    var autanac = {
                         csrf_token: "<t t-esc="request.csrf_token(None)"/>",
                         debug: "<t t-esc="debug"/>",
                     };
@@ -443,7 +443,7 @@
         </xpath>
         <xpath expr="//head/script" position="after">
             <script type="text/javascript">
-                odoo.session_info = <t t-raw="json.dumps(request.env['ir.http'].get_frontend_session_info())"/>;
+                autanac.session_info = <t t-raw="json.dumps(request.env['ir.http'].get_frontend_session_info())"/>;
             </script>
             <t t-call-assets="web.assets_common_minimal_js" t-css="false" defer_load="True"/>
             <t t-call-assets="web.assets_frontend_minimal_js" t-css="false" defer_load="True"/>
@@ -482,17 +482,16 @@
     </template>
 
     <template id="brand_promotion_message" name="Brand Promotion Message">
-        <t t-set="odoo_logo">
+        <t t-set="autanac_logo">
             <a target="_blank"
-                t-attf-href="http://www.odoo.com?utm_source=db&amp;utm_medium=#{_utm_medium}"
                 class="badge badge-light">
-                <img alt="Odoo"
-                        src="/web/static/src/img/odoo_logo_tiny.png"
+                <img alt="autanac"
+                        src="/web/static/src/img/autanac_logo_tiny.png"
                         style="height: 1em; vertical-align: baseline;"/>
             </a>
         </t>
         <t t-set="final_message">Powered by %s%s</t>
-        <t t-raw="final_message % (odoo_logo, _message and ('- %s' % _message) or '')"/>
+        <t t-raw="final_message % (autanac_logo, _message and ('- %s' % _message) or '')"/>
     </template>
     <template id="brand_promotion" name="Brand Promotion">
         <div class="o_brand_promotion">
@@ -521,7 +520,7 @@
                             <t t-if="not disable_database_manager">
                                 <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
                             </t>
-                            <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Odoo</span></a>
+                            <a href="" target="_blank">Powered by <span>Autanac</span></a>
                         </div>
                     </div>
                 </div>
@@ -539,7 +538,7 @@
                     <div t-attf-class="input-group {{'input-group-sm' if form_small else ''}}">
                         <input type="text" name="db" t-att-value="request.db" id="db" t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required" readonly="readonly"/>
                         <span class="input-group-append">
-                            <a role="button" href="/web/database/selector" class="btn btn-secondary">Select <i class="fa fa-database" role="img" aria-label="Database" title="Database"></i></a>
+                            <a role="button" href="/web/database/selector" class="btn rounded-pill btn-secondary">Select <i class="fa fa-database" role="img" aria-label="Database" title="Database"></i></a>
                         </span>
                     </div>
                 </div>
@@ -562,10 +561,8 @@
                 </p>
 
                 <div t-attf-class="clearfix oe_login_buttons text-center mb-1 {{'pt-2' if form_small else 'pt-3'}}">
-                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
-                    <t t-if="debug">
-                        <button type="submit" name="redirect" value="/web/become" class="btn btn-link btn-sm btn-block">Log in as superuser</button>
-                    </t>
+                    <button type="submit" class="btn rounded-pill btn-primary btn-block">Log in</button>
+                    
                     <div class="o_login_auth"/>
                 </div>
 
@@ -596,7 +593,7 @@
 
         <script type="text/javascript">
             // define the 'web.web_client' module because some other modules require it
-            odoo.define('web.web_client', function (require) {
+            autanac.define('web.web_client', function (require) {
                 var WebClient = require('web.WebClient');
                 var web_client = new WebClient();
                 return web_client;
@@ -759,11 +756,11 @@
                 <script type="text/javascript">
                     QUnit.config.hidepassed = false;
 
-                    odoo.define('web.WebClientWithoutServices', function (require) {
+                    autanac.define('web.WebClientWithoutServices', function (require) {
                         var ServiceProviderMixin = require('web.ServiceProviderMixin');
                         var WebClient = require('web.WebClient');
                         var WebClientWithoutServices = WebClient.extend({
-                            /**
+                            /*
                              * Patch web client so that it is no longer a service provider.
                              *
                              * @override
@@ -778,7 +775,7 @@
                         return WebClientWithoutServices;
                     });
                     // define the 'web.web_client' module because some other modules require it
-                    odoo.define('web.web_client', function (require) {
+                    autanac.define('web.web_client', function (require) {
                         var WebClient = require('web.WebClientWithoutServices');
                         var web_client = new WebClient();
                         return web_client;
@@ -825,8 +822,8 @@
         <t t-call="web.layout">
             <t t-set="head_web">
                 <script type="text/javascript">
-                    odoo.session_info = <t t-raw="json.dumps(session_info)"/>;
-                    odoo.reloadMenus = function () {
+                    autanac.session_info = <t t-raw="json.dumps(session_info)"/>;
+                    autanac.reloadMenus = function () {
                         return new Promise(function(resolve, reject) {
                             function onLoaded() {
                                 resolve(oReq.response);
@@ -835,11 +832,11 @@
                             oReq.responseType = "json";
                             oReq.addEventListener("load", onLoaded);
                             oReq.addEventListener("error", reject);
-                            oReq.open("GET", '/web/webclient/load_menus/' + odoo.session_info.cache_hashes.load_menus);
+                            oReq.open("GET", '/web/webclient/load_menus/' + autanac.session_info.cache_hashes.load_menus);
                             oReq.send();
                         });
                     }
-                    odoo.loadMenusPromise = odoo.reloadMenus();
+                    autanac.loadMenusPromise = autanac.reloadMenus();
                 </script>
                 <t t-call-assets="web.assets_common" t-js="false"/>
                 <t t-call-assets="web.assets_backend" t-js="false"/>
@@ -854,7 +851,7 @@
                 ]]>
 
                 <script type="text/javascript">
-                    odoo.define('web.web_client', function (require) {
+                    autanac.define('web.web_client', function (require) {
                         var WebClient = require('web.WebClient');
                         var web_client = new WebClient();
                         $(function() {
@@ -923,16 +920,12 @@
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/core/jbig2.js"></script>
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/core/bidi.js"></script>
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/core/murmurhash3.js"></script>
-        <!--
-            NOTE JEM : PDFJS not-minified load its assets dynamically. Not minify, this lib is huge (4000 lines).
-            To load PDFJS using odoo bundle, we create a custom worker_loader, to avoid reloading all the assets (core/*.js) dynamically.
-            Loading all this assets in a bundle can be problematic in debug mode, since we don't wait all assets to be loaded to start using PDFJS. That's why, in debug mode, we use the native loader, otherwise our custom loader is used.
-        -->
+      
         <t t-if="not debug">
             <script>
-                // Use Odoo PDFJS Loader, to avoid dynamic assets loading
-                PDFJS.workerSrc = '/web/static/lib/pdfjs/worker_loader_by_odoo.js';
-                PDFJS.disableWorker = true;
+                // Use Autanac PDFJS Loader, to avoid dynamic assets loading
+              <!--   PDFJS.workerSrc = '/web/static/lib/pdfjs/worker_loader_by_autanac.js';
+                PDFJS.disableWorker = true; -->
             </script>
         </t>
         <t t-if="debug">
@@ -949,4 +942,4 @@
         -->
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/pdf.js"></script>
     </template>
-</odoo>
+</autanac>

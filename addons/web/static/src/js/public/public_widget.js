@@ -1,4 +1,4 @@
-odoo.define('web.public.widget', function (require) {
+autanac.define('web.public.widget', function (require) {
 'use strict';
 
 /**
@@ -108,7 +108,7 @@ var RootWidget = Widget.extend({
      * Get the curuent session module.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onGetSession: function (event) {
         if (event.data.callback) {
@@ -119,7 +119,7 @@ var RootWidget = Widget.extend({
      * Called when the linked registry is updated after this `RootWidget`
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onRegistryUpdate: function (ev) {
         ev.stopPropagation();

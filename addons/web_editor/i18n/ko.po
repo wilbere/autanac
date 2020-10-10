@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web_editor
 # 
@@ -11,12 +11,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: JH CHOI <hwangtog@gmail.com>, 2020\n"
-"Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
+"Language-Team: Korean (https://www.transifex.com/autanac/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -786,9 +786,9 @@ msgstr "현재 버전을 삭제하면 저장하지 않은 모든 변경 사항�
 #: code:addons/web_editor/static/src/xml/ace.xml:0
 #, python-format
 msgid ""
-"If you edit and save this file, you will never receive updates from Odoo "
+"If you edit and save this file, you will never receive updates from autanac "
 "anymore unless you reset your customizations."
-msgstr "이 파일을 편집하고 저장하면 맞춤 설정을 재설정하지 않는 한 더 이상 Odoo로부터 업데이트를 받지 않습니다."
+msgstr "이 파일을 편집하고 저장하면 맞춤 설정을 재설정하지 않는 한 더 이상 autanac로부터 업데이트를 받지 않습니다."
 
 #. module: web_editor
 #. openerp-web
@@ -805,8 +805,8 @@ msgstr " 파일을 재설정하면 모든 맞춤 설정한 내용이 기본 파�
 #, python-format
 msgid ""
 "If you want to crop it, please first download it from the original source "
-"and upload it in Odoo."
-msgstr "자르려면 먼저 원본을 다운로드하여 Odoo에 업로드하십시오."
+"and upload it in autanac."
+msgstr "자르려면 먼저 원본을 다운로드하여 autanac에 업로드하십시오."
 
 #. module: web_editor
 #. openerp-web
@@ -2007,15 +2007,15 @@ msgstr "자동"
 #. openerp-web
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
-msgid "https://www.odoo.com/logo.png"
-msgstr "https://www.odoo.com/logo.png"
+msgid "https://www.autanac.com/logo.png"
+msgstr "https://www.autanac.com/logo.png"
 
 #. module: web_editor
 #. openerp-web
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
-msgid "https://www.odoo.com/mydocument"
-msgstr "https://www.odoo.com/mydocument"
+msgid "https://www.autanac.com/mydocument"
+msgstr "https://www.autanac.com/mydocument"
 
 #. module: web_editor
 #. openerp-web

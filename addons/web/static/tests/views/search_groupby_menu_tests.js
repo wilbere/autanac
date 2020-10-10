@@ -1,4 +1,4 @@
-odoo.define('web.search_groupby_menu_tests', function (require) {
+autanac.define('web.search_groupby_menu_tests', function (require) {
 "use strict";
 
 var GroupByMenu = require('web.GroupByMenu');

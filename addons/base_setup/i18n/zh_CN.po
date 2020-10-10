@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -12,7 +12,7 @@
 # lttlsnk <lttlsnk@gmail.com>, 2019
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2019
 # aishiby Ail <15287995117@189.cn>, 2019
-# Cécile Collart <cco@odoo.com>, 2019
+# Cécile Collart <cco@autanac.com>, 2019
 # keecome <7017511@qq.com>, 2019
 # ChinaMaker <liuct@chinamaker.net>, 2019
 # neter ji <jifuyi@qq.com>, 2019
@@ -24,12 +24,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~12.5\n"
+"Project-Id-Version: autanac Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: guohuadeng <guohuadeng@hotmail.com>, 2020\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/autanac/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -328,8 +328,8 @@ msgstr "外部邮件服务器"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze Odoo data from Google Spreadsheet"
-msgstr "从Google Spreadsheet中提取和分析Odoo数据"
+msgid "Extract and analyze autanac data from Google Spreadsheet"
+msgstr "从Google Spreadsheet中提取和分析autanac数据"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -505,15 +505,15 @@ msgstr "OAuth认证"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: base_setup
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo S.A."
-msgstr "Odoo S.A."
+msgid "Distribuidor Autana Cars c.a"
+msgstr "Distribuidor Autana Cars c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -638,8 +638,8 @@ msgstr "使用外部验证提供者 (OAuth)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in Odoo Notes"
-msgstr "在Odoo Notes中使用外部记事板"
+msgid "Use external pads in autanac Notes"
+msgstr "在autanac Notes中使用外部记事板"
 
 #. module: base_setup
 #. openerp-web
@@ -653,7 +653,7 @@ msgstr "用户"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, Odoo provides a list of matching "
+"When populating your address book, autanac provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr "当公布你的地址簿时，系统为你提供一个匹配公司列表。当选择其中一个，公司数据和logo会自动填充。"

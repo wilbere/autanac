@@ -1,5 +1,5 @@
 
-odoo.define('web_tour.RunningTourActionHelper', function (require) {
+autanac.define('web_tour.RunningTourActionHelper', function (require) {
 "use strict";
 
 var core = require('web.core');

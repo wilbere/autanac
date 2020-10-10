@@ -1,4 +1,4 @@
-odoo.define('web.AddNewFavoriteMenu', function (require) {
+autanac.define('web.AddNewFavoriteMenu', function (require) {
 "use strict";
 
 var core = require('web.core');

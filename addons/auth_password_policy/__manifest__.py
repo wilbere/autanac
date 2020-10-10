@@ -1,6 +1,6 @@
 {
     'name': "Password Policy",
-    "summary": "Implement basic password policy configuration & check",
+    "summary": "Implementa la configuración y verificación básicas de la política de contraseñas",
     'category': 'Tools',
     'depends': ['base_setup', 'web'],
     'data': [

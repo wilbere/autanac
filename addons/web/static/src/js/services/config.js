@@ -1,4 +1,4 @@
-odoo.define('web.config', function () {
+autanac.define('web.config', function () {
 "use strict";
 
 /**
@@ -47,9 +47,9 @@ var config = {
      */
     isDebug: function (debugMode) {
         if (debugMode) {
-            return odoo.debug && odoo.debug.indexOf(debugMode) !== -1;
+            return autanac.debug && autanac.debug.indexOf(debugMode) !== -1;
         }
-        return odoo.debug;
+        return autanac.debug;
     },
 };
 

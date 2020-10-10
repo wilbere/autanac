@@ -1,4 +1,4 @@
-odoo.define('web.view_dialogs_tests', function (require) {
+autanac.define('web.view_dialogs_tests', function (require) {
 "use strict";
 
 var dialogs = require('web.view_dialogs');
@@ -267,9 +267,9 @@ QUnit.module('Views', {
         await testUtils.nextTick();
 
         // click on the first row to see if the list is editable
-        await testUtils.dom.click(dialog.$('.o_list_view tbody tr:first td:not(.o_list_record_selector):first'));
+        await testUtils.dom.click(dialog.$('.a_list_view tbody tr:first td:not(.o_list_record_selector):first'));
 
-        assert.equal(dialog.$('.o_list_view tbody tr:first td:not(.o_list_record_selector):first input').length, 0,
+        assert.equal(dialog.$('.a_list_view tbody tr:first td:not(.o_list_record_selector):first input').length, 0,
             "list view should not be editable in a SelectCreateDialog");
 
         parent.destroy();
@@ -334,7 +334,7 @@ QUnit.module('Views', {
 
         await testUtils.form.clickEdit(form);
         await testUtils.dom.click(form.$('.o_field_x2many_list_row_add a'));
-        await testUtils.dom.click(form.$('.o_field_widget .o_field_many2one[name=instrument] input'));
+        await testUtils.dom.click(form.$('.a_field_widget .o_field_many2one[name=instrument] input'));
         await testUtils.dom.click($('ul.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content li.o_m2o_dropdown_option').first());
 
         var $modal = $('.modal-lg');
@@ -350,7 +350,7 @@ QUnit.module('Views', {
             'There should be two modals');
 
         var $second_modal = $modals.not($modal);
-        await testUtils.dom.click($second_modal.find('.o_list_table.table.table-sm.table-striped.o_list_table_ungrouped .o_data_row input[type=checkbox]'));
+        await testUtils.dom.click($second_modal.find('.o_list_table.table.table-sm.table-striped.o_list_table_ungrouped .a_data_row input[type=checkbox]'));
 
         await testUtils.dom.click($second_modal.find('.o_select_button'));
 
@@ -359,7 +359,7 @@ QUnit.module('Views', {
         assert.equal($modal.length, 1,
             'There should be one modal');
 
-        assert.equal($modal.find('.o_data_cell').text(), 'Awsome',
+        assert.equal($modal.find('.a_data_cell').text(), 'Awsome',
             'There should be one item in the list of the modal');
 
         await testUtils.dom.click($modal.find('.btn.btn-primary'));
@@ -420,7 +420,7 @@ QUnit.module('Views', {
             },
         });
 
-        await testUtils.dom.click(form.$('.o_field_widget[name="instrument"] button.o_external_button'));
+        await testUtils.dom.click(form.$('.a_field_widget[name="instrument"] button.o_external_button'));
         form.destroy();
     });
 
@@ -470,13 +470,13 @@ QUnit.module('Views', {
         });
         await testUtils.nextTick();
 
-        assert.containsN(dialog, '.o_data_row', 3, "should contain 3 records");
+        assert.containsN(dialog, '.a_data_row', 3, "should contain 3 records");
 
         // filter on bar
         await testUtils.dom.click(dialog.$('.o_dropdown_toggler_btn:contains(Filters)'));
         await testUtils.dom.click(dialog.$('.o_filters_menu a:contains(Bar)'));
 
-        assert.containsN(dialog, '.o_data_row', 2, "should contain 2 records");
+        assert.containsN(dialog, '.a_data_row', 2, "should contain 2 records");
 
         // save filter
         await testUtils.dom.click(dialog.$('.o_dropdown_toggler_btn:contains(Favorites)'));
@@ -531,7 +531,7 @@ QUnit.module('Views', {
             },
         });
 
-        await testUtils.dom.click(form.$('.o_field_widget[name="instrument"] .o_input'));
+        await testUtils.dom.click(form.$('.a_field_widget[name="instrument"] .o_input'));
 
         assert.notOk($('.ui-autocomplete a:contains(Create and Edit)').length,
             'Create and edit not present in dropdown');

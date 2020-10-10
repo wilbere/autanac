@@ -1,4 +1,4 @@
-odoo.define('web.FormView', function (require) {
+autanac.define('web.FormView', function (require) {
 "use strict";
 
 var BasicView = require('web.BasicView');

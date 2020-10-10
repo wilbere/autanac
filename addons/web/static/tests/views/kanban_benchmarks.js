@@ -1,4 +1,4 @@
-odoo.define('web.kanban_benchmarks', function (require) {
+autanac.define('web.kanban_benchmarks', function (require) {
 "use strict";
 
 var KanbanView = require('web.KanbanView');
@@ -48,7 +48,7 @@ QUnit.module('Kanban View', {
         var done = assert.async();
         assert.expect(1);
 
-        this.arch = '<kanban class="o_kanban_test"><templates><t t-name="kanban-box">' +
+        this.arch = '<kanban class="a_kanban_test"><templates><t t-name="kanban-box">' +
                 '<div>' +
                 '<t t-esc="record.foo.value"/>' +
                 '<field name="foo"/>' +
@@ -69,7 +69,7 @@ QUnit.module('Kanban View', {
             });
         }
 
-        this.arch = '<kanban class="o_kanban_test"><templates><t t-name="kanban-box">' +
+        this.arch = '<kanban class="a_kanban_test"><templates><t t-name="kanban-box">' +
                 '<div>' +
                 '<t t-esc="record.foo.value"/>' +
                 '<field name="foo"/>' +

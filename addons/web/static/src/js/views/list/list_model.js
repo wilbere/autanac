@@ -1,4 +1,4 @@
-odoo.define('web.ListModel', function (require) {
+autanac.define('web.ListModel', function (require) {
     "use strict";
 
     var BasicModel = require('web.BasicModel');

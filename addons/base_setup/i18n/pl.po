@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -16,20 +16,20 @@
 # Karol Rybak <karolrybak85@gmail.com>, 2019
 # Monika Grzelak <m.e.grzelak@gmail.com>, 2019
 # Piotr Cierkosz <piotr.w.cierkosz@gmail.com>, 2019
-# Paweł Wodyński <pw@myodoo.pl>, 2019
+# Paweł Wodyński <pw@myautanac.pl>, 2019
 # Maja Stawicka <mjstwck@wp.pl>, 2019
 # Wiktor Kaźmierczak <wik92tor@wp.pl>, 2019
-# Maksym <ms@myodoo.pl>, 2019
-# Natalia Gros <nag@odoo.com>, 2019
+# Maksym <ms@myautanac.pl>, 2019
+# Natalia Gros <nag@autanac.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~12.5\n"
+"Project-Id-Version: autanac Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
-"Last-Translator: Natalia Gros <nag@odoo.com>, 2019\n"
-"Language-Team: Polish (https://www.transifex.com/odoo/teams/41243/pl/)\n"
+"Last-Translator: Natalia Gros <nag@autanac.com>, 2019\n"
+"Language-Team: Polish (https://www.transifex.com/autanac/teams/41243/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -339,8 +339,8 @@ msgstr "Zewnętrzne serwery poczty e-mail"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze Odoo data from Google Spreadsheet"
-msgstr "Wyodrębniaj i analizuj dane Odoo z arkusza kalkulacyjnego Google"
+msgid "Extract and analyze autanac data from Google Spreadsheet"
+msgstr "Wyodrębniaj i analizuj dane autanac z arkusza kalkulacyjnego Google"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -516,15 +516,15 @@ msgstr "Uwierzytelnianie OAuth"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo"
-msgstr "Odoo"
+msgid "autanac"
+msgstr "autanac"
 
 #. module: base_setup
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Odoo S.A."
-msgstr "Odoo S.A."
+msgid "Distribuidor Autana Cars c.a"
+msgstr "Distribuidor Autana Cars c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -649,8 +649,8 @@ msgstr "Użyj zewnętrznych dostawców uwierzytelnień (OAuth)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in Odoo Notes"
-msgstr "Użyj zewnętrznych padów w Notatki Odoo"
+msgid "Use external pads in autanac Notes"
+msgstr "Użyj zewnętrznych padów w Notatki autanac"
 
 #. module: base_setup
 #. openerp-web
@@ -664,11 +664,11 @@ msgstr "Użytkownicy"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, Odoo provides a list of matching "
+"When populating your address book, autanac provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""
-"Podczas wypełniania książki adresowej, Odoo zapewnia listę sugerowanych "
+"Podczas wypełniania książki adresowej, autanac zapewnia listę sugerowanych "
 "firm. Przy wyborze odpowiedniego pola, informacje o firmie oraz logo będą "
 "automatycznie uzupełnione. "
 

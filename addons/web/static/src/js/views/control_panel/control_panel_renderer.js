@@ -1,4 +1,4 @@
-odoo.define('web.ControlPanelRenderer', function (require) {
+autanac.define('web.ControlPanelRenderer', function (require) {
 "use strict";
 
 var config = require('web.config');

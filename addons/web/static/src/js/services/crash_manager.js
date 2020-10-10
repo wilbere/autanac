@@ -1,4 +1,4 @@
-odoo.define('web.ErrorDialogRegistry', function (require) {
+autanac.define('web.ErrorDialogRegistry', function (require) {
 "use strict";
 
 var Registry = require('web.Registry');
@@ -6,7 +6,7 @@ var Registry = require('web.Registry');
 return new Registry();
 });
 
-odoo.define('web.CrashManager', function (require) {
+autanac.define('web.CrashManager', function (require) {
 "use strict";
 
 const AbstractService = require('web.AbstractService');
@@ -119,7 +119,7 @@ var CrashManager = AbstractService.extend({
                     delete window.onOriginError;
                 } else {
                     self.show_error({
-                        type: _t("Odoo Client Error"),
+                        type: _t("autanac Client Error"),
                         message: _t("Unknown CORS error"),
                         data: {debug: _t("An unknown CORS error occured. The error probably originates from a JavaScript file served from a different origin. (Opening your browser console might give you a hint on the error.)")},
                     });
@@ -131,7 +131,7 @@ var CrashManager = AbstractService.extend({
                 }
                 var traceback = error ? error.stack : '';
                 self.show_error({
-                    type: _t("Odoo Client Error"),
+                    type: _t("autanac Client Error"),
                     message: message,
                     data: {debug: file + ':' + line + "\n" + _t('Traceback:') + "\n" + traceback},
                 });
@@ -154,7 +154,7 @@ var CrashManager = AbstractService.extend({
                     traceback = `${_t("Error:")} ${ev.reason.message}\n${ev.reason.stack}`;
                 }
                 self.show_error({
-                    type: _t("Odoo Client Error"),
+                    type: _t("autanac Client Error"),
                     message: '',
                     data: {debug: _t('Traceback:') + "\n" + traceback},
                 });
@@ -278,7 +278,7 @@ var CrashManager = AbstractService.extend({
         error.traceback = error.data.debug;
         var dialogClass = error.data.context && ErrorDialogRegistry.get(error.data.context.exception_class) || ErrorDialog;
         var dialog = new dialogClass(this, {
-            title: _.str.capitalize(error.type) || _t("Odoo Error"),
+            title: _.str.capitalize(error.type) || _t("autanac Error"),
         }, error);
 
 
@@ -320,7 +320,7 @@ var CrashManager = AbstractService.extend({
     },
     show_message: function(exception) {
         return this.show_error({
-            type: _t("Odoo Client Error"),
+            type: _t("autanac Client Error"),
             message: exception,
             data: {debug: ""}
         });
@@ -377,7 +377,7 @@ var RedirectWarningHandler = Widget.extend(ExceptionHandler, {
         var error = this.error;
 
         new WarningDialog(this, {
-            title: _.str.capitalize(error.type) || _t("Odoo Warning"),
+            title: _.str.capitalize(error.type) || _t("autanac Warning"),
             buttons: [
                 {text: error.data.arguments[2], classes : "btn-primary", click: function() {
                     $.bbq.pushState({
@@ -395,16 +395,16 @@ var RedirectWarningHandler = Widget.extend(ExceptionHandler, {
     }
 });
 
-core.crash_registry.add('odoo.exceptions.RedirectWarning', RedirectWarningHandler);
+core.crash_registry.add('autanac.exceptions.RedirectWarning', RedirectWarningHandler);
 
 function session_expired(cm) {
     return {
         display: function () {
-            cm.show_warning({type: _t("Odoo Session Expired"), message: _t("Your Odoo session expired. Please refresh the current web page.")});
+            cm.show_warning({type: _t("autanac Session Expired"), message: _t("Your autanac session expired. Please refresh the current web page.")});
         }
     };
 }
-core.crash_registry.add('odoo.http.SessionExpiredException', session_expired);
+core.crash_registry.add('autanac.http.SessionExpiredException', session_expired);
 core.crash_registry.add('werkzeug.exceptions.Forbidden', session_expired);
 
 core.crash_registry.add('504', function (cm) {

@@ -1,4 +1,4 @@
-odoo.define('web.view_dialogs', function (require) {
+autanac.define('web.view_dialogs', function (require) {
 "use strict";
 
 var config = require('web.config');
@@ -48,7 +48,7 @@ var ViewDialog = Dialog.extend({
      * We stop all push_state events from bubbling up.  It would be weird to
      * change the url because a dialog opened.
      *
-     * @param {OdooEvent} event
+     * @param {autanacEvent} event
      */
     _onPushState: function (event) {
         event.stopPropagation();

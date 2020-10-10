@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<autanac>
 <template id="snippets">
     <div id="snippets_menu">
         <button type="button" class="o_we_add_snippet_btn active">
@@ -47,4 +47,4 @@
     </div>
 </template>
 
-</odoo>
+</autanac>

@@ -1,4 +1,4 @@
-# Translation of Odoo Server.
+# Translation of autanac Server.
 # This file contains the translation of the following modules:
 # 	* web
 # 
@@ -18,12 +18,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: autanac Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Nancy Momoland <thanhnguyen.icsc@gmail.com>, 2020\n"
-"Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
+"Language-Team: Vietnamese (https://www.transifex.com/autanac/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -1754,7 +1754,7 @@ msgstr "Fushia"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "Get this feature and much more with Odoo Enterprise!"
+msgid "Get this feature and much more with autanac Enterprise!"
 msgstr "Nhận được tính năng này và nhiều hơn nữa với phiên bản Doanh nghiệp!"
 
 #. module: web
@@ -2350,7 +2350,7 @@ msgstr "Văn bản nhiều dòng"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
-msgid "My Odoo.com account"
+msgid "My autanac.com account"
 msgstr "Tài khoản Hệ thống"
 
 #. module: web
@@ -2544,14 +2544,14 @@ msgstr "Đối tượng:"
 #: code:addons/web/static/src/js/core/dialog.js:0
 #: model_terms:ir.ui.view,arch_db:web.brand_promotion_message
 #, python-format
-msgid "Odoo"
-msgstr "Hệ thống Odoo"
+msgid "autanac"
+msgstr "Hệ thống autanac"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/apps.js:0
 #, python-format
-msgid "Odoo Apps will be available soon"
+msgid "autanac Apps will be available soon"
 msgstr "Ứng dụng Hệ thống sẽ sớm khả dụng"
 
 #. module: web
@@ -2561,35 +2561,35 @@ msgstr "Ứng dụng Hệ thống sẽ sớm khả dụng"
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Client Error"
+msgid "autanac Client Error"
 msgstr "Lỗi máy trạm"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/fields/upgrade_fields.js:0
 #, python-format
-msgid "Odoo Enterprise"
+msgid "autanac Enterprise"
 msgstr "Hệ thống cho Doanh nghiệp"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Error"
+msgid "autanac Error"
 msgstr "Lỗi hệ thống"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Session Expired"
+msgid "autanac Session Expired"
 msgstr "Phiên làm việc đã hết hạn"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Odoo Warning"
+msgid "autanac Warning"
 msgstr "Cảnh báo hệ thống"
 
 #. module: web
@@ -2915,7 +2915,7 @@ msgstr ""
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.login_layout
-msgid "Powered by <span>Odoo</span>"
+msgid "Powered by <span>autanac</span>"
 msgstr "Được hỗ trợ bởi <span>Hệ thống</span>"
 
 #. module: web
@@ -4324,9 +4324,9 @@ msgstr ""
 #: code:addons/web/static/src/js/chrome/action_manager_report.js:0
 #, python-format
 msgid ""
-"You need to start Odoo with at least two workers to print a pdf version of "
+"You need to start autanac with at least two workers to print a pdf version of "
 "the reports."
-msgstr "Bạn cần chạy Odoo với ít nhất 2 worker để in báo cáo định dạng pdf."
+msgstr "Bạn cần chạy autanac với ít nhất 2 worker để in báo cáo định dạng pdf."
 
 #. module: web
 #. openerp-web
@@ -4345,7 +4345,7 @@ msgstr ""
 #. openerp-web
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
-msgid "Your Odoo session expired. Please refresh the current web page."
+msgid "Your autanac session expired. Please refresh the current web page."
 msgstr ""
 "Phiên làm việc của bạn đã hết hạn. Hãy nạp lại trang hiện tại (F5 hoặc "
 "Ctrl+F5)."

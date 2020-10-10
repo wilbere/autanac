@@ -1,0 +1,14 @@
+[Unit]
+Description=autanac Open Source ERP and CRM
+After=network.target
+
+[Service]
+Type=simple
+User=autanac
+Group=autanac
+ExecStart=/usr/bin/autanac --config /etc/autanac/autanac.conf --logfile /var/log/autanac/autanac-server.log
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+

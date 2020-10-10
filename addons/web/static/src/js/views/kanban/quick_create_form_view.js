@@ -1,4 +1,4 @@
-odoo.define('web.QuickCreateFormView', function (require) {
+autanac.define('web.QuickCreateFormView', function (require) {
 "use strict";
 
 /**
@@ -27,7 +27,7 @@ var QuickCreateFormRenderer = FormRenderer.extend({
     /**
      * @override
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onNavigationMove: function (ev) {
         var direction = ev.data.direction;

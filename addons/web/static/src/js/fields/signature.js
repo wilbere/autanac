@@ -1,4 +1,4 @@
-odoo.define('web.Signature', function (require) {
+autanac.define('web.Signature', function (require) {
     "use strict";
 
     var AbstractFieldBinary = require('web.basic_fields').AbstractFieldBinary;

@@ -1,4 +1,4 @@
-odoo.define('web.Notification', function (require) {
+autanac.define('web.Notification', function (require) {
 'use strict';
 
 var Widget = require('web.Widget');

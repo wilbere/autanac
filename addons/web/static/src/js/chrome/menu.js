@@ -1,4 +1,4 @@
-odoo.define('web.Menu', function (require) {
+autanac.define('web.Menu', function (require) {
 "use strict";
 
 var AppsMenu = require('web.AppsMenu');

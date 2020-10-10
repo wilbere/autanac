@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 
 from werkzeug import url_quote
 
-from odoo import api, models, fields, tools
+from autanac import api, models, fields, tools
 
 
 class IrAttachment(models.Model):

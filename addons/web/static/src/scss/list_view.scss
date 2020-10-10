@@ -1,4 +1,4 @@
-.o_list_view {
+.a_list_view {
     position: relative;
 
     .o_list_table {
@@ -54,9 +54,9 @@
 
         tfoot {
             cursor: default;
-            color: $o-list-footer-color;
-            background-color: $o-list-footer-bg-color;
-            font-weight: $o-list-footer-font-weight;
+            color: $a-list-footer-color;
+            background-color: $a-list-footer-bg-color;
+            font-weight: $a-list-footer-font-weight;
             border-top: 2px solid #cacaca;
             border-bottom: 1px solid #cacaca;
 
@@ -105,7 +105,7 @@
 
         .o_list_record_selector {
             width: 40px;
-            padding-left: $o-horizontal-padding;
+            padding-left: $a-horizontal-padding;
         }
         .o_list_record_remove, .o_handle_cell {
             width: 1px;  // to prevent the column to expand
@@ -159,9 +159,9 @@
                 .o_pager_previous, .o_pager_next {
                     max-height: 30px;
                     padding: 0 5px;
-                    background-color: $o-list-group-header-color;
+                    background-color: $a-list-group-header-color;
                     &:hover {
-                        background-color: darken($o-list-group-header-color, 10%);
+                        background-color: darken($a-list-group-header-color, 10%);
                     }
                 }
                 .btn-rounded{
@@ -175,17 +175,17 @@
 
         &, &.table-striped {
             tr:focus-within {
-                background-color: lighten($o-form-lightsecondary, 10%);
+                background-color: lighten($a-form-lightsecondary, 10%);
             }
         }
         thead th:focus-within,
         tbody.o_keyboard_navigation td:focus-within {
-            background-color: $o-form-lightsecondary;
+            background-color: $a-form-lightsecondary;
             outline: none;
         }
 
-        .o_data_cell.o_text_overflow,
-        .o_data_cell.o_invisible_modifier {
+        .a_data_cell.o_text_overflow,
+        .a_data_cell.o_invisible_modifier {
             // Override display: none to keep table cells aligned. Note: cannot use
             // 'initial' as it will force them to 'inline', not 'table-cell'.
             display: table-cell!important;
@@ -217,7 +217,7 @@
             width: 32px;
         }
 
-        .o_data_row:not(.o_selected_row) .o_data_cell {
+        .a_data_row:not(.a_selected_row) .a_data_cell {
 
             // Boolean fields in non-selected rows completely disabled.
             .custom-checkbox {
@@ -227,27 +227,27 @@
             // These widgets enable the checkbox if there is no readonly modifier.
             &.o_boolean_button_cell,
             &.o_boolean_favorite_cell,
-            &.o_boolean_toggle_cell,
+            &.a_boolean_toggle_cell,
             &.o_toggle_button_cell {
 
-                &:not(.o_readonly_modifier) .custom-checkbox {
+                &:not(.a_readonly_modifier) .custom-checkbox {
                     pointer-events: auto;
                 }
             }
         }
 
-        .o_data_row:not(.o_selected_row) {
+        .a_data_row:not(.a_selected_row) {
             .o_list_many2one,
             .o_list_char,
             .o_list_number {
                 white-space: nowrap;
-                .o_field_widget:not(.o_row_handle) {
+                .a_field_widget:not(.o_row_handle) {
                     display: inline;
                 }
             }
         }
 
-        .o_data_row.o_selected_row > .o_data_cell:not(.o_readonly_modifier):not(.o_invisible_modifier) {
+        .a_data_row.a_selected_row > .a_data_cell:not(.a_readonly_modifier):not(.o_invisible_modifier) {
             position: relative; // for o_field_translate
             background-color: white;
             .o_input {
@@ -257,7 +257,7 @@
             > .o_field_text {
                 vertical-align: top;
             }
-            > .o_field_widget {
+            > .a_field_widget {
                 width: 100%;
                 > .o_external_button {
                     padding: 0;
@@ -340,7 +340,7 @@
     }
 }
 
-.o_view_controller > .o_content > .o_list_view > .table-responsive {
+.o_view_controller > .o_content > .a_list_view > .table-responsive {
     // in main list views, let .o_content scroll
     overflow: visible;
 }

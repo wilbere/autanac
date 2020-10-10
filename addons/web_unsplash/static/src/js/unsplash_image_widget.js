@@ -1,4 +1,4 @@
-odoo.define('web_unsplash.image_widgets', function (require) {
+autanac.define('web_unsplash.image_widgets', function (require) {
 'use strict';
 
 var core = require('web.core');

@@ -1,4 +1,4 @@
-odoo.define('web.kanban_examples_registry', function (require) {
+autanac.define('web.kanban_examples_registry', function (require) {
 "use strict";
 
 /**

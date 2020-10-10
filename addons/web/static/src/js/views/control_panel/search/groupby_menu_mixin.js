@@ -1,4 +1,4 @@
-odoo.define('web.GroupByMenuMixin', function (require) {
+autanac.define('web.GroupByMenuMixin', function (require) {
 "use strict";
 
 var GroupByMenu = require('web.GroupByMenu');
@@ -106,7 +106,7 @@ var GroupByMenuMixin = {
 
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onItemOptionClicked: function (ev) {
         const fieldName = ev.data.id;
@@ -125,7 +125,7 @@ var GroupByMenuMixin = {
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {autanacEvent} ev
      */
     _onMenuItemClicked: function (ev) {
         const fieldName = ev.data.id;

@@ -1,14 +1,14 @@
 // MIXINS
 @mixin o-base-settings-horizontal-padding($padding-base: $input-btn-padding-y-sm) {
-    padding: $padding-base $o-horizontal-padding;
+    padding: $padding-base $a-horizontal-padding;
 
     @include media-breakpoint-up(xl) {
-        padding-left: $o-horizontal-padding*2;;
+        padding-left: $a-horizontal-padding*2;;
     }
 }
 
 // Use a very specif selector to overwrite generic form-view rules
-.o_form_view.o_form_nosheet.o_base_settings {
+.a_form_view.o_form_nosheet.o_base_settings {
     display: flex;
     flex-flow: column nowrap;
     padding: 0px;
@@ -28,12 +28,12 @@
         .o_panel {
             display: flex;
             flex-flow: row wrap;
-            margin-bottom: $o-sheet-vpadding*0.5;
+            margin-bottom: $a-sheet-vpadding*0.5;
             width: 100%;
 
             .title, .o_setting_search {
                 flex: 1 0 auto;
-                width: map-get($o-extra-grid-breakpoints, vsm) / 2;
+                width: map-get($a-extra-grid-breakpoints, vsm) / 2;
             }
 
             .o_setting_search {
@@ -87,10 +87,10 @@
             flex-flow: column nowrap;
             background: gray('900');
             overflow: auto;
-            padding-top: $o-horizontal-padding*0.5;
+            padding-top: $a-horizontal-padding*0.5;
 
             @include media-breakpoint-down(sm) {
-                flex: 0 0 $o-base-settings-mobile-tabs-height;
+                flex: 0 0 $a-base-settings-mobile-tabs-height;
                 display: inline-flex;
                 position: relative;
                 overflow: hidden;
@@ -108,7 +108,7 @@
 
             .tab {
                 display: flex;
-                padding: 0 $o-horizontal-padding*2 0 $o-horizontal-padding;
+                padding: 0 $a-horizontal-padding*2 0 $a-horizontal-padding;
                 height: 40px;
                 color: gray('400');
                 font-size: 13px;
@@ -126,8 +126,8 @@
                 @include media-breakpoint-down(sm) {
                     display: block;
                     @include o-position-absolute($left:100%);
-                    @include size(auto, $o-base-settings-mobile-tabs-height);
-                    padding: $o-base-settings-mobile-tabs-height*0.25 $o-base-settings-mobile-tabs-height*0.4;
+                    @include size(auto, $a-base-settings-mobile-tabs-height);
+                    padding: $a-base-settings-mobile-tabs-height*0.25 $a-base-settings-mobile-tabs-height*0.4;
                     text-align: center;
                     font-size: 14px;
                     font-weight: 500;
@@ -150,7 +150,7 @@
                     }
 
                     &.previous, &.before {
-                        left: 0% - $o-base-settings-mobile-tabs-overflow-gap;
+                        left: 0% - $a-base-settings-mobile-tabs-overflow-gap;
                     }
 
                     &.current {
@@ -167,7 +167,7 @@
                     }
 
                     &.next, &.after {
-                        left: 100% + $o-base-settings-mobile-tabs-overflow-gap;
+                        left: 100% + $a-base-settings-mobile-tabs-overflow-gap;
                     }
                 }
             }

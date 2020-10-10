@@ -1,4 +1,4 @@
-odoo.define('web_tour.tour', function (require) {
+autanac.define('web_tour.tour', function (require) {
 "use strict";
 
 var config = require('web.config');
@@ -96,7 +96,7 @@ return session.is_bound.then(function () {
             };
         }
         // helper to start a tour manually (or from a python test with its counterpart start_tour function)
-        odoo.startTour = tour_manager.run.bind(tour_manager);
+        autanac.startTour = tour_manager.run.bind(tour_manager);
         return tour_manager;
     });
 });

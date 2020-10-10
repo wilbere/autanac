@@ -1,4 +1,4 @@
-odoo.define('web.KanbanRecord', function (require) {
+autanac.define('web.KanbanRecord', function (require) {
 "use strict";
 
 /**
@@ -36,7 +36,7 @@ var NB_KANBAN_RECORD_COLORS = KANBAN_RECORD_COLORS.length;
 var KanbanRecord = Widget.extend({
     events: {
         'click .oe_kanban_action': '_onKanbanActionClicked',
-        'click .o_kanban_manage_toggle_button': '_onManageTogglerClicked',
+        'click .a_kanban_manage_toggle_button': '_onManageTogglerClicked',
     },
     /**
      * @override
@@ -351,7 +351,7 @@ var KanbanRecord = Widget.extend({
         // from the DOM at the next line
         _.invoke(this.subWidgets, 'on_detach_callback');
         this._replaceElement(this.qweb.render('kanban-box', this.qweb_context));
-        this.$el.addClass('o_kanban_record').attr("tabindex", 0);
+        this.$el.addClass('a_kanban_record').attr("tabindex", 0);
         this.$el.attr('role', 'article');
         this.$el.data('record', this);
         // forcefully add class oe_kanban_global_click to have clickable record always to select it
@@ -402,7 +402,7 @@ var KanbanRecord = Widget.extend({
                 attachmentIds: attachmentIds,
                 widget: self,
             }));
-            var $imgs = $content.find('.o_kanban_cover_image');
+            var $imgs = $content.find('.a_kanban_cover_image');
             var dialog = new Dialog(self, {
                 title: _t("Set a Cover Image"),
                 $content: $content,
@@ -443,12 +443,12 @@ var KanbanRecord = Widget.extend({
             });
             dialog.opened().then(function () {
                 var $selectBtn = dialog.$footer.find('.btn-primary');
-                $content.on('click', '.o_kanban_cover_image', function (ev) {
+                $content.on('click', '.a_kanban_cover_image', function (ev) {
                     $imgs.not(ev.currentTarget).removeClass('o_selected');
                     $selectBtn.prop('disabled', !$(ev.currentTarget).toggleClass('o_selected').hasClass('o_selected'));
                 });
 
-                $content.on('dblclick', '.o_kanban_cover_image', function (ev) {
+                $content.on('dblclick', '.a_kanban_cover_image', function (ev) {
                     var $img  = $(ev.currentTarget).find('img');
                     var data = {};
                     data[fieldName] = {
@@ -743,7 +743,7 @@ var KanbanRecord = Widget.extend({
         event.preventDefault();
         this.$el.toggleClass('o_dropdown_open');
         var colorClass = this._getColorClassname(this.recordData.color || 0);
-        this.$('.o_kanban_manage_button_section').toggleClass(colorClass);
+        this.$('.a_kanban_manage_button_section').toggleClass(colorClass);
     },
 });
 
