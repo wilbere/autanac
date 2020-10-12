@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+autanac_CONFIGURATION_FILE=/etc/autanac/autanac.conf
+autanac_GROUP="autanac"
+autanac_DATA_DIR=/var/lib/autanac
+autanac_LOG_DIR=/var/log/autanac
+autanac_USER="autanac"
+
+case "${1}" in
+    configure)
+        if ! getent passwd | grep -q "^autanac:"; then
+            adduser --system --home $autanac_DATA_DIR --quiet --group $autanac_USER
+        fi
+        # Register "$autanac_USER" as a postgres user with "Create DB" role attribute
+        su - postgres -c "createuser -d -R -S $autanac_USER" 2> /dev/null || true
+        # Configuration file
+        chown $autanac_USER:$autanac_GROUP $autanac_CONFIGURATION_FILE
+        chmod 0640 $autanac_CONFIGURATION_FILE
+        # Log
+        mkdir -p $autanac_LOG_DIR
+        chown $autanac_USER:$autanac_GROUP $autanac_LOG_DIR
+        chmod 0750 $autanac_LOG_DIR
+        # Data dir
+        chown $autanac_USER:$autanac_GROUP $autanac_DATA_DIR
+        ;;
+    *)
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

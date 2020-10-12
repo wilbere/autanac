@@ -1,0 +1,2 @@
+debian/autanac.conf /etc/autanac
+README.md /usr/share/doc/autanac

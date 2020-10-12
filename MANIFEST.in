@@ -1,0 +1,49 @@
+include requirements.txt
+include LICENSE
+include README.md
+include autanac/addons/mail/static/scripts/autanac-mailgate.py
+recursive-include autanac *.css
+recursive-include autanac *.csv
+recursive-include autanac *.doc
+recursive-include autanac *.docx
+recursive-include autanac *.eml
+recursive-include autanac *.eot
+recursive-include autanac *.gif
+recursive-include autanac *.html
+recursive-include autanac *.ico
+recursive-include autanac *.jpeg
+recursive-include autanac *.jpg
+recursive-include autanac *.js
+recursive-include autanac *.md
+recursive-include autanac *.mp3
+recursive-include autanac *.ogg
+recursive-include autanac *.ods
+recursive-include autanac *.odt
+recursive-include autanac *.otf
+recursive-include autanac *.pdf
+recursive-include autanac *.png
+recursive-include autanac *.po
+recursive-include autanac *.pot
+recursive-include autanac *.rml
+recursive-include autanac *.rng
+recursive-include autanac *.rst
+recursive-include autanac *.scss
+recursive-include autanac *.sql
+recursive-include autanac *.svg
+recursive-include autanac *.template
+recursive-include autanac *.txt
+recursive-include autanac *.ttf
+recursive-include autanac *.woff
+recursive-include autanac *.woff2
+recursive-include autanac *.wsdl
+recursive-include autanac *.xls
+recursive-include autanac *.xsd
+recursive-include autanac *.xsl
+recursive-include autanac *.xlsx
+recursive-include autanac *.xml
+recursive-include autanac *.yml
+recursive-include autanac *.zip
+recursive-include autanac/addons/l10n_mx_edi *.xslt *.key *.cer *.txt
+recursive-include autanac/addons/l10n_mx_reports *.xslt
+recursive-exclude * *.py[co]
+recursive-exclude * *.hg*

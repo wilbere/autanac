@@ -1,0 +1,115 @@
+///
+/// This file regroups the variables that style autanac components.
+/// They are available in every asset bundle.
+///
+
+// Font sizes
+$o-root-font-size: 12px;
+$o-font-size-base: 13rem * (1px / $o-root-font-size);
+$o-line-height-base: 1.5; // This is BS default
+
+// Colors
+$a-autanac-color: #21232F;
+$a-autanac-color: #21232F;
+$a-primary-color: #21B591;
+
+$a-brand-autanac: $a-autanac-color;
+$a-brand-primary: $a-primary-color;
+
+$a-brand-secondary: #f0eeee;
+$a-brand-lightsecondary: #e2e2e0;
+$a-gray-100: #a7a8a8; // This is BS default
+
+$a-main-color-muted: #dbdbdb;
+$a-main-text-color: #7c7c7c;
+
+$a-view-background-color: #43464B;
+$a-shadow-color: #ebebeb;
+
+$a-form-lightsecondary: #ccc;
+
+$a-list-footer-bg-color: #eee;
+$a-list-footer-font-weight: bold;
+
+$a-tooltip-background-color: black;
+$a-tooltip-color: white;
+$a-tooltip-arrow-color: black;
+$a-tooltip-text-color: #777777;
+$a-tooltip-title-text-color: #4c4c4c;
+
+// Layout
+//
+// Extension of BS4. This is not redefining the BS4 variable directly as we only
+// need the extra ones for media queries (not creating new breakpoint classes).
+// Note: default BS4 values are hardcoded here while it should be possible to
+// merge with the default BS variable (but we would have to take care of
+// ordering & cie).
+$a-extra-grid-breakpoints: (
+    xs: 0,
+    vsm: 475px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1534px,
+);
+
+$a-form-group-cols: 12;
+$a-form-spacing-unit: 5px;
+$a-horizontal-padding: 16px;
+$a-innergroup-rpadding: 45px;
+$a-dropdown-hpadding: 20px;
+
+$a-sheet-vpadding: 24px;
+
+$a-statbutton-height: 44px;
+$a-statbutton-vpadding: 0px;
+$a-statbutton-spacing: 6px;
+
+$a-modal-lg: 980px;
+$a-modal-md: 650px;
+
+$a-sheet-cancel-tpadding: 0px;
+
+$a-avatar-size: 90px;
+
+$a-statusbar-height: 33px;
+
+$a-label-font-size-factor: 0.8;
+$a-navbar-height: 46px;
+
+$a-nb-calendar-colors: 24;
+
+$a-base-settings-mobile-tabs-height: 40px;
+$a-base-settings-mobile-tabs-overflow-gap: 3%;
+
+$a-cp-breadcrumb-height: 30px;
+
+$a-datepicker-week-color: #8f8f8f;
+
+$a-card-body-bg-opacity: 0.9;
+
+// Kanban
+
+$a-kanban-default-record-width: 300px;
+$a-kanban-small-record-width: 240px;
+
+$a-kanban-header-title-height: 50px;
+
+$a-kanban-image-width: 64px;
+$a-kanban-image-fill-width: 95px;
+$a-kanban-inside-vgutter: 8px;
+$a-kanban-inside-hgutter: 8px;
+$a-kanban-color-border-width: 3px;
+$a-kanban-inner-hmargin: 5px;
+$a-kanban-progressbar-height: 20px;
+
+$a-kanban-mobile-tabs-height: 40px;
+$a-kanban-mobile-empty-height: $a-kanban-image-width;
+// ------- Kanban dashboard variables -------
+
+// Used to manage spacing in complex dropdown menu
+$a-kanban-dashboard-dropdown-complex-gap: 5px;
+
+// For the frontend part
+$a-theme-font-size-base: (14 / 16) * 1rem;

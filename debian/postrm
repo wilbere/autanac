@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+autanac_LIB_DIR=/var/lib/autanac
+autanac_USER="autanac"
+autanac_GROUP="autanac"
+
+case "${1}" in
+    remove)
+        deluser --quiet --system $autanac_USER || true
+        delgroup --quiet --system --only-if-empty $autanac_GROUP || true
+        ;;
+
+    purge)
+        if [ -d "$autanac_LIB_DIR" ]; then
+            rm -rf $autanac_LIB_DIR
+        fi
+        ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        ;;
+
+esac
+
+#DEBHELPER#
+
+exit 0
