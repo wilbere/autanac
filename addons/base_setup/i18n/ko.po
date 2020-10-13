@@ -1,4 +1,4 @@
-# Translation of autanac Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -7,18 +7,18 @@
 # Goh Gangtai <gangtai.goh@gmail.com>, 2019
 # Link Up링크업 <linkup.way@gmail.com>, 2019
 # Seongseok Shin <shinss61@hotmail.com>, 2019
-# Mark Lee <autanacs@soti.33mail.com>, 2019
+# Mark Lee <odoos@soti.33mail.com>, 2019
 # Linkup <link-up@naver.com>, 2019
 # JH CHOI <hwangtog@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server saas~12.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: JH CHOI <hwangtog@gmail.com>, 2020\n"
-"Language-Team: Korean (https://www.transifex.com/autanac/teams/41243/ko/)\n"
+"Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "(Community Edition)"
@@ -131,21 +131,21 @@ msgid "Access Denied"
 msgstr "접근이 거부되었습니다"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode"
 msgstr "개발자 모드 활성화하기"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with assets)"
 msgstr "개발자 모드 활성화하기(에셋 포함) "
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with tests assets)"
@@ -258,7 +258,7 @@ msgid "Contacts"
 msgstr "연락처"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Copyright © 2004"
@@ -275,7 +275,7 @@ msgid "Custom Report Footer"
 msgstr "사용자 정의 보고서 꼬리말"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Deactivate the developer mode"
@@ -288,7 +288,7 @@ msgid "Default Access Rights"
 msgstr "기본 사용 권한"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Developer Tools"
@@ -305,7 +305,7 @@ msgid "Edit Layout"
 msgstr "배치 편집"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Enter e-mail address"
@@ -318,8 +318,8 @@ msgstr "외부 이메일 서버"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze autanac data from Google Spreadsheet"
-msgstr "Google 스프레드시트에서 autanac 데이터 추출 및 분석"
+msgid "Extract and analyze Odoo data from Google Spreadsheet"
+msgstr "Google 스프레드시트에서 Odoo 데이터 추출 및 분석"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -337,7 +337,7 @@ msgid "Format"
 msgstr "형식"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "GNU LGPL Licensed"
@@ -405,14 +405,14 @@ msgid "Inter-Company Transactions"
 msgstr "회사간 자료 교환"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite"
 msgstr "초대"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite New Users"
@@ -435,7 +435,7 @@ msgid "Layout"
 msgstr "배치"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Load demo data"
@@ -492,14 +492,14 @@ msgid "OAuth Authentication"
 msgstr "OAuth 인증"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "autanac"
-msgstr "autanac"
+msgid "Odoo"
+msgstr "Odoo"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Distribuidor Autana Cars c.a"
@@ -526,7 +526,7 @@ msgid "Partner Autocomplete"
 msgstr "협력사 자동 완성"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Pending Invitations:"
@@ -578,14 +578,14 @@ msgid "Synchronize your calendar with Google Calendar"
 msgstr "Google 캘린더와 내부 일정표 동기화"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses already exist: %s."
 msgstr "요청하신 이메일주소가 이미 존재합니다:%s."
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses are invalid: %s."
@@ -628,11 +628,11 @@ msgstr "외부 인증 공급자 (OAuth) 사용"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in autanac Notes"
-msgstr "autanac Notes에서 외부 문서편집도구 사용"
+msgid "Use external pads in Odoo Notes"
+msgstr "Odoo Notes에서 외부 문서편집도구 사용"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #: model:ir.model,name:base_setup.model_res_users
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -643,13 +643,13 @@ msgstr "사용자"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, autanac provides a list of matching "
+"When populating your address book, Odoo provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr "주소록을 게시하면 시스템이 일치하는 회사 목록을 제공합니다. 하나를 선택하면 회사 데이터와 로고가 자동으로 채워집니다."
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "more"

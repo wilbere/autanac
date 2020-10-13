@@ -1,4 +1,4 @@
-# Translation of autanac Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -12,12 +12,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server saas~12.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: tserendavaa tsogtoo <tseegii011929@gmail.com>, 2019\n"
-"Language-Team: Mongolian (https://www.transifex.com/autanac/teams/41243/mn/)\n"
+"Language-Team: Mongolian (https://www.transifex.com/odoo/teams/41243/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "(Community Edition)"
@@ -116,21 +116,21 @@ msgid "Access Denied"
 msgstr "Хандалтыг татгалзав"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode"
 msgstr "Хөгжүүлэгч горимыг идэвхжүүлэх"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with assets)"
 msgstr "Хөгжүүлэгч горимыг идэвхжүүлэх (хөрөнгүүдтэй)"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with tests assets)"
@@ -250,7 +250,7 @@ msgid "Contacts"
 msgstr "Харилцагч"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Copyright © 2004"
@@ -267,7 +267,7 @@ msgid "Custom Report Footer"
 msgstr "Өөриймшүүлсэн тайлангийн хөл"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Deactivate the developer mode"
@@ -280,7 +280,7 @@ msgid "Default Access Rights"
 msgstr "Үндсэн хандах эрхүүд"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Developer Tools"
@@ -297,7 +297,7 @@ msgid "Edit Layout"
 msgstr "Зохиомжийг Засварлах"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Enter e-mail address"
@@ -310,8 +310,8 @@ msgstr "Гадаад имэйл сервер"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze autanac data from Google Spreadsheet"
-msgstr "Google Spreadsheet програмаас autanac өгөгдлийг татаад шинжилгээ хийх"
+msgid "Extract and analyze Odoo data from Google Spreadsheet"
+msgstr "Google Spreadsheet програмаас Odoo өгөгдлийг татаад шинжилгээ хийх"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -329,7 +329,7 @@ msgid "Format"
 msgstr "Формат"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "GNU LGPL Licensed"
@@ -397,14 +397,14 @@ msgid "Inter-Company Transactions"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite"
 msgstr "Урих"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite New Users"
@@ -427,7 +427,7 @@ msgid "Layout"
 msgstr "Хэв загвар"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Load demo data"
@@ -484,14 +484,14 @@ msgid "OAuth Authentication"
 msgstr "OAuth нэвтрэлт"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "autanac"
-msgstr "autanac"
+msgid "Odoo"
+msgstr "Odoo"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Distribuidor Autana Cars c.a"
@@ -518,7 +518,7 @@ msgid "Partner Autocomplete"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Pending Invitations:"
@@ -570,14 +570,14 @@ msgid "Synchronize your calendar with Google Calendar"
 msgstr "Өөрийн цаглабарыг Google Calendar-тай ижилсүүлэх"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses already exist: %s."
 msgstr "Дараах и-мэйл хаягууд давхардаж байна: %s"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses are invalid: %s."
@@ -620,11 +620,11 @@ msgstr "Гадны нэвтрэлт хяналтыг (OAuth) ашиглах"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in autanac Notes"
-msgstr "autanac Notes дээр гадаад пад ашиглах"
+msgid "Use external pads in Odoo Notes"
+msgstr "Odoo Notes дээр гадаад пад ашиглах"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #: model:ir.model,name:base_setup.model_res_users
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -635,16 +635,16 @@ msgstr "Хэрэглэгчид"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, autanac provides a list of matching "
+"When populating your address book, Odoo provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""
-"Өөрийн хаягийн дэвтрээ бүртгэх үед autanac тохирох компаний жагсаалтыг өгдөг. "
+"Өөрийн хаягийн дэвтрээ бүртгэх үед Odoo тохирох компаний жагсаалтыг өгдөг. "
 "Эднээс аль нэгийг нь сонгоход компаний мэдээлэл, лого нь автоматаар "
 "бөглөдөг."
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "more"

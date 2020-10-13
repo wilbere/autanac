@@ -1,4 +1,4 @@
-# Translation of autanac Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -15,12 +15,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server saas~12.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: Maialen Rodriguez <maialenrodriguez98@gmail.com>, 2020\n"
-"Language-Team: Basque (https://www.transifex.com/autanac/teams/41243/eu/)\n"
+"Language-Team: Basque (https://www.transifex.com/odoo/teams/41243/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -28,7 +28,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "(Community Edition)"
@@ -114,21 +114,21 @@ msgid "Access Denied"
 msgstr "Sarbidea ukatua"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode"
 msgstr "Aktibatu sustatzailearen modua"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with assets)"
 msgstr "Aktibatu sustatzailearen modua (aktiboekin) "
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with tests assets)"
@@ -241,7 +241,7 @@ msgid "Contacts"
 msgstr "Kontaktuak"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Copyright © 2004"
@@ -258,7 +258,7 @@ msgid "Custom Report Footer"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Deactivate the developer mode"
@@ -271,7 +271,7 @@ msgid "Default Access Rights"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Developer Tools"
@@ -288,7 +288,7 @@ msgid "Edit Layout"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Enter e-mail address"
@@ -301,7 +301,7 @@ msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze autanac data from Google Spreadsheet"
+msgid "Extract and analyze Odoo data from Google Spreadsheet"
 msgstr ""
 
 #. module: base_setup
@@ -320,7 +320,7 @@ msgid "Format"
 msgstr "Formatua"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "GNU LGPL Licensed"
@@ -388,14 +388,14 @@ msgid "Inter-Company Transactions"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite"
 msgstr "Gonbidatu "
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite New Users"
@@ -418,7 +418,7 @@ msgid "Layout"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Load demo data"
@@ -475,14 +475,14 @@ msgid "OAuth Authentication"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "autanac"
-msgstr "autanac"
+msgid "Odoo"
+msgstr "Odoo"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Distribuidor Autana Cars c.a"
@@ -509,7 +509,7 @@ msgid "Partner Autocomplete"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Pending Invitations:"
@@ -561,14 +561,14 @@ msgid "Synchronize your calendar with Google Calendar"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses already exist: %s."
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses are invalid: %s."
@@ -611,11 +611,11 @@ msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in autanac Notes"
+msgid "Use external pads in Odoo Notes"
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #: model:ir.model,name:base_setup.model_res_users
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -626,13 +626,13 @@ msgstr "Erabiltzaileak"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, autanac provides a list of matching "
+"When populating your address book, Odoo provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "more"

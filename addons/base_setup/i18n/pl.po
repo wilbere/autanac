@@ -1,4 +1,4 @@
-# Translation of autanac Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* base_setup
 # 
@@ -16,20 +16,20 @@
 # Karol Rybak <karolrybak85@gmail.com>, 2019
 # Monika Grzelak <m.e.grzelak@gmail.com>, 2019
 # Piotr Cierkosz <piotr.w.cierkosz@gmail.com>, 2019
-# Paweł Wodyński <pw@myautanac.pl>, 2019
+# Paweł Wodyński <pw@myodoo.pl>, 2019
 # Maja Stawicka <mjstwck@wp.pl>, 2019
 # Wiktor Kaźmierczak <wik92tor@wp.pl>, 2019
-# Maksym <ms@myautanac.pl>, 2019
-# Natalia Gros <nag@autanashops.com>, 2019
+# Maksym <ms@myodoo.pl>, 2019
+# Natalia Gros <nag@odoo.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server saas~12.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
-"Last-Translator: Natalia Gros <nag@autanashops.com>, 2019\n"
-"Language-Team: Polish (https://www.transifex.com/autanac/teams/41243/pl/)\n"
+"Last-Translator: Natalia Gros <nag@odoo.com>, 2019\n"
+"Language-Team: Polish (https://www.transifex.com/odoo/teams/41243/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -37,7 +37,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "(Community Edition)"
@@ -146,21 +146,21 @@ msgid "Access Denied"
 msgstr "Brak dostępu"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode"
 msgstr "Aktywuj tryb deweloperski"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with assets)"
 msgstr "Aktywuj tryb deweloperski (z zasobami)"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Activate the developer mode (with tests assets)"
@@ -279,7 +279,7 @@ msgid "Contacts"
 msgstr "Kontakty"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Copyright © 2004"
@@ -296,7 +296,7 @@ msgid "Custom Report Footer"
 msgstr "Niestandardowa stopka raportu"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Deactivate the developer mode"
@@ -309,7 +309,7 @@ msgid "Default Access Rights"
 msgstr "Domyślne prawa dostępu"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Developer Tools"
@@ -326,7 +326,7 @@ msgid "Edit Layout"
 msgstr "Edytuj układ"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Enter e-mail address"
@@ -339,8 +339,8 @@ msgstr "Zewnętrzne serwery poczty e-mail"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Extract and analyze autanac data from Google Spreadsheet"
-msgstr "Wyodrębniaj i analizuj dane autanac z arkusza kalkulacyjnego Google"
+msgid "Extract and analyze Odoo data from Google Spreadsheet"
+msgstr "Wyodrębniaj i analizuj dane Odoo z arkusza kalkulacyjnego Google"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -358,7 +358,7 @@ msgid "Format"
 msgstr "Format"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "GNU LGPL Licensed"
@@ -426,14 +426,14 @@ msgid "Inter-Company Transactions"
 msgstr "Transakcje międzyfirmowe"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite"
 msgstr "Zaproś"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Invite New Users"
@@ -456,7 +456,7 @@ msgid "Layout"
 msgstr "Układ"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
 #, python-format
 msgid "Load demo data"
@@ -513,14 +513,14 @@ msgid "OAuth Authentication"
 msgstr "Uwierzytelnianie OAuth"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "autanac"
-msgstr "autanac"
+msgid "Odoo"
+msgstr "Odoo"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
 msgid "Distribuidor Autana Cars c.a"
@@ -547,7 +547,7 @@ msgid "Partner Autocomplete"
 msgstr "Autouzupełnianie partnerów"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "Pending Invitations:"
@@ -599,14 +599,14 @@ msgid "Synchronize your calendar with Google Calendar"
 msgstr "Zsynchronizuj swój kalendarz z Kalendarzem Google"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses already exist: %s."
 msgstr "Następujący adres e-mail już istnieje: %s."
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #, python-format
 msgid "The following email addresses are invalid: %s."
@@ -649,11 +649,11 @@ msgstr "Użyj zewnętrznych dostawców uwierzytelnień (OAuth)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Use external pads in autanac Notes"
-msgstr "Użyj zewnętrznych padów w Notatki autanac"
+msgid "Use external pads in Odoo Notes"
+msgstr "Użyj zewnętrznych padów w Notatki Odoo"
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
 #: model:ir.model,name:base_setup.model_res_users
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -664,16 +664,16 @@ msgstr "Użytkownicy"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"When populating your address book, autanac provides a list of matching "
+"When populating your address book, Odoo provides a list of matching "
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr ""
-"Podczas wypełniania książki adresowej, autanac zapewnia listę sugerowanych "
+"Podczas wypełniania książki adresowej, Odoo zapewnia listę sugerowanych "
 "firm. Przy wyborze odpowiedniego pola, informacje o firmie oraz logo będą "
 "automatycznie uzupełnione. "
 
 #. module: base_setup
-#. openerp-web
+
 #: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
 #, python-format
 msgid "more"
