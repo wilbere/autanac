@@ -3,10 +3,9 @@
 {
     'name': 'Discuss',
     'version': '1.0',
-    'category': 'Discuss',
+    'category': 'Hidden',
     'summary': 'Chat, mail gateway and private channels',
     'description': "",
-    'website': 'https://www.autanac.com/page/discuss',
     'depends': ['base', 'base_setup', 'bus', 'web_tour'],
     'data': [
         'wizard/invite_view.xml',
