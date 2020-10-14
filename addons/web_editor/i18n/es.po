@@ -15,22 +15,22 @@
 # Antonio Trueba, 2019
 # Inigo Zuluaga <inigo_zuluaga@yahoo.es>, 2019
 # Miguel Orueta <mo@landoo.es>, 2019
-# Raquel Iciarte <ric@autanac.com>, 2019
+# Raquel Iciarte <ric@autanashops.com>, 2019
 # Nicolás Broggi <rnbroggi@gmail.com>, 2019
-# Efrem Jimenez <efj@autanac.com>, 2019
-# Jesse Garza <jga@autanac.com>, 2019
+# Efrem Jimenez <efj@autanashops.com>, 2019
+# Jesse Garza <jga@autanashops.com>, 2019
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2019
 # Martin Trigaux, 2019
-# John Guardado <jgu@autanac.com>, 2019
-# Jon Perez <jop@autanac.com>, 2019
-# gpi autanac <gpi@autanac.com>, 2020
+# John Guardado <jgu@autanashops.com>, 2019
+# Jon Perez <jop@autanashops.com>, 2019
+# gpi autanac <gpi@autanashops.com>, 2020
 # VivianMontana23 <vivianpvm@gmail.com>, 2020
 # Rick Hunter <rick.hunter.ec@gmail.com>, 2020
 # Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"

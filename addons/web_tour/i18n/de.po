@@ -3,12 +3,12 @@
 # * web_tour
 # 
 # Translators:
-# Leon Grill <leg@autanac.com>, 2019
+# Leon Grill <leg@autanashops.com>, 2019
 # Ralf Hilgenstock <rh@dialoge.info>, 2019
 # Martin Trigaux, 2019
 # darenkster <inactive+darenkster@transifex.com>, 2019
 # Christian Oechsner <carinachristian@gmail.com>, 2019
-# Johannes Croe <jcr@autanac.com>, 2019
+# Johannes Croe <jcr@autanashops.com>, 2019
 # Marco Tarsia <marco.y.tarsia@gmail.com>, 2019
 # Chris Egal <sodaswed@web.de>, 2019
 # 

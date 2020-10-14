@@ -7,7 +7,7 @@
 # Simone Bernini <simone@aperturelabs.it>, 2019
 # Paolo Valier, 2019
 # Pietro Della Notte <pdellanotte@gmail.com>, 2019
-# Léonie Bouchat <lbo@autanac.com>, 2019
+# Léonie Bouchat <lbo@autanashops.com>, 2019
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
@@ -508,8 +508,8 @@ msgstr "autanac"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Distribuidor Autana Cars c.a"
-msgstr "Distribuidor Autana Cars c.a"
+msgid "AutanaShops c.a"
+msgstr "AutanaShops c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form

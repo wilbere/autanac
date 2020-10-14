@@ -291,7 +291,7 @@ var Dialog = Widget.extend({
         _.each(buttons, function (buttonData) {
             var $button = dom.renderButton({
                 attrs: {
-                    class: buttonData.classes || (buttons.length > 1 ? 'btn-secondary' : 'btn-primary'),
+                    class: buttonData.classes || (buttons.length > 1 ? 'btn-secondary rounded-pill' : 'btn-primary rounded-pill'),
                     disabled: buttonData.disabled,
                 },
                 icon: buttonData.icon,
@@ -390,12 +390,13 @@ Dialog.confirm = function (owner, message, options) {
     var buttons = [
         {
             text: _t("Ok"),
-            classes: 'btn-primary',
+            classes: 'btn-primary rounded-pill',
             close: true,
             click: options && options.confirm_callback,
         },
         {
             text: _t("Cancel"),
+            classes: 'rounded-pill',
             close: true,
             click: options && options.cancel_callback
         }
@@ -443,13 +444,14 @@ Dialog.safeConfirm = function (owner, message, options) {
     var buttons = [
         {
             text: _t("Ok"),
-            classes: 'btn-primary o_safe_confirm_button',
+            classes: 'btn-primary rounded-pill o_safe_confirm_button',
             close: true,
             click: options && options.confirm_callback,
             disabled: true,
         },
         {
             text: _t("Cancel"),
+            classes: 'rounded-pill',
             close: true,
             click: options && options.cancel_callback
         }

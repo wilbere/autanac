@@ -3,8 +3,8 @@
 # 	* base_import
 # 
 # Translators:
-# Johannes Croe <jcr@autanac.com>, 2019
-# Leon Grill <leg@autanac.com>, 2019
+# Johannes Croe <jcr@autanashops.com>, 2019
+# Leon Grill <leg@autanashops.com>, 2019
 # Martin Trigaux, 2019
 # Chris Egal <sodaswed@web.de>, 2020
 # Max-Milan Stoyanov, 2020

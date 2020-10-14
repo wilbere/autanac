@@ -8,15 +8,15 @@
 # Martin Trigaux, 2019
 # Felix Schubert <felix.schubert@go-erp.com>, 2019
 # Wolfgang Taferner, 2019
-# Gab_autanac <gab@autanac.com>, 2019
+# Gab_autanac <gab@autanashops.com>, 2019
 # darenkster <inactive+darenkster@transifex.com>, 2019
 # Andi, 2019
 # Katharina Moritz <kmo@e2f.com>, 2019
 # key six <mobile.umts@gmail.com>, 2019
-# Johannes Croe <jcr@autanac.com>, 2019
+# Johannes Croe <jcr@autanashops.com>, 2019
 # Marco Tarsia <marco.y.tarsia@gmail.com>, 2019
 # Chris Egal <sodaswed@web.de>, 2019
-# Leon Grill <leg@autanac.com>, 2019
+# Leon Grill <leg@autanashops.com>, 2019
 # Florian Pose <fp@igh.de>, 2020
 # 
 msgid ""
@@ -522,8 +522,8 @@ msgstr "autanac"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Distribuidor Autana Cars c.a"
-msgstr "Distribuidor Autana Cars c.a"
+msgid "AutanaShops c.a"
+msgstr "AutanaShops c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form

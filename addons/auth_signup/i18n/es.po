@@ -8,10 +8,10 @@
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2019
 # Rick Hunter <rick_hunter_ec@yahoo.com>, 2019
 # Rick Hunter <rick.hunter.ec@gmail.com>, 2019
-# Cristopher Cravioto <ccr@autanac.com>, 2019
+# Cristopher Cravioto <ccr@autanashops.com>, 2019
 # Pilar Marín <pilar@autanacperu.pe>, 2019
-# Efrem Jimenez <efj@autanac.com>, 2019
-# Jon Perez <jop@autanac.com>, 2019
+# Efrem Jimenez <efj@autanashops.com>, 2019
+# Jon Perez <jop@autanashops.com>, 2019
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2020
 # 
 msgid ""

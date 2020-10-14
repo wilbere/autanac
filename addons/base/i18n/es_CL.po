@@ -3,7 +3,7 @@
 # * base
 #
 # Translators:
-# Martin Trigaux <mat@autanac.com>, 2017
+# Martin Trigaux <mat@autanashops.com>, 2017
 # Daniel Santibáñez Polanco <dansanti@gmail.com>, 2017
 msgid ""
 msgstr ""

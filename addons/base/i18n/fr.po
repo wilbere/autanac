@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Fabri Yohann <psn@fabri.pw>, 2019
-# Fred Gilson <fgi@autanac.com>, 2019
+# Fred Gilson <fgi@autanashops.com>, 2019
 # Adriana Ierfino <adriana.ierfino@savoirfairelinux.com>, 2019
 # Henri Cornuau <hcornuau@gmail.com>, 2019
 # e34d4dcb8e697b071167e94624cfbccb, 2019
@@ -13,70 +13,70 @@
 # Mohamed BENKIRANE <benkirane.med.ali@gmail.com>, 2019
 # Jean-Marc Dupont <jmd@6it.fr>, 2019
 # Jeanjean Noname <monsieur.spock@gmail.com>, 2019
-# Olivier Dony <odo@autanac.com>, 2019
+# Olivier Dony <odo@autanashops.com>, 2019
 # Fabien Pinckaers <fp@openerp.com>, 2019
 # Benjamin Delagoutte <ben@ampletus.fr>, 2019
-# William Henrotin <whe@autanac.com>, 2019
+# William Henrotin <whe@autanashops.com>, 2019
 # Jérôme Tanché <jerome.tanche@ouest-dsi.fr>, 2019
 # William Olhasque <william.olhasque@scopea.fr>, 2019
 # Moka Tourisme <hello@mokatourisme.fr>, 2019
 # Fabien Bourgeois <fabien@yaltik.com>, 2019
-# Melanie Bernard <mbe@autanac.com>, 2019
+# Melanie Bernard <mbe@autanashops.com>, 2019
 # Alexis de Lattre <alexis@via.ecp.fr>, 2019
-# Laura Piraux <lap@autanac.com>, 2019
+# Laura Piraux <lap@autanashops.com>, 2019
 # Lionel Sausin <ls@numerigraphe.com>, 2019
 # nle_autanac, 2019
 # lucasdeliege <deliegelucas@gmail.com>, 2019
-# Léonie Bouchat <lbo@autanac.com>, 2019
+# Léonie Bouchat <lbo@autanashops.com>, 2019
 # f477e7ae9c75a2428d6113663a8354fe_bcd021c <0ff4ce060a36f446722508a48e99c22a_347081>, 2019
 # Alain van de Werve <avw@openerp.com>, 2019
-# Nathan Grognet <ngr@autanac.com>, 2019
+# Nathan Grognet <ngr@autanashops.com>, 2019
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2019
 # e2f <projects@e2f.com>, 2019
 # Maxime Chambreuil <mchambreuil@ursainfosystems.com>, 2019
-# Clo <clo@autanac.com>, 2019
-# Denis Ledoux <dle@autanac.com>, 2019
+# Clo <clo@autanashops.com>, 2019
+# Denis Ledoux <dle@autanashops.com>, 2019
 # Nathan Noël <nathan070@me.com>, 2019
 # Olivier ANDRE <frsw194@gmail.com>, 2019
 # a270031086f2a0d3514bc0cb507b48f6, 2019
 # Saad Thaifa <saad.thaifa@gmail.com>, 2019
 # bb76cd9ac0cb7e20167a14728edb858b, 2019
 # Agathe Mollé <molleagathe@gmail.com>, 2019
-# Richard Mathot <rim@autanac.com>, 2019
+# Richard Mathot <rim@autanashops.com>, 2019
 # Christophe Dubuit <cdubuit@yahoo.com>, 2019
 # Xavier Symons <xsy@openerp.com>, 2019
 # Xavier Belmere <Info@cartmeleon.com>, 2019
 # f5f0a0dac17dde787a1d812a6989680e, 2019
 # Benoît Fontaine <benoitfontaine.ba@gmail.com>, 2019
-# Celia Tydgat <cty@autanac.com>, 2019
-# Lucas Deliege <lud@autanac.com>, 2019
-# Emmanuel Partsafas <epa@autanac.com>, 2019
+# Celia Tydgat <cty@autanashops.com>, 2019
+# Lucas Deliege <lud@autanashops.com>, 2019
+# Emmanuel Partsafas <epa@autanashops.com>, 2019
 # Alexandre Fellner <afe@openerp.com>, 2019
-# Nicolas Roussey <nro@autanac.com>, 2019
-# thomas quertinmont <tqu@autanac.com>, 2019
-# Eloïse Stilmant <est@autanac.com>, 2019
+# Nicolas Roussey <nro@autanashops.com>, 2019
+# thomas quertinmont <tqu@autanashops.com>, 2019
+# Eloïse Stilmant <est@autanashops.com>, 2019
 # Florian Hatat, 2019
 # Aurélien Pillevesse <aurelienpillevesse@hotmail.fr>, 2019
-# lcaautanac <lca@autanac.com>, 2019
-# edc <edc@autanac.com>, 2020
-# Alexandra Jubert <aju@autanac.com>, 2020
+# lcaautanac <lca@autanashops.com>, 2019
+# edc <edc@autanashops.com>, 2020
+# Alexandra Jubert <aju@autanashops.com>, 2020
 # Frédéric GILSON <frederic.gilson@logicasoft.eu>, 2020
-# Jonathan Quique <jqu@autanac.com>, 2020
-# Pauline Thiry <pth@autanac.com>, 2020
-# Christelle Pinchart <cpi@autanac.com>, 2020
-# Vallen Delobel <edv@autanac.com>, 2020
-# Julien Goergen <jgo@autanac.com>, 2020
-# Cécile Collart <cco@autanac.com>, 2020
+# Jonathan Quique <jqu@autanashops.com>, 2020
+# Pauline Thiry <pth@autanashops.com>, 2020
+# Christelle Pinchart <cpi@autanashops.com>, 2020
+# Vallen Delobel <edv@autanashops.com>, 2020
+# Julien Goergen <jgo@autanashops.com>, 2020
+# Cécile Collart <cco@autanashops.com>, 2020
 # 44fd1b7fd1ad5b321e37d151521961ad, 2020
 # Martin Trigaux, 2020
 # Olivier Lenoir <olivier.lenoir@free.fr>, 2020
 # Vincent Luba <vincent@biz-4-africa.com>, 2020
-# Priscilla Sanchez <prs@autanac.com>, 2020
+# Priscilla Sanchez <prs@autanashops.com>, 2020
 # Fabrice Henrion, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-23 15:12+0000\n"
 "PO-Revision-Date: 2019-08-26 09:06+0000\n"
@@ -2671,7 +2671,7 @@ msgid ""
 "Legal\n"
 "-----\n"
 "**The use of pos_blackbox_be sources is only certified on autanac.com SaaS platform\n"
-"for version 13.0.** Contact autanac SA before installing pos_blackbox_be module.\n"
+"for version 0.2.** Contact autanac SA before installing pos_blackbox_be module.\n"
 "\n"
 "An obfuscated and certified version of the pos_blackbox_be may be provided on\n"
 "requests for on-premise installations.\n"

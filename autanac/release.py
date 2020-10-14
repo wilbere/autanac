@@ -30,7 +30,7 @@ Programming Language :: Python
 """
 url = 'https://www.autanac.com'
 author = 'OpenERP S.A.'
-author_email = 'info@autanac.com'
+author_email = 'info@autanashops.com'
 license = 'LGPL-3'
 
 nt_service_name = "autanac-server-" + series.replace('~','-')

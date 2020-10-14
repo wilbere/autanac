@@ -2,7 +2,7 @@
 <autanac>
     <data noupdate="True">
         <record id="main_partner" model="res.partner" context="{'default_is_company': True}">
-            <field name="name">Distribuidora Autana Cars</field>
+            <field name="name">AutanaShops</field>
             <field name="company_id" eval="None"/>
             <field name="is_company" eval="True"/>
             <field name="street"></field>

@@ -3,15 +3,15 @@
 # 	* auth_oauth
 # 
 # Translators:
-# Leon Grill <leg@autanac.com>, 2019
+# Leon Grill <leg@autanashops.com>, 2019
 # Martin Trigaux, 2019
-# Johannes Croe <jcr@autanac.com>, 2019
+# Johannes Croe <jcr@autanashops.com>, 2019
 # Chris Egal <sodaswed@web.de>, 2019
 # Andreas Perhab <a.perhab@wtioit.at>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-18 09:46+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"

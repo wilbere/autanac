@@ -8,18 +8,18 @@
 # bb76cd9ac0cb7e20167a14728edb858b, 2019
 # Martin Trigaux, 2019
 # ShevAbam, 2019
-# Richard Mathot <rim@autanac.com>, 2019
+# Richard Mathot <rim@autanashops.com>, 2019
 # Benjamin Delagoutte <ben@ampletus.fr>, 2019
 # Xavier Belmere <Info@cartmeleon.com>, 2019
-# Eloïse Stilmant <est@autanac.com>, 2019
+# Eloïse Stilmant <est@autanashops.com>, 2019
 # William Olhasque <william.olhasque@scopea.fr>, 2019
-# Marie Willemyns <mwi@autanac.com>, 2019
+# Marie Willemyns <mwi@autanashops.com>, 2019
 # Aurélien Pillevesse <aurelienpillevesse@hotmail.fr>, 2019
 # Frédéric GILSON <frederic.gilson@logicasoft.eu>, 2020
-# Cécile Collart <cco@autanac.com>, 2020
-# Pauline Thiry <pth@autanac.com>, 2020
-# Vallen Delobel <edv@autanac.com>, 2020
-# Priscilla Sanchez <prs@autanac.com>, 2020
+# Cécile Collart <cco@autanashops.com>, 2020
+# Pauline Thiry <pth@autanashops.com>, 2020
+# Vallen Delobel <edv@autanashops.com>, 2020
+# Priscilla Sanchez <prs@autanashops.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -27,7 +27,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 11:27+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
-"Last-Translator: Priscilla Sanchez <prs@autanac.com>, 2020\n"
+"Last-Translator: Priscilla Sanchez <prs@autanashops.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/autanac/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -528,8 +528,8 @@ msgstr "autanac"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Distribuidor Autana Cars c.a"
-msgstr "Distribuidor Autana Cars c.a"
+msgid "AutanaShops c.a"
+msgstr "AutanaShops c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form

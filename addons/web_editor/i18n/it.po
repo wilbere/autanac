@@ -12,13 +12,13 @@
 # Luigi Di Naro <gigidn@gmail.com>, 2019
 # Paolo Valier, 2019
 # Niccolò Lubello <nlubello@gmail.com>, 2019
-# Léonie Bouchat <lbo@autanac.com>, 2019
+# Léonie Bouchat <lbo@autanashops.com>, 2019
 # Manuela Feliciani <mfeliciani@alice.it>, 2019
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"

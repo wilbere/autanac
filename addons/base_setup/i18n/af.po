@@ -3,7 +3,7 @@
 # * base_setup
 # 
 # Translators:
-# Martin Trigaux <mat@autanac.com>, 2017
+# Martin Trigaux <mat@autanashops.com>, 2017
 # Andre de Kock <adekock11@gmail.com>, 2017
 msgid ""
 msgstr ""

@@ -23,7 +23,7 @@
 # bf2549c5415a9287249cba2b8a5823c7, 2019
 # diaojiaolou <124412206@qq.com>, 2019
 # ChinaMaker <liuct@chinamaker.net>, 2019
-# Felix Yuen <fyu@autanac.com>, 2019
+# Felix Yuen <fyu@autanashops.com>, 2019
 # snow wang <147156565@qq.com>, 2019
 # inspur qiuguodong <qiuguodong@inspur.com>, 2019
 # liAnGjiA <liangjia@qq.com>, 2019
@@ -37,7 +37,7 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"

@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Martin Trigaux, 2019
-# Cristopher Cravioto <ccr@autanac.com>, 2019
-# Jon Perez <jop@autanac.com>, 2019
+# Cristopher Cravioto <ccr@autanashops.com>, 2019
+# Jon Perez <jop@autanashops.com>, 2019
 # Platon BJS <raul.caballero.girol@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-18 09:46+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"

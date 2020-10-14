@@ -25,9 +25,9 @@
 # hoxhe Aits <hoxhe0@gmail.com>, 2019
 # Abdulmajeed Alomar <majeeed87@gmail.com>, 2019
 # Martin Trigaux, 2019
-# Tasneem Sarhan <tsa@autanac.com>, 2020
-# Rabie Bou Khodor <RBK@autanac.com>, 2020
-# Talal Kamal <tka@autanac.com>, 2020
+# Tasneem Sarhan <tsa@autanashops.com>, 2020
+# Rabie Bou Khodor <RBK@autanashops.com>, 2020
+# Talal Kamal <tka@autanashops.com>, 2020
 # Mustafa Rawi <mustafa@cubexco.com>, 2020
 # Osama Ahmaro <osamaahmaro@gmail.com>, 2020
 # Shaima Safar <shaima.safar@open-inside.com>, 2020
@@ -37,7 +37,7 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-23 15:12+0000\n"
 "PO-Revision-Date: 2019-08-26 09:06+0000\n"
@@ -2234,7 +2234,7 @@ msgid ""
 "Legal\n"
 "-----\n"
 "**The use of pos_blackbox_be sources is only certified on autanac.com SaaS platform\n"
-"for version 13.0.** Contact autanac SA before installing pos_blackbox_be module.\n"
+"for version 0.2.** Contact autanac SA before installing pos_blackbox_be module.\n"
 "\n"
 "An obfuscated and certified version of the pos_blackbox_be may be provided on\n"
 "requests for on-premise installations.\n"

@@ -5,7 +5,7 @@
 # Translators:
 # Martin Trigaux, 2018
 # Ajay Chauhan, 2018
-# Ranjit Pillai <rpi@autanac.com>, 2018
+# Ranjit Pillai <rpi@autanashops.com>, 2018
 # Turkesh Patel <turkesh4friends@gmail.com>, 2018
 # Dharmraj Jhala <dja@openerp.com>, 2018
 msgid ""

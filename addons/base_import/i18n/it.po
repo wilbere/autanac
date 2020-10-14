@@ -8,10 +8,10 @@
 # SebastianoPistore <SebastianoPistore.info@protonmail.ch>, 2019
 # Paolo Valier, 2019
 # Pietro Della Notte <pdellanotte@gmail.com>, 2019
-# Léonie Bouchat <lbo@autanac.com>, 2019
+# Léonie Bouchat <lbo@autanashops.com>, 2019
 # Stefano Consolaro <stefano.consolaro@mymage.it>, 2019
-# Petra <bop@autanac.com>, 2019
-# Iacopo Simonelli <lsi@autanac.com>, 2020
+# Petra <bop@autanashops.com>, 2019
+# Iacopo Simonelli <lsi@autanashops.com>, 2020
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""

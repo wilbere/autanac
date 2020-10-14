@@ -7,13 +7,13 @@
 # Jeffery CHEN Fan <jeffery9@gmail.com>, 2019
 # liAnGjiA <liangjia@qq.com>, 2019
 # inspur qiuguodong <qiuguodong@inspur.com>, 2019
-# Felix Yuen <fyu@autanac.com>, 2019
+# Felix Yuen <fyu@autanashops.com>, 2019
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2019
 # guohuadeng <guohuadeng@hotmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-22 08:19+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"

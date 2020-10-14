@@ -107,7 +107,7 @@ $o-we-zindex: $o-we-overlay-zindex + 1 !default;
             @extend %we-active-button;
         }
 
-        // This element should have been removed but still exists in 13.0 by
+        // This element should have been removed but still exists in 0.2 by
         // mistake. This takes advantage of it to restore the color preview
         // feature which disappeared and cannot be fixed as in 12.0.
         // TODO fix the right way in 14.0.

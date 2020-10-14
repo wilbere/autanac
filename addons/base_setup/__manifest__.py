@@ -5,7 +5,7 @@
     'category': 'Hidden',
     'description': """
 Este módulo ayuda a configurar el sistema en la instalación de una nueva base de datos.
-================================================================================
+=======================================================================================
 
 
     """,

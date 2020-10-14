@@ -6,7 +6,7 @@
 # Thomas Pot <thomas@open2bizz.nl>, 2019
 # Cas Vissers <casvissers@brahoo.nl>, 2019
 # Cas Vissers <c.vissers@brahoo.nl>, 2019
-# Wynand Tastenhoye <wta@autanac.com>, 2019
+# Wynand Tastenhoye <wta@autanashops.com>, 2019
 # Martin Trigaux, 2019
 # Erwin van der Ploeg <erwin@autanacexperts.nl>, 2019
 # Yenthe Van Ginneken <yenthespam@gmail.com>, 2019

@@ -455,7 +455,7 @@ class TestBase(TransactionCase):
     def test_70_archive_internal_partners(self):
         test_partner = self.env['res.partner'].create({'name':'test partner'})
         test_user = self.env['res.users'].create({
-                                'login': 'test@autanac.com',
+                                'login': 'test@autanashops.com',
                                 'partner_id': test_partner.id,
                                 })
         # Cannot archive the partner

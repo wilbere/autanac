@@ -4,7 +4,7 @@
     'name': 'Signup',
     'description': """
 Permite a las usuarios registrarse y restablecer su contraseña
-===============================================
+==============================================================
     """,
     'version': '1.0',
     'category': 'Tools',

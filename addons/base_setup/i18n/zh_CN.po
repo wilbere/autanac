@@ -12,7 +12,7 @@
 # lttlsnk <lttlsnk@gmail.com>, 2019
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2019
 # aishiby Ail <15287995117@189.cn>, 2019
-# Cécile Collart <cco@autanac.com>, 2019
+# Cécile Collart <cco@autanashops.com>, 2019
 # keecome <7017511@qq.com>, 2019
 # ChinaMaker <liuct@chinamaker.net>, 2019
 # neter ji <jifuyi@qq.com>, 2019
@@ -512,8 +512,8 @@ msgstr "autanac"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Distribuidor Autana Cars c.a"
-msgstr "Distribuidor Autana Cars c.a"
+msgid "AutanaShops c.a"
+msgstr "AutanaShops c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form

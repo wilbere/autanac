@@ -755,7 +755,7 @@
                 t-att-id="widget.idForLabel"/>
             <a role="button" class="o_dropdown_button" draggable="false"/>
         </div>
-        <button type="button" t-if="!widget.noOpen" class="fa fa-external-link btn btn-secondary o_external_button" tabindex="-1" draggable="false" aria-label="External link" title="External link"/>
+        <button type="button" t-if="!widget.noOpen" class="fa fa-external-link btn btn-secondary o_external_button rounded-pill" tabindex="-1" draggable="false" aria-label="External link" title="External link"/>
     </div>
 </t>
 <t t-name="FieldReference" t-extend="FieldMany2One">
@@ -837,7 +837,7 @@
 </t>
 <t t-name="FieldStatus.content">
     <t t-if="selection_folded.length">
-        <button type="button" class="btn rounded-pill o_arrow_button btn-secondary dropdown-toggle rounded-pill" data-toggle="dropdown" aria-expanded="false">More</button>
+        <button type="button" class="btn o_arrow_button btn-secondary dropdown-toggle rounded-pill" data-toggle="dropdown" aria-expanded="false">More</button>
         <div class="dropdown-menu" role="menu">
             <t t-foreach="selection_folded" t-as="i">
                 <t t-call="FieldStatus.content.button">
@@ -854,17 +854,17 @@
     <t t-set="disabled" t-value="!clickable"/>
     <button type="button" t-att-data-value="i.id" disabled="disabled" title="Current state" aria-checked="true"
         t-att-role="is_dropdown ? 'menuitemradio': 'radio'"
-        t-attf-class="btn rounded-pill o_arrow_button btn-primary disabled #{is_dropdown ? 'dropdown-item bg-primary text-white': ''}" t-if="i.selected" aria-current="step">
+        t-attf-class="btn  o_arrow_button btn-primary disabled #{is_dropdown ? 'dropdown-item bg-primary text-white': ''}" t-if="i.selected" aria-current="step">
         <t t-esc="i.display_name" role="img" t-attf-aria-label="#{i.display_name} is current state"/>
     </button>
     <button type="button" t-att-data-value="i.id" disabled="disabled" title="Not active state" aria-checked="false"
         t-att-role="is_dropdown ? 'menuitemradio': 'radio'"
-        t-attf-class="btn rounded-pill o_arrow_button btn-secondary disabled #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and disabled">
+        t-attf-class="btn  o_arrow_button btn-secondary disabled #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and disabled">
         <t t-esc="i.display_name" role="img" t-attf-aria-label="#{i.display_name} is not current state"/>
     </button>
     <button type="button" t-att-data-value="i.id" title="Not active state, click to change it" aria-checked="false"
         t-att-role="is_dropdown ? 'menuitemradio': 'radio'"
-        t-attf-class="btn rounded-pill o_arrow_button btn-secondary #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and !disabled">
+        t-attf-class="btn  o_arrow_button btn-secondary #{is_dropdown ? 'dropdown-item': ''}" t-if="!i.selected and !disabled">
         <t t-esc="i.display_name" role="img" t-attf-aria-label="Click to change current state to #{i.display_name}"/>
     </button>
 </t>
@@ -950,7 +950,7 @@
         <div class="card-header">
             <a role="button" class="o_sign_select_style float-right btn btn-link">Select Signature Style</a>
             <a role="button" class="o_sign_clean float-right btn btn-link">Clear Signature</a>
-            <a data-mode="draw" class="o_sign_mode o_sign_mode_draw btn btn-primary" role="button">Draw</a>
+            <a data-mode="draw" class="o_sign_mode o_sign_mode_draw rounded-pill btn btn-primary" role="button">Draw</a>
             <a data-mode="auto" class="o_sign_mode o_sign_mode_auto btn" role="button">Auto</a>
             <a data-mode="load" class="o_sign_mode o_sign_mode_load btn" role="button">Load</a>
             <input type="file" name="files[]" class="o_sign_load btn btn-link" role="button"/>
@@ -1129,7 +1129,7 @@
 </t>
 
 <div t-name="web.TimeRangeMenu" class="btn-group o_dropdown">
-    <button t-att-class="'o_dropdown_toggler_btn btn btn-secondary dropdown-toggle o_time_range_menu_button' + (widget.isMobile ? ' o-no-caret' : '')" data-toggle="dropdown"
+    <button t-att-class="'o_dropdown_toggler_btn btn rounded-pill btn-secondary dropdown-toggle o_time_range_menu_button' + (widget.isMobile ? ' o-no-caret' : '')" data-toggle="dropdown"
         aria-expanded="false" tabindex="-1">
         <span class="fa fa-calendar"/> Time Ranges <span t-att-class="widget.symbol"/>
     </button>
@@ -1202,7 +1202,7 @@
 
 <div t-name="SearchView" class="o_searchview rounded-pill" role="search" aria-autocomplete="list">
     <t t-if="widget.isMobile">
-        <button class="o_enable_searchview btn btn-link fa fa-search"/>
+        <button class="o_enable_searchview rounded-pill btn btn-link fa fa-search"/>
         <t t-call="MobileSearchView"/>
         <button class="o_toggle_searchview_full o_hidden btn fa fa-filter"/>
     </t>
@@ -1423,6 +1423,10 @@
 </t>
 
 <div t-name="Pager" class="o_pager">
+
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
     
     <span class="btn-group" aria-atomic="true">
         <!-- accesskeys not wanted in X2Many widgets -->
@@ -1430,8 +1434,8 @@
             <t t-set="att_prev" t-value="{'accesskey': 'p'}" />
             <t t-set="att_next" t-value="{'accesskey': 'n'}" />
         </t>
-        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous rounded-circle mr-1" t-att="att_prev" aria-label="Previous" title="Previous" tabindex="-1"/>
-        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next rounded-circle mr-1" t-att="att_next" aria-label="Next" title="Next" tabindex="-1"/>
+        <button type="button" class="fa fa-chevron-left btn  btn-secondary o_pager_previous rounded-circle mr-1" t-att="att_prev" aria-label="Previous" title="Previous" tabindex="-1"/>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary  o_pager_next rounded-circle mr-1" t-att="att_next" aria-label="Next" title="Next" tabindex="-1"/>
     </span>
 </div>
 
