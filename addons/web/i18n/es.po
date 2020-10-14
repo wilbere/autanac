@@ -19,7 +19,7 @@
 # Luis M. Triana <luis.triana@jarsa.com.mx>, 2019
 # RGB Consulting <autanac@rgbconsulting.com>, 2019
 # Kiko <kiko@comunitea.com>, 2019
-# Cristopher Cravioto <ccr@autanac.com>, 2019
+# Cristopher Cravioto <ccr@autanashops.com>, 2019
 # e2f <projects@e2f.com>, 2019
 # Ana Juaristi <ajuaristio@gmail.com>, 2019
 # Carlos Lopez <celm1990@hotmail.com>, 2019
@@ -33,12 +33,12 @@
 # Albert Orellano <albert.orellano@megaterios.co>, 2019
 # Nicolás Broggi <rnbroggi@gmail.com>, 2019
 # Edilianny Sanchez - https://www.vauxoo.com/ <esanchez@vauxoo.com>, 2019
-# Jesse Garza <jga@autanac.com>, 2019
+# Jesse Garza <jga@autanashops.com>, 2019
 # 966ff43e6966712895a590e7320ca288, 2019
-# Efrem Jimenez <efj@autanac.com>, 2019
-# Florimond Husquinet <fhu@autanac.com>, 2019
-# John Guardado <jgu@autanac.com>, 2019
-# Jon Perez <jop@autanac.com>, 2019
+# Efrem Jimenez <efj@autanashops.com>, 2019
+# Florimond Husquinet <fhu@autanashops.com>, 2019
+# John Guardado <jgu@autanashops.com>, 2019
+# Jon Perez <jop@autanashops.com>, 2019
 # Miguel Orueta <mo@landoo.es>, 2019
 # Francis Peña <francisca.e@gmx.com>, 2019
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2020
@@ -48,7 +48,7 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"

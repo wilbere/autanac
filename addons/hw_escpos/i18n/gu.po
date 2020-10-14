@@ -3,7 +3,7 @@
 # * hw_escpos
 #
 # Translators:
-# Ranjit Pillai <rpi@autanac.com>, 2015
+# Ranjit Pillai <rpi@autanashops.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: autanac 9.0\n"

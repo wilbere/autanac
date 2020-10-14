@@ -18,13 +18,13 @@
 # dd5cd5bab88c61e9dedf84f5ea59b147, 2019
 # Jan Meyer, 2019
 # Ermin Trevisan <trevi@twanda.com>, 2019
-# Leon Grill <leg@autanac.com>, 2019
-# JEK autanac <jek@autanac.com>, 2020
+# Leon Grill <leg@autanashops.com>, 2019
+# JEK autanac <jek@autanashops.com>, 2020
 # Chris Egal <sodaswed@web.de>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"

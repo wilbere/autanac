@@ -6,7 +6,7 @@
 # gabriumaa <gabriel.umana@delfixcr.com>, 2019
 # Miguel Orueta <mo@landoo.es>, 2019
 # Emilio Silva <efsilvay@gmail.com>, 2019
-# Jon Perez <jop@autanac.com>, 2019
+# Jon Perez <jop@autanashops.com>, 2019
 # Martin Trigaux, 2019
 # Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020
 # 

@@ -22,13 +22,13 @@
 # Marcelo Costa <marcelo@comdesk.com.br>, 2019
 # falexandresilva <falexandresilva@gmail.com>, 2019
 # Luiz Carlos de Lima <luiz.carlos@akretion.com.br>, 2019
-# Cécile Collart <cco@autanac.com>, 2019
+# Cécile Collart <cco@autanashops.com>, 2019
 # Ramiro Pereira de Magalhães <ramiro.p.magalhaes@gmail.com>, 2019
 # Rodrigo de Almeida Sottomaior Macedo <rmsolucoeseminformatica@protonmail.com>, 2019
-# Keli Brugalli <kbr@autanac.com>, 2019
-# Fernanda Marques <fem@autanac.com>, 2020
+# Keli Brugalli <kbr@autanashops.com>, 2019
+# Fernanda Marques <fem@autanashops.com>, 2020
 # Marcel Savegnago <marcel.savegnago@gmail.com>, 2020
-# Kevin Harrings <kha@autanac.com>, 2020
+# Kevin Harrings <kha@autanashops.com>, 2020
 # Luiz Fernando <lfpsgs@outlook.com>, 2020
 # Guilherme Libardi <guilherme.libardig@gmail.com>, 2020
 # Maurício Liell <mauricio@liell.com.br>, 2020
@@ -44,7 +44,7 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-23 15:12+0000\n"
 "PO-Revision-Date: 2019-08-26 09:06+0000\n"
@@ -2488,7 +2488,7 @@ msgid ""
 "Legal\n"
 "-----\n"
 "**The use of pos_blackbox_be sources is only certified on autanac.com SaaS platform\n"
-"for version 13.0.** Contact autanac SA before installing pos_blackbox_be module.\n"
+"for version 0.2.** Contact autanac SA before installing pos_blackbox_be module.\n"
 "\n"
 "An obfuscated and certified version of the pos_blackbox_be may be provided on\n"
 "requests for on-premise installations.\n"

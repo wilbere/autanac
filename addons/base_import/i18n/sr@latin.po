@@ -3,7 +3,7 @@
 # * base_import
 # 
 # Translators:
-# Martin Trigaux <mat@autanac.com>, 2017
+# Martin Trigaux <mat@autanashops.com>, 2017
 # Nemanja Dragovic <nemanjadragovic94@gmail.com>, 2017
 # Djordje Marjanovic <djordje_m@yahoo.com>, 2017
 # Ljubisa Jovev <ljubisa.jovev@gmail.com>, 2017

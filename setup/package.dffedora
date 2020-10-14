@@ -1,7 +1,7 @@
 # Please note that this Dockerfile is used for testing nightly builds and should
 # not be used to deploy autanac
 FROM fedora:30
-MAINTAINER autanac S.A. <info@autanac.com>
+MAINTAINER AutanaShops <info@autanashops.com>
 
 # Dependencies and postgres
 RUN dnf update -d 0 -e 0 -y && \

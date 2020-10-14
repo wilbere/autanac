@@ -507,7 +507,7 @@ msgstr "autanac"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Distribuidor Autana Cars c.a"
+msgid "AutanaShops c.a"
 msgstr "יישומי autanac"
 
 #. module: base_setup

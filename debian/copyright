@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Contact: autanac <info@autanac.com>
+Upstream-Contact: autanac <info@autanashops.com>
 
 Files: *
 Copyright: Copyright (C) 2004-2015 autanac SA. (www.autanac.com)
@@ -159,7 +159,7 @@ License: MIT
 
 Files: addons/website/static/src/js/website.zoomautanac.js
 Copyright: Copyright 2013 Matt Hinchliffe
-           2016 Jeremy Kersten <jke@autanac.com>
+           2016 Jeremy Kersten <jke@autanashops.com>
 License: MIT
 
 Files: addons/web/static/lib/benchmarkjs/lodash.js

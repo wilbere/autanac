@@ -7,9 +7,9 @@
 # Martin Trigaux, 2019
 # Giovanni Perteghella <giovanni@perteghella.org>, 2019
 # Paolo Valier, 2019
-# Léonie Bouchat <lbo@autanac.com>, 2019
+# Léonie Bouchat <lbo@autanashops.com>, 2019
 # Stefano Consolaro <stefano.consolaro@mymage.it>, 2019
-# Petra <bop@autanac.com>, 2019
+# Petra <bop@autanashops.com>, 2019
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""

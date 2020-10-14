@@ -3,12 +3,12 @@
 # * web_tour
 # 
 # Translators:
-# Cécile Collart <cco@autanac.com>, 2019
+# Cécile Collart <cco@autanashops.com>, 2019
 # Martin Trigaux, 2019
 # Fabien Pinckaers <fp@openerp.com>, 2019
-# Richard Mathot <rim@autanac.com>, 2019
+# Richard Mathot <rim@autanashops.com>, 2019
 # Xavier Belmere <Info@cartmeleon.com>, 2019
-# Eloïse Stilmant <est@autanac.com>, 2019
+# Eloïse Stilmant <est@autanashops.com>, 2019
 # William Olhasque <william.olhasque@scopea.fr>, 2019
 # Frédéric GILSON <frederic.gilson@logicasoft.eu>, 2020
 # 

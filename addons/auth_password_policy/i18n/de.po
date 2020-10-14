@@ -3,7 +3,7 @@
 # 	* auth_password_policy
 # 
 # Translators:
-# Leon Grill <leg@autanac.com>, 2019
+# Leon Grill <leg@autanashops.com>, 2019
 # Martin Trigaux, 2019
 # Marco Tarsia <marco.y.tarsia@gmail.com>, 2019
 # 

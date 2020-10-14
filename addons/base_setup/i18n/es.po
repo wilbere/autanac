@@ -14,11 +14,11 @@
 # Inigo Zuluaga <inigo_zuluaga@yahoo.es>, 2019
 # Gelo Joga Landoo <gj@landoo.es>, 2019
 # Nicolás Broggi <rnbroggi@gmail.com>, 2019
-# Cristopher Cravioto <ccr@autanac.com>, 2019
+# Cristopher Cravioto <ccr@autanashops.com>, 2019
 # Fernando Herrera <baloosoftware@gmail.com>, 2019
-# Efrem Jimenez <efj@autanac.com>, 2019
-# Jon Perez <jop@autanac.com>, 2019
-# Jesse Garza <jga@autanac.com>, 2019
+# Efrem Jimenez <efj@autanashops.com>, 2019
+# Jon Perez <jop@autanashops.com>, 2019
+# Jesse Garza <jga@autanashops.com>, 2019
 # Erick Herrera <erick.herrera@jarsa.com.mx>, 2020
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2020
 # Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020
@@ -527,8 +527,8 @@ msgstr "autanac"
 #. openerp-web
 #: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
 #, python-format
-msgid "Distribuidor Autana Cars c.a"
-msgstr "Distribuidor Autana Cars c.a"
+msgid "AutanaShops c.a"
+msgstr "AutanaShops c.a"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form

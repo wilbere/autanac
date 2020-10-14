@@ -874,8 +874,7 @@ class Users(models.Model):
                     "The rate-limited IP address %s is classified as private "
                     "and *might* be a proxy. If your autanac is behind a proxy, "
                     "it may be mis-configured. Check that you are running "
-                    "autanac in Proxy Mode and that the proxy is properly configured, see "
-                    "https://www.autanac.com/documentation/13.0/setup/deploy.html#https for details.",
+                    "autanac in Proxy Mode and that the proxy is properly configured.",
                     source
                 )
             raise AccessDenied(_("Too many login failures, please wait a bit before trying again."))

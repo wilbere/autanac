@@ -7,7 +7,7 @@
 # Martin Trigaux, 2019
 # Marius Marolla <mariusmarolla@entersys.it>, 2019
 # Paolo Valier, 2019
-# Léonie Bouchat <lbo@autanac.com>, 2019
+# Léonie Bouchat <lbo@autanashops.com>, 2019
 # mymage <stefano.consolaro@mymage.it>, 2019
 # 
 msgid ""

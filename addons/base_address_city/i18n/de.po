@@ -3,7 +3,7 @@
 # 	* base_address_city
 # 
 # Translators:
-# Leon Grill <leg@autanac.com>, 2019
+# Leon Grill <leg@autanashops.com>, 2019
 # Martin Trigaux, 2019
 # Wolfgang Taferner, 2019
 # Chris Egal <sodaswed@web.de>, 2019

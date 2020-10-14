@@ -3,7 +3,7 @@
 # 	* base_iban
 # 
 # Translators:
-# Petra <bop@autanac.com>, 2019
+# Petra <bop@autanashops.com>, 2019
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""

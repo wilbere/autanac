@@ -4,10 +4,10 @@
 # 
 # Translators:
 # Martin Trigaux, 2019
-# Cristopher Cravioto <ccr@autanac.com>, 2019
+# Cristopher Cravioto <ccr@autanashops.com>, 2019
 # VivianMontana23 <vivianpvm@gmail.com>, 2019
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2019
-# Jon Perez <jop@autanac.com>, 2019
+# Jon Perez <jop@autanashops.com>, 2019
 # Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020
 # 
 msgid ""

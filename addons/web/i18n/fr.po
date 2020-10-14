@@ -6,15 +6,15 @@
 # bb76cd9ac0cb7e20167a14728edb858b, 2019
 # Fabien Bourgeois <fabien@yaltik.com>, 2019
 # Benoît Fontaine <benoitfontaine.ba@gmail.com>, 2019
-# Lucas Deliege <lud@autanac.com>, 2019
-# Melanie Bernard <mbe@autanac.com>, 2019
+# Lucas Deliege <lud@autanashops.com>, 2019
+# Melanie Bernard <mbe@autanashops.com>, 2019
 # Jérémy Donas <LeDistordu@users.noreply.github.com>, 2019
 # e2f <projects@e2f.com>, 2019
 # Moka Tourisme <hello@mokatourisme.fr>, 2019
-# Olivier Dony <odo@autanac.com>, 2019
+# Olivier Dony <odo@autanashops.com>, 2019
 # Frédéric LIETART <stuff@tifred.fr>, 2019
 # Olivier Lenoir <olivier.lenoir@free.fr>, 2019
-# Richard Mathot <rim@autanac.com>, 2019
+# Richard Mathot <rim@autanashops.com>, 2019
 # Adriana Ierfino <adriana.ierfino@savoirfairelinux.com>, 2019
 # Florian Hatat, 2019
 # Fabri Yohann <psn@fabri.pw>, 2019
@@ -22,23 +22,23 @@
 # Matillon Samantha <smatillon@gmail.com>, 2019
 # Jerther, 2019
 # William Olhasque <william.olhasque@scopea.fr>, 2019
-# Nathan Grognet <ngr@autanac.com>, 2019
+# Nathan Grognet <ngr@autanashops.com>, 2019
 # Olivier ANDRE <frsw194@gmail.com>, 2019
 # a270031086f2a0d3514bc0cb507b48f6, 2019
-# fah_autanac <fah@autanac.com>, 2019
+# fah_autanac <fah@autanashops.com>, 2019
 # Sébastien BÜHL <buhlsebastien@gmail.com>, 2019
 # Aurélien Pillevesse <aurelienpillevesse@hotmail.fr>, 2019
 # Xavier Belmere <Info@cartmeleon.com>, 2019
-# Eloïse Stilmant <est@autanac.com>, 2019
+# Eloïse Stilmant <est@autanashops.com>, 2019
 # Frédéric GILSON <frederic.gilson@logicasoft.eu>, 2020
-# Priscilla Sanchez <prs@autanac.com>, 2020
-# Cécile Collart <cco@autanac.com>, 2020
-# Julien Goergen <jgo@autanac.com>, 2020
+# Priscilla Sanchez <prs@autanashops.com>, 2020
+# Cécile Collart <cco@autanashops.com>, 2020
+# Julien Goergen <jgo@autanashops.com>, 2020
 # Martin Trigaux, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 10:17+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"

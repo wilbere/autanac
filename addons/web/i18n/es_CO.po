@@ -584,8 +584,8 @@ msgstr "Contexto:"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:116
 #, python-format
-msgid "Copyright © 2004-2015 autanac S.A."
-msgstr "Copyright © 2004-2015 autanac S.A."
+msgid "Copyright © 2004-2015 AutanaShops"
+msgstr "Copyright © 2004-2015 AutanaShops"
 
 #. module: web
 #. openerp-web
@@ -1622,8 +1622,8 @@ msgstr "autanac Empresarial"
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:117
 #, python-format
-msgid "autanac S.A."
-msgstr "autanac S.A."
+msgid "AutanaShops"
+msgstr "AutanaShops"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.qunit_suite

@@ -3,14 +3,14 @@
 # * base_import_module
 # 
 # Translators:
-# Martin Trigaux <mat@autanac.com>, 2017
+# Martin Trigaux <mat@autanashops.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: autanac Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-24 09:00+0000\n"
 "PO-Revision-Date: 2017-10-24 09:00+0000\n"
-"Last-Translator: Martin Trigaux <mat@autanac.com>, 2017\n"
+"Last-Translator: Martin Trigaux <mat@autanashops.com>, 2017\n"
 "Language-Team: Spanish (Dominican Republic) (https://www.transifex.com/autanac/teams/41243/es_DO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

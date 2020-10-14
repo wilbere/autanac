@@ -10,7 +10,7 @@
 # Marius Marolla <mariusmarolla@entersys.it>, 2019
 # Maurizio Delmonte <maurizio.delmonte@gmail.com>, 2019
 # Fabio Genovese <ing.fabiogenovese@gmail.com>, 2019
-# efraimbiffi <eab@autanac.com>, 2019
+# efraimbiffi <eab@autanashops.com>, 2019
 # Cesare Cugnasco <cesare.cugnasco@gmail.com>, 2019
 # Lorenzo Battistini <lb@takobi.online>, 2019
 # Matteo Boscolo <matteo.boscolo.76@gmail.com>, 2019
@@ -22,18 +22,18 @@
 # Giovanni Perteghella <giovanni@perteghella.org>, 2019
 # Luigi Di Naro <gigidn@gmail.com>, 2019
 # SebastianoPistore <SebastianoPistore.info@protonmail.ch>, 2019
-# Cécile Collart <cco@autanac.com>, 2019
-# Petra <bop@autanac.com>, 2019
-# Luigia Cimmino Caserta <lcc@autanac.com>, 2019
+# Cécile Collart <cco@autanashops.com>, 2019
+# Petra <bop@autanashops.com>, 2019
+# Luigia Cimmino Caserta <lcc@autanashops.com>, 2019
 # Simone Rubino <simone.rubino@agilebg.com>, 2019
 # Paolo Valier, 2020
-# Léonie Bouchat <lbo@autanac.com>, 2020
+# Léonie Bouchat <lbo@autanashops.com>, 2020
 # Martin Trigaux, 2020
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: autanac Server 13.0\n"
+"Project-Id-Version: autanac Server 0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-23 15:12+0000\n"
 "PO-Revision-Date: 2019-08-26 09:06+0000\n"
@@ -2423,7 +2423,7 @@ msgid ""
 "Legal\n"
 "-----\n"
 "**The use of pos_blackbox_be sources is only certified on autanac.com SaaS platform\n"
-"for version 13.0.** Contact autanac SA before installing pos_blackbox_be module.\n"
+"for version 0.2.** Contact autanac SA before installing pos_blackbox_be module.\n"
 "\n"
 "An obfuscated and certified version of the pos_blackbox_be may be provided on\n"
 "requests for on-premise installations.\n"
