@@ -999,7 +999,7 @@ msgstr "Código de barras del paquete (ZPL)"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_stock_picking_batch
 msgid "Batch Pickings"
-msgstr "Agrupación de albaranes"
+msgstr "Agrupación de notas de entrega"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__res_partner__picking_warn__block
@@ -2057,7 +2057,7 @@ msgstr "Mostrar Completo"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__group_lot_on_delivery_slip
 msgid "Display Lots & Serial Numbers on Delivery Slips"
-msgstr "Mostrar Lotes y Números de Serie en Albaranes"
+msgstr "Mostrar Lotes y Números de Serie en notas de entrega"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_procurement_group__display_name
@@ -4329,7 +4329,7 @@ msgstr "Albarán"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_internal_search
 msgid "Picking Lists"
-msgstr "Listas de albaranes"
+msgstr "Listas de notas de entrega"
 
 #. module: stock
 #: model:ir.actions.report,name:stock.action_report_picking
@@ -4349,7 +4349,7 @@ msgstr "Lista de albarán"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_internal_search
 msgid "Pickings already processed"
-msgstr "Albaranes ya procesadas"
+msgstr "notas de entrega ya procesadas"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_picking_type_kanban
@@ -7154,7 +7154,7 @@ msgstr "Alerta"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_partner_stock_warnings_form
 msgid "Warning on the Picking"
-msgstr "Aviso en los albaranes"
+msgstr "Aviso en los notas de entrega"
 
 #. module: stock
 #: code:addons/stock/models/product.py:0

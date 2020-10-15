@@ -10,7 +10,7 @@
                     <div class="app_settings_block" data-string="General Settings" string="General Settings" data-key="general_settings">
 
                         <div id="invite_users">
-                            <h2>Users</h2>
+                            <h2 class="rounded-pill">Users</h2>
                             <div class="row mt16 o_settings_container">
                                 <div class="col-12 col-lg-6 o_setting_box">
                                     <div class="o_setting_right_pane">
@@ -37,7 +37,7 @@
                         </div>
 
                         <div id="companies">
-                            <h2>Companies</h2>
+                            <h2 class="rounded-pill">Companies</h2>
                             <div class="row mt16 o_settings_container">
                                 <div class="col-12 col-lg-6 o_setting_box">
                                     <div class="o_setting_right_pane">
@@ -64,7 +64,7 @@
                         </div>
 
                         <div id="languages">
-                            <h2>Languages</h2>
+                            <h2 class="rounded-pill">Languages</h2>
                             <div class='row mt16 o_settings_container'>
                                 <div class='col-xs-12 col-md-6 o_setting_box'>
                                     <div class='o_setting_right_pane'>
@@ -84,7 +84,7 @@
                         </div>
 
                         <div id="business_documents">
-                            <h2>Business Documents</h2>
+                            <h2 class="rounded-pill">Business Documents</h2>
                             <div class="row mt16 o_settings_container">
                                 <div class="col-12 col-lg-6 o_setting_box">
                                     <div class="o_setting_right_pane">
@@ -131,7 +131,7 @@
                         </div> -->
 
                         <div id="contacts_settings">
-                            <h2>Contacts</h2>
+                            <h2 class="rounded-pill">Contacts</h2>
                             <div class="row mt16 o_settings_container">
                                <div class="col-xs-12 col-md-6 o_setting_box" id="sms" style="display: none">
                                         <div class="o_setting_right_pane" id="sms_settings">
@@ -155,7 +155,7 @@
                         </div>
                     </div>
                     <div id="emails"/>
-                    <h2>Users</h2>
+                    <h2 class="rounded-pill">Users</h2>
                     <div class="row mt16 o_settings_container" id="user_default_rights">
                         <div class="col-12 col-lg-6 o_setting_box"  title="By default, new users get highest access rights for all installed apps." id="access_rights">
                             <div class="o_setting_left_pane">

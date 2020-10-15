@@ -183,10 +183,11 @@
                 h2 {
                     margin-bottom: 0;
                     @include o-base-settings-horizontal-padding;
-                    background-color: gray('200');
+                    background-color: $a-autanac-color;
                     font-size: 15px;
                     font-weight: bold;
-
+                    color: white;
+                    width: 99%;
                     &:first-of-type {
                         // Necessary to overwrite mt32 class
                         margin-top: 10px!important;

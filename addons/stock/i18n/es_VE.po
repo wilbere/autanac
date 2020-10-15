@@ -2594,7 +2594,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_reception_steps
 msgid "Incoming Shipments"
-msgstr "Albaranes de entrada"
+msgstr "notas de entrega de entrada"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_incoterms_code

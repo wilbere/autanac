@@ -10,7 +10,7 @@
                     <div class="col-12 col-lg-6 o_setting_box" title=" To send invitations in B2B mode, open a contact or select several ones in list view and click on 'Portal Access Management' option in the dropdown menu *Action*.">
                         <div class="o_setting_left_pane">
                         </div>
-                        <div class="o_setting_right_pane">
+                        <div class="o_setting_right_pane" style="display:none">
                             <label for="auth_signup_uninvited"/>
                             <div class="text-muted">
                                 Let your customers log in to see their documents

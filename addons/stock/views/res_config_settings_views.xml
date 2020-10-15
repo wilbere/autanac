@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[hasclass('settings')]" position="inside" >
                     <div class="app_settings_block" data-string="Inventory" string="Inventory" data-key="stock" groups="stock.group_stock_manager">
-                        <h2>Operations</h2>
+                        <h2 class="rounded-pill">Operations</h2>
                         <div class="row mt16 o_settings_container">
                             <!-- <div class="col-12 col-lg-6 o_setting_box">
                                 <div class="o_setting_left_pane">
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h2>Shipping</h2>
+                        <h2 class="rounded-pill">Shipping</h2>
                         <div class="row mt16 o_settings_container">
                             <div class="col-12 col-lg-6 o_setting_box">
                                 <div class="o_setting_left_pane">
@@ -78,7 +78,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6 o_setting_box">
+                            <!-- <div class="col-12 col-lg-6 o_setting_box">
                                 <div class="o_setting_left_pane">
                                     <field name="module_stock_sms"/>
                                 </div>
@@ -92,7 +92,7 @@
                                         <div id="stock_confirmation_sms"/>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-12 col-lg-6 o_setting_box" id="delivery" title="Shipping connectors allow to compute accurate shipping costs, print shipping labels and request carrier picking at your warehouse to ship to the customer. Apply shipping connector from delivery methods.">
                                 <div class="o_setting_left_pane">
                                     <field name="module_delivery"/>
@@ -190,7 +190,7 @@
                                 </div>
                             </div> -->
                         </div>
-                        <h2>Products</h2>
+                        <h2 class="rounded-pill">Products</h2>
                         <div class="row mt16 o_settings_container">
                             <div class="col-12 col-lg-6 o_setting_box">
                                 <div class="o_setting_left_pane">
@@ -241,7 +241,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h2>Traceability</h2>
+                        <h2 class="rounded-pill">Traceability</h2>
                         <div class="row mt16 o_settings_container" id="production_lot_info">
                             <div class="col-12 col-lg-6 o_setting_box">
                                 <div class="o_setting_left_pane">
@@ -288,7 +288,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h2 class="mt32">Warehouse</h2>
+                        <h2 class="mt32 rounded-pill">Warehouse</h2>
                         <div class="row mt16 o_settings_container">
                             <div class="col-12 col-lg-6 o_setting_box" title="Store products in specific locations of your warehouse (e.g. bins, racks) and to track inventory accordingly.">
                                 <div class="o_setting_left_pane">

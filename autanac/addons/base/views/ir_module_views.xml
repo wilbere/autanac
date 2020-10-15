@@ -189,7 +189,7 @@
 <!--                             <a t-att-href="record.website.raw_value" target="_blank" attrs="{'invisible':[('website', '=', '')]}" class="btn rounded-pill btn-sm btn-secondary float-right" role="button">Learn More</a>
  -->                            <a type="edit" class="btn rounded-pill btn-secondary btn-sm float-right" role="button" attrs="{'invisible': [('website', '&lt;&gt;', '')]}">Module Info</a>
                            <button type="object" class="btn rounded-pill btn-primary btn-sm" name="button_immediate_install" states="uninstalled" t-if="! record.to_buy.raw_value">Install</button>
-                         <!--     <a href="https://autanac.com/pricing?utm_source=db&amp;utm_medium=module#hosting=on_premise" class="btn rounded-pill btn-info btn-sm" states="uninstalled,uninstallable" t-if="record.to_buy.raw_value" role="button">Upgrade</a> -->
+                         <!--     <a href="#" class="btn rounded-pill btn-info btn-sm" states="uninstalled,uninstallable" t-if="record.to_buy.raw_value" role="button">Upgrade</a> -->
                             <div t-if="installed" class="text-muted float-left">Installed</div>
                             <button states="to remove" type="object" class="btn rounded-pill btn-sm btn-primary" name="button_uninstall_cancel">Cancel Uninstall</button>
                             <button states="to install" type="object" class="btn rounded-pill btn-sm btn-primary" name="button_install_cancel">Cancel Install</button>

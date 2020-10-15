@@ -1132,7 +1132,7 @@ msgid ""
 "the picking order and is mainly used if you use the EDI module."
 msgstr ""
 "Indica las diferentes formas de empaquetar el mismo producto. Esto no tiene "
-"ningún impacto en la preparación de albaranes y se utiliza principalmente si "
+"ningún impacto en la preparación de notas de entrega y se utiliza principalmente si "
 "utiliza el módulo EDI."
 
 #. module: product

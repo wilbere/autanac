@@ -2242,11 +2242,11 @@ msgid ""
 "invoices from picking, the system is able to add and compute the shipping line.\n"
 msgstr ""
 "\n"
-"Permite agregar métodos de entrega en pedidos de venta y albaranes.\n"
+"Permite agregar métodos de entrega en pedidos de venta y notas de entrega.\n"
 "==============================================================\n"
 "\n"
 "Puede definir transportista por precios. Al crear\n"
-"facturas desde albaranes, el sistema es capaz de agregar y calcular qué transportista utilizar.\n"
+"facturas desde notas de entrega, el sistema es capaz de agregar y calcular qué transportista utilizar.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_mrp_account_enterprise
@@ -4123,7 +4123,7 @@ msgstr ""
 "Gestión de costes en destino\n"
 "============================\n"
 "\n"
-"Este módulo le permite añadir fácilmente costes extra en los albaranes y decidir el reparto de estos costes entre los movimientos de existencia para tenerlo en cuenta en la valoración de existencias.\n"
+"Este módulo le permite añadir fácilmente costes extra en los notas de entrega y decidir el reparto de estos costes entre los movimientos de existencia para tenerlo en cuenta en la valoración de existencias.\n"
 "    "
 
 #. module: base
@@ -15648,7 +15648,7 @@ msgid ""
 msgstr ""
 "Ayuda a sacar lo mejor de sus puntos de venta con la codificación rápida de "
 "la venta, codificación simplificada de modos de pago, generación automática "
-"de albaranes y más."
+"de notas de entrega y más."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_accounting_accounting
@@ -15711,7 +15711,7 @@ msgid ""
 "receptions, etc."
 msgstr ""
 "Le ayuda a gestionar su inventario y las operaciones principales de stock: "
-"albaranes, recepciones, etc"
+"notas de entrega, recepciones, etc"
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_manufacturing_manufacturing
