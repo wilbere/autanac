@@ -343,8 +343,9 @@
                                 </div>
                             </div>  -->
                         </div> 
-<!--                         <widget name='res_config_dev_tool'/>
- -->                       <!--  <div id='about'>
+                        
+                        <widget name='res_config_dev_tool' style="display:none"/>
+                       <!--  <div id='about'>
                             <h2>About</h2>
                             <div class="row mt16 o_settings_container">
                                 <div class='col-12 col-lg-6 o_setting_box' id='appstore'>

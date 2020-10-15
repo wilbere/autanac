@@ -1825,7 +1825,7 @@ msgstr "Entrega"
 #: model:stock.picking.type,name:stock.picking_type_out
 #, python-format
 msgid "Delivery Orders"
-msgstr "Albaranes de salida"
+msgstr "notas de Entrega de salida"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_delivery_route_id
@@ -2319,7 +2319,7 @@ msgstr "Agrupado por..."
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_procurement_form_stock_inherit
 msgid "Group's Pickings"
-msgstr "Grupos de albaranes"
+msgstr "Grupos de notas de Entrega"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_pack_operation_exist
@@ -2716,7 +2716,7 @@ msgstr "Fecha de entrada"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_reception_steps
 msgid "Incoming Shipments"
-msgstr "Albaranes de entrada"
+msgstr "notas de Entrega de entrada"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_incoterms_code
@@ -2777,8 +2777,8 @@ msgid ""
 "Install the picking wave module which will help you grouping your pickings "
 "and processing them in batch"
 msgstr ""
-"Instale el módulo de grupos de albaranes para ayudarle a agrupar sus "
-"albaranes y procesarlo en lote"
+"Instale el módulo de grupos de notas de Entrega para ayudarle a agrupar sus "
+"notas de Entrega y procesarlo en lote"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_inter_wh
@@ -3048,7 +3048,7 @@ msgstr "Especifica si los bienes se entregan parcialmente o de una"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_type_last_done_picking
 msgid "Last 10 Done Pickings"
-msgstr "Últimos 10 albaranes realizados"
+msgstr "Últimos 10 notas de Entrega realizados"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_make_procurement___last_update
@@ -4346,7 +4346,7 @@ msgstr "Albarán"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_internal_search
 msgid "Picking Lists"
-msgstr "Albaranes"
+msgstr "notas de Entrega"
 
 #. module: stock
 #: model:ir.actions.report.xml,name:stock.action_report_picking
@@ -4395,22 +4395,22 @@ msgstr "Albarán"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.procurement_group_form_view_herited
 msgid "Pickings"
-msgstr "Albaranes"
+msgstr "notas de Entrega"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_internal_search
 msgid "Pickings already processed"
-msgstr "Albaranes ya procesados"
+msgstr "notas de Entrega ya procesados"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.do_view_pickings
 msgid "Pickings for Groups"
-msgstr "Albaranes para grupos"
+msgstr "notas de Entrega para grupos"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_internal_search
 msgid "Pickings that are late on scheduled time"
-msgstr "Albaranes retrasados según planificación"
+msgstr "notas de Entrega retrasados según planificación"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_level_forecast_filter
@@ -6120,7 +6120,7 @@ msgid ""
 "moves.  This can make it possible to know which production lot was sent to a "
 "certain client, ..."
 msgstr ""
-"Esto permite asignar un lote (o nº de serie) a los albaranes y movimientos, "
+"Esto permite asignar un lote (o nº de serie) a los notas de Entrega y movimientos, "
 "lo que puede hacer posible conocer qué lote de producción en concreto fue "
 "enviado a un cliente, ..."
 
@@ -7149,7 +7149,7 @@ msgstr "¡Sólo puede devolver un albarán a la vez!"
 #: code:addons/stock/wizard/stock_return_picking.py:58
 #, python-format
 msgid "You may only return pickings that are Done!"
-msgstr "Sólo puede devolver albaranes que estén ya realizados."
+msgstr "Sólo puede devolver notas de Entrega que estén ya realizados."
 
 #. module: stock
 #: code:addons/stock/stock.py:2376 code:addons/stock/stock.py:4510

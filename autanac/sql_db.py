@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-"""
-The PostgreSQL connector is a connectivity layer between the OpenERP code and
-the database, *not* a database abstraction toolkit. Database abstraction is what
-the ORM does, in fact.
-"""
+
 
 from contextlib import contextmanager
 from functools import wraps
@@ -85,75 +81,7 @@ re_into = re.compile('.* into "?([a-zA-Z_0-9]+)"? .*$')
 sql_counter = 0
 
 class Cursor(object):
-    """Represents an open transaction to the PostgreSQL DB backend,
-       acting as a lightweight wrapper around psycopg2's
-       ``cursor`` objects.
-
-        ``Cursor`` is the object behind the ``cr`` variable used all
-        over the OpenERP code.
-
-        .. rubric:: Transaction Isolation
-
-        One very important property of database transactions is the
-        level of isolation between concurrent transactions.
-        The SQL standard defines four levels of transaction isolation,
-        ranging from the most strict *Serializable* level, to the least
-        strict *Read Uncommitted* level. These levels are defined in
-        terms of the phenomena that must not occur between concurrent
-        transactions, such as *dirty read*, etc.
-        In the context of a generic business data management software
-        such as OpenERP, we need the best guarantees that no data
-        corruption can ever be cause by simply running multiple
-        transactions in parallel. Therefore, the preferred level would
-        be the *serializable* level, which ensures that a set of
-        transactions is guaranteed to produce the same effect as
-        running them one at a time in some order.
-
-        However, most database management systems implement a limited
-        serializable isolation in the form of
-        `snapshot isolation <http://en.wikipedia.org/wiki/Snapshot_isolation>`_,
-        providing most of the same advantages as True Serializability,
-        with a fraction of the performance cost.
-        With PostgreSQL up to version 9.0, this snapshot isolation was
-        the implementation of both the ``REPEATABLE READ`` and
-        ``SERIALIZABLE`` levels of the SQL standard.
-        As of PostgreSQL 9.1, the previous snapshot isolation implementation
-        was kept for ``REPEATABLE READ``, while a new ``SERIALIZABLE``
-        level was introduced, providing some additional heuristics to
-        detect a concurrent update by parallel transactions, and forcing
-        one of them to rollback.
-
-        OpenERP implements its own level of locking protection
-        for transactions that are highly likely to provoke concurrent
-        updates, such as stock reservations or document sequences updates.
-        Therefore we mostly care about the properties of snapshot isolation,
-        but we don't really need additional heuristics to trigger transaction
-        rollbacks, as we are taking care of triggering instant rollbacks
-        ourselves when it matters (and we can save the additional performance
-        hit of these heuristics).
-
-        As a result of the above, we have selected ``REPEATABLE READ`` as
-        the default transaction isolation level for OpenERP cursors, as
-        it will be mapped to the desired ``snapshot isolation`` level for
-        all supported PostgreSQL version (8.3 - 9.x).
-
-        Note: up to psycopg2 v.2.4.2, psycopg2 itself remapped the repeatable
-        read level to serializable before sending it to the database, so it would
-        actually select the new serializable mode on PostgreSQL 9.1. Make
-        sure you use psycopg2 v2.4.2 or newer if you use PostgreSQL 9.1 and
-        the performance hit is a concern for you.
-
-        .. attribute:: cache
-
-            Cache dictionary with a "request" (-ish) lifecycle, only lives as
-            long as the cursor itself does and proactively cleared when the
-            cursor is closed.
-
-            This cache should *only* be used to store repeatable reads as it
-            ignores rollbacks and savepoints, it should not be used to store
-            *any* data which may be modified during the life of the cursor.
-
-    """
+    
     IN_MAX = 1000   # decent limit on size of IN queries - guideline = Oracle limit
 
     def check(f):
@@ -216,11 +144,7 @@ class Cursor(object):
 
     def __del__(self):
         if not self._closed and not self._cnx.closed:
-            # Oops. 'self' has not been closed explicitly.
-            # The cursor will be deleted by the garbage collector,
-            # but the database connection is not put back into the connection
-            # pool, preventing some operation on the database like dropping it.
-            # This can also lead to a server overload.
+            
             msg = "Cursor not closed explicitly\n"
             if self.__caller:
                 msg += "Cursor was created at %s:%s" % self.__caller
@@ -323,11 +247,7 @@ class Cursor(object):
 
         self._obj.close()
 
-        # This force the cursor to be freed, and thus, available again. It is
-        # important because otherwise we can overload the server very easily
-        # because of a cursor shortage (because cursors are not garbage
-        # collected as fast as they should). The problem is probably due in
-        # part because browse records keep a reference to the cursor.
+      
         del self._obj
         self._closed = True
 
@@ -347,16 +267,7 @@ class Cursor(object):
         if on:
             isolation_level = ISOLATION_LEVEL_AUTOCOMMIT
         else:
-            # If a serializable cursor was requested, we
-            # use the appropriate PotsgreSQL isolation level
-            # that maps to snaphsot isolation.
-            # For all supported PostgreSQL versions (8.3-9.x),
-            # this is currently the ISOLATION_REPEATABLE_READ.
-            # See also the docstring of this class.
-            # NOTE: up to psycopg 2.4.2, repeatable read
-            #       is remapped to serializable before being
-            #       sent to the database, so it is in fact
-            #       unavailable for use with pg 9.1.
+           
             isolation_level = \
                 ISOLATION_LEVEL_REPEATABLE_READ \
                 if self._serialized \
@@ -365,18 +276,7 @@ class Cursor(object):
 
     @check
     def after(self, event, func):
-        """ Register an event handler.
-
-            :param event: the event, either `'commit'` or `'rollback'`
-            :param func: a callable object, called with no argument after the
-                event occurs
-
-            Be careful when coding an event handler, since any operation on the
-            cursor that was just committed/rolled back will take place in the
-            next transaction that has already begun, and may still be rolled
-            back or committed independently. You may consider the use of a
-            dedicated temporary cursor to do some database operation.
-        """
+       
         self._event_handlers[event].append(func)
 
     def _pop_event_handlers(self):
@@ -387,8 +287,7 @@ class Cursor(object):
 
     @check
     def commit(self):
-        """ Perform an SQL `COMMIT`
-        """
+    
         flush_env(self)
         result = self._cnx.commit()
         for func in self._pop_event_handlers()['commit']:
@@ -397,8 +296,7 @@ class Cursor(object):
 
     @check
     def rollback(self):
-        """ Perform an SQL `ROLLBACK`
-        """
+       
         clear_env(self)
         result = self._cnx.rollback()
         for func in self._pop_event_handlers()['rollback']:
@@ -406,15 +304,7 @@ class Cursor(object):
         return result
 
     def __enter__(self):
-        """ Using the cursor as a contextmanager automatically commits and
-            closes it::
-
-                with cr:
-                    cr.execute(...)
-
-                # cr is committed if no failure occurred
-                # cr is closed in any case
-        """
+        
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
@@ -452,24 +342,7 @@ class Cursor(object):
 
 
 class TestCursor(object):
-    """ A pseudo-cursor to be used for tests, on top of a real cursor. It keeps
-        the transaction open across requests, and simulates committing, rolling
-        back, and closing:
-
-              test cursor           | queries on actual cursor
-            ------------------------+---------------------------------------
-              cr = TestCursor(...)  | SAVEPOINT test_cursor_N
-                                    |
-              cr.execute(query)     | query
-                                    |
-              cr.commit()           | SAVEPOINT test_cursor_N
-                                    |
-              cr.rollback()         | ROLLBACK TO SAVEPOINT test_cursor_N
-                                    |
-              cr.close()            | ROLLBACK TO SAVEPOINT test_cursor_N
-                                    |
-
-    """
+  
     _savepoint_seq = itertools.count()
 
     def __init__(self, cursor, lock):
@@ -519,14 +392,7 @@ class PsycoConnection(psycopg2.extensions.connection):
     pass
 
 class ConnectionPool(object):
-    """ The pool of connections to database(s)
-
-        Keep a set of connections to pg databases open, and reuse them
-        to open cursors for all transactions.
-
-        The connections are *not* automatically closed. Only a close_db()
-        can trigger that.
-    """
+    
 
     def locked(fun):
         @wraps(fun)

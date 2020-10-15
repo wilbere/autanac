@@ -3010,8 +3010,8 @@ msgid ""
 "Install the picking wave module which will help you grouping your pickings "
 "and processing them in batch"
 msgstr ""
-"Instale el módulo de grupos de albaranes para ayudarle a agrupar sus "
-"albaranes y procesarlo en lote"
+"Instale el módulo de grupos de notas de Entrega para ayudarle a agrupar sus "
+"notas de Entrega y procesarlo en lote"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_inter_wh
@@ -6438,7 +6438,7 @@ msgid ""
 "moves.  This can make it possible to know which production lot was sent to a "
 "certain client, ..."
 msgstr ""
-"Esto permite asignar un lote (o nº de serie) a los albaranes y movimientos, "
+"Esto permite asignar un lote (o nº de serie) a los notas de Entrega y movimientos, "
 "lo que puede hacer posible conocer qué lote de producción en concreto fue "
 "enviado a un cliente, ..."
 
@@ -7575,7 +7575,7 @@ msgstr "¡Sólo puede devolver un albarán a la vez!"
 #: code:addons/stock/wizard/stock_return_picking.py:58
 #, python-format
 msgid "You may only return pickings that are Done!"
-msgstr "Sólo puede devolver albaranes que estén ya realizados!"
+msgstr "Sólo puede devolver notas de Entrega que estén ya realizados!"
 
 #. module: stock
 #: code:addons/stock/stock.py:2376 code:addons/stock/stock.py:4510

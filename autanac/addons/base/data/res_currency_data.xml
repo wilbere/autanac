@@ -16,7 +16,7 @@
             <field name="symbol">Bs.F</field>
             <field name="rounding">0.01</field>
             <field name="active" eval="False"/>
-            <field name="currency_unit_label">Bolivar</field>
+            <field name="currency_unit_label">Bolivar Fuerte</field>
             <field name="currency_subunit_label">Centimos</field>
         </record>
 

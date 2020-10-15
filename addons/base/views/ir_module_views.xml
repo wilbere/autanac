@@ -165,7 +165,7 @@
                     <t t-name="kanban-box">
                       <div class="oe_module_vignette">
                         <t t-set="installed" t-value="record.state.raw_value == 'installed'"/>
-                      <!--   <div class="o_dropdown_kanban dropdown" tabindex="-1">
+                        <!--   <div class="o_dropdown_kanban dropdown" tabindex="-1">
                             <a class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" data-display="static" href="#" role="button" aria-label="Dropdown menu" title="Dropdown menu">
                                 <span class="fa fa-ellipsis-v"/>
                             </a>
@@ -186,9 +186,9 @@
                             <code groups="base.group_no_one"><field name="name"/></code>
                           </p>
                           <div class="oe_module_action">
-<!--                             <a t-att-href="record.website.raw_value" target="_blank" attrs="{'invisible':[('website', '=', '')]}" class="btn rounded-pill btn-sm btn-secondary float-right" role="button">Learn More</a>
-                            <a type="edit" class="btn rounded-pill btn-secondary btn-sm float-right" role="button" attrs="{'invisible': [('website', '&lt;&gt;', '')]}">Module Info</a>
-                           <button type="object" class="btn rounded-pill btn-primary btn-sm" name="button_immediate_install" states="uninstalled" t-if="! record.to_buy.raw_value">Install</button>--> 
+                            <!--  <a t-att-href="record.website.raw_value" target="_blank" attrs="{'invisible':[('website', '=', '')]}" class="btn rounded-pill btn-sm btn-secondary float-right" role="button">Learn More</a>
+                            <a type="edit" class="btn rounded-pill btn-secondary btn-sm float-right" role="button" attrs="{'invisible': [('website', '&lt;&gt;', '')]}">Module Info</a>--> 
+                           <button type="object" class="btn rounded-pill btn-primary btn-sm" name="button_immediate_install" states="uninstalled" t-if="! record.to_buy.raw_value">Install</button>
                          
                              <div t-if="installed" class="text-muted float-left">Installed</div>
                             <!-- <button states="to remove" type="object" class="btn rounded-pill btn-sm btn-primary" name="button_uninstall_cancel">Cancel Uninstall</button>
@@ -227,30 +227,30 @@
         <!--link to stores-->
         <record model='ir.actions.act_url' id='action_third_party'>
             <field name='name'>Third-Party Apps</field>
-            <field name='url'>https://apps.autanac.com/apps/modules</field>
-        </record>
-<!--         <menuitem id="menu_third_party" parent="menu_apps" name="Third-Party Apps" sequence="20" action="action_third_party"/>
- -->
+<!--             <field name='url'>https://apps.autanac.com/apps/modules</field>
+ -->        </record>
+        <menuitem id="menu_third_party" parent="menu_apps" name="Third-Party Apps" sequence="20" action="action_third_party"/>
+
         <record model='ir.actions.act_url' id='action_theme_store'>
             <field name='name'>Theme Store</field>
-            <field name='url'>https://apps.autanac.com/apps/themes</field>
-        </record>
-<!--         <menuitem id="menu_theme_store" parent="menu_apps" name="Theme Store" sequence="10" action="action_theme_store"/>
- -->
+<!--             <field name='url'>https://apps.autanac.com/apps/themes</field>
+ -->        </record>
+        <menuitem id="menu_theme_store" parent="menu_apps" name="Theme Store" sequence="10" action="action_theme_store"/>
+
 
         <!-- Apps modules -->
         <record model="ir.actions.client" id="modules_act_cl">
             <field name="name">App Store</field>
             <field name="tag">apps</field>
         </record>
-<!--         <menuitem id="module_mi" parent="base.menu_management" sequence="10" action="modules_act_cl" groups="base.group_no_one"/>
- -->
+        <menuitem id="module_mi" parent="base.menu_management" sequence="10" action="modules_act_cl" groups="base.group_no_one"/>
+
         <record model="ir.actions.client" id="modules_updates_act_cl">
             <field name="name">Updates</field>
             <field name="tag">apps.updates</field>
             <field name="params">{}</field>
         </record>
-        <menuitem id="menu_module_updates" parent="base.menu_management" sequence="20" action="modules_updates_act_cl" groups="base.group_no_one"/>
+        <menuitem id="menu_module_updates" parent="base.menu_management" sequence="20" action="modules_updates_act_cl" />
 
     </data>
 </autanac>
