@@ -140,7 +140,6 @@
     </span>
 </t>
 
-<!-- Note: this dialog isn't responsive, but it is not accessible on mobile -->
 <div t-name="KanbanView.ExamplesDialog" class="o_kanban_examples_dialog">
     <div class="o_kanban_examples_dialog_nav">
         <ul class="nav nav-pills flex-column">
@@ -156,7 +155,7 @@
             <t t-foreach="examples" t-as="example">
                 <div role="tabpanel" t-attf-id="example_#{example_index}" t-attf-class="tab-pane #{example_index == 0 and 'active in' or ''}">
                     <div t-if="example.description" class="o_kanban_examples_description">
-                        <t t-raw="example.description"/> <!-- description is supposed to be properly escaped -->
+                        <t t-raw="example.description"/> 
                     </div>
                     <div class="o_kanban_examples">
                         <t t-foreach="example.columns" t-as="column">
@@ -186,7 +185,6 @@
     </div>
 </t>
 
-<!-- Kanban Example Background -->
 <t t-name="KanbanView.ExamplesBackground">
     <div class="o_kanban_example_background_container">
         <div class="o_kanban_example_background">
@@ -211,7 +209,6 @@
     </div>
 </t>
 
-<!-- Kanban SearchPanel -->
 <t t-name="SearchPanel.SectionHeader">
     <header class="o_search_panel_section_header text-uppercase">
         <i t-attf-class="mr-1 fa #{section.icon} o_search_panel_section_icon" t-attf-style="#{section.color ? ('color: ' + section.color) : ''}"/>
@@ -324,7 +321,6 @@
     </li>
 </t>
 
-<!-- Mobile templates -->
 <t t-name="KanbanView.MobileTabs">
     <div class="o_kanban_mobile_tabs_container">
         <div class="o_kanban_mobile_tabs">

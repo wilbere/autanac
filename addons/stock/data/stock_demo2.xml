@@ -80,7 +80,6 @@
             <field name="prod_lot_id" ref="lot_product_product_cable_management_box_1"/>
         </record>
 
-        <!-- Create STOCK_MOVE for OUT -->
         <record id="outgoing_shipment_main_warehouse" model="stock.picking">
             <field name="picking_type_id" ref="stock.picking_type_out"/>
             <field name="origin">outgoing shipment main_warehouse</field>
@@ -242,7 +241,6 @@
             })]"/>
         </record>
 
-        <!-- Create STOCK_PICKING for IN -->
         <record id="incomming_shipment" model="stock.picking">
             <field name="user_id"></field>
             <field name="picking_type_id" ref="stock.picking_type_in"/>
@@ -328,7 +326,6 @@
             })]"/>
         </record>
 
-        <!-- Create STOCK_PICKING_IN for Chicago Warehouse-->
         <record id="incomming_chicago_warehouse" model="stock.picking">
             <field name="picking_type_id" ref="stock.chi_picking_type_in"/>
             <field name="origin">incoming_chicago_warehouse</field>
@@ -413,7 +410,6 @@
             })]"/>
         </record>
 
-        <!-- Create STOCK_PICKING_OUT for Chicago Warehouse -->
         <record id="outgoing_chicago_warehouse" model="stock.picking">
             <field name="picking_type_id" ref="stock.chi_picking_type_out"/>
             <field name="user_id"></field>

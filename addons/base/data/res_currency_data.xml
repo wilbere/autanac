@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data noupdate="1">
-        <!-- Currencies -->
         <record id="USD" model="res.currency">
             <field name="name">USD</field>
             <field name="symbol">$</field>

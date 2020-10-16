@@ -2,7 +2,6 @@
 <autanac>
     <data>
 
-        <!-- Add 'serialization_field_id' in ir.model form view -->
         <record model="ir.ui.view" id="model_form_view">
             <field name="model">ir.model</field>
             <field name="inherit_id" ref="base.view_model_form"/>
@@ -15,7 +14,6 @@
             </field>
         </record>
 
-        <!-- Add 'serialization_field_id' in ir.model.fields form view -->
         <record model="ir.ui.view" id="field_form_view">
             <field name="model">ir.model.fields</field>
             <field name="inherit_id" ref="base.view_model_fields_form"/>

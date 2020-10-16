@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
-    <!--
-        Discuss Main template
-
-        @param {mail.discuss} widget
-    -->
+    
     <t t-name="mail.discuss">
         <div class="o_mail_discuss">
             <div class="o_mail_discuss_sidebar">
@@ -21,16 +17,7 @@
         </div>
     </t>
 
-    <!--
-        @param {string|integer} activeThreadID
-        @param {mail.model.Channel[]} channels
-        @param {boolean} isMyselfModerator
-        @param {mail.model.Mailbox} inbox
-        @param {mail.model.Mailbox} starred
-        @param {mail.model.Mailbox|undefined} moderation set if current user is moderator
-        @param {boolean} displayQuickSearch
-        @param {Object} options
-    -->
+    
     <t t-name="mail.discuss.Sidebar">
         <div class="o_mail_discuss_sidebar">
             <div class="o_mail_discuss_sidebar_mailboxes">
@@ -47,13 +34,6 @@
         </div>
     </t>
 
-    <!--
-        @param {string|integer} activeThreadID
-        @param {boolean} isMyselfModerator
-        @param {mail.model.Mailbox} [inbox]
-        @param {mail.model.Mailbox} [starred]
-        @param {mail.model.Mailbox} [moderation] set if current user is moderator
-    -->
     <t t-name="mail.discuss.SidebarMailboxes">
         <div t-if="inbox" t-attf-class="o_mail_discuss_title_main o_mail_discuss_item #{(activeThreadID === 'mailbox_inbox') ? 'o_active': ''}"
                 data-thread-id="mailbox_inbox">
@@ -79,10 +59,6 @@
         </div>
     </t>
 
-    <!--
-        @param {string|integer} activeThreadID
-        @param {mail.model.Channel[]} channels
-    -->
     <t t-name="mail.discuss.SidebarChannels">
         <t t-set="type" t-value="'multi_user_channel'"/>
         <t t-call="mail.discuss.SidebarTitle">
@@ -105,25 +81,14 @@
         </t>
     </t>
 
-    <!--
-        @param {integer} counter
-    -->
+
     <t t-name="mail.discuss.SidebarCounter">
         <span t-attf-class="o_mail_sidebar_needaction badge badge-pill #{(!counter ? 'd-none' : '')}">
             <t t-esc="counter"/>
         </span>
     </t>
 
-    <!--
-        Don't display the thread type if there is no thread of such type
-        and the 'add a thread' option is disabled for this type
-
-        @param {mail.model.Channel[]} channels
-        @param {boolean} [disableAddThread] whether the 'Add thread' action should disabled or not for the considered discuss item category
-        @param {string} [icon] classname to add on title to display icon
-        @param {string} title the displayed type of the discuss items (e.g. "Channels")
-        @param {string} type the type of the thread
-    -->
+    
     <t t-name="mail.discuss.SidebarTitle">
         <t t-if="disableAddThread">
             <t t-set="empty" t-value="true"/>
@@ -144,14 +109,7 @@
         </t>
     </t>
 
-    <!--
-        @param {string|integer} activeThreadID
-        @param {mail.model.Channel[]} channels
-        @param {boolean} disableAddThread whether the 'Add thread' action should be disable or not for the considered discuss item category
-        @param {boolean} [displayHash] whether the hash ('#') character should be displayed as a prefix for item's name
-        @param {boolean} [displayStatus] whether the item should display its status (should be the case only for chats)
-        @param {string} inputPlaceholder text placeholder on showing input in a sidebar category
-    -->
+    
     <t t-name="mail.discuss.SidebarItems">
         <div t-if="!disableAddThread" class="o_mail_add_thread" t-attf-data-type="#{type}">
             <span t-if="displayHash">#</span>
@@ -186,10 +144,7 @@
         </t>
     </t>
 
-    <!--
-        @param {string} status
-        @param {integer|undefined} [partnerID]
-    -->
+    
     <t t-name="mail.UserStatus">
         <span t-att-class="partnerID ? 'o_updatable_im_status' : ''" t-att-data-partner-id="partnerID">
             <i t-if="status == 'online'" class="o_mail_user_status o_user_online fa fa-circle" title="Online" role="img" aria-label="User is online"/>
@@ -198,9 +153,7 @@
         </span>
     </t>
 
-    <!--
-        @param {string} documentName
-    -->
+    
     <t t-name="mail.discuss.MessageSentSnackbar">
         <div class="alert o_mail_snackbar" data-dismiss="alert" role="alert">
             Message sent in "<t t-esc="documentName"/>".
@@ -208,32 +161,26 @@
     </t>
 
 
-    <!--
-        Buttons of the Control Panel
-
-        @param {boolean} [disableAddThread] whether the 'Add channel' action should be disabled or not for the considered discuss item category
-    -->
+    
     <t t-name="mail.discuss.ControlButtons">
         <div>
-            <button type="button" class="btn btn-primary o_mail_discuss_button_invite d-none d-md-inline-block" title="Invite people">Invite</button>
-            <button type="button" class="btn btn-secondary o_mail_discuss_button_mark_all_read d-none d-md-inline-block" title="Mark all as read">Mark all read</button>
-            <button type="button" class="btn btn-secondary o_mail_discuss_button_unstar_all" title="Unstar all messages">Unstar all</button>
-            <button type="button" class="btn btn-secondary o_mail_discuss_button_dm_chat o_hidden d-md-none" title="New Message">New Message</button>
-            <button t-if="!disableAddThread" type="button" class="btn btn-secondary o_mail_discuss_button_multi_user_channel d-block d-md-none" title="New Channel">New Channel</button>
-            <button type="button" class="btn btn-secondary o_hidden o_mail_discuss_button_select_all" title="Select all messages to moderate">Select All</button>
-            <button type="button" class="btn btn-secondary o_hidden o_mail_discuss_button_unselect_all" title="Unselect all messages to moderate">Unselect All</button>
-            <button type="button" data-decision="accept" class="btn btn-secondary o_mail_discuss_button_moderate_all" title="Accept selected messages">Accept</button>
-            <button type="button" data-decision="reject" class="btn btn-secondary o_mail_discuss_button_moderate_all" title="Reject selected messages">Reject</button>
-            <button type="button" data-decision="discard" class="btn btn-secondary o_mail_discuss_button_moderate_all" title="Discard selected messages">Discard</button>
+            <button type="button" class="btn rounded-pill btn-primary o_mail_discuss_button_invite d-none d-md-inline-block" title="Invite people">Invite</button>
+            <button type="button" class="btn rounded-pill btn-secondary o_mail_discuss_button_mark_all_read d-none d-md-inline-block" title="Mark all as read">Mark all read</button>
+            <button type="button" class="btn rounded-pill btn-secondary o_mail_discuss_button_unstar_all" title="Unstar all messages">Unstar all</button>
+            <button type="button" class="btn rounded-pill btn-secondary o_mail_discuss_button_dm_chat o_hidden d-md-none" title="New Message">New Message</button>
+            <button t-if="!disableAddThread" type="button" class="btn rounded-pill btn-secondary o_mail_discuss_button_multi_user_channel d-block d-md-none" title="New Channel">New Channel</button>
+            <button type="button" class="btn rounded-pill btn-secondary o_hidden o_mail_discuss_button_select_all" title="Select all messages to moderate">Select All</button>
+            <button type="button" class="btn rounded-pill btn-secondary o_hidden o_mail_discuss_button_unselect_all" title="Unselect all messages to moderate">Unselect All</button>
+            <button type="button" data-decision="accept" class="btn rounded-pill btn-secondary o_mail_discuss_button_moderate_all" title="Accept selected messages">Accept</button>
+            <button type="button" data-decision="reject" class="btn rounded-pill btn-secondary o_mail_discuss_button_moderate_all" title="Reject selected messages">Reject</button>
+            <button type="button" data-decision="discard" class="btn rounded-pill btn-secondary o_mail_discuss_button_moderate_all" title="Discard selected messages">Discard</button>
         </div>
     </t>
 
-    <!-- Invite dialog's content -->
     <div t-name="mail.PartnerInviteDialog">
         <input type="text" class="o_input o_mail_discuss_partner_invite_input" id="mail_search_partners"/>
     </div>
 
-    <!-- Rename channel dialog's content -->
     <div t-name="mail.RenameConversationDialog">
         <input type="text" class="o_input o_mail_discuss_rename_channel_input"/>
     </div>
@@ -243,7 +190,6 @@
         <textarea class="form-control mt16" id="reject_message" placeholder="Mail Body">Your message was rejected by moderator.</textarea>
     </div>
 
-    <!-- Mobile templates -->
     <t t-name="mail.discuss_mobile">
         <div class="o_mail_discuss">
             <div class="o_mail_discuss_mobile_mailboxes_buttons">
@@ -275,10 +221,7 @@
         </div>
     </t>
 
-    <!--
-        @param {boolean} [disableAddThread] whether the 'Add thread' action should be disabled or not for the considered discuss item category
-        @param {Object[]} previews valid objects for preview rendering (see mail.Preview template)
-    -->
+    
     <t t-name="mail.discuss.MobileTabPane">
         <div class="o_mail_discuss_tab_pane" t-att-data-type="type">
             <div t-if="!disableAddThread" class="o_mail_add_thread" t-att-data-type="type">
@@ -293,26 +236,7 @@
         </div>
     </t>
 
-    <!--
-        The preview template is used by the discuss in mobile, and by the systray menu
-        In order to show preview of threads
-
-        FIXME: it is shared with systray, so it should not be in discuss.xml
-
-        @param {Object} preview a valid object for preview rendering
-        @param {integer} [preview.documentID]
-        @param {string} [preview.documentModel]
-        @param {string|integer} preview.id
-        @param {string} [preview.imageSRC]
-        @param {boolean} [preview.isMyselfAuthor]
-        @param {moment} [preview.date]
-        @param {string} [preview.author]
-        @param {string} [preview.body]
-        @param {string} [preview.title]
-        @param {string} [preview.status]
-        @param {integer} [preview.unreadCounter]
-        @param {integer[]} [preview.messageIDs]
-    -->
+    
     <t t-name="mail.Preview">
         <div t-attf-class="o_mail_preview #{preview.unreadCounter &gt; 0 ? 'o_preview_unread' : ''}"
              t-att-data-preview-id="preview.id" t-att-data-document-id="preview.documentID" t-att-data-document-model="preview.documentModel" t-att-data-unread-counter="preview.unreadCounter" t-att-data-message-ids="preview.messageIDs">

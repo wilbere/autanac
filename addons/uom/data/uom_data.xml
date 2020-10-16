@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data noupdate="1">
-        <!--
-        Resource: uom.category
-        -->
+      
         <record id="product_uom_categ_unit" model="uom.category">
             <field name="name">Unit</field>
             <field name="measure_type">unit</field>
@@ -24,9 +22,7 @@
             <field name="name">Volume</field>
             <field name="measure_type">volume</field>
         </record>
-       <!--
-            Resource: uom.uom
-        -->
+       
         <record id="product_uom_unit" model="uom.uom">
             <field name="category_id" ref="product_uom_categ_unit"/>
             <field name="name">Units</field>
@@ -66,8 +62,6 @@
         </record>
         <record id="product_uom_ton" model="uom.uom">
             <field name="category_id" ref="product_uom_categ_kgm"/>
-            <!-- 'tonne' is the most common spelling in english-speaking countries,
-                 the alternative is 'metric ton' in the US, abbreviated as 'mt' -->
             <field name="name">t</field>
             <field name="factor_inv" eval="1000"/>
             <field name="uom_type">bigger</field>
@@ -95,7 +89,6 @@
             <field name="factor">1.0</field>
         </record>
 
-        <!--Americanization of units of measure-->
         <record id="product_uom_lb" model="uom.uom">
             <field name="name">lbs</field>
             <field name="category_id" ref="product_uom_categ_kgm"/>

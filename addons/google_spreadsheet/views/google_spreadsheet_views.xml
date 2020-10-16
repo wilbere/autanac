@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
 
-        <!-- add google drive config field in user form -->
 
         <record id="view_ir_attachment_google_spreadsheet_tree" model="ir.ui.view">
             <field name="name">ir.attachment.google.spreadsheet.tree</field>

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data>
-        <!--
-        Country
-        -->
+       
         <record id="view_country_tree" model="ir.ui.view">
             <field name="name">res.country.tree</field>
             <field name="model">res.country</field>
@@ -96,7 +94,6 @@
             <field name="help">Display and manage the list of all countries group. You can create or delete country group to make sure the ones you are working on will be maintained.</field>
         </record>
 
-        <!-- State -->
         <record id="view_country_state_tree" model="ir.ui.view">
             <field name="name">res.country.state.tree</field>
             <field name="model">res.country.state</field>

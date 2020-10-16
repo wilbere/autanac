@@ -10,9 +10,6 @@
     </nav>
 </header>
 
-<!--
-    @param {web.AppsMenu} widget
--->
 <t t-name="AppsMenu">
     <li class="dropdown">
         <a class="full" data-toggle="dropdown" data-display="static" href="#">
@@ -64,7 +61,6 @@
     </t>
 </t>
 
-<!-- separate first level dropdown from the others to avoid nested dropdown -->
 <t t-name="Menu.sections">
     <t t-foreach="menu_data.children" t-as="first_level_menu">
         <section t-att-class="first_level_menu.id">
@@ -96,9 +92,7 @@
 </t>
 
 <t t-extend="UserMenu.Actions">
-    <!-- <t t-jquery=".dropdown-divider" t-operation="before">
-        <a role="menuitem" href="#" data-menu="shortcuts" class="dropdown-item d-none d-md-inline-block">Shortcuts</a>
-    </t> -->
+    
 </t>
 
 <div t-name="UserMenu.shortcuts">

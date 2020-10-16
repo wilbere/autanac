@@ -109,7 +109,6 @@
             <field name="sequence">102</field>
         </record>
 
-        <!-- add applications to base groups -->
         <record model="res.groups" id="group_erp_manager">
             <field name="category_id" ref="module_category_administration_administration"/>
         </record>

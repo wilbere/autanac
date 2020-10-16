@@ -2,7 +2,6 @@
 <autanac>
     <data>
 
-        <!-- Alias Form View -->
         <record  model="ir.ui.view" id="view_mail_alias_form">
             <field name="name">mail.alias.form</field>
             <field name="model">mail.alias</field>
@@ -32,7 +31,6 @@
             </field>
         </record>
 
-        <!-- Alias List View -->
         <record  model="ir.ui.view" id="view_mail_alias_tree">
             <field name="name">mail.alias.tree</field>
             <field name="model">mail.alias</field>
@@ -47,7 +45,6 @@
             </field>
         </record>
 
-        <!-- Alias Search View -->
         <record  model="ir.ui.view" id="view_mail_alias_search">
             <field name="name">mail.alias.search</field>
             <field name="model">mail.alias</field>

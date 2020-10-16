@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
 
-        <!-- add google drive config field in user form -->
         <record id="view_google_drive_config_tree" model="ir.ui.view">
             <field name="name">google_drive.config.tree</field>
             <field name="model">google.drive.config</field>

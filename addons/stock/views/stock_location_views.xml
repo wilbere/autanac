@@ -17,14 +17,14 @@
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button string="Putaway Rules"
-                                class="oe_stat_button"
+                                class="oe_stat_button rounded-pill"
                                 icon="fa-random" name="%(location_open_putaway)d" type="action"
                                 groups="stock.group_stock_multi_locations" context="{'default_company_id': company_id}"/>
                         <button string="Current Stock"
-                                class="oe_stat_button"
+                                class="oe_stat_button rounded-pill"
                                 icon="fa-cubes" name="%(location_open_quants)d" type="action"/>
                         <button string="Products"
-                                class="oe_stat_button"
+                                class="oe_stat_button rounded-pill"
                                 icon="fa-th-list" name="%(act_product_location_open)d" type="action"
                                 context="{'location_id': active_id}"
                                 />
@@ -136,7 +136,6 @@
     <menuitem action="action_location_form" id="menu_action_location_form"
         parent="menu_warehouse_config" sequence="2" groups="stock.group_stock_multi_locations"/>
 
-        <!--Routes-->
         <record id="stock_location_route_tree" model="ir.ui.view">
             <field name="name">stock.location.route.tree</field>
             <field name="model">stock.location.route</field>

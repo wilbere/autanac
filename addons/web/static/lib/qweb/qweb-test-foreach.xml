@@ -21,7 +21,6 @@
 - last (even)
     </result>
 
-    <!-- test integer param -->
     <t t-name="iter-int">
         <t t-foreach="3" t-as="item">
 [<t t-esc="item_index"/>: <t t-esc="item"/> <t t-esc="item_value"/>]</t>
@@ -32,7 +31,6 @@
 [2: 2 2]
     </result>
 
-    <!-- test dict param -->
     <t t-name="iter-dict">
         <t t-foreach="value" t-as="item">
 [<t t-esc="item_index"/>: <t t-esc="item"/> <t t-esc="item_value"/> - <t t-esc="item_parity"/>]</t>

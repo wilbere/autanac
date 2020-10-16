@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data noupdate="0">
-        <!--
-        Resource: res.partner.category
-        -->
         <record id="res_partner_category_0" model="res.partner.category">
             <field name="name">Vendor</field>
             <field name="color" eval="2"/>
@@ -35,9 +32,6 @@
             <field name="parent_id" ref="res_partner_category_0"/>
         </record>
 
-       <!--
-        Resource: res.partner
-        -->
 
         <record id="res_partner_1" model="res.partner">
             <field name="name">Wood Corner</field>

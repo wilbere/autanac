@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template id="template" xml:space="preserve">
 
-    <!-- LAYOUT TEMPLATES -->
     <div t-name="iap.redirect_to_autanac_credit">
         <t t-if="data.body">
             <div t-raw="data.body"/>

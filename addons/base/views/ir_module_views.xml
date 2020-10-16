@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data>
-        <!-- Modules Categories -->
         <record id="view_module_category_form" model="ir.ui.view">
             <field name="name">ir.module.category.form</field>
             <field name="model">ir.module.category</field>
@@ -29,7 +28,6 @@
             </field>
         </record>
 
-        <!-- Click on a category -->
         <record id="view_module_filter" model="ir.ui.view">
             <field name="name">ir.module.module.list.select</field>
             <field name="model">ir.module.module</field>
@@ -52,7 +50,6 @@
             </field>
         </record>
 
-        <!-- Modules -->
         <record id="module_form" model="ir.ui.view">
             <field name="name">ir.module.module.form</field>
             <field name="model">ir.module.module</field>
@@ -63,13 +60,9 @@
                     <field name="icon_image" widget="image" class="oe_avatar"/>
                     <div class="oe_title mb32">
                         <h1><field name="shortdesc" placeholder="Module Name"/></h1>
-                       <!--  <h3 class="oe_fade">
-                            By <field name="author" class="oe_inline" placeholder="Author Name"/>
-                        </h3> -->
+                       
                         <div>
                             <button name="button_immediate_install" string="Install" attrs="{'invisible': ['|', ('to_buy','=',True), ('state','!=', 'uninstalled')]}" type="object" class="btn rounded-pill btn-primary mr-1"/>
-                           <!--  <a href="https://autanac.com/pricing?utm_source=db&amp;utm_medium=module#hosting=on_premise" class="btn rounded-pill btn-primary mr-1"
-                               attrs="{'invisible': ['|', ('to_buy','=',False), ('state', 'not in', ('uninstalled', 'uninstallable'))]}" role="button">Upgrade</a> -->
                             <button name="button_immediate_upgrade" states="installed" string="Upgrade" type="object" class="btn rounded-pill btn-primary mr-1"/>
                             <button name="button_uninstall_wizard" states="installed" string="Uninstall" type="object"  class="btn rounded-pill btn-secondary mr-1"/>
                             <button name="button_uninstall_cancel" states="to remove" string="Cancel Uninstall" type="object" class="btn rounded-pill btn-secondary mr-1"/>
@@ -141,7 +134,6 @@
                 <tree decoration-info="state=='to upgrade' or state=='to install'" decoration-danger="state=='uninstalled'" decoration-muted="state=='uninstallable'" create="false" string="Apps">
                     <field name="shortdesc"/>
                     <field name="name" groups="base.group_no_one"/>
-<!--                     <field name="author"/>
  -->                    <field name="website"/>
                     <field name="installed_version"/>
                     <field name="state"/>
@@ -165,17 +157,6 @@
                     <t t-name="kanban-box">
                       <div class="oe_module_vignette">
                         <t t-set="installed" t-value="record.state.raw_value == 'installed'"/>
-                      <!--   <div class="o_dropdown_kanban dropdown" tabindex="-1">
-                            <a class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" data-display="static" href="#" role="button" aria-label="Dropdown menu" title="Dropdown menu">
-                                <span class="fa fa-ellipsis-v"/>
-                            </a>
-                            <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                <a type="edit" class="dropdown-item">Module Info</a>
-                                <a t-if="record.website.raw_value" role="menuitem" class="dropdown-item" t-att-href="record.website.raw_value" target="_blank">Learn More</a>
-                                <a t-if="installed" name="button_immediate_upgrade" type="object" role="menuitem" class="dropdown-item">Upgrade</a>
-                                <a t-if="installed" name="button_uninstall_wizard" type="object" role="menuitem" class="dropdown-item">Uninstall</a>
-                            </div>
-                        </div>--> 
                         <img t-attf-src="/base/static/description/icon.png" class="oe_module_icon" alt="Icon"/>
                         <div class="oe_module_desc" t-att-title="record.shortdesc.value">
                           <h4 class="o_kanban_record_title">
@@ -186,13 +167,9 @@
                             <code groups="base.group_no_one"><field name="name"/></code>
                           </p>
                           <div class="oe_module_action">
-<!--                             <a t-att-href="record.website.raw_value" target="_blank" attrs="{'invisible':[('website', '=', '')]}" class="btn rounded-pill btn-sm btn-secondary float-right" role="button">Learn More</a>
-                            <a type="edit" class="btn rounded-pill btn-secondary btn-sm float-right" role="button" attrs="{'invisible': [('website', '&lt;&gt;', '')]}">Module Info</a>
-                           <button type="object" class="btn rounded-pill btn-primary btn-sm" name="button_immediate_install" states="uninstalled" t-if="! record.to_buy.raw_value">Install</button>--> 
                          
                              <div t-if="installed" class="text-muted float-left">Installed</div>
-                            <!-- <button states="to remove" type="object" class="btn rounded-pill btn-sm btn-primary" name="button_uninstall_cancel">Cancel Uninstall</button>
-                            <button states="to install" type="object" class="btn rounded-pill btn-sm btn-primary" name="button_install_cancel">Cancel Install</button>--> 
+                            
                           </div>
                         </div>
                       </div>
@@ -216,35 +193,17 @@
             </field>
         </record>
 
-        <!--top menu -->
         <menuitem id="menu_apps" name="Apps" parent="menu_management" sequence="5"/>
 
-        <!--submenu -->
         <menuitem id="menu_module_tree" parent="menu_apps" name="Main Apps" sequence="5" action="open_module_tree" />
 
         <menuitem id="theme_store" parent="menu_apps" name="Theme Store" sequence="15"/>
 
-        <!--link to stores-->
-        <record model='ir.actions.act_url' id='action_third_party'>
-            <field name='name'>Third-Party Apps</field>
-            <!-- <field name='url'></field> -->
-        </record>
-<!--         <menuitem id="menu_third_party" parent="menu_apps" name="Third-Party Apps" sequence="20" action="action_third_party"/>
- -->
-        <record model='ir.actions.act_url' id='action_theme_store'>
-            <field name='name'>Theme Store</field>
-            <field name='url'></field>
-        </record>
-<!--         <menuitem id="menu_theme_store" parent="menu_apps" name="Theme Store" sequence="10" action="action_theme_store"/>
- -->
 
-        <!-- Apps modules -->
         <record model="ir.actions.client" id="modules_act_cl">
             <field name="name">App Store</field>
             <field name="tag">apps</field>
         </record>
-<!--         <menuitem id="module_mi" parent="base.menu_management" sequence="10" action="modules_act_cl" groups="base.group_no_one"/>
- -->
         <record model="ir.actions.client" id="modules_updates_act_cl">
             <field name="name">Updates</field>
             <field name="tag">apps.updates</field>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data>
-        <!-- Properties -->
         <record id="ir_property_view_search" model="ir.ui.view">
             <field name="name">ir.property.search</field>
             <field name="model">ir.property</field>

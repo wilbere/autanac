@@ -213,8 +213,8 @@
                     </group>
                     <field name="move_line_ids" attrs="{'readonly': ['|', ('state', '=', 'cancel'), '&amp;', ('state', '=', 'done'), ('is_locked', '=', True)]}" context="{'tree_view_ref': 'stock.view_stock_move_line_operation_tree', 'default_product_uom_id': product_uom, 'default_picking_id': picking_id, 'default_move_id': id, 'default_product_id': product_id, 'default_location_id': location_id, 'default_location_dest_id': location_dest_id, 'default_company_id': company_id}"/>
                     <footer class="oe_edit_only">
-                        <button string="Confirm" special="save" class="oe_highlight"/>
-                        <button string="Discard" special="cancel"/>
+                        <button  string="Confirm" special="save" class="oe_highlight rounded-pill "/>
+                        <button class=" rounded-pill " string="Discard" special="cancel"/>
                     </footer>
                 </form>
             </field>
@@ -459,11 +459,6 @@
             <field name="act_window_id" ref="stock_move_action"/>
         </record>
 
-
-        <!--
-            Receipt Picking (By Stock Move)
-            From stock_partial_move_view
-        -->
         <record id="view_move_tree_receipt_picking" model="ir.ui.view">
             <field name="name">stock.move.tree2</field>
             <field name="model">stock.move</field>
@@ -523,7 +518,6 @@
             </field>
         </record>
 
-        <!-- test -->
         <record id="view_move_tree_receipt_picking_board" model="ir.ui.view">
             <field name="name">stock.move.tree3</field>
             <field name="model">stock.move</field>

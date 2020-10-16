@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates>
 
-    <!--
-        Chatter attachment tab
-    -->
+ 
 
     <div t-name="mail.chatter.AttachmentBox" class="o_mail_chatter_attachments">
         <div class="o_chatter_attachment">
@@ -37,18 +35,11 @@
         </div>
     </div>
 
-    <!--
-        Chatter composer
-
-        @param {mail.composer.Chatter} widget
-    -->
+    
 
     <t t-name="mail.chatter.Composer" t-extend="mail.Composer">
-        <!-- Insert information before the composer -->
         <t t-jquery=".o_composer_container" t-operation="before">
-            <!-- New message composer -->
             <t t-if="!widget.options.isLog">
-                <!-- Text for followers -->
                 <small class="o_chatter_composer_info">
                     <b class="text-muted">To: </b>
                     <em class="text-muted">Followers of </em>
@@ -61,7 +52,6 @@
                         </t>
                     </b>
                 </small>
-                <!-- List of followers -->
                 <div class="o_composer_suggested_partners">
                     <t t-foreach='widget.suggestedPartners' t-as='recipient'>
                         <div t-attf-title="Add as recipient and follower (reason: #{recipient.reason})" t-att-class="recipient_index > 2 ? 'o_suggested_toggle o_hidden' : ''">
@@ -90,20 +80,11 @@
             </t>
         </t>
 
-        <!-- Add a button to open the full composer dialog -->
         <t t-jquery=".o_composer_button_add_attachment" t-operation="after">
-            <button tabindex="6" class="btn btn-secondary fa fa-expand o_composer_button_full_composer" type="button" title="Full composer" aria-label="Full composer"/>
+            <button tabindex="6" class="btn rounded-pill btn-secondary fa fa-expand o_composer_button_full_composer" type="button" title="Full composer" aria-label="Full composer"/>
         </t>
     </t>
 
-    <!--
-        Chatter (mail_thread widget) buttons
-
-        @param {boolean} [isMobile]
-        @param {boolean} [logNoteButton]
-        @param {boolean} [newMessageButton]
-        @param {boolean} [scheduleActivityButton]
-    -->
     <t t-name="mail.chatter.Buttons">
         <button t-if="newMessageButton" type="button" class="btn btn-link o_chatter_button_new_message" title="Send a message" disabled="disabled">
             Send message
@@ -117,12 +98,7 @@
 
     </t>
 
-    <!--
-        Chatter attachment paperclip button.
-
-        @param {boolean} [displayCounter]
-        @param {integer} [count]
-    -->
+    
     <t t-name="mail.chatter.Attachment.Button">
         <t t-set="attachment_button_aria_label">Attachments</t>
         <button class="btn btn-link o_chatter_button_attachment" title="View all the attachments of the current record" t-attf-aria-label="#{attachment_button_aria_label} #{count}">
@@ -135,9 +111,7 @@
         </button>
     </t>
 
-    <!--
-        Chatter main div
-    -->
+    
     <t t-name="mail.Chatter">
         <aside class="o_chatter">
             <div class="o_chatter_topbar">

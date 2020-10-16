@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates id="template" xml:space="preserve">
 
-    <!--=================-->
-    <!-- Edition Iframe -->
-    <!--=================-->
+
 
     <t t-name="wysiwyg.iframeContent"><head>
             <meta charset="utf-8"/>
@@ -65,11 +63,6 @@
         </body>
     </t>
 
-    <!--=================-->
-    <!-- Edition Dialogs -->
-    <!--=================-->
-
-    <!-- Alt Dialog (allows to change alt and title of page images) -->
     <form t-name="wysiwyg.widgets.alt" action="#">
         <div class="form-group row">
             <label class="col-md-3 col-form-label" for="alt"
@@ -91,7 +84,6 @@
         </div>
     </form>
 
-    <!-- Media Dialog (allows to choose an img/pictogram/video) -->
     <div t-name="wysiwyg.widgets.media">
         <ul class="nav nav-tabs" role="tablist">
             <li t-if="!widget.options.noImages" class="nav-item"><a t-attf-class="nav-link #{widget.isImageActive() ? 'active' : ''}" id="editor-media-image-tab" data-toggle="tab" href="#editor-media-image" role="tab" aria-controls="editor-media-image" t-att-aria-selected="widget.isImageActive().toString()">Image</a></li>
@@ -99,7 +91,6 @@
             <li t-if="!widget.options.noIcons" class="nav-item"><a t-attf-class="nav-link #{widget.isIconActive() ? 'active' : ''}" id="editor-media-icon-tab" data-toggle="tab" href="#editor-media-icon" role="tab" aria-controls="editor-media-icon" t-att-aria-selected="widget.isIconActive().toString()">Pictogram</a></li>
             <li t-if="!widget.options.noVideos" class="nav-item"><a t-attf-class="nav-link #{widget.isVideoActive() ? 'active' : ''}" id="editor-media-video-tab" data-toggle="tab" href="#editor-media-video" role="tab" aria-controls="editor-media-video" t-att-aria-selected="widget.isVideoActive().toString()">Video</a></li>
         </ul>
-        <!-- Tab panes -->
         <div class="tab-content">
             <div t-if="!widget.options.noImages" t-attf-class="tab-pane fade #{widget.isImageActive() ? 'show active': ''}" id="editor-media-image" role="tabpanel" aria-labelledby="editor-media-image-tab"/>
             <div t-if="!widget.options.noDocuments" t-attf-class="tab-pane fade #{widget.isDocumentActive() ? 'show active': ''}" id="editor-media-document" role="tabpanel" aria-labelledby="editor-media-document-tab"/>
@@ -119,7 +110,6 @@
         </div>
     </t>
 
-    <!-- File choosing part of the Media Dialog -->
     <t t-name="wysiwyg.widgets.file">
         <form>
             <t t-call="wysiwyg.widgets.files.submenu"/>
@@ -348,7 +338,6 @@
         </div>
     </t>
 
-    <!-- Icon choosing part of the Media Dialog -->
     <t t-name="wysiwyg.widgets.font-icons">
         <form action="#">
             <div class="form-inline align-items-center py-4">
@@ -374,7 +363,6 @@
         </t>
     </t>
 
-    <!-- Video choosing part of the Media Dialog -->
     <t t-name="wysiwyg.widgets.video">
         <form action="#" class="row">
             <div class="col mt-4 o_video_dialog_form">
@@ -428,7 +416,6 @@
     </t>
 
 
-    <!-- Link Dialog (allows to choose a style and content for a link on the page) -->
     <div t-name="wysiwyg.widgets.link" class="o_link_dialog">
         <div class="row">
             <form class="col-lg-8">
@@ -511,7 +498,6 @@
         </div>
     </div>
 
-    <!-- Crop Image Dialog (allows to crop image on the page) -->
     <div t-name="wysiwyg.widgets.crop_image" class="o_crop_image_dialog">
         <div t-if="widget.imageData.isExternalImage" class="alert alert-warning text-center" role="alert">
             <i class="fa fa-exclamation-triangle fa-2x"/>

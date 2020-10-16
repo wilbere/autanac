@@ -6,12 +6,11 @@
             <field name="model">res.users</field>
             <field name="inherit_id" ref="base.view_users_form"/>
             <field name="arch" type="xml">
-                <!-- add state field in header -->
                 <xpath expr="//header" position="inside">
-                    <button string="Send Reset Password Instructions"
+                    <button class=" rounded-pill " string="Send Reset Password Instructions"
                                 type="object" name="action_reset_password"
                                 attrs="{'invisible': [('state', '!=', 'active')]}"/>
-                    <button string="Send an Invitation Email"
+                    <button class=" rounded-pill " string="Send an Invitation Email"
                                 type="object" name="action_reset_password" context="{'create_user': 1}"
                                 attrs="{'invisible': [('state', '!=', 'new')]}"/>
                     <field name="state" widget="statusbar"/>

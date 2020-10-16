@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
-    <!-- Assets for reports -->
 
     <template id="report_assets_common">
         <t t-call="web._assets_helpers">
-            <!-- FIXME web_editor ? -->
           <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/bootstrap_overridden_report.scss"/>
           <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/bootstrap_overridden.scss"/>
         </t>
@@ -13,7 +11,6 @@
 
         <link href="/base/static/src/css/description.css" rel="stylesheet" type="text/css"/>
 
-        <!-- FIXME web_editor ? -->
         <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/web_editor.common.scss"/>
 
         <link href="/web/static/lib/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
@@ -39,7 +36,6 @@
         <link href="/web/static/src/css/reset.min.css" rel="stylesheet"/>
     </template>
 
-    <!-- Private templates used internally by reports -->
 
     <template id="report_layout" name="Report layout">&lt;!DOCTYPE html&gt;
         <html t-att-lang="lang and lang.replace('_', '-')"
@@ -123,7 +119,6 @@
         </html>
     </template>
 
-    <!-- External layouts styles -->
 
     <template id="address_layout">
         <t t-set="colclass" t-value="('col-md-5' if report_type == 'html' else 'col-5') + ' ml-auto'"/>
@@ -299,8 +294,6 @@
         <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
             <div class="text-center" style="border-top: 1px solid black;">
                 <ul class="list-inline mb4">
-                    <!-- using the list-inline-item class from bootstrap causes weird behaviours in pdf report
-                         adding d-inline class fixes the problem-->
                     <li t-if="company.phone" class="list-inline-item d-inline">Phone: <span t-field="company.phone"/></li>
                     <li t-if="company.email" class="list-inline-item d-inline">Email: <span t-field="company.email"/></li>
                     <li t-if="company.website" class="list-inline-item d-inline">Web: <span t-field="company.website"/></li>
@@ -318,13 +311,11 @@
         </div>
     </template>
 
-    <!-- Public api: layout to t-call from reports -->
 
     <template id="external_layout">
         <t t-if="not o" t-set="o" t-value="doc"/>
 
         <t t-if="not company">
-            <!-- Multicompany -->
             <t t-if="company_id">
                 <t t-set="company" t-value="company_id"/>
             </t>
@@ -345,7 +336,6 @@
         <t t-if="not o" t-set="o" t-value="doc"/>
 
         <t t-if="not company">
-            <!-- Multicompany -->
             <t t-if="company_id">
                 <t t-set="company" t-value="company_id"/>
             </t>
@@ -388,8 +378,6 @@
         </t>
     </template>
 
-    <!-- Customize the company form view by adding paperformat field as well as demo reports -->
-    <!-- Demo reports definition -->
     <template id="preview_internalreport">
         <t t-set="company" t-value="env.company"/>
         <t t-call="web.html_container">

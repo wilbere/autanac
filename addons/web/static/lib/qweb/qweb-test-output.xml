@@ -1,5 +1,4 @@
 <templates>
-    <!-- esc, evaluates and returns @t-esc after having xml-escaped it -->
     <t t-name="esc-literal">
         <t t-esc="'ok'"/>
     </t>
@@ -22,7 +21,6 @@
     <result id="esc-node"><![CDATA[<span>ok</span>]]></result>
 
 
-    <!-- raw, evaluates and returns @t-raw directly (no escaping) -->
     <t t-name="raw-literal">
         <t t-raw="'ok'"/>
     </t>

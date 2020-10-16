@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates>
 
-    <!--
-        Followers, actions and subtypes in a record.
-    -->
+  
     <t t-name="mail.Followers">
         <div class="o_followers btn-group">
             <div class="o_followers_title_box btn-group">
@@ -26,9 +24,6 @@
         </div>
     </t>
 
-    <!--
-        Partner or channel following the record
-    -->
     <t t-name="mail.Followers.partner">
         <div role="menuitem" t-attf-class="dropdown-item o_partner {{ !record.active ? 'o_inactive': '' }}">
             <a class="o_mail_redirect text-truncate"
@@ -55,9 +50,6 @@
         </div>
     </t>
 
-    <!--
-        'Add followers' and 'Add channels' buttons
-    -->
     <t t-name="mail.Followers.add_more">
         <t t-if="widget.isEditable">
             <a href="#" role="menuitem" class="dropdown-item o_add_follower">Add Followers</a>
@@ -66,9 +58,7 @@
         </t>
     </t>
 
-    <!--
-        Message subtypes of a follower subscription
-    -->
+
     <t t-name="mail.Followers.subtype">
         <div role="menuitem" class="o_subtype dropdown-item">
             <div class="custom-control custom-checkbox">

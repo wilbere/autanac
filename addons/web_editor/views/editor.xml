@@ -12,7 +12,6 @@
 </template>
 
 <template id="assets_wysiwyg" name="Wysiwyg Editor Assets">
-    <!-- lib -->
 
     <t t-call-assets="web_editor.summernote"/>
 
@@ -22,13 +21,11 @@
     <script type="text/javascript" src="/web_editor/static/lib/jQuery.transfo.js"/>
     <script type="text/javascript" src="/web_editor/static/lib/nearest/jquery.nearest.js"/>
 
-    <!-- autanac utils -->
 
     <t t-call="web._assets_helpers">
         <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/bootstrap_overridden.scss"/>
     </t>
 
-    <!-- integration -->
 
     <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/wysiwyg.scss"/>
     <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/wysiwyg_iframe.scss"/>
@@ -41,7 +38,6 @@
     <script type="text/javascript" src="/web_editor/static/src/js/editor/rte.summernote.js"/>
     <script type="text/javascript" src="/web_editor/static/src/js/tours/rte.js"/>
 
-    <!-- widgets & plugins -->
 
     <script type="text/javascript" src="/web_editor/static/src/js/wysiwyg/widgets/image_optimize_dialog.js"/>
     <script type="text/javascript" src="/web_editor/static/src/js/wysiwyg/widgets/media.js"/>
@@ -55,7 +51,6 @@
     <script type="text/javascript" src="/web_editor/static/src/js/editor/snippets.editor.js"/>
     <script type="text/javascript" src="/web_editor/static/src/js/editor/snippets.options.js"/>
 
-    <!-- Launcher -->
 
     <script type="text/javascript" src="/web_editor/static/src/js/wysiwyg/wysiwyg.js"/>
     <script type="text/javascript" src="/web_editor/static/src/js/wysiwyg/wysiwyg_snippets.js"/>
@@ -143,7 +138,7 @@
 
 <template id="assets_backend" inherit_id="web.assets_backend" name="Web Editor Backend Assets (used in backend interface)">
     <xpath expr="link[last()]" position="after">
-        <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/web_editor.common.scss"/> <!-- not in common because compiled differently with context -->
+        <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/web_editor.common.scss"/> 
         <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/web_editor.backend.scss"/>
     </xpath>
     <xpath expr="script[last()]" position="after">
@@ -166,7 +161,7 @@
 
 <template id="assets_frontend" inherit_id="web.assets_frontend" name="Web Editor Frontend Assets (used in public autanac)" priority="15">
     <xpath expr="//link[last()]" position="after">
-        <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/web_editor.common.scss"/> <!-- not in common because compiled differently with context -->
+        <link rel="stylesheet" type="text/scss" href="/web_editor/static/src/scss/web_editor.common.scss"/> 
         <link rel="stylesheet" type ="text/scss" href="/web_editor/static/src/scss/web_editor.frontend.scss"/>
     </xpath>
     <xpath expr="//script[last()]" position="after">
@@ -192,19 +187,7 @@
     </xpath>
 </template>
 
-<!--
-    The web_editor.colorpicker template regroups section of colorpicker menu for website customization
-    (text foreground/background but also snippet background color option).
-    As it is presentend below, the colorpicker tag regroups a set of .o_colorpicker_section with name,
-    icon-class and icon-content as data. These will be used to build the colorpicker dropdowns.
 
-    Redefinition can edit section content, add sections or even remove them. If no section is found when
-    building a colorpicker dropdown, the template content will be used without changes as the colorpicker
-    dropdown content.
-
-    Sections should contain a set of button with a data-color attribute. When selecting such a button to
-    edit style, the "bg-x" class or the "text-x" will be automatically added.
--->
 <template id="web_editor.colorpicker" name="Color-Picker">
     <colorpicker>
         <div class="o_colorpicker_section" data-name="theme" data-display="Theme Colors" data-icon-class="fa fa-flask">
@@ -232,7 +215,7 @@
             <button data-color="700"></button>
             <button data-color="600"></button>
             <button data-color="500"></button>
-            <button data-color="400" class="d-none"></button><!-- Hide this one to be able to use it but not display it -->
+            <button data-color="400" class="d-none"></button>
             <button data-color="300"></button>
             <button data-color="200"></button>
             <button data-color="100"></button>

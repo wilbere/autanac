@@ -73,7 +73,7 @@
         </field>
     </record>
 
-    <record model="ir.actions.act_window" id="category_open_putaway"> <!-- Putaway rules from category -->
+    <record model="ir.actions.act_window" id="category_open_putaway"> 
         <field name="name">Putaway Rules</field>
         <field name="res_model">stock.putaway.rule</field>
         <field name="context">{
@@ -81,7 +81,7 @@
             'fixed_category': True,
         }</field>
     </record>
-    <record model="ir.actions.act_window" id="location_open_putaway"> <!-- Putaway rules from location -->
+    <record model="ir.actions.act_window" id="location_open_putaway">
         <field name="name">Putaway Rules</field>
         <field name="res_model">stock.putaway.rule</field>
         <field name="context">{'fixed_location': True}</field>

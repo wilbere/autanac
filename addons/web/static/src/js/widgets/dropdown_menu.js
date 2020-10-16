@@ -31,7 +31,7 @@ var DropdownMenu = Widget.extend({
         this.dropdownStyle = {
                 el: {class: 'btn-group o_dropdown', attrs: {}},
                 mainButton: {
-                    class: 'o_dropdown_toggler_btn btn btn-secondary ' +
+                    class: 'o_dropdown_toggler_btn rounded-pill btn btn-secondary ' +
                         'dropdown-toggle ' +
                         (this.dropdownSymbol ? 'o-no-caret' : '')
                 },

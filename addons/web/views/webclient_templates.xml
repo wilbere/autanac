@@ -40,9 +40,7 @@
         <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/bootstrap_review.scss"/>
     </template>
 
-    <!-- The assets common minimal code should not require any library to work. -->
-    <!-- An exception is made for the promises polyfill and extensions that the -->
-    <!-- boot.js script needs to work -->
+  
     <template id="_assets_common_minimal_js">
         <script type="text/javascript" src="/web/static/lib/es6-promise/es6-promise-polyfill.js"></script>
         <script type="text/javascript" src="/web/static/src/js/promise_extension.js"></script>
@@ -232,7 +230,6 @@
 
         <script type="text/javascript" src="/web/static/lib/py.js/lib/py.js"></script>
         <script type="text/javascript" src="/web/static/lib/py.js/lib/py_extras.js"></script>
-        <!-- Special case: core.js declares $.browser needed by ba-bbq -->
         <script type="text/javascript" src="/web/static/lib/jquery.ba-bbq/jquery.ba-bbq.js"></script>
 
         <script type="text/javascript" src="/web/static/src/js/core/domain.js"></script>
@@ -403,7 +400,6 @@
         <xpath expr="//t[@t-call='web._assets_frontend_minimal_js']" position="replace"/>
     </template>
 
-    <!-- Do not direcly call this template, call 'conditional_assets_tests' instead -->
     <template id="assets_tests" name="Tests Assets">
     </template>
 
@@ -490,7 +486,6 @@
                         style="height: 1em; vertical-align: baseline;"/>
             </a>
         </t>
-        <t t-set="final_message">Powered by %s%s</t>
         <t t-raw="final_message % (autanac_logo, _message and ('- %s' % _message) or '')"/>
     </template>
     <template id="brand_promotion" name="Brand Promotion">
@@ -516,12 +511,7 @@
                             <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
                         </div>
                         <t t-raw="0"/>
-                        <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
-                            <t t-if="not disable_database_manager">
-                                <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
-                            </t>
-                            <a href="" target="_blank">Powered by <span>Autanac</span></a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -582,7 +572,6 @@
         <script type="text/javascript" src="/web/static/tests/helpers/qunit_config.js"></script>
         <script type="text/javascript" src="/web/static/tests/helpers/qunit_asserts.js"></script>
 
-        <!-- add lazy-loaded libs to make tests synchronous -->
         <link rel="stylesheet" href="/web/static/lib/fullcalendar/css/fullcalendar.css"/>
         <script type="text/javascript" src="/web/static/lib/fullcalendar/js/fullcalendar.js"></script>
         <script type="text/javascript" src="/web/static/lib/ace/ace.js"></script>
@@ -592,7 +581,6 @@
         <script type="text/javascript" src="/web/static/lib/ace/mode-js.js"></script>
 
         <script type="text/javascript">
-            // define the 'web.web_client' module because some other modules require it
             autanac.define('web.web_client', function (require) {
                 var WebClient = require('web.WebClient');
                 var web_client = new WebClient();
@@ -875,12 +863,7 @@
         </t>
     </template>
 
-    <!--
-        Optional Bundle for PDFJS lib
-        Since PDFJS is quite huge (40000 lines), please only load it when it is necessary.
-        For now, it is only use to display the PDF slide Viewer during an embed.
-        Bundlized, the size is reduced to 3000 lines.
-    -->
+   
     <template id="pdf_js_lib" name="PDF JS Library">
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/shared/util.js"></script>
 
@@ -891,7 +874,6 @@
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/display/pattern_helper.js"></script>
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/display/font_loader.js"></script>
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/display/annotation_helper.js"></script>
-        <!-- files normally dynamically loaded in worker_loader.js -->
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/core/network.js"></script>
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/core/chunked_stream.js"></script>
         <script type="text/javascript" src="/web/static/lib/pdfjs/src/core/pdf_manager.js"></script>

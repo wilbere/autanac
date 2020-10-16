@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
 
-    <!--   Product Price List -->
         <record id="view_product_price_list" model="ir.ui.view">
               <field name="name">Price per unit</field>
               <field name="model">product.price_list</field>
@@ -16,8 +15,8 @@
                         <field name="qty5"/>
                     </group>
                     <footer>
-                        <button name="print_report" string="Print"  type="object" class="btn-primary"/>
-                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                        <button name="print_report" string="Print"  type="object" class="btn-primary rounded-pill"/>
+                        <button string="Cancel" class="btn-secondary rounded-pill" special="cancel" />
                     </footer>
                 </form>
               </field>

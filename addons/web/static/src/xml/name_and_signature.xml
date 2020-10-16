@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
 
-    <!--
-        This template is used to generate the SVG containing the signature when
-        using mode 'auto'.
-
-        The following variables have to be defined:
-            - width: (number) the width of the resulting image in px
-            - height: (number) the height of the resulting image in px
-            - font: base64 encoded font to use
-            - text: (string) the name to draw
-            - type: (string)
-                -> if set to 'signature', it will adapt the characters width to
-                fit the whole text in the image.
-                -> otherwise, it will adapt the space between characters to fill
-                the image with the text.
-    -->
+  
     <t t-name="web.sign_svg_text" name="SVG Signature Text">
         <svg t-att-width="width" t-att-height="height">
             <defs>
@@ -28,7 +14,6 @@
                     }
                 </style>
             </defs>
-            <!-- adapt textLength to prevent distortion and left overflow with small words -->
             <text t-esc="text" x="50%" t-att-y="height * 4 / 5" t-att-font-size="height * 4 / 5"
                 t-att-textLength="width * 4 / 5 * (type === 'signature' ? Math.min(1, text.length / 7) : 1)"
                 t-att-lengthAdjust="'spacing' + (type === 'signature' ? 'AndGlyphs' : '')"
@@ -36,7 +21,6 @@
         </svg>
     </t>
 
-    <!-- Template for the widget webSignNameAndDraw. -->
     <t t-name="web.sign_name_and_signature">
         <div class="o_web_sign_name_and_signature">
             <div class="o_web_sign_name_group form-group">
@@ -44,30 +28,25 @@
                 <input type="text" name="signer" t-att-id="'o_web_sign_name_input_' + widget.htmlId" class="o_web_sign_name_input form-control" t-att-value="widget.defaultName" placeholder="Your name" required=""/>
             </div>
 
-            <!--
-                Overflow hidden is necessary because the card has a rounded
-                border, but we remove the padding from the body, so the canvas
-                will overflow on the corners without this rule.
-            -->
             <div class="o_web_sign_signature_group card mt-3" style="overflow: hidden;">
                 <div class="card-header">
                     <div class="row no-gutters">
                         <div class="col-auto">
-                            <a role="button" href="#" t-attf-class="o_web_sign_draw_button mr-2 btn btn-light {{ widget.signMode === 'draw' ? 'active': '' }}">
+                            <a role="button" href="#" t-attf-class="o_web_sign_draw_button mr-2 btn btn-light rounded-pill {{ widget.signMode === 'draw' ? 'active': '' }}">
                                 Draw
                             </a>
                         </div>
                         <div class="col-auto">
-                            <a role="button" href="#" t-attf-class="o_web_sign_auto_button mr-2 btn btn-light {{ widget.signMode === 'auto' ? 'active': '' }}">
+                            <a role="button" href="#" t-attf-class="o_web_sign_auto_button mr-2 btn btn-light rounded-pill {{ widget.signMode === 'auto' ? 'active': '' }}">
                                 Auto
                             </a>
                         </div>
                         <div class="col-auto">
-                            <a role="button" href="#" t-attf-class="o_web_sign_load_button mr-2 btn btn-light {{ widget.signMode === 'load' ? 'active': '' }}">
+                            <a role="button" href="#" t-attf-class="o_web_sign_load_button mr-2 btn btn-light rounded-pill{{ widget.signMode === 'load' ? 'active': '' }}">
                                 Load
                             </a>
                         </div>
-                        <div t-attf-class="o_web_sign_draw_clear col-auto ml-auto {{ widget.signMode !== 'draw' ? 'd-none' : '' }}">
+                        <div t-attf-class="o_web_sign_draw_clear col-auto ml-auto rounded-pill {{ widget.signMode !== 'draw' ? 'd-none' : '' }}">
                             <a role="button" href="#" class="btn rounded-pill btn-link">
                                 Clear
                             </a>

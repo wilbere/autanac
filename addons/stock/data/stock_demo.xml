@@ -7,14 +7,12 @@
         </record>
 
 
-        <!-- Resource: stock.inventory -->
 
         <record id="stock_inventory_0" model="stock.inventory">
             <field name="name">Starting Inventory</field>
         </record>
 
 
-        <!-- Resource: stock.inventory.line -->
 
         <record id="stock_inventory_line_1" model="stock.inventory.line">
             <field name="product_id" ref="product.product_product_24"/>
@@ -137,9 +135,7 @@
         </function>
 
 
-        <!--  Multi Company -->
-
-        <!--        Child Company 1-->
+       
         <record id="res_partner_company_1" model="res.partner">
             <field name="name">My Company, Chicago</field>
             <field name="is_company">1</field>
@@ -199,7 +195,6 @@
             <field name="type">product</field>
         </record>
 
-        <!-- Activate Lots options as demo data depends on it -->
         <record id="base.group_user" model="res.groups">
             <field name="implied_ids" eval="[(4, ref('stock.group_production_lot'))]"/>
         </record>

@@ -2,7 +2,6 @@
 <autanac>
     <data>
 
-        <!-- change password wizard -->
         <record id="change_password_wizard_view" model="ir.ui.view">
             <field name="name">Change Password</field>
             <field name="model">change.password.wizard</field>
@@ -10,8 +9,8 @@
                 <form string="Change Password">
                     <field name="user_ids"/>
                     <footer>
-                        <button string="Change Password" name="change_password_button" type="object" class="btn-primary"/>
-                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                        <button string="Change Password" name="change_password_button" type="object" class="btn-primary rounded-pill"/>
+                        <button string="Cancel" class="btn-secondary rounded-pill" special="cancel" />
                     </footer>
                 </form>
             </field>
@@ -20,7 +19,6 @@
             <field name="name">Change Password Users</field>
             <field name="model">change.password.user</field>
             <field name="arch" type="xml">
-                <!-- the user list is editable, but one cannot add or delete rows -->
                 <tree string="Users" editable="bottom" create="false" delete="false">
                     <field name="user_login"/>
                     <field name="new_passwd" required="True" password="True"/>
@@ -34,7 +32,6 @@
             view_mode="form" target="new"
             groups="base.group_erp_manager"/>
 
-        <!-- res.groups -->
         <record id="view_groups_search" model="ir.ui.view">
             <field name="name">res.groups.search</field>
             <field name="model">res.groups</field>
@@ -113,7 +110,6 @@
         </record>
         <menuitem action="action_res_groups" id="menu_action_res_groups" parent="base.menu_users" groups="base.group_no_one" sequence="3"/>
 
-        <!-- res.users -->
         <record id="view_users_simple_form" model="ir.ui.view">
             <field name="name">res.users.simplified.form</field>
             <field name="model">res.users</field>
@@ -307,11 +303,9 @@
             <field name="model">res.users</field>
             <field name="inherit_id" ref="view_users_form"/>
             <field name="arch" type="xml">
-                <!-- dummy, will be modified by groups -->
                 <field name="groups_id" position="after"/>
             </field>
         </record>
-        <!-- dummy update on group, to force the view above to be update -->
         <record model="res.groups" id="group_no_one"/>
         <record id="action_res_users" model="ir.actions.act_window">
             <field name="name">Users</field>
@@ -377,9 +371,9 @@
                     </group>
                     <group name="preference_contact"></group>
                     <footer>
-                        <button name="preference_save" type="object" string="Save" class="btn-primary"/>
-                        <button name="preference_cancel" string="Cancel" special="cancel" class="btn-secondary"/>
-                        <button name="preference_change_password" type="object" string="Change password" class="btn-secondary"/>
+                        <button name="preference_save" type="object" string="Save" class="btn-primary rounded-pill"/>
+                        <button name="preference_cancel" string="Cancel" special="cancel" class="btn-secondary rounded-pill"/>
+                        <button name="preference_change_password" type="object" string="Change password" class="btn-secondary rounded-pill"/>
                     </footer>
                 </form>
             </field>

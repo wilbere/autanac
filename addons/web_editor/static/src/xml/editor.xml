@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates id="template" xml:space="preserve">
-    <!--=================-->
-    <!-- Base components -->
-    <!--=================-->
 
-    <!-- Editor top bar which contains the summernote tools and save/discard buttons -->
     <t t-name="web_editor.editorbar">
         <div id="web_editor-toolbars"/>
     </t>
 
-    <!--=================-->
-    <!-- Snippet options -->
-    <!--=================-->
-
-    <!-- Background position option dialog -->
     <div t-name="web_editor.dialog.background_position" class="o_bg_img_opt_modal">
         <label class="radio-inline"><input type="radio" name="o_bg_img_opt" value="cover"/> Cover</label>
         <label class="radio-inline"><input type="radio" name="o_bg_img_opt" value="contain"/> Contain</label>

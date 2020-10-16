@@ -11,7 +11,6 @@
             </field>
         </record>
 
-        <!-- ir.translation form view -->
         <record id="view_ir_translation_inherit_base_gengo_form" model="ir.ui.view">
             <field name="name">ir.translation.form.inherit</field>
             <field name="inherit_id" ref="base.view_translation_form"/>

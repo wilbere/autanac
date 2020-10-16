@@ -131,7 +131,6 @@
         <menuitem action="action_warehouse_form" id="menu_action_warehouse_form"
             parent="menu_warehouse_config" sequence="1"/>
 
-        <!-- Order Point -->
         <record id="view_stock_warehouse_orderpoint_kanban" model="ir.ui.view">
             <field name="name">stock.warehouse.orderpoint.kanban</field>
             <field name="model">stock.warehouse.orderpoint</field>

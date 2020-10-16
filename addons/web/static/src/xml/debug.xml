@@ -99,10 +99,8 @@
 </t>
 <div t-name="WebClient.DebugManager.RequestsOverlay" class="o_debug_manager_overlay">
     <header>
-        <!-- enough height to display all tracks + 1px spacing between tracks -->
         <t t-set="canvas_height" t-value="widget.TRACKS * (widget.TRACK_WIDTH + 1)"/>
         <canvas t-att-height="canvas_height" id="o_debug_requests_summary"/>
-        <!-- transparent overlay to display selected range -->
         <canvas t-att-height="canvas_height" id="o_debug_requests_selector"/>
     </header>
     <div class="o_debug_requests"/>

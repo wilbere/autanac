@@ -57,7 +57,6 @@
         </field>
     </record>
 
-    <!-- Technical Menu -->
     <menuitem id="mail_blacklist_menu" name="Mass Mail Blacklist" action="mail_blacklist_action" parent="base.menu_email"/>
 
 </autanac>

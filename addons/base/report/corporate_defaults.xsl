@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format">
 	<xsl:variable name="signature" select="//corporate-header/user/signature"/>
-	<xsl:variable name="title">autanac Report</xsl:variable>
+	<xsl:variable name="title">Autana Report</xsl:variable>
 	<xsl:variable name="leftMargin">1cm</xsl:variable>
 	<xsl:variable name="rightMargin">1cm</xsl:variable>
 	<xsl:variable name="topMargin">1cm</xsl:variable>
@@ -12,7 +12,6 @@
 	<xsl:variable name="page_format">a4_letter</xsl:variable>
 
 	<xsl:template name="first_page_graphics_corporation">
-		<!--logo-->
 		<setFont name="Helvetica" size="14"/>
 		<fill color="black"/>
 		<stroke color="black"/>
@@ -36,7 +35,6 @@
 		<drawRightString x="7cm" y="25.5cm"><xsl:value-of select="//corporate-header/corporation/email"/></drawRightString>
 
 
-		<!--page bottom-->
 
 		<lines>1.5cm 2.2cm 19.9cm 2.2cm</lines>
 		<drawCentredString x="10.5cm" y="1.7cm"><xsl:value-of select="//corporate-header/corporation/rml_footer"/></drawCentredString>
@@ -46,13 +44,11 @@
 
 
 	<xsl:template name="other_pages_graphics_corporation">
-		<!--logo-->
 		<setFont name="Helvetica" size="14"/>
 		<fill color="black"/>
 		<stroke color="black"/>
 		<drawString x="1cm" y="27.6cm"><xsl:value-of select="//corporate-header/corporation/name"/></drawString>
 		<lines>1cm 25.4cm 20cm 25.4cm</lines>
-<!--		<lines>1cm 25.7cm 7cm 25.7cm</lines>-->
 
 		<setFont name="Helvetica" size="10"/>
 		<drawRightString x="1cm" y="27.5cm"><xsl:value-of select="//corporate-header/corporation/rml_header1"/></drawRightString>
@@ -69,11 +65,9 @@
 		<drawString x="1cm" y="25.5cm">Mail:</drawString>
 		<drawRightString x="7cm" y="25.5cm"><xsl:value-of select="//corporate-header/corporation/email"/></drawRightString>
 
-		<!--page bottom-->
 
 		<lines>1.5cm 1.2cm 19.9cm 1.2cm</lines>
 		<drawCentredString x="10.5cm" y="1.7cm"><xsl:value-of select="//corporate-header/corporation/rml_footer"/></drawCentredString>
-<!--		<drawCentredString x="10.5cm" y="0.8cm">Your contact : <xsl:value-of select="//corporate-header/user/name"/></drawCentredString>-->
 	</xsl:template>
 
 	<xsl:template name="first_page_frames">

@@ -13,7 +13,6 @@
                         <div class="row col-sm-12">
                             <div class="oe_import_toggled oe_import_options js_import_options col-md-6 col-lg-4">
                                 <p t-foreach="widget.opts" t-as="option">
-                                    <!-- no @name, avoid submission when file_update called -->
                                     <label t-attf-for="#{option.name}_#{_id}">
                                         <t t-esc="option.label"/></label>
                                     <input t-attf-id="#{option.name}_#{_id}"
@@ -24,7 +23,6 @@
                             </div>
                             <div t-foreach="[widget.parse_opts_formats, widget.parse_opts_separators]" t-as="options" class="oe_import_toggled oe_import_options col-md-6 col-lg-4">
                                 <p t-foreach="options" t-as="option">
-                                    <!-- no @name, avoid submission when file_update called -->
                                     <label t-attf-for="#{option.name}_#{_id}">
                                         <t t-esc="option.label"/></label>
                                     <input t-attf-id="#{option.name}_#{_id}"
@@ -93,13 +91,6 @@
                     <p>
                         Excel files are recommended as fields formatting is automatic.
                     </p>
-                    <div class="mt16 mb4">Need Help?</div>
-                    <div t-foreach="widget.importTemplates" t-as="template">
-                        <a t-att-href="template.template" aria-label="Download" title="Download">
-                            <i class="fa fa-download"/> <span><t t-esc="template.label"/></span>
-                        </a>
-                    </div>
-                    <a href="#" target="new">Import FAQ</a>
                 </div>
             </div>
         </form>
@@ -129,7 +120,6 @@
                     ><span class="o_import_header_name"><t t-esc="header"/></span></td>
             </tr>
             <tr class="oe_import_fields">
-                <!-- Iterate on first row to ensure we have all columns -->
                 <td t-foreach="preview[0]" t-as="column">
                     <input class="oe_import_match_field"/>
                 </td>

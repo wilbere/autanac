@@ -3,13 +3,11 @@
     <t t-name="web_editor.snippet_overlay">
         <div class="oe_overlay">
             <div class="o_handles">
-                <!-- Visible overlay borders + allow to resize when not readonly -->
                 <div class="o_handle n readonly"/>
                 <div class="o_handle e readonly"/>
                 <div class="o_handle w readonly"/>
                 <div class="o_handle s readonly"/>
 
-                <!-- Overlay button-like handle to drag and drop -->
                 <div class="o_move_handle"/>
             </div>
         </div>
@@ -33,7 +31,6 @@
         <we-customizeblock-option/>
     </t>
 
-    <!-- options -->
     <div t-name="web_editor.snippet.option.colorpicker" class="colorpicker">
         <div class="btn-group palette-reset">
             <div class="note-color-reset" data-event="foreColor" data-value="inherit" title="None" role="img" aria-label="No color">

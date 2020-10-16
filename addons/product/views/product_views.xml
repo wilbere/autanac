@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data>
-    <!-- base structure of product.template, common with product.product -->
     <record id="product_template_form_view" model="ir.ui.view">
         <field name="name">product.template.common.form</field>
         <field name="model">product.template</field>
@@ -9,7 +8,7 @@
         <field name="arch" type="xml">
             <form string="Product">
                 <header>
-                    <button string="Configure Variants" type="action"
+                    <button class=" rounded-pill " string="Configure Variants" type="action"
                         name="%(product_attribute_value_action)d"
                         attrs="{'invisible': ['|', ('attribute_line_ids', '&lt;=', 0), ('is_product_variant', '=', True)]}"
                         groups="product.group_product_variant"/>
@@ -198,7 +197,7 @@
             <field name="res_model">product.product</field>
             <field name="view_mode">tree,form,kanban,activity</field>
             <field name="search_view_id" ref="product_search_form_view"/>
-            <field name="view_id" eval="False"/> <!-- Force empty -->
+            <field name="view_id" eval="False"/> 
             <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face">
                 Create a new product variant
@@ -445,7 +444,7 @@
                 <form class="oe_form_configuration">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button class="oe_stat_button"
+                            <button class="oe_stat_button rounded-pill"
                                 name="%(product_template_action_all)d"
                                 icon="fa-th-list"
                                 type="action"

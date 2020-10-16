@@ -8,7 +8,6 @@
             <field name="description">General announcements for all employees.</field>
         </record>
 
-        <!-- notify all employees of module installation -->
         <record model="mail.message" id="module_install_notification" context="{'mail_notify_noemail': True}">
             <field name="model">mail.channel</field>
             <field name="res_id" ref="mail.channel_all_employees"/>

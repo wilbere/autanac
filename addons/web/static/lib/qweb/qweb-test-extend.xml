@@ -1,5 +1,4 @@
 <templates>
-    <!-- js-only -->
     <t t-name="jquery-extend">
         <ul><li>one</li></ul>
     </t>

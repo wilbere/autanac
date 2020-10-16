@@ -17,9 +17,9 @@
                 <div class="o_composer_input">
                     <textarea class="o_input o_composer_text_field" tabindex="2" placeholder="Write something..."/>
                     <div class="o_chatter_composer_tools">
-                        <button tabindex="4" class="btn btn-secondary fa fa-smile-o o_composer_button_emoji" type="button" data-toggle="popover" title="Emojis" aria-label="Emojis"/>
-                        <button t-if="!widget.options.thread or widget.options.thread.getType() !== 'livechat'" tabindex="5" class="btn btn-secondary fa fa-paperclip o_composer_button_add_attachment" type="button" aria-label="Add attachment" title="Add attachment"/>
-                        <button t-if="widget.options.isMobile" tabindex="3" t-attf-class="btn #{widget.isMini ? 'btn-primary' : 'btn-secondary'} fa fa-paper-plane-o o_composer_button_send" type="button" title="Send" aria-label="Send"/>
+                        <button tabindex="4" class="btn rounded-pill btn-secondary fa fa-smile-o o_composer_button_emoji" type="button" data-toggle="popover" title="Emojis" aria-label="Emojis"/>
+                        <button t-if="!widget.options.thread or widget.options.thread.getType() !== 'livechat'" tabindex="5" class="btn rounded-pill btn-secondary fa fa-paperclip o_composer_button_add_attachment" type="button" aria-label="Add attachment" title="Add attachment"/>
+                        <button t-if="widget.options.isMobile" tabindex="3" t-attf-class="btn rounded-pill #{widget.isMini ? 'btn-primary' : 'btn-secondary'} fa fa-paper-plane-o o_composer_button_send" type="button" title="Send" aria-label="Send"/>
                     </div>
                 </div>
              </div>
@@ -27,8 +27,8 @@
              <div class="o_composer_thread_typing"/>
          </div>
          <div class="o_composer_send">
-             <button tabindex="3" class="btn btn-primary o_composer_button_send d-none d-md-inline-block" type="button"><t t-esc="widget.options.sendText"/></button>
-             <button tabindex="3" class="btn btn-secondary o_composer_button_discard d-none" type="button">Discard</button>
+             <button tabindex="3" class="btn rounded-pill btn-primary o_composer_button_send d-none d-md-inline-block" type="button"><t t-esc="widget.options.sendText"/></button>
+             <button tabindex="3" class="btn rounded-pill btn-secondary o_composer_button_discard d-none" type="button">Discard</button>
          </div>
          <span class="d-none">
             <t t-call="HiddenInputFile">
@@ -41,9 +41,6 @@
          </span>
     </div>
 
-    <!--
-        @param {mail.model.Thread} thread
-    -->
     <t t-name="mail.Composer.ThreadTyping">
         <t t-esc="thread.getTypingMembersToText()"/>
     </t>
@@ -56,10 +53,6 @@
         </t>
     </div>
 
-    <!--
-        @param {Object[]} suggestions
-        @param {boolean} [suggestions.divider=false]
-    -->
     <t t-name="mail.MentionSuggestions">
         <div class="dropdown-menu" role="menu">
             <t t-foreach="suggestions" t-as="suggestion">

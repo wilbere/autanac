@@ -29,9 +29,7 @@
     </div>
 </template>
 
-<!-- options (data-selector, data-drop-in, data-drop-near, data-js to link js object ) -->
 <template id="snippet_options">
-    <!-- t-field -->
     <div data-js='many2one'
          data-selector="[data-oe-many2one-model]:not([data-oe-readonly])"
          data-no-check="true"/>
@@ -40,7 +38,6 @@
          data-drop-near="p, h1, h2, h3, blockquote, .s_hr"/>
 </template>
 
-<!-- default block -->
 <template id="s_hr" name="Separator">
     <div class="s_hr pt32 pb32">
         <hr class="s_hr_1px s_hr_solid w-100 mx-auto"/>

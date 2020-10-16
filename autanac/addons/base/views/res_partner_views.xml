@@ -2,7 +2,6 @@
 <autanac>
     <data>
 
-        <!-- Partner Titles -->
         <record id="view_partner_title_tree" model="ir.ui.view">
             <field name="name">res.partner.title.tree</field>
             <field name="model">res.partner.title</field>
@@ -37,7 +36,6 @@
             <field name="help">Manage the contact titles you want to have available in your system and the way you want to print them in letters and other documents. Some example: Mr., Mrs. </field>
         </record>
 
-        <!-- Partner -->
         <record id="view_partner_tree" model="ir.ui.view">
             <field name="name">res.partner.tree</field>
             <field name="model">res.partner</field>
@@ -91,7 +89,6 @@
             </field>
         </record>
 
-        <!-- Open partner address -->
         <record id="view_partner_address_form" model="ir.ui.view">
             <field name="name">res.partner.form.address</field>
             <field name="model">res.partner</field>
@@ -309,7 +306,6 @@
                                     <field name="state_id"/>
                                     <field name="image_128"/>
                                     <field name="lang"/>
-                                    <!-- fields in form x2many view to diminish requests -->
                                     <field name="comment"/>
                                     <field name="display_name"/>
                                     <templates>
@@ -348,9 +344,7 @@
                                 </kanban>
                                 <form string="Contact / Address">
                                     <sheet>
-                                        <!-- parent_id and type fields needed in attrs in base_address_city module which overwrites
-                                        _fields_view_get() of partner. It would be better to put those fields there but the web client
-                                        dosen't support when a field is displayed several times in the same view.-->
+                                        
                                         <field name="type" required="1" widget="radio" options="{'horizontal': true}"/>
                                         <field name="parent_id" invisible="1"/>
                                         <hr/>
@@ -413,8 +407,7 @@
             </field>
         </record>
 
-      <!-- Special restricted view for private address, with limited "named" info that
-           can be traced back to the employee -->
+     
         <record id="res_partner_view_form_private" model="ir.ui.view">
             <field name="name">res.partner.view.form.private</field>
             <field name="model">res.partner</field>
@@ -486,7 +479,6 @@
             </field>
         </record>
 
-        <!-- Partner Kanban View -->
         <record model="ir.ui.view" id="res_partner_kanban_view">
             <field name="name">res.partner.kanban</field>
             <field name="model">res.partner</field>
@@ -672,7 +664,6 @@
             <field name="filter" eval="True"/>
         </record>
 
-        <!-- Categories -->
         <record id="view_partner_category_form" model="ir.ui.view">
             <field name="name">Contact Tags</field>
             <field name="model">res.partner.category</field>
@@ -727,7 +718,6 @@
             </field>
         </record>
 
-        <!-- Industry -->
         <record id="res_partner_industry_view_form" model="ir.ui.view">
             <field name="name">Industry</field>
             <field name="model">res.partner.industry</field>

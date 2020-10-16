@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data noupdate="1">
-        <!-- We want to activate product variant by default for easier demoing. -->
         <record id="base.group_user" model="res.groups">
             <field name="implied_ids" eval="[(4, ref('product.group_product_variant'))]"/>
         </record>
@@ -31,7 +30,6 @@
             <field name="name">Consumable</field>
         </record>
 
-        <!-- Expensable products -->
         <record id="expense_product" model="product.product">
             <field name="name">Restaurant Expenses</field>
             <field name="list_price">14.0</field>
@@ -52,7 +50,6 @@
             <field name="categ_id" ref="cat_expense"/>
         </record>
 
-        <!-- Service products -->
         <record id="product_product_1" model="product.product">
             <field name="name">Virtual Interior Design</field>
             <field name="categ_id" ref="product_category_3"/>
@@ -73,7 +70,6 @@
             <field name="uom_po_id" ref="uom.product_uom_hour"/>
         </record>
 
-        <!-- Physical Products -->
 
         <record id="product_delivery_01" model="product.product">
             <field name="name">Office Chair</field>
@@ -128,7 +124,6 @@
             <field name="image_1920" type="base64" file="product/static/img/product_product_3-image.jpg"/>
         </record>
 
-        <!-- Variants -->
 
         <record id="product_attribute_1" model="product.attribute">
             <field name="name">Legs</field>
@@ -185,7 +180,6 @@
             <field name="description_sale">160x80cm, with large legs.</field>
         </record>
 
-        <!-- the product template attribute lines have to be defined before creating the variants -->
         <record id="product_4_attribute_1_product_template_attribute_line" model="product.template.attribute.line">
             <field name="product_tmpl_id" ref="product_product_4_product_template"/>
             <field name="attribute_id" ref="product_attribute_1"/>
@@ -197,12 +191,7 @@
             <field name="value_ids" eval="[(6, 0, [ref('product.product_attribute_value_3'), ref('product.product_attribute_value_4')])]"/>
         </record>
 
-        <!--
-        Handle automatically created product.template.attribute.value.
-        Meaning that the combination between the "customizable desk" and the attribute value "black" will be materialized
-        into a "product.template.attribute.value" with the ref "product.product_4_attribute_1_value_1".
-        This will allow setting fields like "price_extra" and "exclude_for"
-         -->
+       
         <function model="ir.model.data" name="_update_xmlids">
             <value model="base" eval="[{
                 'xml_id': 'product.product_4_attribute_1_value_1',
@@ -359,7 +348,6 @@
             <field name="image_1920" type="base64" file="product/static/img/product_product_11-image.png"/>
         </record>
 
-        <!-- the product template attribute lines have to be defined before creating the variants -->
         <record id="product_11_attribute_1_product_template_attribute_line" model="product.template.attribute.line">
             <field name="product_tmpl_id" ref="product_product_11_product_template"/>
             <field name="attribute_id" ref="product_attribute_1"/>
@@ -407,7 +395,6 @@
             <field name="price_extra">6.40</field>
         </record>
 
-        <!-- MRP Demo Data-->
 
         <record id="product_product_12" model="product.product">
             <field name="name">Office Chair Black</field>
@@ -555,9 +542,6 @@
             <field name="image_1920" type="base64" file="product/static/img/product_product_d01-image.png"/>
         </record>
 
-        <!--
-    Resource: product.supplierinfo
-    -->
 
         <record id="product_supplierinfo_1" model="product.supplierinfo">
             <field name="product_tmpl_id" ref="product_product_6_product_template"/>

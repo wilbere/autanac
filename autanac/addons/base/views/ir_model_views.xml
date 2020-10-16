@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
 
-        <!-- menu_create from model form -->
         <record id="view_model_menu_create" model="ir.ui.view">
             <field name="name">Create Menu</field>
             <field name="model">wizard.ir.model.menu.create</field>
@@ -12,15 +11,14 @@
                         <field name="menu_id"/>
                     </group>
                     <footer>
-                        <button name="menu_create" string="Create _Menu" type="object" class="btn-primary"/>
-                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                        <button name="menu_create" string="Create _Menu" type="object" class="btn-primary rounded-pill"/>
+                        <button string="Cancel" class="btn-secondary rounded-pill" special="cancel" />
                     </footer>
                 </form>
             </field>
         </record>
         <act_window context="{'model_id': active_id}" id="act_menu_create" name="Create Menu" res_model="wizard.ir.model.menu.create" target="new" view_mode="form"/>
 
-        <!-- model -->
         <record id="view_model_form" model="ir.ui.view">
             <field name="model">ir.model</field>
             <field name="arch" type="xml">
@@ -159,6 +157,7 @@
                                 </form>
                             </field>
                             <button groups="base.group_no_one"
+                                class=" rounded-pill "
                                 icon="fa-align-justify"
                                 name="%(act_menu_create)d"
                                 string="Create a Menu" type="action"
@@ -235,7 +234,6 @@
         </record>
         <menuitem action="action_model_model" id="ir_model_model_menu" parent="next_id_9"/>
 
-        <!-- ir model fields -->
         <record id="view_model_fields_form" model="ir.ui.view">
             <field name="model">ir.model.fields</field>
             <field name="arch" type="xml">
@@ -399,7 +397,6 @@
         </record>
         <menuitem action="action_model_fields" id="ir_model_model_fields" parent="base.next_id_9"/>
 
-        <!-- ir model fields selection -->
         <record id="view_model_fields_selection_form" model="ir.ui.view">
             <field name="model">ir.model.fields.selection</field>
             <field name="arch" type="xml">
@@ -447,7 +444,6 @@
         </record>
         <menuitem action="action_model_fields_selection" id="ir_model_model_fields_selection" parent="base.next_id_9"/>
 
-        <!-- ir model data -->
         <record model="ir.ui.view" id="view_model_data_form">
             <field name="model">ir.model.data</field>
             <field name="arch" type="xml">
@@ -513,7 +509,6 @@
         <menuitem action="action_model_data" id="ir_model_data_menu" parent="base.next_id_5"
                   groups="base.group_no_one"/>
 
-        <!-- ir model contraints -->
         <record model="ir.ui.view" id="view_model_constraint_form">
             <field name="model">ir.model.constraint</field>
             <field name="arch" type="xml">
@@ -551,7 +546,6 @@
         <menuitem action="action_model_constraint" id="ir_model_constraint_menu" parent="base.next_id_9"
                   groups="base.group_no_one"/>
 
-        <!-- ir model relations -->
         <record model="ir.ui.view" id="view_model_relation_form">
             <field name="model">ir.model.relation</field>
             <field name="arch" type="xml">
@@ -584,7 +578,6 @@
         <menuitem action="action_model_relation" id="ir_model_relation_menu" parent="base.next_id_9"
                   groups="base.group_no_one"/>
 
-        <!-- ir.model.access -->
         <record id="ir_access_view_tree" model="ir.ui.view">
             <field name="name">ir.model.access.view.tree</field>
             <field name="model">ir.model.access</field>

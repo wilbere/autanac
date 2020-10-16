@@ -94,7 +94,7 @@
                 <div class="ribbon color-1" />
                 <div class="ribbon color-2" />
                 <div class="flake color-1" />
-                <div /> <!-- spacer -->
+                <div /> 
             </div>
             <div>
                 <div class="ribbon color-2" />
@@ -102,14 +102,14 @@
                 <div class="flake color-3" />
                 <div class="ribbon color-1" />
                 <div class="flake color-4" />
-                <div /> <!-- spacer -->
+                <div /> 
             </div>
             <div>
                 <div class="ribbon color-1" />
                 <div class="ribbon color-4" />
                 <div class="ribbon color-2" />
                 <div class="flake color-3" />
-                <div /> <!-- spacer -->
+                <div /> 
             </div>
             <div>
                 <div class="flake color-3" />
@@ -117,18 +117,17 @@
                 <div class="ribbon color-4" />
                 <div class="flake color-3" />
                 <div class="ribbon color-2" />
-                <div /> <!-- spacer -->
+                <div /> 
             </div>
             <div>
                 <div class="ribbon color-2" />
                 <div class="flake color-3" />
                 <div class="flake color-4" />
                 <div class="ribbon color-1" />
-                <div /> <!-- spacer -->
+                <div /> 
             </div>
         </div>
     </template>
-    <!-- ONBOARDING STEPS -->
     <template id="onboarding_company_step">
         <t t-call="base.onboarding_step">
             <t t-set="title">Company Data</t>
@@ -141,7 +140,6 @@
             <t t-set="state" t-value="state.get('base_onboarding_company_state')" />
         </t>
     </template>
-    <!-- COMPANY FORM -->
     <record id="base_onboarding_company_form" model="ir.ui.view">
         <field name="name">base.company.onboarding.form</field>
         <field name="model">res.company</field>
@@ -153,7 +151,7 @@
             <form position="inside">
                 <footer position="replace">
                     <button name="action_save_onboarding_company_step" class="btn rounded-pill btn-primary" type="object" string="Apply" />
-                    <button special="cancel" string="Cancel" />
+                    <button special="cancel" class=" rounded-pill " string="Cancel" />
                 </footer>
             </form>
         </field>

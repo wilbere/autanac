@@ -85,9 +85,7 @@
             <rng:optional> <rng:attribute name="attachment_use" /> </rng:optional>
             <rng:optional> <rng:attribute name="groups"/> </rng:optional>
             <rng:optional> <rng:attribute name="paperformat"/> </rng:optional>
-            <!-- `Usage` may help identify the best report for a certain task,
-                 for example usage="default" for reports that are attached by
-                 default in EDI exports -->
+            
             <rng:optional><rng:attribute name="usage"/></rng:optional>
             <rng:empty />
         </rng:element>
@@ -226,7 +224,6 @@
 
     <rng:define name="menuitem">
         <rng:element name="menuitem">
-            <!-- TODO: id should probably be mandatory -->
             <rng:optional> <rng:attribute name="id" /></rng:optional>
             <rng:optional> <rng:attribute name="name"/></rng:optional>
             <rng:optional> <rng:attribute name="parent"/> </rng:optional>
@@ -234,11 +231,9 @@
             <rng:optional> <rng:attribute name="sequence"/> </rng:optional>
             <rng:optional> <rng:attribute name="groups"/> </rng:optional>
             <rng:optional> <rng:attribute name="active"/> </rng:optional>
-            <!-- TODO: remove icon stuff -->
             <rng:optional> <rng:attribute name="icon"/> </rng:optional>
             <rng:optional> <rng:attribute name="web_icon"/> </rng:optional>
             <rng:optional> <rng:attribute name="web_icon_hover"/> </rng:optional>
-            <!-- string doesn't seem used anywhere -->
             <rng:optional> <rng:attribute name="string"/> </rng:optional>
             <rng:empty />
         </rng:element>

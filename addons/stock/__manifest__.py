@@ -6,7 +6,6 @@
     'version': '1.1',
     'summary': 'Manage your stock and logistics activities',
     'description': "",
-    'website': 'https://www.autanac.com/page/warehouse',
     'depends': ['product', 'barcodes'],
     'category': 'Operations/Inventory',
     'sequence': 13,

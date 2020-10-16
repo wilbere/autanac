@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data noupdate="1">
-        <!-- user root should not receive emails at creation -->
         <record id="base.user_root" model="res.users">
             <field name="notification_type">inbox</field>
         </record>
 
-        <!-- Catchall Email Alias -->
         <record id="icp_mail_catchall_alias" model="ir.config_parameter">
             <field name="key">mail.catchall.alias</field>
             <field name="value">catchall</field>
         </record>
 
-        <!-- Bounce Email Alias -->
         <record id="icp_mail_bounce_alias" model="ir.config_parameter">
             <field name="key">mail.bounce.alias</field>
             <field name="value">bounce</field>
         </record>
 
-        <!-- Discussion subtype for messaging / Chatter -->
         <record id="mt_comment" model="mail.message.subtype">
             <field name="name">Discussions</field>
             <field name="sequence" eval="0"/>
@@ -209,10 +205,6 @@
 </tbody>
 </table>
 </td></tr>
-<!-- POWERED BY -->
-<tr><td align="center" style="min-width: 590px;">
-        P
-</td></tr>
 </table>
         </template>
 
@@ -294,14 +286,9 @@
 </tbody>
 </table>
 </td></tr>
-<!-- POWERED BY -->
-<tr><td align="center" style="min-width: 590px; padding: 8px; font-size:11px;">
-    
-</td></tr>
 </table>
         </template>
 
-        <!-- Discuss utility templates for notifications -->
         <template id="message_user_assigned">
 <p style="margin: 0px;">
     <span>Dear <t t-esc="object.user_id.sudo().name"/>,</span><br />
@@ -327,7 +314,7 @@
             <br t-if="not feedback_line_last"/>
         </t>
     </div>
-    <t t-if="activity.note and activity.note != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'"><!-- <p></br></p> -->
+    <t t-if="activity.note and activity.note != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'">
         <div class="o_mail_note_title"><strong>Original note:</strong></div>
         <div t-field="activity.note"/>
     </t>

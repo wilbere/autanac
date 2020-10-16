@@ -4,7 +4,6 @@
 <t t-name="mail.KanbanActivity">
     <div class="a_kanban_inline_block dropdown a_kanban_selection o_mail_activity">
         <a class="dropdown-toggle o-no-caret o_activity_btn" data-toggle="dropdown" role="button">
-            <!-- span classes are generated dynamically (see _render) -->
             <span t-att-title="widget.selection[widget.activityState]" role="img" t-att-aria-label="widget.selection[widget.activity_state]"/>
        </a>
         <div class="dropdown-menu o_activity" role="menu"/>
@@ -46,7 +45,7 @@
     </div>
     <div class="dropdown-divider mt-0"/>
     <div role="menuitem" class="o_schedule_activity dropdown-header py-1 text-center">
-        <button class="btn btn-secondary mb-1">
+        <button class="btn btn-secondary rounded-pill mb-1">
             <i class="fa fa-plus fa-fw"></i><strong>Schedule an activity</strong>
         </button>
     </div>

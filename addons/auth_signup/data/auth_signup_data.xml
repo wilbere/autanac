@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <autanac>
     <data noupdate="1">
-        <!-- activate B2C portal by default -->
         <function model="ir.config_parameter" name="set_param" eval="('auth_signup.invitation_scope', 'b2c')"/>
-        <!-- activate Reset password by default -->
         <function model="ir.config_parameter" name="set_param" eval="('auth_signup.reset_password', 'True')"/>
-        <!-- Email template for reset password -->
         <record id="reset_password_email" model="mail.template">
             <field name="name">Auth Signup: Reset Password</field>
             <field name="model_id" ref="base.model_res_users"/>
@@ -83,12 +80,6 @@
     </tr>
 </tbody>
 </table>
-</td></tr>
-<!-- POWERED BY -->
-<tr><td align="center" style="min-width: 590px;">
-    <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
-      
-    </table>
 </td></tr>
 </table>
             </field>
@@ -185,7 +176,7 @@
 <tr><td align="center" style="min-width: 590px;">
     <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
       <tr><td style="text-align: center; font-size: 13px;">
-        Powered by <a target="_blank" href="https://www.autanac.com?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">autanac</a>
+        Powered by <a target="_blank" href="" style="color: #875A7B;">autanac</a>
       </td></tr>
     </table>
 </td></tr>
@@ -325,14 +316,6 @@
     </tr>
 </tbody>
 </table>
-</td></tr>
-<!-- POWERED BY -->
-<tr><td align="center" style="min-width: 590px;">
-    <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
-      <tr><td style="text-align: center; font-size: 13px;">
-        Powered by <a target="_blank" href="https://www.autanac.com?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">autanac</a>
-      </td></tr>
-    </table>
 </td></tr>
 </table></field>
             <field name="lang">${object.lang}</field>

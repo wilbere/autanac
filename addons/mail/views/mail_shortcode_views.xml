@@ -2,7 +2,6 @@
 <autanac>
     <data>
 
-        <!-- mail.shortcode -->
         <record id="mail_shortcode_action" model="ir.actions.act_window">
             <field name="name">Chat Shortcode</field>
             <field name="res_model">mail.shortcode</field>

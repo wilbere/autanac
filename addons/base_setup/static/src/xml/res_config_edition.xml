@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TODO See if this has to be editable in some way, see if it is easy for someone to change this -->
-<!-- TODO Also see what is done to override the (Community Edition) -->
 <template>
     <div t-name='res_config_edition'>
         <div class="col-12 o_setting_box" id="edition">
@@ -8,13 +6,12 @@
                 <div class="user-heading">
                     <h3>
                         Autanac <t t-esc="widget.server_version"/>
-                        (Community Edition)
                     </h3>
                 </div>
                 <div>
                     <div class="tab-content">
                         <div role="tabpanel" id="settings" class="tab-pane active text-muted o_web_settings_compact_subtitle">
-                            <small>Copyright © 2004 <a target="_blank" href="https://www.Autanac.com" style="text-decoration: underline;">AutanaShops c.a</a> <a target="_blank" href="http://www.gnu.org/licenses/lgpl.html" style="text-decoration: underline;">GNU LGPL Licensed</a></small>
+                           
                         </div>
                     </div>
                 </div>

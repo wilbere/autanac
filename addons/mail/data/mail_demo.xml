@@ -2,7 +2,6 @@
 <autanac>
     <data noupdate="1">
 
-        <!-- Thread: 1 incoming email -->
         <record id="msg_discus5" model="mail.message">
             <field name="subject">Plan to install backup servers</field>
             <field name="body" type="xml"><p>Hello,</p>
@@ -27,7 +26,6 @@ virginie@agrolait.fr</pre></field>
             <field name="partner_ids" eval="[(6, 0, [ref('base.partner_demo'), ref('base.partner_root')])]"/>
             <field name="date" eval="(DateTime.today() - timedelta(days=2)).strftime('%Y-%m-%d %H:%M')"/>
         </record>
-        <!-- Short thread: Admin ask, Agrolait answer [DEMO: mark thread as done] -->
         <record id="msg_discus1" model="mail.message">
             <field name="subject">Feedback about our On Site Assistance</field>
             <field name="body"><![CDATA[<p>Hi Virginie,</p><p>I wrote to you about our <i>On Site Assistance Service</i> that we delivered to Agrolait last week. Do you have any feedback or remark about our service? I noticed you requested new IP phones. Will it be used for new employees, or did you have any issue with the ones we provided?<br />Best regards,</p>]]></field>
@@ -38,7 +36,6 @@ virginie@agrolait.fr</pre></field>
             <field name="date" eval="(DateTime.today() - timedelta(days=2)).strftime('%Y-%m-%d %H:%M')"/>
         </record>
 
-        <!-- Admin and Demo with attachments -->
         <record id="msg_discus4_attach1" model="ir.attachment">
             <field name="datas">bWlncmF0aW9uIHRlc3Q=</field>
             <field name="name">catalog.doc</field>
@@ -59,7 +56,6 @@ virginie@agrolait.fr</pre></field>
             <field name="attachment_ids" eval="[(6, 0, [ref('msg_discus4_attach1'), ref('msg_discus4_attach2')])]"/>
             <field name="date" eval="(DateTime.today() - timedelta(days=1)).strftime('%Y-%m-%d %H:%M')"/>
         </record>
-        <!-- Thread: Epic Technologies and Admin as salesman discuss about a meeting [DEMO: see context, mark thread as done] -->
         <record id="msg_discus2" model="mail.message">
             <field name="subject">Information meeting</field>
             <field name="body"><![CDATA[<p>Hello,</p><p>Epic Technologies is a small company specialized in software managing huge volume of data. Having an efficient and reliable backup system is very important for us, and critical for our customers. I eared you have some interesting solutions to manage our backups. Could we meet each other as soon as possible to discuss our need? Here is a first list of requirements:</p>
@@ -77,7 +73,6 @@ virginie@agrolait.fr</pre></field>
             <field name="date" eval="(DateTime.today() - timedelta(days=1)).strftime('%Y-%m-%d %H:%M')"/>
         </record>
 
-        <!-- Discussion: attachments and spec [DEMO: search on has_attachments -->
         <record id="msg_discus6_attach1" model="ir.attachment">
             <field name="datas">bWlncmF0aW9uIHRlc3Q=</field>
             <field name="name">RedHat_spec.doc</field>
@@ -122,7 +117,6 @@ virginie@agrolait.fr</pre></field>
             <field name="date" eval="(DateTime.today() - timedelta(hours=3)).strftime('%Y-%m-%d %H:%M')"/>
         </record>
 
-        <!-- Thread: Demo (network admin) and Admin -->
         <record id="msg_discus3" model="mail.message">
             <field name="body"><![CDATA[<p>Hello,</p><p>I have a friend working at Epic Technologies. He told me they plan to upgrade their backup servers within the next 3 months.</p><p>I think that someone should contact them and check if there is an opportunity.</p>]]></field>
             <field name="message_type">comment</field>
@@ -206,7 +200,6 @@ virginie@agrolait.fr</pre></field>
             <field name="date" eval="(DateTime.today() - timedelta(minutes=5)).strftime('%Y-%m-%d %H:%M')"/>
         </record>
 
-        <!-- Header only: message from res_partner_1 [DEMO: mark as done] -->
         <record id="msg_discus0" model="mail.message">
             <field name="subject">FWD: Meeting with Demo </field>
             <field name="body"><![CDATA[<p>Hello Administrator,</p><p>A small email to inform you that we will have a meeting with Mr Demo next Tuesday. Everything is under control!<br />Regards,</p>]]></field>

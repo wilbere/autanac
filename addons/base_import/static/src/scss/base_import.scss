@@ -1,7 +1,8 @@
 .oe_import {
     @include o-webclient-padding($top: 8px);
     overflow: auto;
-    position: absolute; // Needed for chrome
+    //position: absolute;  Needed for chrome
+    position: inherit;
     top: 0;
     right: 0;
     bottom: 0;

@@ -8,7 +8,6 @@
             <field name="arch" type="xml">
                 <form string="Compose Email">
                     <group>
-                        <!-- truly invisible fields for control and options -->
                         <field name="composition_mode" invisible="1"/>
                         <field name="model" invisible="1"/>
                         <field name="res_id" invisible="1"/>
@@ -17,7 +16,6 @@
                         <field name="mail_server_id" invisible="1"/>
                         <field name="active_domain" invisible="1"/>
 
-                        <!-- Various warnings -->
                         <div colspan="2" class="oe_form_box_info bg-info oe_text_center"
                                 attrs="{'invisible': [('active_domain', '=', False)]}">
                             <p attrs="{'invisible': [('use_active_domain', '=', False)]}">
@@ -42,7 +40,6 @@
                                 <field class="oe_inline" name="use_active_domain"/>
                             </p>
                         </div>
-                        <!-- visible wizard -->
                         <field name="email_from"
                             attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')]}"/>
                         <label for="partner_ids" string="Recipients"  attrs="{'invisible': [('is_log', '=', True)]}" groups="base.group_user"/>
@@ -58,10 +55,8 @@
                                 attrs="{'invisible': [('composition_mode', '!=', 'comment')]}"/>
                         </div>
                         <field name="subject" placeholder="Subject..." required="True"/>
-                        <!-- mass post -->
                         <field name="notify"
                             attrs="{'invisible':['|', ('composition_mode', '!=', 'mass_post')]}"/>
-                        <!-- mass mailing -->
                         <field name="no_auto_thread" attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')]}"/>
                         <field name="reply_to" placeholder="Email address to redirect replies..."
                             attrs="{'invisible':['|', ('no_auto_thread', '=', False), ('composition_mode', '!=', 'mass_mail')],
@@ -74,12 +69,12 @@
                                context="{'default_model': model, 'default_body_html': body, 'default_subject': subject}"/>
                     </group>
                     <footer>
-                        <button string="Send" attrs="{'invisible': [('is_log', '=', True)]}" name="action_send_mail" type="object" class="btn-primary o_mail_send"/>
+                        <button string="Send" attrs="{'invisible': [('is_log', '=', True)]}" name="action_send_mail" type="object" class="rounded-pill btn-primary o_mail_send"/>
                         <button string="Log" attrs="{'invisible': [('is_log', '=', False)]}" name="action_send_mail" type="object" class="btn-primary"/>
-                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                        <button string="Cancel" class="btn-secondary rounded-pill" special="cancel" />
 
                         <button icon="fa-lg fa-save" type="object" name="save_as_template" string="Save as new template"
-                                class="float-right btn-secondary" help="Save as a new template"/>
+                                class="float-right btn-secondary rounded-pill" help="Save as a new template"/>
                     </footer>
                 </form>
             </field>

@@ -42,7 +42,7 @@ var FilterMenu = DropdownMenu.extend({
         this.dropdownSymbol = this.isMobile ?
                                 'fa fa-chevron-right float-right mt4' :
                                 false;
-        this.dropdownStyle.mainButton.class = 'o_filters_menu_button ' +
+        this.dropdownStyle.mainButton.class = 'o_filters_menu_button rounded-pill ' +
                                                 this.dropdownStyle.mainButton.class;
     },
     /**
